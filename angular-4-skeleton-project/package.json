@@ -2,13 +2,12 @@
     "name": "angular2-skeleton",
     "version": "1.0.0",
     "description": "Saurabh's Angular 2 Project" ,
-    "scripts": {
-        "start": "tsc && concurrently \tsc -w\" \"lite-server\" ",
+   "scripts": {
+        "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
         "lite": "lite-server",
-        "tsc":"tsc",
-        "tsc:w":"tsc -w"
+        "tsc": "tsc",
+        "tsc:w": "tsc -w"
     },
-
     "license": "UNLICENSED",
     "repository": {
         "type": "git",
