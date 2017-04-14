@@ -8,7 +8,7 @@ import {Task} from './model/task'
     styleUrls: [ 'app.component.css' ]
 })
 export class AppComponent { 
-    task1 : Task = {
+    private task1 : Task = {
         content:'hey',
         done: false
     }
