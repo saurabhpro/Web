@@ -12,6 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 const task_1 = require("../model/task");
 let CardComponent = class CardComponent {
+    statusToggle() {
+        this.task.done = !this.task.done;
+    }
 };
 __decorate([
     core_1.Input(),

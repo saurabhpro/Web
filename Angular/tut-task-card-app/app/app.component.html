@@ -1,3 +1,23 @@
 <div class="container">
-    <app-card [task]='task1'></app-card>
+    <div class="row">
+        <div class="col-md offset-md-3">
+            <form class="form-inline" (ngSubmit)="addTask()" #taskForm="ngForm">
+                <div class="form-group">
+                    <label for="content-field" class="sr-only"></label>
+                    <input type="text" class="form-control" id="content-field" required placeholder="Enter a task..." [(ngModel)]="currentTask.content" name="content">
+                    <!-- input referencing by #input, then say pass it to methood as addTask(input.value) see #taskForm-->
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="taskForm.form.invalid"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <app-card *ngFor="let task of tasks" [task]="task" [hidden]="task.done"></app-card>
+
+        <!-- add some message if no cards added  -->
+         <h5 *ngIf="tasks.length == 0">
+            <p>The task list is empty</p>
+            <p>Add new tasks using the form above</p>
+        </h5>
+    </div>
 </div>

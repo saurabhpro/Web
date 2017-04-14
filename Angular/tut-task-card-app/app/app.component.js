@@ -7,12 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
+const task_1 = require("./model/task");
 let AppComponent = class AppComponent {
     constructor() {
-        this.task1 = {
-            content: 'hey',
-            done: false
-        };
+        this.tasks = [];
+        this.currentTask = new task_1.Task(null, false);
+    }
+    addTask() {
+        let task = new task_1.Task(this.currentTask.content, this.currentTask.done);
+        this.tasks.push(task); //array push
+        this.currentTask.content = null; //reset the input placeholder
     }
 };
 AppComponent = __decorate([

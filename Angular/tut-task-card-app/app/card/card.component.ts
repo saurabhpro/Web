@@ -1,17 +1,17 @@
-import {Component, Input} from "@angular/core";
+import { Component, Input } from '@angular/core';
 
-import {Task} from "../model/task";
+import { Task } from '../model/task';
 
-@Component(
-    {
-        moduleId: module.id,
-        selector: 'app-card',
-        templateUrl: 'card.component.html',
-        styleUrls:[ 'card.component.css']
-    }
-) 
+@Component({
+    moduleId: module.id,
+    selector: 'app-card',
+    templateUrl: 'card.component.html',
+    styleUrls: [ 'card.component.css' ]
+})
 export class CardComponent {
-    @Input() task:Task;
+    @Input() task: Task;
 
+    statusToggle() {
+        this.task.done = !this.task.done;
+    }
 }
-
