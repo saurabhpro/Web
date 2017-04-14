@@ -3,10 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+//register the components here
+import { CardComponent } from './card/card.component';
+
 @NgModule({
-    imports: [ BrowserModule ],
-    declarations: [ AppComponent ],
+    imports: [
+        BrowserModule
+        ],
+    declarations: [
+        AppComponent,
+        CardComponent
+        ],
     bootstrap: [ AppComponent ]
 })
+
 
 export class AppModule { }
