@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TemperatureUnitPipe implements PipeTransform {
     transform(temperature: number, unitType: string) {
-        if (unitType == "celsius") {
+        if (unitType === "celsius") {
             const celsius = (temperature - 32) * 0.5556;
             return celsius;
         } else {

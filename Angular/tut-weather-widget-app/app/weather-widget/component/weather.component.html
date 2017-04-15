@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" (click)="toggleUnit()">
     <!--Card Header -->
     <div class="card-header">
         <div class="row">
@@ -14,7 +14,7 @@
 
     <!--Card Main Block -->
     <div class="card-block text-center">
-        <h1>0</h1>
+        <canvas id="icon"></canvas>
         <p>{{ weatherData.summary }}</p>
     </div>
 

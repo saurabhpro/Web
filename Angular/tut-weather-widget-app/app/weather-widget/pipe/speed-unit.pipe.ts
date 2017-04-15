@@ -1,17 +1,17 @@
-import {Pipe, PipeTransform } from '@angular/core'
+import { Pipe, PipeTransform } from '@angular/core'
 
 @Pipe({
-    name : "speedUnit"
+    name: "speedUnit"
 })
 export class SpeedUnitPipe implements PipeTransform {
     transform(speed: number, unitType: string) {
-        switch(unitType) {
-            case "mph":
-                const miles = Number(speed * 1.6).toFixed(0);
-                return miles + "mph";
+        switch (unitType) {
+            case "kph":
+                const miles = Number(speed * 1.6).toFixed(1);
+                return miles + "kph";
             default:
-                const kilo = Number(speed).toFixed(0);
-                return kilo + "kph";
+                const kilo = Number(speed).toFixed(1);
+                return kilo + "mph";
         }
     }
 }

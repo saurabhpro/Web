@@ -21,3 +21,6 @@ printing dynamic values of temparature using custom pipes
 use google maps api reverse geocoding json reponse to get the location name
 Basic reoformatting
 TODO refactor the result to only show Ashok Nagar, Delhi, India
+
+## commit 1.6
+added animated icons for weather
