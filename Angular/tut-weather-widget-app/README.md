@@ -11,4 +11,5 @@ Changes in bootstrap
 ## commit 1.2
 adding the service method to get current location and print thst on browser console
 
-Next - get that location and use darksky.net to get the weather
+## commit 1.3
+use reactiveX obsrvable to get the positions and weather

@@ -7,10 +7,19 @@ import { WeatherService } from '../service/weather.service'
     selector: 'weather-widget',
     templateUrl: 'weather.component.html',
     styles: ['weather.component.css'],
-    providers:[WeatherService]
+    providers: [WeatherService]
 })
-export class WeatherComponent { 
-    constructor(private service: WeatherService){
-        this.service.getCurrentLocaction();
+export class WeatherComponent {
+    position: Position;
+
+    constructor(private service: WeatherService) {
+        
+        this.service.getCurrentLocation()
+        .subscribe(position => {
+                this.position = position,
+                this.service.getCurrentWeather(this.position.coords.latitude, this.position.coords.longitude)
+                    .subscribe(weather => console.log(weather), err => console.error(err));
+            },
+            err => console.error(err));   
     }
 }
