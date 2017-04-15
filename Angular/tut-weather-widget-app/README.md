@@ -7,3 +7,8 @@ Basic layout of widget with static screen
 Changes in bootstrap
 1. col-xs- is replaced by col-
 2. text-align-right is replaced by text-right
+
+## commit 1.2
+adding the service method to get current location and print thst on browser console
+
+Next - get that location and use darksky.net to get the weather
