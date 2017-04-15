@@ -6,7 +6,8 @@
                 <p>Place Name</p>
             </div>
             <div class="col-4 text-right">
-                <h1>3&deg;</h1>
+                <!-- use pipes to weed out decimals 0 - 0 means minium 0 to max 0 places -->
+                <h1>{{ weatherData.temp | temperatureUnit: currentTemparatureUnit | number:'.0-0' }}&deg;</h1>
             </div>
         </div>
     </div>
@@ -14,7 +15,7 @@
     <!--Card Main Block -->
     <div class="card-block text-center">
         <h1>0</h1>
-        <p>Weather Conditions</p>
+        <p>{{ weatherData.summary }}</p>
     </div>
 
     <!--Card Footer -->    
@@ -22,11 +23,11 @@
         <div class="row">
             <div class="col-5">
                 <p>Wind</p>
-                <p>Blowing</p>
+                <p>{{ weatherData.wind | speedUnit : currentSpeedUnit }}</p>
             </div>
             <div class="col-5 offset-2">
                 <p>Humidity</p>
-                <p>something</p>
+                <p>{{ weatherData.humidity | percent }}</p>
             </div>
         </div>
     </div>

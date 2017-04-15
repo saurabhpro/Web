@@ -13,3 +13,6 @@ adding the service method to get current location and print thst on browser cons
 
 ## commit 1.3
 use reactiveX obsrvable to get the positions and weather
+
+## commit 1.4
+printing dynamic values of temparature using custom pipes
