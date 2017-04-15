@@ -1,9 +1,13 @@
-<div class="card" (click)="toggleUnit()">
+<div class="card" (click)="toggleUnit()" [ngStyle]="setStyles()">
     <!--Card Header -->
-    <div class="card-header">
+    <div class="card-header" [class.invisible]="!dataReceived" [ngStyle]="setStyles()">
         <div class="row">
             <div class="col-8">
-                <p>{{ currentLocation }}</p>
+                <p class="text-uppercase">
+                    <i id="location-icon" class="fa fa-map-marker" aria-hidden="true"></i>
+                    {{ currentLocation }}
+                </p>
+                <p> {{ currentDate | date:'dd MMMM, yyyy hh:mm a' }}</p>
             </div>
             <div class="col-4 text-right">
                 <!-- use pipes to weed out decimals 0 - 0 means minium 0 to max 0 places -->
@@ -14,21 +18,28 @@
 
     <!--Card Main Block -->
     <div class="card-block text-center">
+        <div id="indicator" [hidden]="dataReceived">
+            <i class="fa fa-spinner fa-spin fa-4x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+        </div>
         <canvas id="icon"></canvas>
-        <p>{{ weatherData.summary }}</p>
+        <p class="text-uppercase">{{ weatherData.summary }}</p>
     </div>
 
     <!--Card Footer -->
-    <div class="card-footer">
+    <div class="card-footer text-center" [class.invisible]="!dataReceived" [ngStyle]="setStyles()">
         <div class="row">
             <div class="col-5">
-                <p>Wind</p>
-                <p>{{ weatherData.wind | speedUnit : currentSpeedUnit }}</p>
+                <p class="text-uppercase">Wind</p>
+                <p class="unit-label">{{ weatherData.wind | speedUnit : currentSpeedUnit }}</p>
             </div>
             <div class="col-5 offset-2">
-                <p>Humidity</p>
+                <p class="text-uppercase">Humidity</p>
                 <p>{{ weatherData.humidity | percent }}</p>
             </div>
+        </div>
+        <div class="row text-center">
+            <small>click to switch between &deg;f/mph and &deg;c/kph</small>
         </div>
     </div>
 </div>

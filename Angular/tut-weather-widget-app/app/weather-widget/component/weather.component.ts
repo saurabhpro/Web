@@ -21,7 +21,11 @@ export class WeatherComponent implements OnInit {
     currentSpeedUnit = "mph";
     currentTemparatureUnit = "fahrenheit";
 
-    icons = new Skycons({ color: "#000" });
+    icons = new Skycons();
+
+    dataReceived = false;
+
+    currentDate = new Date();
 
     constructor(private service: WeatherService) { }
 
@@ -53,6 +57,7 @@ export class WeatherComponent implements OnInit {
                     this.weatherData.icon = weather.currently.icon;
                 console.log(this.weatherData);
                 this.setIcon();
+                this.dataReceived = true;   //arbitary value to indicate that data arrived 
             },
             err => console.error(err));
     }
@@ -61,7 +66,7 @@ export class WeatherComponent implements OnInit {
         this.service.getLocationName(this.position.coords.latitude, this.position.coords.longitude)
             .subscribe(location => {
                 console.log(location);
-                this.currentLocation = location.results[0].formatted_address;
+                this.currentLocation = location.results[0].address_components[5].long_name;
             });
     }
 
@@ -81,6 +86,16 @@ export class WeatherComponent implements OnInit {
     setIcon() {
         this.icons.add("icon", this.weatherData.icon);
         this.icons.play();
+    }
+
+    setStyles(): Object {
+        if(this.weatherData.icon) {
+            this.icons.color = WEATHER_COLORS[this.weatherData.icon]["color"];
+            return WEATHER_COLORS[this.weatherData.icon];
+        } else {
+            this.icons.color = WEATHER_COLORS["default"]["color"];
+            return WEATHER_COLORS["default"];
+        }
     }
 
 }
