@@ -1,16 +1,17 @@
 <div class="card" (click)="toggleUnit()" [ngStyle]="setStyles()">
     <!--Card Header -->
-    <div class="card-header" [class.invisible]="!dataReceived" [ngStyle]="setStyles()">
+    <div class="card-header" [class.invisible]="!dataReceived">
         <div class="row">
-            <div class="col-8">
+            <div class="col-8" id="location-wrapper">
+                <!-- add location icon -->
                 <p class="text-uppercase">
-                    <i id="location-icon" class="fa fa-map-marker" aria-hidden="true"></i>
-                    {{ currentLocation }}
+                    <i id="location-icon" class="fa fa-map-marker" aria-hidden="true"></i> {{ currentLocation }}
                 </p>
+                <!-- display the date time -->
                 <p> {{ currentDate | date:'dd MMMM, yyyy hh:mm a' }}</p>
             </div>
             <div class="col-4 text-right">
-                <!-- use pipes to weed out decimals 0 - 0 means minium 0 to max 0 places -->
+                <!-- use pipes to weed out decimals 0 - 0 means minimum 0 to max 0 places -->
                 <h1>{{ weatherData.temp | temperatureUnit: currentTemparatureUnit | number:'.0-0' }}&deg;</h1>
             </div>
         </div>
@@ -18,19 +19,24 @@
 
     <!--Card Main Block -->
     <div class="card-block text-center">
+        <!-- add spinning wheel before load -->
         <div id="indicator" [hidden]="dataReceived">
             <i class="fa fa-spinner fa-spin fa-4x fa-fw"></i>
             <span class="sr-only">Loading...</span>
         </div>
+
+        <!-- after load show -->
         <canvas id="icon"></canvas>
         <p class="text-uppercase">{{ weatherData.summary }}</p>
     </div>
 
     <!--Card Footer -->
-    <div class="card-footer text-center" [class.invisible]="!dataReceived" [ngStyle]="setStyles()">
-        <div class="row">
+    <div class="card-footer" [class.invisible]="!dataReceived">
+        <!-- class.invisible make the whole class invisible unlike component hidden -->
+        <div class="row" id="detail-row">
             <div class="col-5">
                 <p class="text-uppercase">Wind</p>
+                <!-- use custom piping-->
                 <p class="unit-label">{{ weatherData.wind | speedUnit : currentSpeedUnit }}</p>
             </div>
             <div class="col-5 offset-2">
@@ -38,8 +44,8 @@
                 <p>{{ weatherData.humidity | percent }}</p>
             </div>
         </div>
-        <div class="row text-center">
-            <small>click to switch between &deg;f/mph and &deg;c/kph</small>
+        <div class="row" id="helper-row">
+            <small class="text-muted">click to switch between &deg;F/mph and &deg;C/kmph</small>
         </div>
     </div>
 </div>

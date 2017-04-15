@@ -10,25 +10,39 @@ declare var Skycons: any;
     moduleId: module.id,
     selector: 'weather-widget',
     templateUrl: 'weather.component.html',
-    styles: ['weather.component.css'],
+    styleUrls: ['weather.component.css'],   //make sure its styleUrls<template> and !styles<template>
     providers: [WeatherService]
 })
 export class WeatherComponent implements OnInit {
+    //
     currentLocation: String;
-    position: Position;
-    weatherData = new Weather(null, null, null, null, null);
-
+    position: Position;                     //for Observable to fill it
     currentSpeedUnit = "mph";
     currentTemparatureUnit = "fahrenheit";
 
+
+    //since we have already imported Weather
+    weatherData = new Weather(null, null, null, null, null);
+
+    /*
+    This is a weird thing right here, as Skycons() is a js file, 
+    but it wasn't that popular to have a Type TS file written for it
+
+    so npm install Skycons though gets the .js file, it cannot be registered in the new TS Angular2
+    hence use a local js reposiroty and then just to let the TS know its an object
+
+    create global type using 'declare var Skycons: any;'
+    */
     icons = new Skycons();
 
+    //flag for checking if the data from darksky has been recieved
     dataReceived = false;
 
+    //get the date and set into the class for exporting
     currentDate = new Date();
 
+    //unused but gets the dependency injection
     constructor(private service: WeatherService) { }
-
 
     //override
     ngOnInit(): void {
@@ -36,7 +50,7 @@ export class WeatherComponent implements OnInit {
         //throw new Error('Method not implemented.');
     }
 
-    getCurrentLocation() {
+    private getCurrentLocation() {
 
         this.service.getCurrentLocation()
             .subscribe(position => {
@@ -47,7 +61,7 @@ export class WeatherComponent implements OnInit {
             err => console.error(err));
     }
 
-    getCurrentWeather() {
+    private getCurrentWeather() {
         this.service.getCurrentWeather(this.position.coords.latitude, this.position.coords.longitude)
             .subscribe(weather => {
                 this.weatherData.temp = weather.currently.temperature,
@@ -56,40 +70,42 @@ export class WeatherComponent implements OnInit {
                     this.weatherData.humidity = weather.currently.humidity,
                     this.weatherData.icon = weather.currently.icon;
                 console.log(this.weatherData);
-                this.setIcon();
+                this.setIcon();             //call setIcon() from here
                 this.dataReceived = true;   //arbitary value to indicate that data arrived 
             },
             err => console.error(err));
     }
 
-    getLocationName() {
+    private getLocationName() {
         this.service.getLocationName(this.position.coords.latitude, this.position.coords.longitude)
             .subscribe(location => {
                 console.log(location);
+
+                //take a look into how i'm reading the json - also can use ["xyz"] notation instead of .
                 this.currentLocation = location.results[0].address_components[5].long_name;
             });
     }
 
-    toggleUnit() {
+    public toggleUnit() {
         this.toggleSpeedUnit();
         this.toogleTemperatureUnit();
     }
 
-    toggleSpeedUnit() {
-        this.currentSpeedUnit === "kph" ? this.currentSpeedUnit = "mph" : this.currentSpeedUnit = "kph";
+    private toggleSpeedUnit() {
+        this.currentSpeedUnit === "kmph" ? this.currentSpeedUnit = "mph" : this.currentSpeedUnit = "kmph";
     }
 
-    toogleTemperatureUnit() {
+    private toogleTemperatureUnit() {
         this.currentTemparatureUnit === "celsius" ? this.currentTemparatureUnit = "fahrenheit" : this.currentTemparatureUnit = "celsius";
     }
 
-    setIcon() {
+    private setIcon() {
         this.icons.add("icon", this.weatherData.icon);
         this.icons.play();
     }
 
-    setStyles(): Object {
-        if(this.weatherData.icon) {
+    private setStyles(): Object {
+        if (this.weatherData.icon) {
             this.icons.color = WEATHER_COLORS[this.weatherData.icon]["color"];
             return WEATHER_COLORS[this.weatherData.icon];
         } else {

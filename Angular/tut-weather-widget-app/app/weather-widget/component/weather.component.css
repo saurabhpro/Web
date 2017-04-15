@@ -1,10 +1,25 @@
-i {
-    padding-right : .5rem;
+.card {
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,.24);
+    transition: background-color .5s ease;
+    cursor: pointer;
 }
-
-
-
-/*
+.card,
+.card-header,
+.card-footer {
+    border: none;
+    border-radius: 0;
+}
+.card-header,
+.card-footer {
+    padding: 1rem .5rem;
+    background-color: transparent;
+}
+#location-wrapper {
+    font-size: 1.1rem;
+}
+#location-icon {
+    padding-right: .5rem;
+}
 .card-block {
     padding: 1.5rem 0;
 }
@@ -23,30 +38,24 @@ canvas {
     max-width: 250px;
     margin-bottom: 1rem;
 }
-
-.card-footer {
-    padding-bottom: .5rem;
-}
-
-.card,
-.card-header,
-.card-footer {
-    border: none;
-    border-radius: 0;
-}
-.card {
-    box-shadow: 2px 2px 5px 0 rgba(0,0,0,.45);
-    transition: background-color .5s ease;
-    cursor: pointer;
-}
 .card-block,
 .card-footer {
     text-align: center;
 }
+.card-footer {
+    padding-bottom: .5rem;
+}
+#detail-row {
+    font-size: .8rem;
+}
+#helper-row {
+    padding-top: .5rem;
+    padding-left: 3rem;
+}
 p {
     margin: .2rem;
+    font-size: 1rem;
 }
-
 p:not(.unit-label) {
     text-transform: uppercase;
-}*/
+}

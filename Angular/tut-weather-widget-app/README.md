@@ -26,5 +26,12 @@ TODO refactor the result to only show Ashok Nagar, Delhi, India
 added animated icons for weather
 
 ## commit 1.7
-detail documentation soon
+this is how the app looks now
 ![Screenshot](weather-widget-look.png)
+
+## commit 1.8
+added complete documentation
+fixed the issue with .ts styles vs styleUrls, add css to the page
+
+![Screenshot](weather-widget-look-new.png)
+
