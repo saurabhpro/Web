@@ -24,3 +24,7 @@ TODO refactor the result to only show Ashok Nagar, Delhi, India
 
 ## commit 1.6
 added animated icons for weather
+
+## commit 1.7
+detail documentation soon
+![Screenshot](weather-widget-look.png)
