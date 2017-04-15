@@ -11,13 +11,14 @@ import { Weather } from '../model/weather'
     providers: [WeatherService]
 })
 export class WeatherComponent implements OnInit {
+    currentLocation: String;
     position: Position;
     weatherData = new Weather(null, null, null, null, null);
 
-    currentSpeedUnit ="kph";
-    currentTemparatureUnit ="fahrenheit";
+    currentSpeedUnit = "kph";
+    currentTemparatureUnit = "celsius";
 
-    constructor(private service: WeatherService) {    }
+    constructor(private service: WeatherService) { }
 
 
     //override
@@ -26,26 +27,36 @@ export class WeatherComponent implements OnInit {
         //throw new Error('Method not implemented.');
     }
 
-    getCurrentLocation(){
-            
+    getCurrentLocation() {
+
         this.service.getCurrentLocation()
-        .subscribe(position => {
+            .subscribe(position => {
                 this.position = position,
-                 this.getCurrentWeather()
+                    this.getCurrentWeather();
+                    this.getLocationName();
             },
-            err => console.error(err));   
+            err => console.error(err));
     }
 
-    getCurrentWeather(){
+    getCurrentWeather() {
         this.service.getCurrentWeather(this.position.coords.latitude, this.position.coords.longitude)
             .subscribe(weather => {
                 this.weatherData.temp = weather.currently.temperature,
-                this.weatherData.summary = weather.currently.summary,
-                this.weatherData.wind = weather.currently.windSpeed,
-                this.weatherData.humidity = weather.currently.humidity,
-                this.weatherData.icon = weather.currently.icon
+                    this.weatherData.summary = weather.currently.summary,
+                    this.weatherData.wind = weather.currently.windSpeed,
+                    this.weatherData.humidity = weather.currently.humidity,
+                    this.weatherData.icon = weather.currently.icon
                 console.log(this.weatherData);
             },
             err => console.error(err));
     }
+
+    getLocationName(){
+          this.service.getLocationName(this.position.coords.latitude, this.position.coords.longitude)
+            .subscribe(location => {
+                console.log(location);
+                this.currentLocation = location.results[0].formatted_address;
+            });
+    }
+
 }

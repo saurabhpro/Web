@@ -16,3 +16,8 @@ use reactiveX obsrvable to get the positions and weather
 
 ## commit 1.4
 printing dynamic values of temparature using custom pipes
+
+## commit 1.5
+use google maps api reverse geocoding json reponse to get the location name
+Basic reoformatting
+TODO refactor the result to only show Ashok Nagar, Delhi, India
