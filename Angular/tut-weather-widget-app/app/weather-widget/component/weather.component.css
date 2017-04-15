@@ -15,7 +15,7 @@
     background-color: transparent;
 }
 #location-wrapper {
-    font-size: 1.1rem;
+    font-size: .9rem;
 }
 #location-icon {
     padding-right: .5rem;
@@ -50,12 +50,15 @@ canvas {
 }
 #helper-row {
     padding-top: .5rem;
-    padding-left: 3rem;
 }
 p {
     margin: .2rem;
-    font-size: 1rem;
+    text-transform: uppercase;
 }
 p:not(.unit-label) {
     text-transform: uppercase;
+}
+.refresh-block{
+    background-color: #000;
+    color: #FFF;
 }

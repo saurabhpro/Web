@@ -50,6 +50,11 @@ export class WeatherComponent implements OnInit {
         //throw new Error('Method not implemented.');
     }
 
+    refresh(): void {
+        this.getCurrentLocation();
+        this.currentDate = new Date();
+    }
+
     private getCurrentLocation() {
 
         this.service.getCurrentLocation()
