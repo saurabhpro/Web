@@ -1,0 +1,1 @@
+{"version":3,"file":"bug-list.component.js","sourceRoot":"","sources":["bug-list.component.ts"],"names":[],"mappings":";;;;;;;;AAAA,wCAAyC;AAUzC,IAAa,gBAAgB,GAA7B;CAAiC,CAAA;AAApB,gBAAgB;IAR5B,gBAAS,CAAC;QACP,QAAQ,EAAE,MAAM,CAAC,EAAE;QACnB,QAAQ,EAAE,UAAU;QACpB,WAAW,EAAE,yBAAyB;QACtC,SAAS,EAAE,CAAC,wBAAwB,CAAC;KAExC,CAAC;GAEW,gBAAgB,CAAI;AAApB,4CAAgB"}
