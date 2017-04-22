@@ -2,8 +2,9 @@
     <div class="modal-dialog modal-lg" role="document">
 
         <div class="modal-content">
-            <!--Add a Form using Reactive Form-->
-            <form [formGroup]="bugForm"> 
+            <!--Add a Form using Reactive Form // (ngSubmit)="submitForm()" doesnt work for modal, so (click)-->
+            <form [formGroup]="bugForm" #form>
+                state: {{ form.className }}
                 <!-- define modal body-->
                 <div class="modal-body">
                     <!-- First row of form (inline) -->
@@ -13,7 +14,7 @@
                             <input type="text" class="form-control" id="title-field" placeholder="Bug Title" formControlName="title">
                         </div>
 
-                        <div class="col-8">
+                        <div class="col-7">
                             <div class="form-group float-right">
                                 <label for="status-dropdown" class="sr-only">Status</label>
                                 <select id="status-dropdown" class="form-control btn btn-primary" formControlName="status">
@@ -49,7 +50,7 @@
                 <div class="modal-footer">
                     <div class="col-12 text-center">
                         <button class="btn btn-secondary btn-xl" type="button" data-dismiss="modal">Cancel</button>
-                        <button class="btn btn-success btn-xl" type="submit" data-dismiss="modal">Save</button>
+                        <button class="btn btn-success btn-xl" type="submit" data-dismiss="modal" (click)="submitForm()">Save</button>
                     </div>
 
                 </div>

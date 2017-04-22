@@ -14,13 +14,14 @@ import { Bug } from '../model/bug'
 
 export class BugListComponent implements OnInit {
     //private array to store the bugs array
-    private bugs : Bug[] = [];
+    private bugs: Bug[] = [];
 
     constructor(private bugService: BugService) { }
 
     //override
     ngOnInit(): void {
         this.getAddedBugs();
+        this.getUpdatedBugs();
     }
     getAddedBugs() {
         this.bugService.getAddedBugs()
@@ -30,6 +31,21 @@ export class BugListComponent implements OnInit {
             },
             err => {
                 console.error("Unable to get added bug - ", err);
+            });
+    }
+
+    getUpdatedBugs() {
+        this.bugService.changedListener()
+            .subscribe(updatedBug => {
+                //map iterates through all bugs and returns array of ids, then indexof checks for 'id'
+                const bugIndex = 
+                    this.bugs.map(index => index.id)
+                        .indexOf(updatedBug['id']);
+
+                this.bugs[bugIndex] = updatedBug;
+            },
+            err => {
+                console.error("Unable to get updated bug - ", err);
             });
     }
 }

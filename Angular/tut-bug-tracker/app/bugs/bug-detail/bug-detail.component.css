@@ -42,3 +42,8 @@ textarea.ng-invalid.ng-dirty {
     padding-left: 5px;
     transition: border-width 0.2s ease;
 }
+#title-field.ng-valid.ng-dirty {
+    border-left: 5px solid #008F00;
+    padding-left: 5px;
+    transition: border-width 0.2s ease;
+}
