@@ -6,7 +6,10 @@ import { BugListComponent } from './bug-list/bug-list.component';
 @NgModule({
     imports: [
         RouterModule.forChild([
-            { path: 'bugs', component: BugListComponent }
+            { path: '', redirectTo: 'bugs', pathMatch: 'full' },
+            { path: 'bugs', component: BugListComponent },
+            //for default routing...like 404 components
+            { path: '**', redirectTo: 'bugs' }
         ])
     ],
     exports: [RouterModule]

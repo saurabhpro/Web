@@ -7,17 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
-const router_1 = require("@angular/router");
-//import { BugListComponent } from './bugs/bug-list/bug-list.component';
-let AppRoutingModule = class AppRoutingModule {
+let NavBarComponent = class NavBarComponent {
 };
-AppRoutingModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            router_1.RouterModule.forRoot([])
-        ],
-        exports: [router_1.RouterModule]
+NavBarComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'navbar',
+        templateUrl: 'navbar.component.html',
+        styleUrls: ['navbar.component.css']
     })
-], AppRoutingModule);
-exports.AppRoutingModule = AppRoutingModule;
-//# sourceMappingURL=app-routing.module.js.map
+], NavBarComponent);
+exports.NavBarComponent = NavBarComponent;
+//# sourceMappingURL=navbar.component.js.map

@@ -15,7 +15,10 @@ BugRoutingModule = __decorate([
     core_1.NgModule({
         imports: [
             router_1.RouterModule.forChild([
-                { path: 'bugs', component: bug_list_component_1.BugListComponent }
+                { path: '', redirectTo: 'bugs', pathMatch: 'full' },
+                { path: 'bugs', component: bug_list_component_1.BugListComponent },
+                //for default routing...like 404 components
+                { path: '**', redirectTo: 'bugs' }
             ])
         ],
         exports: [router_1.RouterModule]

@@ -12,7 +12,10 @@ let AppComponent = class AppComponent {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: '<h1>Skeleton Project</h1> <router-outlet></router-outlet>'
+        template: `
+    <navbar></navbar>
+    <router-outlet></router-outlet>
+    `
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
