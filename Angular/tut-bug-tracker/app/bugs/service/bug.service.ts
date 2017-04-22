@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { FirebaseConfigService } from '../../core/service/firebase-config.service';
 
+import { Bug } from '../model/bug'
+
 @Injectable()
 export class BugService {
 
@@ -13,8 +15,8 @@ export class BugService {
     getAddedBugs(): Observable<any> {
         return Observable.create(obs => {
             this.bugsDbRef.on('child_added', bug => {
-                const newBug = bug.val();
-                newBug.id = bug.key;
+                const newBug = bug.val() as Bug;   //.val() creates a js object
+               // newBug.id = bug.key;
                 obs.next(newBug);
             },
                 err => {
