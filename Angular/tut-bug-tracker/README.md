@@ -11,3 +11,7 @@ then localhost:9000/bugs will work
 # commit 1.2
 added simple navbar with popup signout and navbar-brand logo
 navbar-dark is not there in bootstrap4 
+
+# commit 1.3
+replace href with routerLink
+coe module  - for creating singleton services  - say authentication modukle
