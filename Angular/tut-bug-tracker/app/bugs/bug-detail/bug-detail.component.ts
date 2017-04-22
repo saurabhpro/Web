@@ -23,11 +23,20 @@ export class BugDetailComponent implements OnInit {
     private statuses = STATUS;
     private severities = SEVERITY;
 
+    private statusArr: string[] = [];
+    private severityArr: string[] = [];
 
-    @Input() private currentBug: Bug = new Bug(null, null, 1, 1, null, null, null);
+    @Input() private currentBug: Bug = new Bug(null, null, this.statuses.Logged, this.severities.Severe, null, null, null);
 
     constructor(private formBuilder: FormBuilder, private bugService: BugService) { }
+
     ngOnInit() {
+
+        console.log(this.statuses);
+
+        this.statusArr = Object.keys(this.statuses).filter(Number);
+        this.severityArr = Object.keys(this.severities).filter(Number);
+
         this.configureForm();
     }
 
@@ -76,7 +85,8 @@ export class BugDetailComponent implements OnInit {
         } else {
             this.addBug();
         }
-        this.freshForm();
+        
+        //this.freshForm(); tp spearate the reset from not closing the modal
     }
 
     addBug() {
@@ -92,7 +102,7 @@ export class BugDetailComponent implements OnInit {
     }
 
     freshForm() {
-        this.bugForm.reset({ status: 1, severity: 1 });
+        this.bugForm.reset({ status: this.statuses.Logged, severity: this.severities.Severe });
         this.cleanBug();
     }
 

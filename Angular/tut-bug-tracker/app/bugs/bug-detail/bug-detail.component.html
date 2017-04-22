@@ -1,10 +1,13 @@
-<div class="modal fade" [id]="modalId">
+<div class="modal fade" [id]="modalId" data-backdrop="static">
+    <!-- data-backdrop="static" stops from dismiss on outside modal click-->
     <div class="modal-dialog modal-lg" role="document">
 
         <div class="modal-content">
             <!--Add a Form using Reactive Form // (ngSubmit)="submitForm()" doesnt work for modal, so (click)-->
             <form [formGroup]="bugForm" #form>
-                state: {{ form.className }}
+                <!--
+                    state: {{ form.className }}
+                -->
                 <!-- define modal body-->
                 <div class="modal-body">
                     <!-- First row of form (inline) -->
@@ -18,11 +21,15 @@
                             <div class="form-group float-right">
                                 <label for="status-dropdown" class="sr-only">Status</label>
                                 <select id="status-dropdown" class="form-control btn btn-primary" formControlName="status">
+                                <!--    
                                     <option value="1">Logged</option>
                                     <option value="2">Recreated</option>
                                     <option value="3">In Progress</option>
                                     <option value="4">Fixed</option>
                                     <option value="5">Decline</option>
+                                -->
+                                    <option *ngFor="let status of statusArr" [value]="status">{{ statuses[status] }}</option>
+
                                 </select>
                             </div>
                         </div>
@@ -32,10 +39,14 @@
                     <div class="form-group float-left" id="severity-form-group">
                         <label for="severity-dropdown" class="sr-only">Severity Dropdown</label>
                         <select id="severity-dropdown" class="form-control" formControlName="severity">
+                        <!--    
                             <option value="1">Severe</option>
                             <option value="2">Medium</option>
                             <option value="3">Low</option>
                             <option value="4">Cosmatic</option>
+                        -->
+                            <option *ngFor="let severity of severityArr" [value]="severity">{{ severities[severity] }}</option>
+
                         </select>
                     </div>
 
@@ -50,7 +61,7 @@
                 <div class="modal-footer">
                     <div class="col-12 text-center">
                         <button class="btn btn-secondary btn-xl" type="button" data-dismiss="modal">Cancel</button>
-                        <button class="btn btn-success btn-xl" type="submit" data-dismiss="modal" (click)="submitForm()">Save</button>
+                        <button class="btn btn-success btn-xl" type="submit" data-dismiss="modal" (click)="submitForm()" [disabled]="bugForm.invalid">Save</button>
                     </div>
 
                 </div>
