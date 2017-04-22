@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+//remove if not used in the testing contructor
+import {FirebaseConfigService} from './core/service/firebase-config.service'
+
 @Component({
     selector: 'my-app',
     template: `
@@ -14,4 +17,10 @@ import { Component } from '@angular/core';
     }
     `]
 })
-export class AppComponent { }
+export class AppComponent { 
+
+    //constructor for testing the firebase config startup TODO remove
+    constructor(private service: FirebaseConfigService){
+
+    }
+}
