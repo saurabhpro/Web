@@ -62,8 +62,8 @@
                     <div class="col-12 text-center">
                         <button class="btn btn-secondary btn-xl" type="button" data-dismiss="modal">Cancel</button>
                         <button class="btn btn-success btn-xl" type="submit" data-dismiss="modal" (click)="submitForm()" [disabled]="bugForm.invalid">Save</button>
+                        <button class="btn btn-danger btn-xl" type="submit" data-dismiss="modal" (click)="deleteItem()" [disabled]="!currentBug.id">Delete</button>
                     </div>
-
                 </div>
 
             </form>

@@ -21,11 +21,11 @@ export class FirebaseConfigService {
         return this._database;
     }
 
-    configureApp() {
+    private configureApp() {
         firebase.initializeApp(FIREBASE_CONFIG);
     }
 
-    configureDatabase() {
+    private configureDatabase() {
         this._database = firebase.database();
     }
 }

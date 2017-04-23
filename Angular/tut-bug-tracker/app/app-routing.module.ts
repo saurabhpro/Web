@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
     imports: [
         RouterModule.forRoot([
-           // { path: '', component: BugListComponent }
+            // { path: '', component: BugListComponent }
         ])
     ],
     exports: [RouterModule]

@@ -10,22 +10,8 @@ export class BugService {
     //_database was private, we added `get database()`
     private bugsDbRef = this.fireb.database.ref('/bugs');
 
+    //Inject FirebaseConfigService
     constructor(private fireb: FirebaseConfigService) { }
-
-    getAddedBugs(): Observable<any> {
-        return Observable.create(obs => {
-            this.bugsDbRef.on('child_added', bug => {
-                const newBug = bug.val() as Bug;   //.val() creates a js object
-                //adding the key of the fetched object - since Bug model didnt hav it
-                newBug.id = bug.key;
-                obs.next(newBug);
-            },
-                err => {
-                    obs.throw(err);
-                });
-        });
-    }
-
 
     addBug(bug: Bug) {
         const newBugRef = this.bugsDbRef.push();
@@ -47,12 +33,47 @@ export class BugService {
         currentBugRef.update(bug);
     }
 
+    deleteBug(bug: Bug) {
+        const currentBugRef = this.bugsDbRef.child(bug.id);
+        currentBugRef.remove();
+    }
+
+    /* Listners to update the list on UI*/
+
+    getAddedBugs(): Observable<any> {
+        return Observable.create(obs => {
+            this.bugsDbRef.on('child_added', bug => {
+                const newBug = bug.val() as Bug;   //.val() creates a js object
+                //adding the key of the fetched object - since Bug model didnt hav it
+                newBug.id = bug.key;
+                obs.next(newBug);
+            },
+                err => {
+                    obs.throw(err);
+                });
+        });
+    }
+
     changedListener(): Observable<any> {
         return Observable.create(obs => {
             this.bugsDbRef.on('child_changed', bug => {
                 const updatedBug = bug.val() as Bug;
                 updatedBug.id = bug.key;
                 obs.next(updatedBug);
+            },
+                err => {
+                    obs.throw(err);
+                });
+        });
+    }
+
+    deletedListener(): Observable<any> {
+        return Observable.create(obs => {
+            this.bugsDbRef.on('child_removed', bug => {
+                const removedBug = bug.val() as Bug;
+                removedBug.id = bug.key;
+                //console.log(removedBug);
+                obs.next(removedBug);
             },
                 err => {
                     obs.throw(err);

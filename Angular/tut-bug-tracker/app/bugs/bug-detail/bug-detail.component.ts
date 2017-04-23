@@ -17,7 +17,7 @@ import { STATUS, SEVERITY } from '../../shared/constant/constants';
     styleUrls: ['bug-detail.component.css']
 })
 export class BugDetailComponent implements OnInit {
-    private modalId = "bugModal";
+    private modalId = "bugModal";   //no use
     private bugForm: FormGroup;
 
     private statuses = STATUS;
@@ -28,11 +28,12 @@ export class BugDetailComponent implements OnInit {
 
     @Input() private currentBug: Bug = new Bug(null, null, this.statuses.Logged, this.severities.Severe, null, null, null);
 
+    //Inject Bug Service and form builder
     constructor(private formBuilder: FormBuilder, private bugService: BugService) { }
 
     ngOnInit() {
 
-        console.log(this.statuses);
+        //console.log(this.statuses);
 
         this.statusArr = Object.keys(this.statuses).filter(Number);
         this.severityArr = Object.keys(this.severities).filter(Number);
@@ -44,7 +45,7 @@ export class BugDetailComponent implements OnInit {
         //creating a reactive form - needs a modal - add it to the actual html form
         // this.bugForm = new FormGroup({
         //     //param1 - initalvalue, param2 - single or array of validators
-        //     title: new FormControl(null, [Validators.required, forbiddenStringValidator(/puppy/i)]),   //true is title != *puppy*, i ignore case
+        //     title: new FormControl(null, [Validators.required, forbiddenStringValidator(/puppy/i)]),   //true if title != *puppy*, i ignore case
         //     status: new FormControl(1, Validators.required),     //pass 1 will pick option 1 from status dropdown
         //     severity: new FormControl(2, Validators.required),   //pass 2 which will pick option 2
         //     description: new FormControl(null, Validators.required)
@@ -72,32 +73,42 @@ export class BugDetailComponent implements OnInit {
         })
     }
 
+    // on click of save
     submitForm() {
         this.currentBug.title = this.bugForm.value["title"];
         this.currentBug.status = this.bugForm.value["status"];
         this.currentBug.severity = this.bugForm.value["severity"];
         this.currentBug.description = this.bugForm.value["description"];
 
-
-        // console.log(this.bugForm);
+        //console.log('Hi', this.bugForm.value);
         if (this.currentBug.id) {
             this.updateBug();
         } else {
             this.addBug();
         }
-        
-        //this.freshForm(); tp spearate the reset from not closing the modal
+
+        //this.freshForm(); commented to spearate the reset from not closing the modal
     }
 
-    addBug() {
+    private addBug() {
         //pass to the service
         this.bugService.addBug(this.currentBug);
-
         //this.freshForm();
     }
 
-    updateBug() {
+    private updateBug() {
         this.bugService.updateBug(this.currentBug);
+        //this.freshForm();
+    }
+
+
+    //on click of Delete
+    deleteItem() {
+        this.deleteBug();
+    }
+
+    private deleteBug() {
+        this.bugService.deleteBug(this.currentBug);
         //this.freshForm();
     }
 
@@ -106,7 +117,7 @@ export class BugDetailComponent implements OnInit {
         this.cleanBug();
     }
 
-    cleanBug() {
+    private cleanBug() {
         this.currentBug = new Bug(null, null, this.statuses.Logged, this.severities.Severe, null, null, null, null, null);
     }
 }
