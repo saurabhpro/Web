@@ -1,0 +1,25 @@
+<div *ngIf="hero">
+    <!--
+        When there is no selected hero, the ngIf directive removes the hero detail HTML from the DOM. 
+        There are no hero detail elements or bindings to worry about.
+    -->
+    <h2>{{hero.name}} details</h2>
+
+    <div><label>id: </label>{{hero.id}}</div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name">
+
+        <!--
+            [(ngModel)] is the Angular syntax to bind the hero.name property to the textbox. 
+            Data flows in both directions: from the property to the textbox, and from the textbox back to the property.
+
+            Unfortunately, immediately after this change, the application breaks. If you looked in the browser console, 
+            you'd see Angular complaining that "ngModel ... isn't a known property of input."
+
+            Although NgModel is a valid Angular directive, it isn't available by default. It belongs to the optional FormsModule. 
+            You must opt-in to using that module.
+        -->
+
+    </div>
+</div>
