@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 //Component
 import { AppComponent } from './app.component';
-import { HeroDetailComponent } from './hero-detail.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 
 @NgModule({
