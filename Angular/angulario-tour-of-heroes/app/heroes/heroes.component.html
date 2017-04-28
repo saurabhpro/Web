@@ -14,21 +14,25 @@
         <span class="badge">{{hero.id}}</span> {{hero.name}}
     </li>
 </ul>
-<hero-detail [hero]="selectedHero"></hero-detail>
 <!--
-<div *ngIf="selectedHero">
-    
-        When there is no selected hero, the ngIf directive removes the hero detail HTML from the DOM. 
-        There are no hero detail elements or bindings to worry about.
-    
-    <h2>{{selectedHero.name}} details</h2>
+<hero-detail [hero]="selectedHero"></hero-detail> -->
 
+<div *ngIf="selectedHero">
+
+    <!--When there is no selected hero, the ngIf directive removes the hero detail HTML from the DOM. 
+        There are no hero detail elements or bindings to worry about.-->
+
+    <h2>
+        {{selectedHero.name | uppercase}} is my hero
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+
+    <!--
     <div><label>id: </label>{{selectedHero.id}}</div>
     <div>
         <label>name: </label>
         <input [(ngModel)]="selectedHero.name" placeholder="name">
 
-        
             [(ngModel)] is the Angular syntax to bind the hero.name property to the textbox. 
             Data flows in both directions: from the property to the textbox, and from the textbox back to the property.
 
@@ -38,7 +42,7 @@
             Although NgModel is a valid Angular directive, it isn't available by default. It belongs to the optional FormsModule. 
             You must opt-in to using that module.
         
-
+        
     </div>
+    -->
 </div>
--->
