@@ -1,0 +1,15 @@
+{
+  "name": "functional_scripts",
+  "version": "1.0.0",
+  "description": "Code based on Function JS by Apress",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "typescript": "^2.3.2"
+  }
+}

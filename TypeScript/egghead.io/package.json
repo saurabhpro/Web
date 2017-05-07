@@ -1,0 +1,17 @@
+{
+  "name": "egghead.io",
+  "version": "1.0.0",
+  "description": "[Documentaion on How To Use Different Errors](https://narayanatechnicalworld.blogspot.in/2016/05/error-handling-in-typescript.html)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^2.3.2"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.41"
+  }
+}
