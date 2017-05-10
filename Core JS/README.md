@@ -1,5 +1,5 @@
 # JavaScript Recipes: A Problem-Solution Approach
-[Chapter 1 - Types](./JS Knowledge Base/1.Types.md)
+[Chapter 1 - Types](JS Knowledge Base/1.Types.md)
 # Chapter - 5
 Zero-Fill Right Shift (>>>) 
 ~0; //-1
@@ -170,3 +170,25 @@ multiDArray.sort(function(a,b){
 console.log(multiDArray); //returns [[1,2], [3,4], [5,6], [7,8]];
 
 ```
+
+## forEach()
+
+## Test for a False Condition in an Array?
+The `every()` method will run on every element. The important difference is that the callback function will evaluate the element and return true only if every element meets the conditions. Otherwise, it will stop evaluating and return false. This function is only called on indexes with a value.
+```js
+//Appending the Values of an Array to Another Array
+var myArray = [9, 2, 7, 6, 8, 5, 3];
+myArray.every(function(element){
+     console.log(element >= 1); //returns true
+});
+```
+
+##  Test for a True Condition in an Array?
+```js
+//Reversing Elements in the Array Using the Reverse Method
+var myArray = [9, 2, 7, 6, 8, 5, 3];
+    myArray.some(function(element){
+        console.log(element == 9); //returns true then false for all the other values
+    });
+```
+The `some()` method returns true for the element that meets the condition. It will return false for everything else. Just like the `every()` method, it will not execute on indexes that do not contain a value or have been deleted.
