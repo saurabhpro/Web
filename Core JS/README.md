@@ -1,5 +1,5 @@
 # JavaScript Recipes: A Problem-Solution Approach
-[Chapter 1 - Types](Web/Core JS/JS Knowlede Base/1.Types.md)
+[Chapter 1 - Types](https://github.com/saurabhpro/Web/blob/master/Core%20JS/JS%20Knowlede%20Base/1.Types.md)
 # Chapter - 5
 Zero-Fill Right Shift (>>>) 
 ~0; //-1
