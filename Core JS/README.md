@@ -10,3 +10,13 @@ Zero-Fill Right Shift (>>>)
 ~2; //-3
 ~7; //-8,
 
+
+* [Chapter 6 - Array](JS_Knowlede_Base/4-Numbers.md)
+* [Chapter 7 - Array Advance](JS_Knowlede_Base/4-Numbers.md)
+* [Chapter 8 - Array Advance](JS_Knowlede_Base/4-Numbers.md)
+* [Chapter 9 - Objects](JS_Knowlede_Base/9-Objects.md)
+* [Chapter 11 - Maps](JS_Knowlede_Base/11-Maps.md)
+* [Chapter 12 - Functions](JS_Knowlede_Base/12-Function.md)
+
+
+
