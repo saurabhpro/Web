@@ -27,16 +27,6 @@ console.log(results); //returns 1 Mississippi 2 Mississippi
 
 Tagged template functions allow you to take a template literal and its values as its parmeters.
 
-## Using Line Breaks with Template Literals
-```js
-var seriesOfWords = ' this is line one\n this is line two\n this is line three';
-console.log(seriesOfWords);
-var temp = `
-           one
-two
-three `
-console.log(temp);//as shown
-```
 
 ## Returning a String with the Raw Property
 ```js
@@ -59,3 +49,14 @@ In the example, a line break has been added to each name. When using the raw pro
 they are printed just as they were put into the template literal.
 
 
+
+## Using Line Breaks with Template Literals
+```js
+var seriesOfWords = ' this is line one\n this is line two\n this is line three';
+console.log(seriesOfWords);
+var temp = `
+           one
+two
+three `
+console.log(temp);//as shown
+```
