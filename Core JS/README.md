@@ -17,6 +17,8 @@ Zero-Fill Right Shift (>>>)
 * [Chapter 9 - Objects](JS_Knowlede_Base/9-Objects.md)
 * [Chapter 11 - Maps](JS_Knowlede_Base/11-Maps.md)
 * [Chapter 12 - Functions](JS_Knowlede_Base/12-Function.md)
+* [Chapter 13 - Generators](JS_Knowlede_Base/13-Generators.md)
+* [Chapter 14 - Template Strings](JS_Knowlede_Base/14-templateStrings.md)
 
 
 
