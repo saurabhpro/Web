@@ -135,7 +135,7 @@ does not know the difference between an object literal and the code block. There
 object with parentheses the object will be returned, even if the return keyword is not explicitly used.
 
 ## super and this work as expected
-Just a not on this
+Just a note on `this`
 ```js
 console.log(this); //returns Window
 
