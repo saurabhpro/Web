@@ -7,7 +7,9 @@
 # Chapter - 5
 Zero-Fill Right Shift (>>>) 
 ~0; //-1
+
 ~2; //-3
+
 ~7; //-8,
 
 
@@ -19,6 +21,9 @@ Zero-Fill Right Shift (>>>)
 * [Chapter 12 - Functions](JS_Knowlede_Base/12-Function.md)
 * [Chapter 13 - Generators](JS_Knowlede_Base/13-Generators.md)
 * [Chapter 14 - Template Strings](JS_Knowlede_Base/14-templateStrings.md)
+
+* [Chapter 15 - symbol](JS_Knowlede_Base/15-.md)
+* [Chapter 16 - Proxies](JS_Knowlede_Base/12-Function.md)
 
 
 
