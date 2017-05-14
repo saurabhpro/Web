@@ -35,7 +35,7 @@ Most use cases for anonymous functions are for closures or using a function as a
 
 
 ## method parameters
-Up until ES6 properties, had a value of undefined if a value was not passed when the function was called. Default properties are not restricted to strings or numbers. Objects, arrays, and functions can be used as default values. One of the values that could be passed over is undefined the result would be the same as not passing a value. This would be different than passing null.
+Up until ES6 properties, had a value of `undefined` if a value was not passed when the function was called. Default properties are not restricted to strings or numbers. Objects, arrays, and functions can be used as default values. One of the values that could be passed over is undefined the result would be the same as not passing a value. This would be different than passing null.
 
 Properties can also be evaluated at call time. This would give you the ability to assign a function as the default property and return the result.
 Properties can also be chained together.
@@ -154,18 +154,19 @@ function globalStrictFunction(){
 	'use strict'
 	return this;
 }
-//When returning this from a function call, its value is also Window. In this instance, 
-//the function is part of the global scope, which means you can also call this same 
-//function this way: window.globalFunction(). In either case the result would be the same.
+/*
+When returning this from a function call, its value is also Window. In this instance, 
+the function is part of the global scope, which means you can also call this same 
+function this way: window.globalFunction(). In either case the result would be the same.
 
-//In the earlier examples we are not using strict mode. Strict mode is a more restricted version 
-//of JavaScript that is designed to have different semantics. If you were to use strict mode at 
-//the top of the page, the first and second results would return undefined.
+In the earlier examples we are not using strict mode. Strict mode is a more restricted version 
+of JavaScript that is designed to have different semantics. If you were to use strict mode at 
+the top of the page, the first and second results would return undefined.
 
-//Strict mode can also be defined on the function level. Before all other statements add use strict 
-//to run the function in strict mode. When using the globalStrictFunction the result of this is undefined. 
-//The reason you receive undefined is that this keeps the value of whatever it was set to when the function is being executed.
-
+Strict mode can also be defined on the function level. Before all other statements add use strict to run 
+the function in strict mode. When using the globalStrictFunction the result of this is undefined. The reason 
+you receive undefined is that this keeps the value of whatever it was set to when the function is being executed.
+*/
 console.log(globalStrictFunction());
 console.log(window.globalStrictFunction());
 
