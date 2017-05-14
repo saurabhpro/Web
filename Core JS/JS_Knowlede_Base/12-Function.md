@@ -104,9 +104,13 @@ document.getElementById('myButton').addEventListener('click', function(){
 	}, 1000);
 });
 ```
-The first example first shows how the keyword `this` has different context between the callback function and the function associated with `setInterval`. 
-The only way to bridge the gap is the create a new variable 
-*(this is why in reval's js file always `var me = this` is done as `this` context can chnage based on from where the callback will be executed .*
+The first example first shows how the keyword `this` has different context between the callback function 
+and the function associated with `setInterval`. 
+The only way to bridge the gap is the create a new variable
+
+*(this is why in reval's js file always `var me = this` is done as `this` context can chnage based 
+on from where the callback will be executed .*
+
 The inner function (closure) can access the outer variable without using the keyword `this`.
 
 ```js
@@ -121,8 +125,14 @@ document.getElementById('myButton').addEventListener('click', () => {
 var myObj = () =>  ({name:'June'}) ;
 console.log(myObj()); //returns Object {name: "June"}
 ```
-The second example done with ES6 shows a similar version that is less verbose using the arrow functions. Because arrow functions inherit the property this (due to lexical scoping), you do not need to define another variable to reference the outer context.
-If the arrow function needs to return an object literal, the object must be surrounded by parentheses. The reason for this is because if the block were to start with the curly braces ({}), the JavaScript engine does not know the difference between an object literal and the code block. Therefore, by surrounding the object with parentheses the object will be returned, even if the return keyword is not explicitly used.
+The second example done with ES6 shows a similar version that is less verbose using the arrow functions. 
+Because arrow functions inherit the property this (due to lexical scoping), you do not need to define another 
+variable to reference the outer context.
+
+If the arrow function needs to return an object literal, the object must be surrounded by parentheses. 
+The reason for this is because if the block were to start with the curly braces ({}), the JavaScript engine 
+does not know the difference between an object literal and the code block. Therefore, by surrounding the 
+object with parentheses the object will be returned, even if the return keyword is not explicitly used.
 
 ## super and this work as expected
 Just a not on this
@@ -133,7 +143,8 @@ function globalFunction(){
 	return this;
 }
 
-//First let’s talk about the global context. If you were to just print out the value of this in the console in an otherwise blank JavaScript file, it would refer to the Window object.
+//First let’s talk about the global context. If you were to just print out the value 
+//of this in the console in an otherwise blank JavaScript file, it would refer to the Window object.
 
 console.log(globalFunction()); //returns Window
 
@@ -143,11 +154,18 @@ function globalStrictFunction(){
 	'use strict'
 	return this;
 }
-//When returning this from a function call, its value is also Window. In this instance, the function is part of the global scope, which means you can also call this same function this way: window.globalFunction(). In either case the result would be the same.
+//When returning this from a function call, its value is also Window. In this instance, 
+//the function is part of the global scope, which means you can also call this same 
+//function this way: window.globalFunction(). In either case the result would be the same.
 
-//In the earlier examples we are not using strict mode. Strict mode is a more restricted version of JavaScript that is designed to have different semantics. If you were to use strict mode at the top of the page, the first and second results would return undefined.
+//In the earlier examples we are not using strict mode. Strict mode is a more restricted version 
+//of JavaScript that is designed to have different semantics. If you were to use strict mode at 
+//the top of the page, the first and second results would return undefined.
 
-//Strict mode can also be defined on the function level. Before all other statements add use strict to run the function in strict mode. When using the globalStrictFunction the result of this is undefined. The reason you receive undefined is that this keeps the value of whatever it was set to when the function is being executed.
+//Strict mode can also be defined on the function level. Before all other statements add use strict 
+//to run the function in strict mode. When using the globalStrictFunction the result of this is undefined. 
+//The reason you receive undefined is that this keeps the value of whatever it was set to when the function is being executed.
+
 console.log(globalStrictFunction());
 console.log(window.globalStrictFunction());
 
@@ -158,12 +176,16 @@ function saySomething(){
 
 /*
 //USING THE BIND METHOD ON A FUNCTION
-Using this method on a function creates a new function called a bound function (BF). The value of this is set to the value that is provided in the first argument. 
+Using this method on a function creates a new function called a bound function (BF). 
+The value of this is set to the value that is provided in the first argument. 
 */
 
 var phrase = saySomething.bind({something: 'Brothers! Sisters!'});
 
-//In the following example, the function saySomething returns a property called something. On its own it would return undefined since there isn’t a variable in the function called something. When using the bind method, we provide an object with the property something. So the object becomes bound to the function and the property something now has a value.
+//In the following example, the function saySomething returns a property called something. 
+//On its own it would return undefined since there isn’t a variable in the function called something. 
+//When using the bind method, we provide an object with the property something. 
+//So the object becomes bound to the function and the property something now has a value.
 
 console.log(saySomething()); //returns undefine
 console.log(phrase());  //returns Brothers! Sisters!
@@ -176,9 +198,11 @@ function useCallFunction(){
 /*
 //USING CALL AND APPLY ON A FUNCTION
 
-Using the call and apply methods on a function is similar to using bind, where you define the object that the keyword this is bound to. 
+Using the call and apply methods on a function is similar to using bind, where you define the object 
+that the keyword this is bound to. 
 
-In the previous example, the call method passes an object over and the function uses the properties of that object to return some values. If you’re using the apply method, you would get the same results.
+In the previous example, the call method passes an object over and the function uses the properties 
+of that object to return some values. If you’re using the apply method, you would get the same results.
 */
 var greetingObj = {greeting: 'Hello, Mr. Robot'};
 
@@ -187,7 +211,8 @@ console.log(useCallFunction.apply(greetingObj));
 
 /*
 //USING AN EVENT HANDLER
-If the function that is being executed is from an event handler, the value of this is set to the element that fired the event. The same is true if the event is fired from a inline event.
+If the function that is being executed is from an event handler, the value of this is set to the element 
+that fired the event. The same is true if the event is fired from a inline event.
 */
 document.getElementById('myButton').addEventListener('click', function(e){
 	console.log(this); //<button id="myButton">Click Me</button>
@@ -196,8 +221,15 @@ document.getElementById('myButton').addEventListener('click', function(e){
 /*
 //USING ARROW FUNCTIONS
 Arrow function expressions give you the ability to create functions just like a function expression but
-with less code. They start with the list of parameters, the arrow pointing to the statement that needs to be executed. If using this in a global context, the Window object would return. It is also the case if the function were to be called as the method of another object, or if the call or bind methods were used. This lets you know that the value of this will be set to the execution context. For example, if arrow functions were used inside an object, the result of this would be the object that this was defined in.
+with less code. They start with the list of parameters, the arrow pointing to the statement that needs 
+to be executed. If using this in a global context, the Window object would return. 
+
+It is also the case if the function were to be called as the method of another object, 
+or if the call or bind methods were used. This lets you know that the value of this will be set 
+to the execution context. For example, if arrow functions were used inside an object, 
+the result of this would be the object that this was defined in.
 */
+
 var globalArrayFunction = () => this;
 console.log(globalArrayFunction());  //returns Window
 
@@ -212,7 +244,8 @@ console.log(returnedFunction()); //returns Object
 
 /*
 //USING OBJECT METHODS
-Object methods make using this much simpler. The value is always set to the object the method is called on, no matter how the method is defined.
+Object methods make using this much simpler. The value is always set to the object the method 
+is called on, no matter how the method is defined.
 
 */
 var theNumber = {p: 42};
