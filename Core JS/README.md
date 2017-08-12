@@ -21,9 +21,12 @@ Zero-Fill Right Shift (>>>)
 * [Chapter 12 - Functions](JS_Knowlede_Base/12-Function.md)
 * [Chapter 13 - Generators](JS_Knowlede_Base/13-Generators.md)
 * [Chapter 14 - Template Strings](JS_Knowlede_Base/14-templateStrings.md)
-
-* [Chapter 15 - symbol](JS_Knowlede_Base/15-.md)
-* [Chapter 16 - Proxies](JS_Knowlede_Base/12-Function.md)
+* [Chapter 15 - ](JS_Knowlede_Base/15-.md)
+* [Chapter 16 - ](JS_Knowlede_Base/15-.md)
+* [Chapter 17 - Classes in JS](JS_Knowlede_Base/17-Class.md)
+* [Chapter 18 - ](JS_Knowlede_Base/12-.md)
+* [Chapter 19 - Error and Debugging JS](JS_Knowlede_Base/19-errorDebug.md)
+* [Chapter 20 - RegEx](JS_Knowlede_Base/20-RegEx.md)
 
 
 
