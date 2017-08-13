@@ -1,0 +1,11 @@
+{
+  "name": "official",
+  "version": "1.0.0",
+  "description": "Official TypeScript Documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh",
+  "license": "ISC"
+}
