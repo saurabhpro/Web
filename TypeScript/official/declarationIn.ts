@@ -1,4 +1,4 @@
-function f(shouldInitialize: boolean) {
+function f2(shouldInitialize: boolean) {
     if (shouldInitialize) {
         var x = 10;
     }
@@ -6,8 +6,8 @@ function f(shouldInitialize: boolean) {
     return x;
 }
 
-f(true);  // returns '10'
-f(false); // returns 'undefined'
+f2(true);  // returns '10'
+f2(false); // returns 'undefined'
 
 //var declarations are accessible anywhere within their containing function, module, namespace, or global scope 
 
@@ -22,6 +22,7 @@ function sumMatrix(matrix: number[][]) {
             sum += currentRow[i];
         }
     }
+    console.log("test");
 
     return sum;
 }
@@ -53,7 +54,7 @@ function f(x) {
 
 //In the above example, all declarations of x actually refer to the same x, and this is perfectly valid. This often ends up being a source of bugs. Thankfully, let declarations are not as forgiving.
 let x = 10;
-let x = 20; // error: can't re-declare 'x' in the same scope
+//let x = 20; // error: can't re-declare 'x' in the same scope
 
 
 //const declarations
@@ -62,18 +63,18 @@ let x = 20; // error: can't re-declare 'x' in the same scope
 const numLivesForCat = 9;
 //They are like let declarations but, as their name implies, their value cannot be changed once they are bound. In other words, they have the same scoping rules as let, but you can’t re-assign to them.
 //const is only applied on variables and not properties
-const numLivesForCat = 9;
+//const numLivesForCat = 9;
 const kitty = {
     name: "Aurora",
     numLives: numLivesForCat,
 }
 
 // Error
-kitty = {
+/*kitty = {
     name: "Danielle",
     numLives: numLivesForCat
 };
-
+*/
 // all "okay"
 kitty.name = "Rory";
 kitty.name = "Kitty";
