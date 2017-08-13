@@ -1,3 +1,5 @@
+[Reference from](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+
 The idea way to run this ts program is to 
 1. `command + shift + p` -> choose  `tasks: run tasks`
 2. this will take `tasks.json` and compile a .js for your ts file
