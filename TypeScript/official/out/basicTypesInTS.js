@@ -20,9 +20,9 @@ let list2 = [1, 2, 3];
 //Tuple
 //Tuple types allow you to express an array where the type of a fixed number of elements is known, but need not be the same. For example, you may want to represent a value as a pair of a string and a number:
 // Declare a tuple type
-let x;
+let x33;
 // Initialize it
-x = ["hello", 10]; // OK
+x33 = ["hello", 10]; // OK
 // Initialize it incorrectly
 //x = [10, "hello"]; // Error
 //Enum
