@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "target": "es2017",
+       // "outFile": "../js/app.js",
+        "outDir": "../js",
+        "experimentalDecorators": true,
+        "module": "amd"
+    }
+}
