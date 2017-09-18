@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="site.css">
     </head>
     <body>
@@ -42,8 +42,8 @@
             </div>
         </div>
 
-        <script src="js/lib/knockout-3.4.0.js"></script>
-        <script src="js/lib/require.js"></script>
+        <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
+        <script src="node_modules/requirejs/require.js"></script>
         
         <script>
             require(["js/vendingMachine"], function (machineModule) {
