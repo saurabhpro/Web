@@ -1,7 +1,7 @@
 export abstract class Coin {
     constructor(public value: number) {
     }
-    abstract getImageUrl(): string;
+    abstract getImageUrl(): string;     
 }
 
 export class Dime extends Coin {

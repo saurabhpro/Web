@@ -1,8 +1,21 @@
 define(["require", "exports", "./product"], function (require, exports, products) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    /**
+     * The default export, there is only a single default export per module.
+     * A default export can be a function, a class, an object or anything else.
+     * This value is to be considered as the "main" exported value since it will be the simplest to import.
+     *
+     * you can give any name - it will still import the deafult export, Ex:
+     * `import getVendingProduct from "./productFactory"`
+     *
+     * update - renamed case 10 -> default
+     *
+     * @export
+     * @returns {products.Product}
+     */
     function getProduct() {
-        let random = Math.floor(Math.random() * 11);
+        let random = Math.floor(Math.random() * 11); //range [0-11)
         switch (random) {
             case 0: return new products.CocaCola();
             case 1: return new products.Fanta();
