@@ -1,0 +1,25 @@
+{
+  "name": "ts_core",
+  "version": "1.0.0",
+  "description": "Udemy's Understanding TypeScript Course Work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": [
+    "TS",
+    "TypeScript",
+    "Course"
+  ],
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "systemjs": "^0.20.19",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  }
+}
