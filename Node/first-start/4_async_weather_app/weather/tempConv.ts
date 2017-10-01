@@ -1,10 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.cToF = (celsius) => {
+export const cToF = (celsius: number): string => {
     var cToFahr = celsius * (9 / 5 + 32);
     return cToFahr.toFixed(2) + ' \xB0F';
-};
-exports.fToC = (fahrenheit) => {
+}
+
+export const fToC = (fahrenheit: number): string => {
     var fToCel = (fahrenheit - 32) * 5 / 9;
     return fToCel.toFixed(2) + '\xB0C';
-};
+}
