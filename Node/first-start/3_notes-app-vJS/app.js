@@ -45,9 +45,9 @@ console.log('Yargs: ', argv);
 switch (command) {
     case 'listAll':
         const notesList = notes.listAllNote();
-       
+
         if (_.isEmpty(notesList)) {
-            console.log("No Note Present");
+            console.error("No Note Present");
         } else {
             console.log(`Printing ${notesList.length} Notes`);
             console.time('for');
@@ -64,25 +64,30 @@ switch (command) {
     case 'add':
         const noteAdded = notes.addNote(argv.title, argv.body);
         if (_.isUndefined(noteAdded)) {
-            console.log('Duplicate Note Title Found');
+            console.error('Duplicate Note Title Found');
         } else {
-            console.log('Added Note');
+            console.info('Added Note');
             notes.printNote(noteAdded);
         }
         break;
 
     case 'read':
         const note = notes.getThisNote(argv.title);
-        _.isEmpty(note) ? 'Note Not Found' : notes.printNote(note[0]);
+        if (_.isEmpty(note))
+            console.error('Note Not Found')
+        else
+            notes.printNote(note[0]);
         break;
 
     case 'remove':
         const isRemoved = notes.removeThisNote(argv.title);
-        
-        const msg = isRemoved ? 'Removed Note' : `Note with Title = ${argv.title} Not Found`;
-        console.log(msg);
+
+        if (isRemoved)
+            console.info('Removed Note')
+        else
+            console.error(`Note with Title = ${argv.title} Not Found`);
         break;
 
     default:
-        console.log('Command not recognized');
+        console.error('Command not recognized');
 }

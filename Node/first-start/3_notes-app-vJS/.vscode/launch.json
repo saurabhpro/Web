@@ -6,7 +6,7 @@
         "name": "Launch Program",
         "program": "${file}",
         "args": [
-            "listAll",
+            "remove",
             "--title",
             "Mo",
             "--body",
