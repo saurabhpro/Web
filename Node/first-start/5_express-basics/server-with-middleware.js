@@ -2,6 +2,9 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+//setting port dynamically
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 //to support partials in web page - 
@@ -91,10 +94,10 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen(3000,
+app.listen(port,
   //optional 2nd argument
   () => {
-    console.log('Server is up on port 3000');
+    console.log(`Server is up on port ${port}`);
   }
 );
 
