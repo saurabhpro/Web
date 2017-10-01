@@ -1,0 +1,19 @@
+<h1>Babies Born List</h1>
+
+<ul>
+  <!-- the async pipe that allows your template bindings to consume observables (which are asynchronous).-->
+  <li *ngFor="let baby of babies | async"> <!-- from where will the baby array come ? -> babies-component.ts -->
+    {{baby.name}}
+  </li>
+</ul>
+
+<!-- event binding -->
+<button (click)="giveBirth()">Give birth!!!</button>
+
+
+<footer>
+  <p>
+    babies works!
+  </p>
+
+</footer>
