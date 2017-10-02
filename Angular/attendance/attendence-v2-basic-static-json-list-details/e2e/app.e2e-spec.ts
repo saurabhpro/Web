@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('attendence-v1-basic-static-json-list-details App', () => {
+describe('attendence-v2-basic-static-json-list-details App', () => {
   let page: AppPage;
 
   beforeEach(() => {

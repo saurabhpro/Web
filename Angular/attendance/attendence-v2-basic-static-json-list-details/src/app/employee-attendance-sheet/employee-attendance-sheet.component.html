@@ -1,0 +1,32 @@
+<h2 style="color:blue">Company Employees</h2>
+
+<div>
+  <table class="table table-bordered">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Email ID</th>
+        <th>SalesForce ID</th>
+      </tr>
+    </thead>
+
+    <tr *ngFor="let emp of employees" [class.selected]="emp === selectedEmployee" (click)="selectedEmployeeDetails(emp)">
+      <td>{{emp.empRevalId}}</td>
+      <td>{{emp.empName}}</td>
+      <td>{{emp.empEmailId}}</td>
+      <td>{{emp.empSalesforceId}}</td>
+    </tr>
+  </table>
+
+  
+  <!-- this is the new syntax for ng-repeat
+   <ul>
+     <li *ngFor="let employee of employees">
+         <a href="#" (click)="selectPerson(person)">
+             {{employee.name}} 
+         </a>
+     </li>
+   </ul>
+-->
+</div>
