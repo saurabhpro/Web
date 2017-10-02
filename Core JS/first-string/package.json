@@ -1,0 +1,15 @@
+{
+  "name": "first-string",
+  "version": "1.0.0",
+  "description": "My First JS code to check the features of the language with Strings",
+  "main": "first.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^2.5.3"
+  }
+}

@@ -1,17 +1,22 @@
-var num1 = 1.45;
+const num1 = 1.45;
 
-var num2 = new Number(1.45);
+const num2 = new Number(1.45);
 
 console.log(typeof num1); // prints out number
 console.log(typeof num2); // prints out object”
 
 
-var sentence = 'This is one sentence. This is a sentence with a list of items:' +
+const sentence = 'This is one sentence. This is a sentence with a list of items:' +
 	'cherries, oranges, apples, bananas. That was the list of items.';
-var start = sentence.indexOf(':');
-var end = sentence.indexOf('.', start + 1);
-var fruits = sentence.substring(start + 1, end).split(',');
-var fruits2 = sentence.substr(start + 1, end - (start + 1)).split(/\s*,\s*/);
+
+const start = sentence.indexOf(':');
+
+const end = sentence.indexOf('.', start + 1);
+
+const fruits = sentence.substring(start + 1, end).split(',');
+
+const fruits2 = sentence.substr(start + 1, end - (start + 1)).split(/\s*,\s*/);
+
 console.log(fruits);
 console.log(fruits2);
 
@@ -24,11 +29,12 @@ console.log(fruits);
 //or
 
 
-var searchString = "Now is the time and this is the time and that is the time";
-var pattern = /t\w*e/g;
-var matchArray;
+const searchString = "Now is the time and this is the time and that is the time";
+const pattern = /t\w*e/g;
 
-var str = "";
+let matchArray: RegExpExecArray | null;
+
+let str = "";
 
 // check for pattern with regexp exec, if not null, process
 while (matchArray = pattern.exec(searchString)) {

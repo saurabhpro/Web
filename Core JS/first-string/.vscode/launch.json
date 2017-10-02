@@ -1,0 +1,26 @@
+{
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "First String",
+                "program": "${workspaceRoot}/first.js"
+            },
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Highlight String",
+                "program": "${workspaceRoot}/highlight.js"
+            },
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Launch Program",
+                "program": "${workspaceRoot}/first.js",
+                "outFiles": [
+                    "${workspaceRoot}/out/**/*.js"
+                ]
+            }
+        ]
+    }
