@@ -13,12 +13,13 @@ const app = express();
 
 app.use(bodyParser.json());
 
+// post mapping
 app.post('/todos', (req, res) => {
     const todo = new TodoModel({
         text: req.body.text
     })
 
-    console.log(req.body);
+    //console.log(req.body);
 
     todo.save()
         .then((doc) => {
@@ -32,11 +33,26 @@ app.post('/todos', (req, res) => {
             });
 });
 
+// get methods
+app.get('/todos', (req, res) => {
+    TodoModel.find()
+        .then((todos) => {
+            res.send({
+                todos
+            });
+        }, (e) => {
+            res.status(400).send(e);
+        });
+});
+
 app.listen(3000, () => {
     console.log('Started on port 3000');
 });
 
 
+module.exports = {
+    app
+};
 /*
 const todoObj = new TodoModel({
     text: ' hi there ',
