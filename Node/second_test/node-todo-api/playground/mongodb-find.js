@@ -27,7 +27,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (error, dbObject) => {
                 console.log('Unable to fetch record!', error);
             });
 
-    /*
+
     // get filtered data 
     dbObject.collection('Todos')
         .find({
@@ -56,7 +56,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (error, dbObject) => {
             (error) => {
                 console.log('Unable to fetch record!', error);
             });
-    
+
 
     // get count of the cursors
     dbObject.collection('Todos')
@@ -69,8 +69,9 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (error, dbObject) => {
             (error) => {
                 console.log('Unable to fetch record!', error);
             });
-    */
 
+
+    // test on users
     dbObject.collection('Users')
         .find({
             name: 'saurabh kumar'
