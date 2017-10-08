@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const _ = require('lodash');
 
 const {
     ObjectID
@@ -77,7 +78,7 @@ app.get('/todos/:id', (req, res) => {
 
 // delete specific documents
 app.delete('/todos/:id', (req, res) => {
-    var id = req.params.id;
+    const id = req.params.id;
 
     // validate the ObjectID
     if (!ObjectID.isValid(id)) {
@@ -99,6 +100,43 @@ app.delete('/todos/:id', (req, res) => {
         });
 });
 
+
+// update a resourse using PATCH
+app.patch('/todos/:id', (req, res) => {
+    const id = req.params.id;
+
+    // pick (from , pick_these ) and returns a new object with picked properties
+    const body = _.pick(req.body, ['text', 'completed']);
+
+    if (!ObjectID.isValid(id)) {
+        return res.status(404).send();
+    }
+
+    if (_.isBoolean(body.completed) && body.completed /*true*/ ) {
+        body.completedAt = new Date().getTime(); // returns js timestamp from jan 1 1970 (-ve means past)
+    } else {
+        body.completed = false;
+        body.completedAt = null; // will be removed from db
+    }
+
+    TodoModel.findByIdAndUpdate(id, {
+            $set: body  // object having updated values
+        }, {
+            new: true   // similar to returnOriginal = false to be processed further
+        })
+        .then((todo) => {
+            if (!todo) {
+                return res.status(404).send();
+            }
+
+            res.send({
+                todo
+            });
+        }).catch((e) => {
+            res.status(400).send();
+        })
+});
+
 app.listen(port, () => {
     console.log(`Started on port ${port}`);
 });
@@ -114,7 +152,7 @@ const todoObj = new TodoModel({
     completedAt: 123
 });
 
-ntodoObj.save()
+todoObj.save()
     .then((doc) => {
     console.log('Saved Todo: ', JSON.stringify(doc, undefined, 2));
 }, (error) => {
