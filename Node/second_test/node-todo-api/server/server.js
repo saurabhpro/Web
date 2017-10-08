@@ -67,7 +67,7 @@ app.get('/todos/:id', (req, res) => {
             }
 
             res.send({
-                todo
+                todo /* ES6 syntax -> if { title: title } we can send {title} automatically */
             });
         })
         .catch((e) => {
