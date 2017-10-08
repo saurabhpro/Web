@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-var {
+const {
     ObjectID
 } = require('mongodb');
 
@@ -12,6 +12,9 @@ const {
     TodoModel
 } = require('./model/todo');
 
+
+//setting up the port so that it can be dwployed on heroku
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -72,9 +75,32 @@ app.get('/todos/:id', (req, res) => {
         });
 });
 
+// delete specific documents
+app.delete('/todos/:id', (req, res) => {
+    var id = req.params.id;
 
-app.listen(3000, () => {
-    console.log('Started on port 3000');
+    // validate the ObjectID
+    if (!ObjectID.isValid(id)) {
+        return res.status(404).send(); // send only 404 with no data
+    }
+
+    TodoModel.findByIdAndRemove(id)
+        .then((todo) => {
+            if (!todo) {
+                return res.status(404).send();
+            }
+
+            res.send({
+                todo
+            }); // by default sennds 200 as status
+        })
+        .catch((e) => {
+            res.status(400).send(); // Bad Request = 400
+        });
+});
+
+app.listen(port, () => {
+    console.log(`Started on port ${port}`);
 });
 
 
