@@ -17,6 +17,11 @@ const {
 } = require('./model/user');
 
 
+var {
+    authenticate
+} = require('./middleware/authenticate');
+
+
 //setting up the port so that it can be dwployed on heroku
 const port = process.env.PORT || 3000;
 
@@ -147,14 +152,22 @@ app.post('/users', (req, res) => {
     var user = new User(body);
 
     user.save()
-        .then((user) => {
-            console.log('Added : '+ user.email);
-            res.send(user);
-        }).catch((e) => {
+        .then(() => {
+            return user.generateAuthToken();
+        })
+        .then((token) => {
+            console.log('Added : ' + user.email);
+            res.header('x-auth', token).send(user); // add x-auth token to head
+        })
+        .catch((e) => {
             res.status(400).send(e);
         })
 });
 
+
+app.get('/users/me', authenticate, (req, res) => {
+    res.send(req.user);
+});
 
 
 app.listen(port, () => {
