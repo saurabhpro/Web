@@ -9,21 +9,14 @@ import 'rxjs/add/operator/toPromise';
 export class EmployeeService {
   employeeList: Employee[];
 
-  private urlBase = 'http://localhost:8080/';
+  // private urlBase = 'http://localhost:8080/';
   private empBasicUrl = 'api/v1/emp';  // URL to web API
 
   constructor(private http: Http) { }
 
   // Get all customers
-  getAllAttendance(): Promise<Employee[]> {
-    return this.http.get(this.urlBase + this.empBasicUrl)
-               .toPromise()
-               .then(response => response.json() as Employee[])
-               .catch(this.handleError);
-  }
-
   getAllEmpBasic(): Promise<Employee[]> {
-    return this.http.get(this.urlBase + this.empBasicUrl)
+    return this.http.get(this.empBasicUrl)
                .toPromise()
                .then(response => response.json() as Employee[])
                .catch(this.handleError);

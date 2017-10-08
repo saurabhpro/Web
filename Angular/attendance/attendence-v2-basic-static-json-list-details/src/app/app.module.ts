@@ -9,13 +9,15 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeAttendanceSheetComponent } from './employee-attendance-sheet/employee-attendance-sheet.component';
 import { EmployeeService } from './services/employee.service';
 import { EmployeeAllAttendanceService } from './services/employee-all-attendance.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeDetailsComponent,
     EmployeeListComponent,
-    EmployeeAttendanceSheetComponent
+    EmployeeAttendanceSheetComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

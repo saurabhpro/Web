@@ -26,3 +26,23 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## To configure proxy
+You can indeed setup a proxy to backend with the angular cli, with the __--proxy-config__ flag.
+
+Say we have a server running on `http://localhost:8080/api` and we want all calls to `http://localhost:4200/api` to go to that server.
+
+We create a file next to projects package.json called proxy.conf.json with the content
+```json
+{   "/api": {
+      "target": "http://localhost:8080",
+      "secure": false
+     } 
+  }
+```
+[...]
+
+and then we edit the package.json file's start script to be
+
+`"start": "ng serve --proxy-config proxy.conf.json"`, now run it with  `npm start`

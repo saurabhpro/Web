@@ -6,13 +6,13 @@ import { Http } from '@angular/http';
 export class EmployeeAllAttendanceService {
   employeeList: EmpAllAttendance[];
 
-    private urlBase = 'http://localhost:8080/';
+    // private urlBase = 'http://localhost:8080/';
     private empAllUrl = 'api/v1/all';  // URL to web API
 
     constructor(private http: Http) { }
     // Get all customers
     getAllAttendance(): Promise<EmpAllAttendance[]> {
-      return this.http.get(this.urlBase + this.empAllUrl)
+      return this.http.get(this.empAllUrl)
                  .toPromise()
                  .then(response => response.json() as EmpAllAttendance[])
                  .catch(this.handleError);

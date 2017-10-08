@@ -1,25 +1,27 @@
 <h2 style="color:blue">Company Employees</h2>
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-bordered table-responsive table-hover">
+      <thead class="thead-inverse">
+        <tr>
+          <th>Employee ID</th>
+          <th>Name</th>
+          <th>Email ID</th>
+          <th>SalesForce ID</th>
+        </tr>
+      </thead>
 
-<div>
-  <table class="table table-bordered">
-    <thead class="thead-inverse">
-      <tr>
-        <th>Employee ID</th>
-        <th>Name</th>
-        <th>Email ID</th>
-        <th>SalesForce ID</th>
+      <tr *ngFor="let emp of employees" [class.selected]="emp === selectedEmployee" (click)="selectedEmployeeDetails(emp)">
+        <td>{{emp.empId}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.emailId}}</td>
+        <td>{{emp.salesForceId}}</td>
       </tr>
-    </thead>
-
-    <tr *ngFor="let emp of employees" [class.selected]="emp === selectedEmployee" (click)="selectedEmployeeDetails(emp)">
-      <td>{{emp.empId}}</td>
-      <td>{{emp.name}}</td>
-      <td>{{emp.emailId}}</td>
-      <td>{{emp.salesForceId}}</td>
-    </tr>
-  </table>
-
-  <app-employee-details [employee]="selectedEmployee"></app-employee-details>
+    </table>
+  </div>
+  <div class="col-m-4">
+    <app-employee-details [employee]="selectedEmployee"></app-employee-details>
+  </div>
 
   <!-- this is the new syntax for ng-repeat
    <ul>
@@ -30,4 +32,5 @@
      </li>
    </ul>
 -->
+
 </div>
