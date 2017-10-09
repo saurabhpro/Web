@@ -1,0 +1,14 @@
+{
+  "name": "async-await",
+  "version": "1.0.0",
+  "description": "Using the new async/await keywords from ES7",
+  "main": "app-promises.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2"
+  }
+}
