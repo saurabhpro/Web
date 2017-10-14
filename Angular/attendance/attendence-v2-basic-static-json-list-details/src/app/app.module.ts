@@ -4,12 +4,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeAttendanceSheetComponent } from './employee-attendance-sheet/employee-attendance-sheet.component';
 import { EmployeeService } from './services/employee.service';
 import { EmployeeAllAttendanceService } from './services/employee-all-attendance.service';
+
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgxPaginationModule } from 'ngx-pagination'; // <-- import the module
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    NgxPaginationModule
   ],
   providers: [EmployeeService, EmployeeAllAttendanceService],
   bootstrap: [AppComponent]

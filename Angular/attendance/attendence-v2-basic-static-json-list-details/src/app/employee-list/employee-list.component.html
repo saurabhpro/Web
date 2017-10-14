@@ -1,9 +1,20 @@
-<h2 style="color:blue">Company Employees</h2>
+<header>
+  <nav class="navbar navbar-default">
+    <div>
+      <a class="navbar-brand" href="#">Company Employees</a>
+      <input class="form-control" type="text" name="search">
+    </div>
+  </nav>
+</header>
+
+<!--h2 style="color:blue">Company Employees</h2-->
+
 <div class="row">
   <div class="col-md-8">
     <table class="table table-bordered table-responsive table-hover">
       <thead class="thead-inverse">
         <tr>
+          <!--th>#</th-->
           <th>Employee ID</th>
           <th>Name</th>
           <th>Email ID</th>
@@ -11,14 +22,23 @@
         </tr>
       </thead>
 
-      <tr *ngFor="let emp of employees" [class.selected]="emp === selectedEmployee" (click)="selectedEmployeeDetails(emp)">
-        <td>{{emp.empId}}</td>
-        <td>{{emp.name}}</td>
-        <td>{{emp.emailId}}</td>
-        <td>{{emp.salesForceId}}</td>
-      </tr>
+      <tbody>
+        <tr *ngFor="let emp of employees | paginate: { itemsPerPage: 10, currentPage: page }; let i = index" [class.selected]="emp === selectedEmployee"
+          (click)="selectedEmployeeDetails(emp)">
+          <!--td>{{i + 1}}</td-->
+          <td>{{emp.empId}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.emailId}}</td>
+          <td>{{emp.salesForceId}}</td>
+        </tr>
+      </tbody>
+
     </table>
+
+    <pagination-controls (pageChange)="page = $event" autoHide="true"></pagination-controls>
+
   </div>
+
   <div class="col-m-4">
     <app-employee-details [employee]="selectedEmployee"></app-employee-details>
   </div>
