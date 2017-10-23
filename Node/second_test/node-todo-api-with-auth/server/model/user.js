@@ -105,7 +105,7 @@ UserSchema.pre('save', function (next) {
     // gensalt  for user.password
     bcrypt.genSalt(10, (err, salt) => {
       bcrypt.hash(user.password, salt, (err, hash) => {
-        
+
         // hash password
         user.password = hash;
         console.log('Bcrypt has: ' + hash);
@@ -118,6 +118,32 @@ UserSchema.pre('save', function (next) {
     next();
   }
 });
+
+UserSchema.statics.findByCredentials = function (email, password) {
+
+  const User = this;
+
+  return User.findOne({
+    email
+  }).then((user) => {
+    if (!user) {
+      return Promise.reject();
+    }
+
+    return new Promise((resolve, reject) => {
+      // use bcrypt.compare to compare the user.password and compare
+      bcrypt.compare(password, user.password, (err, res) => {
+        // res = true/false
+
+        console.log(res);
+        if (res)
+          resolve(user);
+        else
+          reject(); // sends a 400 back
+      });
+    });
+  });
+}
 
 var User = mongoose.model('User', UserSchema);
 

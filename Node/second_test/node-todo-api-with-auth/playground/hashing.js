@@ -23,7 +23,7 @@ const hashedPassword = '$2a$10$QRt5.oOel13mPOo/NmxXGeeasG/yw1e2EogFLRkz9vwsWe3DA
 bcrypt.compare(password, hashedPassword, (err, res) => {
   // res = true/false
   console.log(res);
-})
+});
 
 
 // Load the bcrypt module

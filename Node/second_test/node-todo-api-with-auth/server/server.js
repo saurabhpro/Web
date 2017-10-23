@@ -172,6 +172,24 @@ app.get('/users/me', authenticate, (req, res) => {
 });
 
 
+// POST Route /user/login {email, password} to find user in mongodb users collection
+app.post('/users/login', (req, res) => {
+    var body = _.pick(req.body, ['email', 'password']);
+    //var user = new User(body);
+
+    User.findByCredentials(body.email, body.password)
+        .then((user) => {
+          return  user.generateAuthToken().then((token) => {
+            console.log('Added : ' + user.email);
+            res.header('x-auth', token).send(user); // add x-auth token to head
+          });
+            //res.send(user);
+        }).catch((e) => {
+            res.status(400).send();
+        });
+});
+
+
 app.listen(port, () => {
     console.log(`Started on port ${port}`);
 });
