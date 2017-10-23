@@ -4,6 +4,36 @@ const {
 
 const jwt = require('jsonwebtoken');
 
+// for automatic salting
+const bcrypt = require("bcryptjs");
+
+/*Bcrypt */
+const password = '123abc!'; // change it to see how bcrypt prints false
+
+//1. salt - without salting hash will always be the same
+bcrypt.genSalt(10, (err, salt) => {
+  bcrypt.hash(password, salt, (err, hash) => {
+    console.log('Bcrypt has: ' + hash);
+  })
+}) // brcypt is slow so adding 10 rounds still makes forced attacks slow
+
+//2. genpassword verify sent password
+const hashedPassword = '$2a$10$QRt5.oOel13mPOo/NmxXGeeasG/yw1e2EogFLRkz9vwsWe3DAy27W';
+
+bcrypt.compare(password, hashedPassword, (err, res) => {
+  // res = true/false
+  console.log(res);
+})
+
+
+// Load the bcrypt module
+// var bcrypt = require('bcrypt');
+// Generate a salt
+var salt = bcrypt.genSaltSync(10);
+// Hash the password with the salt
+var hash = bcrypt.hashSync("my password", salt);
+
+
 // checkout the SHA mechanism - always same for a message
 var message = 'I am user number 3';
 var hash = SHA256(message).toString();
@@ -36,11 +66,12 @@ if (resultHash === token.hash) {
 
 // the above mechanism is used in jwt
 
-var token = jwt.sign(data, '123abc');   // takes the data -> signs it and returns a token
+var token = jwt.sign(data, '123abc'); // takes the data -> signs it and returns a token
 console.log(token);
 
 var decoded = jwt.verify(token, '123abc');
 console.log('decoded', decoded);
+
 
 /*
 
