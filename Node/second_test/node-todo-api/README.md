@@ -2,9 +2,10 @@ mongod - start database server - it needs 1 arg --dbpath - where to keep the dat
 
 mongo-  to run some mondo command
 
-you need two temrminals
+you need two temrminals from mongo/bin run
 T1. **./mongod --dbpath ~/mongo-data**
 
+then run
 T2. ./mongo 
 > db.Todos.insert({test: 'Saurabh is here'})
 WriteResult({ "nInserted" : 1 })

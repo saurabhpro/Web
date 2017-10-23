@@ -77,6 +77,7 @@ UserSchema.methods.generateAuthToken = function () {
 
 UserSchema.statics.findByToken = function (token) {
 
+  // model method are called with this stored as a local variable
   const User = this;
   let decoded;
 
@@ -89,6 +90,7 @@ UserSchema.statics.findByToken = function (token) {
     return Promise.reject();
   }
 
+  // findOne is from mongoose
   return User.findOne({
     '_id': decoded._id,
     'tokens.token': token,

@@ -15,10 +15,11 @@ const authenticate = (req, res, next) => {
         return Promise.reject('This is the e value for catch');
       }
 
-      // modifying the request with found values
+      // modifying the request with found values instead of sending from here
       req.user = user;
       req.token = token;
-      next();
+
+      next(); // to run the following after middleware code
 
     })
     .catch((e) => {

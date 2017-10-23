@@ -165,7 +165,9 @@ app.post('/users', (req, res) => {
 });
 
 
+// without the x-auth in request header - this will return error
 app.get('/users/me', authenticate, (req, res) => {
+    // if next() isn't called - the callback won't execute
     res.send(req.user);
 });
 
