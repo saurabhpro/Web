@@ -1,6 +1,6 @@
 const {
   User
-} = require('../model/user');
+} = require('../models/user');
 
 
 // to test this add x-auth in yout http header and add 

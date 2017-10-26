@@ -11,10 +11,10 @@ const {
 } = require('./db/mongoose-config');
 const {
     TodoModel
-} = require('./model/todo');
+} = require('./models/todo');
 const {
     User
-} = require('./model/user');
+} = require('./models/user');
 
 
 var {

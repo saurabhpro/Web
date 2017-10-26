@@ -7,6 +7,32 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Mocha Tests",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "-u",
+                "tdd",
+                "--timeout",
+                "999999",
+                "--colors",
+            //"export NODE_ENV=test || SET NODE_ENV=test ",
+                "${workspaceFolder}/server/tests"
+            ],
+
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "test",
+                "PORT": "3000",
+                "MONGODB_URI": "mongodb://localhost:27017/TodoAppTest",
+                "JWT_SECRET": "poijasdf98435jpgfdpoij3"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceFolder}/server/server.js"
         }
