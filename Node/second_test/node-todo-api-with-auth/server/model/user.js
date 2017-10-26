@@ -98,6 +98,7 @@ UserSchema.statics.findByToken = function (token) {
   });
 };
 
+// pre defines methods that will be called at the beginning
 UserSchema.pre('save', function (next) {
   const user = this;
 
@@ -119,6 +120,7 @@ UserSchema.pre('save', function (next) {
   }
 });
 
+// statics are the methods that can be called directly using the User exports
 UserSchema.statics.findByCredentials = function (email, password) {
 
   const User = this;
@@ -144,6 +146,21 @@ UserSchema.statics.findByCredentials = function (email, password) {
     });
   });
 }
+
+// note methods defined the methods to be used on this schema
+UserSchema.methods.removeToken = function (token) {
+  //lets you remove items from array
+  const user = this;
+
+  return user.update({
+    $pull: {
+      tokens: {
+        token
+      }
+    } // the entire object is removed from 
+  });
+
+};
 
 var User = mongoose.model('User', UserSchema);
 
