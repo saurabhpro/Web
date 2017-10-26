@@ -30,9 +30,10 @@ const app = express();
 app.use(bodyParser.json());
 
 // post mapping
-app.post('/todos', (req, res) => {
+app.post('/todos', authenticate, (req, res) => {
     const todo = new TodoModel({
-        text: req.body.text
+        text: req.body.text,
+        _creator: req.user._id
     })
 
     //console.log(req.body);
@@ -50,8 +51,10 @@ app.post('/todos', (req, res) => {
 });
 
 // get methods
-app.get('/todos', (req, res) => {
-    TodoModel.find()
+app.get('/todos', authenticate, (req, res) => {
+    TodoModel.find({
+            _creator: req.user._id // all the todos for currenly logged in user
+        })
         .then((todos) => {
             res.send({
                 todos
@@ -62,14 +65,18 @@ app.get('/todos', (req, res) => {
 });
 
 // fetch individual item
-app.get('/todos/:id', (req, res) => {
+app.get('/todos/:id', authenticate, (req, res) => {
     var id = req.params.id;
 
     if (!ObjectID.isValid(id)) {
         return res.status(404).send();
     }
 
-    TodoModel.findById(id)
+    // TodoModel.findById(id)
+    TodoModel.findOne({
+            _id: id,
+            _creator: req.user._id
+        })
         .then((todo) => {
             if (!todo) {
                 return res.status(404).send();
@@ -85,7 +92,7 @@ app.get('/todos/:id', (req, res) => {
 });
 
 // delete specific documents
-app.delete('/todos/:id', (req, res) => {
+app.delete('/todos/:id', authenticate, (req, res) => {
     const id = req.params.id;
 
     // validate the ObjectID
@@ -93,7 +100,11 @@ app.delete('/todos/:id', (req, res) => {
         return res.status(404).send(); // send only 404 with no data
     }
 
-    TodoModel.findByIdAndRemove(id)
+    //TodoModel.findByIdAndRemove(id)
+    TodoModel.findOneAndRemove({
+            _id: id,
+            _creator: req.user._id
+        })
         .then((todo) => {
             if (!todo) {
                 return res.status(404).send();
@@ -110,7 +121,7 @@ app.delete('/todos/:id', (req, res) => {
 
 
 // update a resourse using PATCH
-app.patch('/todos/:id', (req, res) => {
+app.patch('/todos/:id', authenticate, (req, res) => {
     const id = req.params.id;
 
     // pick (from , pick_these ) and returns a new object with picked properties
@@ -127,7 +138,11 @@ app.patch('/todos/:id', (req, res) => {
         body.completedAt = null; // will be removed from db
     }
 
-    TodoModel.findByIdAndUpdate(id, {
+    //  TodoModel.findByIdAndUpdate(id, {
+    TodoModel.findOneAndUpdate({
+            _id: id,
+            _creator: req.user._id
+        }, {
             $set: body // object having updated values
         }, {
             new: true // similar to returnOriginal = false to be processed further
@@ -192,11 +207,11 @@ app.post('/users/login', (req, res) => {
 
 app.delete('/users/me/token', authenticate, (req, res) => {
     req.user.removeToken(req.token)
-    .then(() => {
-        res.status(200).send();
-    }, () => {
-        res.status(400).send();
-    });
+        .then(() => {
+            res.status(200).send();
+        }, () => {
+            res.status(400).send();
+        });
 });
 
 app.listen(port, () => {
