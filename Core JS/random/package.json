@@ -1,0 +1,15 @@
+{
+  "name": "random",
+  "version": "1.0.0",
+  "description": "",
+  "main": "randomBackground.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "p5": "^0.5.16"
+  }
+}
