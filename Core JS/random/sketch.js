@@ -4,10 +4,11 @@ function setup() {
   let button = createButton("press");
   //  button.mousePressed(changeBackground);
 
-  button.mousePressed(() => {
-    background(random(255));
-  });
+  // button.mousePressed(() => {
+  //   background(random(255));
+  // });
 
+  button.mousePressed(() => background(random(255)));
 }
 
 
