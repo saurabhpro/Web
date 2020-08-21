@@ -11,7 +11,7 @@ function setup() {
   button.mousePressed(() => background(random(255)));
 }
 
-
+// 1. Basic method
 // function changeBackground() {
 //   background(random(255));
 // }
