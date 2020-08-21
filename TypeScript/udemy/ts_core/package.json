@@ -15,11 +15,11 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.5.4"
   },
   "dependencies": {
-    "systemjs": "^0.20.19",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2"
+    "systemjs": "^6.5.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.2"
   }
 }

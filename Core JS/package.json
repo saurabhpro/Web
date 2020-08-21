@@ -13,8 +13,6 @@
   "author": "saurabh kumar",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.3",
-    "babel": "^6.23.0",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^4.5.2"
   }
 }
