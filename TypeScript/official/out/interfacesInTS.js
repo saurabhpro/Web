@@ -55,10 +55,10 @@ mySearch = function (src, sub) {
     return result > -1;
 };
 class Clock {
+    constructor(h, m) { }
     setTime(d) {
         this.currentTime = d;
     }
-    constructor(h, m) { }
 }
 let square = {}; //genrify that the object can only be of type square
 square.color = "blue";

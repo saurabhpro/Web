@@ -6,6 +6,7 @@ function pickCard(x) {
         let pickedCard = Math.floor(Math.random() * x.length);
         return pickedCard;
     }
+    // Otherwise just let them pick the card
     else if (typeof x == "number") {
         let pickedSuit = Math.floor(x / 13);
         return { suit: suits[pickedSuit], card: x % 13 };

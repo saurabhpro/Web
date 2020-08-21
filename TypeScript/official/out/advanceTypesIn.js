@@ -1,6 +1,6 @@
 //Intersection Types
-//An intersection type combines multiple types into one. 
-//For example, Person & Serializable & Loggable is a Person and Serializable and Loggable. 
+//An intersection type combines multiple types into one.
+//For example, Person & Serializable & Loggable is a Person and Serializable and Loggable.
 //That means an object of this type will have all members of all three types.
 //Union Types
 /**
@@ -20,16 +20,33 @@ function padLeft(value, padding) {
     throw new Error(`Expected string or number, got '${padding}'.`);
 }
 padLeft("Hello world", 4); // returns "    Hello world"
-function getSmallPet() {
+//let indentedString = padLeft("Hello world", true); // errors during compilation
+/*
+//If we have a value that has a union type, we can only access members that are common to all types in the union.
+interface Bird {
+    fly();
+    layEggs();
 }
+
+interface Fish {
+    swim();
+    layEggs();
+}
+
+function getSmallPet(): Fish | Bird {
+}
+
 let pet = getSmallPet();
 pet.layEggs(); // okay
-pet.swim(); // errors
+pet.swim();    // errors
+
 //Type Guards
+
 //A predicate takes the form "parameterName is Type"
-function isFish(pet) {
-    return pet.swim !== undefined;
+function isFish(pet: Fish | Bird): pet is Fish {
+    return (<Fish>pet).swim !== undefined;
 }
+*/
 function isNumber(x) {
     return typeof x === "number";
 }
