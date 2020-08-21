@@ -1,0 +1,29 @@
+{
+  "name": "express-server-example",
+  "version": "1.0.0",
+  "description": "A simple example to show EXPRESS server read write API",
+  "main": "server.js",
+  "scripts": {
+    "build": "babel server.mjs -d dist",
+    "start": "npm run build && nodemon dist/server.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "jest": "^26.4.1",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
