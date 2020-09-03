@@ -1,0 +1,23 @@
+{
+  "name": "express-caching-client-example",
+  "version": "1.0.0",
+  "description": "example of how client side caching makes things faster",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "npm index.js"
+  },
+  "keywords": [
+    "caching",
+    "alogexpert",
+    "node",
+    "js"
+  ],
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "redis": "^3.0.2"
+  },
+  "type": "module"
+}

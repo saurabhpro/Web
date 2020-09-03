@@ -1,0 +1,22 @@
+{
+  "name": "express-nginx-load-balancer-example",
+  "version": "1.0.0",
+  "description": "sample for load balancer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "loadbalancer",
+    "alogexpert",
+    "node",
+    "js"
+  ],
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nginx": "0.0.0"
+  },
+  "type": "module"
+}

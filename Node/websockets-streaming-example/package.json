@@ -1,0 +1,25 @@
+{
+  "name": "websockets-streaming-example",
+  "version": "1.0.0",
+  "description": "simple example on how websockets work",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "websockets",
+    "streaming",
+    "node",
+    "system-design"
+  ],
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "readline": "^1.3.0",
+    "ws": "^7.3.1"
+  },
+  "type": "module"
+}

@@ -1,5 +1,5 @@
-To test this 
-- run node server.js
+To test this run 
+`> node server.js`
 
 // GET
 - ➜  ~ curl localhost:3001/memory/foo -w "\n"

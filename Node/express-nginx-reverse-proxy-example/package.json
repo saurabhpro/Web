@@ -1,0 +1,22 @@
+{
+  "name": "express-nginx-reverse-proxy-example",
+  "version": "1.0.0",
+  "description": "sample for reverse proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "proxies",
+    "alogexpert",
+    "node",
+    "js"
+  ],
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nginx": "0.0.0"
+  },
+  "type":"module"
+}
