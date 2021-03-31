@@ -1,0 +1,10 @@
+{
+  "name": "websockets",
+  "version": "1.0.0",
+  "main": "client.js",
+  "author": "Saurabh Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "websocket": "^1.0.33"
+  }
+}
