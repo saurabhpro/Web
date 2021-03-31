@@ -9,7 +9,7 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.0",
     "request": "^2.83.0",
     "yargs": "^10.0.0"
   },
