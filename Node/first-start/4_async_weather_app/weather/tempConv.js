@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {value: true});
 exports.cToF = (celsius) => {
     var cToFahr = celsius * (9 / 5 + 32);
     return cToFahr.toFixed(2) + ' \xB0F';

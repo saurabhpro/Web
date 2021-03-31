@@ -29,9 +29,9 @@ const encodedAddress = geocode.geocodeAddress(argv.address,
             // console.log(JSON.stringify(results, undefined, 4));
 
             weather.getWeather(results.Latitude, results.Longitude,
-                (errorMsg, wresults) => {
-                    if (errorMsg) {
-                        console.error(errorMsg);
+                (error, wresults) => {
+                    if (error) {
+                        console.error(error);
                     } else {
                         //console.log(JSON.stringify(results, undefined, 4));
                         console.log(`It is ${wresults.temparature} but it feels like ${wresults.apparentTemp}`);

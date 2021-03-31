@@ -5,23 +5,24 @@ automatically makes to
 
 https://maps.googleapis.com/maps/api/geocode/json?address=12%2010%20ashok%20nagar%20delhi
 
-if you want to search for stupid addressess like 
+if you want to search for stupid addressess like
 
 https://maps.googleapis.com/maps/api/geocode/json?address=0XX0000
+
 ```json
 {
     results: [ ],
     status: "ZERO_RESULTS"
 }
 ```
-is returned. 
-Note that this is not an error in terms of web, since it has returned something
 
-in js use 
+is returned. Note that this is not an error in terms of web, since it has returned something
+
+in js use
 https://www.npmjs.com/package/request
 
-
 ## request (to , results)
+
 ```js
 
 var request = require('request');
@@ -41,6 +42,7 @@ request('http://www.google.com', function (error, response, body) {
 ```
 
 ## To Convert the String address to encoded string for url
+
 ```c
 $ node
 > encodeURIComponent('12 10 ashok agar delhi')
