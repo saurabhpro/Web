@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.17",
-    "yargs": "^10.0.0"
+    "yargs": "^13.0.0"
   },
   "devDependencies": {
     "eslint": "^4.8.0"
