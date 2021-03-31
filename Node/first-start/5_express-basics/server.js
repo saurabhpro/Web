@@ -15,59 +15,59 @@ app.use(express.static(__dirname + '/public'));
 
 
 //registering hbs helpers which can clean out our send data
-hbs.registerHelper('getCuurentYear', ()=>{
-  return new Date().getUTCFullYear();
+hbs.registerHelper('getCuurentYear', () => {
+    return new Date().getUTCFullYear();
 })
 
 //registering hbs helpers which accepts argument
-hbs.registerHelper('getTextInCaps', (text)=>{
-  return text.toUpperCase();
+hbs.registerHelper('getTextInCaps', (text) => {
+    return text.toUpperCase();
 })
 
 
 //home url mapping
 app.get('/', (req, res) => {
-  // res.send('<h1>Hello Express!</h1>');
-  // res.send(
-  //   //send json object automatically changes the content-type in response
-  //   {
-  //     name: 'Andrew',
-  //     likes: [
-  //       'Biking',
-  //       'Cities'
-  //     ]
-  //   });
+    // res.send('<h1>Hello Express!</h1>');
+    // res.send(
+    //   //send json object automatically changes the content-type in response
+    //   {
+    //     name: 'Andrew',
+    //     likes: [
+    //       'Biking',
+    //       'Cities'
+    //     ]
+    //   });
 
-  res.render('home.hbs', {
-    pageTitle: 'Home Page',
-    //currentYear: new Date().getUTCFullYear(),
-    welcomeMsg: 'Welcome to the jungle'
-  })
+    res.render('home.hbs', {
+        pageTitle: 'Home Page',
+        //currentYear: new Date().getUTCFullYear(),
+        welcomeMsg: 'Welcome to the jungle'
+    })
 });
 
 app.get('/about', (req, res) => {
-  //res.send('About Page');
-  res.render('about.hbs',
-    //optional argument to send data to be used in hbs template
-    {
-      pageTitle: 'About Page',
-      //currentYear: new Date().getUTCFullYear() -> since we are using helpers
-    }
-  );
+    //res.send('About Page');
+    res.render('about.hbs',
+        //optional argument to send data to be used in hbs template
+        {
+            pageTitle: 'About Page',
+            //currentYear: new Date().getUTCFullYear() -> since we are using helpers
+        }
+    );
 });
 
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
-  res.send({
-    errorMessage: 'Unable to handle request'
-  });
+    res.send({
+        errorMessage: 'Unable to handle request'
+    });
 });
 
 app.listen(3000,
-  //optional 2nd argument
-  () => {
-    console.log('Server is up on port 3000');
-  }
+    //optional 2nd argument
+    () => {
+        console.log('Server is up on port 3000');
+    }
 );
 
 

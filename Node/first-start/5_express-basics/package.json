@@ -1,6 +1,6 @@
 {
   "name": "node-web-server",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,11 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "hbs": "^4.0.1"
+    "hbs": "^4.1.1"
   }
 }
