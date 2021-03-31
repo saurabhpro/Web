@@ -70,3 +70,120 @@ query FirstMessage {
   }
 }
 ```
+
+## Level 3 - GraphQL Return Books with the books author name)
+```js
+// input
+{
+  books {
+    name
+    authorId
+    author {
+      name
+    }
+  }
+}
+
+
+
+// output
+{
+  "data": {
+    "books": [
+      {
+        "name": "Harry Potter and the Chamber of Secrets",
+        "authorId": 1,
+        "author": {
+          "name": "J. K. Rowling"
+        }
+      },
+      {
+        "name": "Harry Potter and the Prisoner of Azkaban",
+        "authorId": 1,
+        "author": {
+          "name": "J. K. Rowling"
+        }
+      }
+    ]
+  }
+}
+
+// on authours
+{
+  authors {
+    name
+    books {
+      name
+    }
+  }
+}
+
+{
+  "data": {
+    "authors": [
+      {
+        "name": "J. K. Rowling",
+        "books": [
+          {
+            "name": "Harry Potter and the Chamber of Secrets"
+          },
+          {
+            "name": "Harry Potter and the Prisoner of Azkaban"
+          },
+          {
+            "name": "Harry Potter and the Goblet of Fire"
+          }
+        ]
+      },
+      {
+        "name": "J. R. R. Tolkien",
+        "books": [
+          {
+            "name": "The Fellowship of the Ring"
+          },
+          {
+            "name": "The Two Towers"
+          },
+          {
+            "name": "The Return of the King"
+          }
+        ]
+      },
+      {
+        "name": "Brent Weeks",
+        "books": [
+          {
+            "name": "The Way of Shadows"
+          },
+          {
+            "name": "Beyond the Shadows"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+## Level 3: Find books by id
+```js
+{
+  book(id: 1) {
+    name
+    author{
+      name
+    }
+  }
+}
+
+{
+  "data": {
+    "book": {
+      "name": "Harry Potter and the Chamber of Secrets",
+      "author": {
+        "name": "J. K. Rowling"
+      }
+    }
+  }
+}
+```

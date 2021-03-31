@@ -1,27 +1,18 @@
 import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
-import { books } from './datastore.js';
-
 import {
     GraphQLSchema,
     GraphQLObjectType,
-    GraphQLString,
     GraphQLList,
     GraphQLInt,
-    GraphQLNonNull,
 } from 'graphql';
 
-const app = express();
+// custom imports
+import { books, authors } from './datastore.js';
+import BookType from './types/BookType.js';
+import AuthorType from './types/AuthorType.js';
 
-const BookType = new GraphQLObjectType({
-    name: 'Book',
-    description: 'This represents a book written by an author',
-    fields: () => ({
-        id: { type: GraphQLNonNull(GraphQLInt) },
-        name: { type: GraphQLNonNull(GraphQLString) }, // means we decorate the String type as non-null
-        authorId: { type: GraphQLNonNull(GraphQLInt) },
-    }),
-});
+const app = express();
 
 // we can create a RootQueryType to store all our typs and query feilds
 const RootQueryType = new GraphQLObjectType({
@@ -41,6 +32,20 @@ const RootQueryType = new GraphQLObjectType({
             type: new GraphQLList(BookType),
             description: 'List of All Books',
             resolve: () => books,
+        },
+        authors: {
+            type: new GraphQLList(AuthorType),
+            description: 'List of All Authors',
+            resolve: () => authors,
+        },
+        author: {
+            type: AuthorType,
+            description: 'A Single Author',
+            args: {
+                id: { type: GraphQLInt },
+            },
+            resolve: (parent, args) =>
+                authors.find((author) => author.id === args.id),
         },
     }),
 });
