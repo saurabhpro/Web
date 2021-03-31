@@ -17,7 +17,7 @@ const TodoModel = mongoose.model('Todo', {
     },
     // _ makes clear that this is a id
     _creator: {
-        type : mongoose.Schema.Types.ObjectId, // in order to set creator property
+        type: mongoose.Schema.Types.ObjectId, // in order to set creator property
         required: true
     }
 });

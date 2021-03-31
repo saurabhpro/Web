@@ -53,8 +53,8 @@ app.post('/todos', authenticate, (req, res) => {
 // get methods
 app.get('/todos', authenticate, (req, res) => {
     TodoModel.find({
-            _creator: req.user._id // all the todos for currenly logged in user
-        })
+        _creator: req.user._id // all the todos for currenly logged in user
+    })
         .then((todos) => {
             res.send({
                 todos
@@ -74,9 +74,9 @@ app.get('/todos/:id', authenticate, (req, res) => {
 
     // TodoModel.findById(id)
     TodoModel.findOne({
-            _id: id,
-            _creator: req.user._id
-        })
+        _id: id,
+        _creator: req.user._id
+    })
         .then((todo) => {
             if (!todo) {
                 return res.status(404).send();
@@ -102,9 +102,9 @@ app.delete('/todos/:id', authenticate, (req, res) => {
 
     //TodoModel.findByIdAndRemove(id)
     TodoModel.findOneAndRemove({
-            _id: id,
-            _creator: req.user._id
-        })
+        _id: id,
+        _creator: req.user._id
+    })
         .then((todo) => {
             if (!todo) {
                 return res.status(404).send();
@@ -131,7 +131,7 @@ app.patch('/todos/:id', authenticate, (req, res) => {
         return res.status(404).send();
     }
 
-    if (_.isBoolean(body.completed) && body.completed /*true*/ ) {
+    if (_.isBoolean(body.completed) && body.completed /*true*/) {
         body.completedAt = new Date().getTime(); // returns js timestamp from jan 1 1970 (-ve means past)
     } else {
         body.completed = false;
@@ -140,13 +140,13 @@ app.patch('/todos/:id', authenticate, (req, res) => {
 
     //  TodoModel.findByIdAndUpdate(id, {
     TodoModel.findOneAndUpdate({
-            _id: id,
-            _creator: req.user._id
-        }, {
-            $set: body // object having updated values
-        }, {
-            new: true // similar to returnOriginal = false to be processed further
-        })
+        _id: id,
+        _creator: req.user._id
+    }, {
+        $set: body // object having updated values
+    }, {
+        new: true // similar to returnOriginal = false to be processed further
+    })
         .then((todo) => {
             if (!todo) {
                 return res.status(404).send();
@@ -156,8 +156,8 @@ app.patch('/todos/:id', authenticate, (req, res) => {
                 todo
             });
         }).catch((e) => {
-            res.status(400).send();
-        })
+        res.status(400).send();
+    })
 });
 
 
@@ -200,8 +200,8 @@ app.post('/users/login', (req, res) => {
             });
             //res.send(user);
         }).catch((e) => {
-            res.status(400).send();
-        });
+        res.status(400).send();
+    });
 });
 
 

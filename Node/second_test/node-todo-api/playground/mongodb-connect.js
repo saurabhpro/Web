@@ -7,7 +7,7 @@ const {
 // es6 destructring
 const user = {
     name: 'Saurabh',
-    age : 25
+    age: 25
 };
 const {
     name

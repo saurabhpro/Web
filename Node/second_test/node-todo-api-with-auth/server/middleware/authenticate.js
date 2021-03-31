@@ -1,5 +1,5 @@
 const {
-  User
+    User
 } = require('../models/user');
 
 
@@ -7,27 +7,27 @@ const {
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWQ5ZjZkYzcwNzAyYTI5MjQ0ZTNiN2MiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTA3NDU2NzMyfQ.syHvghC5eFB9oZ_SwL_VGqZgP7_ZGC28oKvvBdOKBgY
 // as its value
 const authenticate = (req, res, next) => {
-  const token = req.header('x-auth');
+    const token = req.header('x-auth');
 
-  User.findByToken(token)
-    .then((user) => {
-      if (!user) {
-        return Promise.reject('This is the e value for catch');
-      }
+    User.findByToken(token)
+        .then((user) => {
+            if (!user) {
+                return Promise.reject('This is the e value for catch');
+            }
 
-      // modifying the request with found values instead of sending from here
-      req.user = user;
-      req.token = token;
+            // modifying the request with found values instead of sending from here
+            req.user = user;
+            req.token = token;
 
-      next(); // to run the following after middleware code
+            next(); // to run the following after middleware code
 
-    })
-    .catch((e) => {
-      console.log(e);
-      res.status(401).send();
-    });
+        })
+        .catch((e) => {
+            console.log(e);
+            res.status(401).send();
+        });
 };
 
 module.exports = {
-  authenticate
+    authenticate
 };

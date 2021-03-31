@@ -1,5 +1,5 @@
 const {
-  SHA256
+    SHA256
 } = require('crypto-js');
 
 const jwt = require('jsonwebtoken');
@@ -12,17 +12,17 @@ const password = '123abc!'; // change it to see how bcrypt prints false
 
 //1. salt - without salting hash will always be the same
 bcrypt.genSalt(10, (err, salt) => {
-  bcrypt.hash(password, salt, (err, hash) => {
-    console.log('Bcrypt has: ' + hash);
-  })
+    bcrypt.hash(password, salt, (err, hash) => {
+        console.log('Bcrypt has: ' + hash);
+    })
 }) // brcypt is slow so adding 10 rounds still makes forced attacks slow
 
 //2. genpassword verify sent password
 const hashedPassword = '$2a$10$QRt5.oOel13mPOo/NmxXGeeasG/yw1e2EogFLRkz9vwsWe3DAy27W';
 
 bcrypt.compare(password, hashedPassword, (err, res) => {
-  // res = true/false
-  console.log(res);
+    // res = true/false
+    console.log(res);
 });
 
 
@@ -44,11 +44,11 @@ console.log(`Hash: ${hash}`);
 
 // checking the data has changed encryption
 var data = {
-  id: 4
+    id: 4
 };
 var token = {
-  data, //ES6 data: data (from above)
-  hash: SHA256(JSON.stringify(data) + 'somesecretkey').toString() // has will be bad if secret is not there HENCE SAFE
+    data, //ES6 data: data (from above)
+    hash: SHA256(JSON.stringify(data) + 'somesecretkey').toString() // has will be bad if secret is not there HENCE SAFE
 }
 
 // test using same id = 4 or different id
@@ -58,9 +58,9 @@ var token = {
 
 var resultHash = SHA256(JSON.stringify(token.data) + 'somesecretkey').toString();
 if (resultHash === token.hash) {
-  console.log('Data was not changed\n');
+    console.log('Data was not changed\n');
 } else {
-  console.log('Data was changed. Do not trust!\n');
+    console.log('Data was changed. Do not trust!\n');
 }
 
 

@@ -112,7 +112,7 @@ app.patch('/todos/:id', (req, res) => {
         return res.status(404).send();
     }
 
-    if (_.isBoolean(body.completed) && body.completed /*true*/ ) {
+    if (_.isBoolean(body.completed) && body.completed /*true*/) {
         body.completedAt = new Date().getTime(); // returns js timestamp from jan 1 1970 (-ve means past)
     } else {
         body.completed = false;
@@ -120,10 +120,10 @@ app.patch('/todos/:id', (req, res) => {
     }
 
     TodoModel.findByIdAndUpdate(id, {
-            $set: body  // object having updated values
-        }, {
-            new: true   // similar to returnOriginal = false to be processed further
-        })
+        $set: body  // object having updated values
+    }, {
+        new: true   // similar to returnOriginal = false to be processed further
+    })
         .then((todo) => {
             if (!todo) {
                 return res.status(404).send();
@@ -133,8 +133,8 @@ app.patch('/todos/:id', (req, res) => {
                 todo
             });
         }).catch((e) => {
-            res.status(400).send();
-        })
+        res.status(400).send();
+    })
 });
 
 app.listen(port, () => {
