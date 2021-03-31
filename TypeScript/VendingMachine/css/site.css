@@ -38,10 +38,16 @@ body {
 }
 
 @keyframes rotate {
-    33% { transform: rotate(-15deg); }
-    66% { transform: rotate(15deg); }
+    33% {
+        transform: rotate(-15deg);
+    }
+    66% {
+        transform: rotate(15deg);
+    }
 }
 
 @keyframes drop {
-    99% { transform: translateY(600px) rotate(120deg); }
+    99% {
+        transform: translateY(600px) rotate(120deg);
+    }
 }

@@ -19,7 +19,7 @@ function buildName2(firstName: string, ...restOfName: string[]) {
 let deck = {
     suits: ["hearts", "spades", "clubs", "diamonds"],
     cards: Array(52),
-    createCardPicker: function() {
+    createCardPicker: function () {
         // NOTE: the line below is now an arrow function, allowing us to capture 'this' right here
         //Arrow functions capture the this where the function is created rather than where it is invoked:
         return () => {

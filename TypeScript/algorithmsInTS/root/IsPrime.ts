@@ -33,7 +33,7 @@ class IsPrime {
 
         } else {
             /**
-             * 'number' rounded to the greatest integer 
+             * 'number' rounded to the greatest integer
              * 'rounded' so that:
              * rounded * rounded <= number
              */

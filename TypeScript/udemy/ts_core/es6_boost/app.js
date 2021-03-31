@@ -16,6 +16,7 @@ var es6_boost;
         let variable = null;
         console.log(variable);
     }
+
     reset();
     console.log(variable);
     // Arrow Functions
@@ -47,17 +48,19 @@ var es6_boost;
     const numbers = [1, 10, 99, -5];
     console.log(Math.max(33, 99, 10, -3));
     console.log(Math.max(...numbers));
+
     function makeArray(name, ...args) {
         return args;
     }
+
     console.log(makeArray("Max", 1, 2, 6));
     // Destructuring
     console.log("DESTRUCTURING");
     const myHobbies = ["Cooking", "Sports"];
     const [hobby1, hobby2] = myHobbies;
     console.log(hobby1, hobby2);
-    const userData = { userName: "Max", age: 27 };
-    const { userName: string, age: number } = userData;
+    const userData = {userName: "Max", age: 27};
+    const {userName: string, age: number} = userData;
     console.log(userData.userName, userData.age);
     // Template Literals
     const userName = "Max";

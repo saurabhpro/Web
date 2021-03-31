@@ -7,7 +7,7 @@ interface Move {
 class TowerOfHanoi {
 
     private static arresult: Array<Move> = [];
-    
+
     /**
      * Returns all movements needed to solve Hanoi Tower problem.
      *
@@ -39,10 +39,10 @@ class TowerOfHanoi {
      */
     static hanoi(count: number, source: string | number, intermediate: string | number, goal: string | number): Array<Move> {
         if (count === 1) {
-            this.arresult.push({ source: source, goal: goal });
+            this.arresult.push({source: source, goal: goal});
         } else {
             this.hanoi(count - 1, source, goal, intermediate);
-            this.arresult.push({ source: source, goal: goal });
+            this.arresult.push({source: source, goal: goal});
             this.hanoi(count - 1, intermediate, source, goal);
         }
         return this.arresult;

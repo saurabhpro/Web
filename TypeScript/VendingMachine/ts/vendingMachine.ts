@@ -1,5 +1,5 @@
 import * as Coins from "./coin"
-import { Product, Initial as Init } from "./product"
+import {Product, Initial as Init} from "./product"
 import getVendingProduct from "./productFactory"
 
 export enum VendingMachineSize {
@@ -11,6 +11,7 @@ export enum VendingMachineSize {
 class Cell {
     constructor(public product: Product) {
     }
+
     stock = ko.observable<number>(3)
     sold = ko.observable<boolean>(false)
 }
@@ -19,17 +20,19 @@ export class VendingMachine {
     paid = ko.observable(0)
     selectedCell = ko.observable(new Cell(new Init()))
     cells: KnockoutObservableArray<Cell> = ko.observableArray([])
-    acceptedCoins: Array<Coins.Coin> = [new Coins.Dime(), new Coins.Quarter(),new Coins.Half(), new Coins.Dollar()]
+    acceptedCoins: Array<Coins.Coin> = [new Coins.Dime(), new Coins.Quarter(), new Coins.Half(), new Coins.Dollar()]
     canPay = ko.pureComputed(() => this.paid() - this.selectedCell().product.price >= 0)
 
-    constructor(public useProductFactory = true) { }
+    constructor(public useProductFactory = true) {
+    }
 
     set size(givenSize: VendingMachineSize) {
         this.cells([]);
 
         for (let index = 0; index < givenSize; index++) {
             this.cells.push(new Cell(getVendingProduct()));
-        };
+        }
+        ;
     }
 
     select = (cell: Cell): void => {

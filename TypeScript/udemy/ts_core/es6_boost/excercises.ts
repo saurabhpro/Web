@@ -75,6 +75,6 @@ const [result1, result2, result3] = testResult;
 console.log(result1, result2, result3);
 
 // Exercise 6 - Destructuring Objects
-const scientist = { firstName: "Will", experience: 12 };
-const { firstName, experience } = scientist;
+const scientist = {firstName: "Will", experience: 12};
+const {firstName, experience} = scientist;
 console.log(firstName, experience);

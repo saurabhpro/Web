@@ -17,7 +17,7 @@ class LevenshteinDistance {
         return Math.min(
             this.calculateDistance(s, ls - 1, t, lt) + 1,
             this.calculateDistance(s, ls, t, lt - 1) + 1,
-            this.calculateDistance(s, ls - 1, t, lt - 1)  + cost
+            this.calculateDistance(s, ls - 1, t, lt - 1) + cost
         );
     }
 

@@ -18,10 +18,12 @@ printLabel(myObj);
 function printLabel(labelledObj) {
     console.log(labelledObj.label);
 }
-let myObj = { size: 10, label: "Size 10 Object" };
+
+let myObj = {size: 10, label: "Size 10 Object"};
 printLabel(myObj);
+
 function createSquare(config) {
-    let newSquare = { color: "white", area: 100 };
+    let newSquare = {color: "white", area: 100};
     //type cecking ensures that only the two propeties are allowed
     if (config.color) {
         newSquare.color = config.color;
@@ -32,9 +34,10 @@ function createSquare(config) {
     }
     return newSquare;
 }
-let mySquare = createSquare({ color: "black" });
+
+let mySquare = createSquare({color: "black"});
 //You can construct a Point by assigning an object literal. After the assignment, x and y can’t be changed.
-let p1 = { x: 10, y: 20 };
+let p1 = {x: 10, y: 20};
 //p1.x = 5; // error!
 //TypeScript comes with a ReadonlyArray<T> type that is the same as Array<T> with all mutating methods removed
 let a = [1, 2, 3, 4];
@@ -54,16 +57,21 @@ mySearch = function (src, sub) {
     let result = src.search(sub);
     return result > -1;
 };
+
 class Clock {
-    constructor(h, m) { }
+    constructor(h, m) {
+    }
+
     setTime(d) {
         this.currentTime = d;
     }
 }
+
 let square = {}; //genrify that the object can only be of type square
 square.color = "blue";
 square.sideLength = 10;
 square.penWidth = 5.0;
+
 /**
  *
  *
@@ -71,12 +79,17 @@ square.penWidth = 5.0;
  */
 class Control {
 }
+
 class Button extends Control {
-    select() { }
+    select() {
+    }
 }
+
 class TextBox extends Control {
-    select() { }
+    select() {
+    }
 }
+
 /*
 Error as select() can only be used by subclasses of Control defiend in the interface
 Since state is a private member it is only possible for descendants of Control to implement SelectableControl.
@@ -87,5 +100,5 @@ class Image {
 class Location {
     select() { }
 }
-*/ 
+*/
 //# sourceMappingURL=interfacesInTS.js.map

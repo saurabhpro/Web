@@ -26,13 +26,16 @@ function sumMatrix(matrix: number[][]) {
 
     return sum;
 }
+
 //Maybe it was easy to spot out for some, but the inner for-loop will accidentally overwrite the variable i because i refers to the same function-scoped variable.
 
 //Variable capturing quirks
 //Take a quick second to guess what the output of the following snippet is:
 
 for (var i = 0; i < 10; i++) {
-    setTimeout(function() { console.log(i); }, 100 * i);
+    setTimeout(function () {
+        console.log(i);
+    }, 100 * i);
 }//OUTPUT: 10 10 10 10 10 10 10 10 10 10 ??? 
 //setTimeout will run a function after some number of milliseconds, but only after the for loop has stopped executing; By the time the for loop has stopped executing, the value of i is 10. 
 //So each time the given function gets called, it will print out 10!

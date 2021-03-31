@@ -19,6 +19,7 @@ function padLeft(value, padding) {
     }
     throw new Error(`Expected string or number, got '${padding}'.`);
 }
+
 padLeft("Hello world", 4); // returns "    Hello world"
 //let indentedString = padLeft("Hello world", true); // errors during compilation
 /*
@@ -50,6 +51,7 @@ function isFish(pet: Fish | Bird): pet is Fish {
 function isNumber(x) {
     return typeof x === "number";
 }
+
 //typeof
 //instanceof
 //# sourceMappingURL=advanceTypesIn.js.map

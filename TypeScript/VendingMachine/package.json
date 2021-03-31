@@ -9,10 +9,10 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "@types/knockout": "^3.4.45",
-    "@types/requirejs": "^2.1.31",
-    "bootstrap": "3.3.7",
-    "knockout": "^3.4.2",
-    "requirejs": "^2.3.5"
+    "@types/knockout": "^3.4.70",
+    "@types/requirejs": "^2.1.32",
+    "bootstrap": "4.6.0",
+    "knockout": "^3.5.1",
+    "requirejs": "^2.3.6"
   }
 }

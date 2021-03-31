@@ -1,52 +1,53 @@
 "use strict";
+
 class LinkedList {
     constructor(item) {
         this.head = item;
     }
+
     append(val) {
         let currentItem = this.head;
         let newItem = new LinkedListItem(val);
         if (!currentItem) {
             this.head = newItem;
-        }
-        else {
+        } else {
             while (true) {
                 if (currentItem.next) {
                     currentItem = currentItem.next;
-                }
-                else {
+                } else {
                     currentItem.next = newItem;
                     break;
                 }
             }
         }
     }
+
     prepend(val) {
         let newItem = new LinkedListItem(val);
         let oldHead = this.head;
         this.head = newItem;
         newItem.next = oldHead;
     }
+
     insert(val, previousItem) {
         let newItem = new LinkedListItem(val);
         let currentItem = this.head;
         if (!currentItem) {
             this.head = newItem;
-        }
-        else {
+        } else {
             while (true) {
                 if (currentItem === previousItem) {
                     let tempNextItem = previousItem.next;
                     currentItem.next = newItem;
                     newItem.next = tempNextItem;
                     break;
-                }
-                else {
+                } else {
                     currentItem = currentItem.next;
                 }
             }
         }
     }
+
     delete(val) {
         var currentItem = this.head;
         if (!currentItem) {
@@ -54,27 +55,25 @@ class LinkedList {
         }
         if (currentItem.value === val) {
             this.head = currentItem.next;
-        }
-        else {
+        } else {
             var previous = null;
             while (true) {
                 if (currentItem.value === val) {
                     if (currentItem.next) {
                         previous.next = currentItem.next;
-                    }
-                    else {
+                    } else {
                         previous.next = null;
                     }
                     currentItem = null;
                     break;
-                }
-                else {
+                } else {
                     previous = currentItem;
                     currentItem = currentItem.next;
                 }
             }
         }
     }
+
     showInArray() {
         let arr = [];
         let currentItem = this.head;
@@ -82,20 +81,21 @@ class LinkedList {
             arr.push(currentItem.value);
             if (currentItem.next) {
                 currentItem = currentItem.next;
-            }
-            else {
+            } else {
                 break;
             }
         }
         return arr;
     }
 }
+
 class LinkedListItem {
     constructor(val) {
         this.value = val;
         this.next = null;
     }
 }
+
 let head = new LinkedListItem(4);
 let linkedList = new LinkedList(head);
 linkedList.append(10);

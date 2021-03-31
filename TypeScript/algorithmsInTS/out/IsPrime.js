@@ -1,22 +1,18 @@
 "use strict";
+
 class IsPrime {
     static isPrime(number) {
         if (number === 1) {
             return false;
-        }
-        else if (number < 4) {
+        } else if (number < 4) {
             return true;
-        }
-        else if (number % 2 === 0) {
+        } else if (number % 2 === 0) {
             return false;
-        }
-        else if (number < 9) {
+        } else if (number < 9) {
             return true;
-        }
-        else if (number % 3 === 0) {
+        } else if (number % 3 === 0) {
             return false;
-        }
-        else {
+        } else {
             var rounded = Math.floor(Math.sqrt(number));
             var factor = 5;
             while (factor <= rounded) {
@@ -32,6 +28,7 @@ class IsPrime {
         return true;
     }
 }
+
 console.log(IsPrime.isPrime(6));
 console.log(IsPrime.isPrime(61));
 console.log(IsPrime.isPrime(167));

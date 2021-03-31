@@ -11,6 +11,7 @@ console.log(echo({name: "Max", age: 27}));
 function betterEcho<T>(data: T) {
     return data;
 }
+
 console.log(betterEcho("Max").length);
 console.log(betterEcho<number>(27));
 console.log(betterEcho({name: "Max", age: 27}));
@@ -24,6 +25,7 @@ console.log(testResults);
 function printAll<T>(args: T[]) {
     args.forEach((element) => console.log(element));
 }
+
 printAll<string>(["Apple", "Banana"]);
 
 // Generic Types
@@ -35,7 +37,7 @@ console.log(echo2<string>("Something"));
 class SimpleMath<T extends number | string, U extends number | string> {
     baseValue!: T;
     multiplyValue!: U;
-    
+
     calculate(): number {
         return +this.baseValue * +this.multiplyValue;
     }

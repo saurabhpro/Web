@@ -1,12 +1,13 @@
 define(["require", "exports", "./coin", "./product", "./productFactory"], function (require, exports, Coins, product_1, productFactory_1) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    Object.defineProperty(exports, "__esModule", {value: true});
     var VendingMachineSize;
     (function (VendingMachineSize) {
         VendingMachineSize[VendingMachineSize["small"] = 6] = "small";
         VendingMachineSize[VendingMachineSize["medium"] = 9] = "medium";
         VendingMachineSize[VendingMachineSize["large"] = 12] = "large";
     })(VendingMachineSize = exports.VendingMachineSize || (exports.VendingMachineSize = {}));
+
     class Cell {
         constructor(product) {
             this.product = product;
@@ -14,6 +15,7 @@ define(["require", "exports", "./coin", "./product", "./productFactory"], functi
             this.sold = ko.observable(false);
         }
     }
+
     class VendingMachine {
         constructor(useProductFactory = true) {
             this.useProductFactory = useProductFactory;
@@ -42,6 +44,7 @@ define(["require", "exports", "./coin", "./product", "./productFactory"], functi
                 this.selectedCell().sold(true);
             };
         }
+
         set size(givenSize) {
             this.cells([]);
             for (let index = 0; index < givenSize; index++) {
@@ -50,6 +53,7 @@ define(["require", "exports", "./coin", "./product", "./productFactory"], functi
             ;
         }
     }
+
     exports.VendingMachine = VendingMachine;
 });
 //# sourceMappingURL=vendingMachine.js.map

@@ -1,9 +1,9 @@
 "use strict";
 const users = [{
-        id: 1,
-        name: 'Saurabh',
-        schoolId: 101
-    },
+    id: 1,
+    name: 'Saurabh',
+    schoolId: 101
+},
     {
         id: 2,
         name: 'Jessica',
@@ -11,10 +11,10 @@ const users = [{
     }
 ];
 const grades = [{
-        id: 1,
-        schoolId: 101,
-        grade: 86
-    },
+    id: 1,
+    schoolId: 101,
+    grade: 86
+},
     {
         id: 2,
         schoolId: 999,
@@ -30,8 +30,7 @@ const getUser = (id) => {
         const user = users.find((user) => user.id == id);
         if (user) {
             resolve(user);
-        }
-        else {
+        } else {
             reject(`Unable to find user with id = ${id}`);
         }
     });
@@ -40,8 +39,7 @@ const getGrades = (schoolId) => {
     return new Promise((resolve, reject) => {
         if (schoolId > 100) {
             resolve(grades.filter((grade) => grade.schoolId == schoolId));
-        }
-        else {
+        } else {
             reject('Wrong School Id');
         }
     });
@@ -57,15 +55,15 @@ const getStatusAlt = async (userId) => {
 };
 getStatusAlt(2)
     .then((status) => {
-    console.log(status);
-}).catch((err) => {
+        console.log(status);
+    }).catch((err) => {
     console.log(err);
 });
 Promise.resolve(1)
     .then((x) => x + 2)
     .then((x) => {
-    throw new Error('foo');
-})
+        throw new Error('foo');
+    })
     .catch(() => 1)
     .then((x) => x + 1)
     .then((x) => console.log(x))

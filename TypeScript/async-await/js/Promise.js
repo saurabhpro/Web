@@ -7,6 +7,7 @@ const p3 = new Promise((resolve, reject) => {
 Promise.all([p1, p2, p3]).then(values => {
     console.log(values);
 });
+
 function serialAsyncMap(collection, fn) {
     let results = [];
     let promise = Promise.resolve();
@@ -35,9 +36,9 @@ promis.then(function (v) {
 });
 Promise.reject(new Error('fail'))
     .then(function (error) {
-}, function (error) {
-    console.log(error);
-});
+    }, function (error) {
+        console.log(error);
+    });
 
 
 const resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];

@@ -1,1 +1,10 @@
-{"version":3,"file":"helloworld.js","sourceRoot":"","sources":["../helloworld.ts"],"names":[],"mappings":"AAAA,IAAI,CAAC,GAAG,EAAE,CAAC;AACX,OAAO,CAAC,GAAG,CAAC,aAAa,CAAC,CAAC"}
+{
+  "version": 3,
+  "file": "helloworld.js",
+  "sourceRoot": "",
+  "sources": [
+    "../helloworld.ts"
+  ],
+  "names": [],
+  "mappings": "AAAA,IAAI,CAAC,GAAG,EAAE,CAAC;AACX,OAAO,CAAC,GAAG,CAAC,aAAa,CAAC,CAAC"
+}

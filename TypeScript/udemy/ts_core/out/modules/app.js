@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {value: true});
 const Circle = require("./math/circle");
 const rectangle_1 = require("./math/rectangle");
 console.log(Circle.PI);

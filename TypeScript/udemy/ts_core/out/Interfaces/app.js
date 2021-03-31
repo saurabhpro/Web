@@ -4,9 +4,11 @@ var InterfaceX;
     function greet(person) {
         console.log("Hello, " + person.firstName);
     }
+
     function changeName(person) {
         person.firstName = "Anna";
     }
+
     const person = {
         firstName: "Max",
         hobbies: ["Cooking", "Sports"],
@@ -18,12 +20,14 @@ var InterfaceX;
     changeName(person);
     greet(person);
     person.greet("Anything");
+
     class Person {
         greet(lastName) {
             console.log("Hi, I am " + this.firstName + " " + lastName);
         }
         ;
     }
+
     const myPerson = new Person();
     myPerson.firstName = "Maximilian";
     myPerson.lastName = "Anything";

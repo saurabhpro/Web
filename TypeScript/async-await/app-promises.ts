@@ -5,11 +5,11 @@ const users: User[] = [{
     name: 'Saurabh',
     schoolId: 101
 },
-{
-    id: 2,
-    name: 'Jessica',
-    schoolId: 999
-}
+    {
+        id: 2,
+        name: 'Jessica',
+        schoolId: 999
+    }
 ];
 
 type Grade = { id: number, schoolId: number, grade: number };
@@ -19,15 +19,15 @@ const grades: Grade[] = [{
     schoolId: 101,
     grade: 86
 },
-{
-    id: 2,
-    schoolId: 999,
-    grade: 100
-}, {
-    id: 3,
-    schoolId: 101,
-    grade: 80
-}
+    {
+        id: 2,
+        schoolId: 999,
+        grade: 100
+    }, {
+        id: 3,
+        schoolId: 101,
+        grade: 80
+    }
 ];
 
 const getUser = (id: number): Promise<User> => {
@@ -46,8 +46,7 @@ const getGrades = (schoolId: number): Promise<Array<Grade>> => {
     return new Promise((resolve, reject) => {
         if (schoolId > 100) {
             resolve(grades.filter((grade) => grade.schoolId == schoolId));
-        }
-        else {
+        } else {
             reject('Wrong School Id');
         }
     });
@@ -105,9 +104,9 @@ getStatusAlt(2)
     .then((status) => {
         console.log(status);
     }).catch((err) => {
-        // if await throws a error - it is catched by catch()
-        console.log(err);
-    })
+    // if await throws a error - it is catched by catch()
+    console.log(err);
+})
 
 // getGrades(101).then((grades) => {
 //         console.log(grades);
@@ -150,8 +149,6 @@ Promise.resolve(1)
 // }
 
 // console.log(typeof aaa());
-
-
 
 
 // app.all("*", function(req, res, next) {

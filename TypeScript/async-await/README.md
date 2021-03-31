@@ -23,4 +23,4 @@ getStatusAlt().then((user) => {
 })
 ```
 
- await should only be used inside async
+await should only be used inside async

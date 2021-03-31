@@ -14,11 +14,11 @@ function pickCard(x): any {
     // Otherwise just let them pick the card
     else if (typeof x == "number") {
         let pickedSuit = Math.floor(x / 13);
-        return { suit: suits[pickedSuit], card: x % 13 };
+        return {suit: suits[pickedSuit], card: x % 13};
     }
 }
 
-let myDeck = [{ suit: "diamonds", card: 2 }, { suit: "spades", card: 10 }, { suit: "hearts", card: 4 }];
+let myDeck = [{suit: "diamonds", card: 2}, {suit: "spades", card: 10}, {suit: "hearts", card: 4}];
 
 let pickedCard1 = myDeck[pickCard(myDeck)];
 alert("card: " + pickedCard1.card + " of " + pickedCard1.suit);

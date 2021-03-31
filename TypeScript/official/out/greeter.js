@@ -14,10 +14,12 @@ class Student {
         this.fullName = firstName + " " + middleInitial + " " + lastName;
     }
 }
+
 function greeter(person) {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
-var user = { firstName: "Saurabh", lastName: "Kumar" };
+
+var user = {firstName: "Saurabh", lastName: "Kumar"};
 //The user is cmpatible to the interface as the names of the keys match, and as said "hence both are compatible"
 document.body.innerHTML = greeter(user);
 //# sourceMappingURL=greeter.js.map

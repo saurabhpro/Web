@@ -1,4 +1,5 @@
 "use strict";
+
 /*
 Let's keep it simple and only add the following methods to the Map:
 
@@ -23,21 +24,26 @@ class MyMap {
     constructor() {
         this.map = {};
     }
+
     setItem(key, item) {
         this.map[key] = item;
     }
+
     getItem(key) {
         return this.map[key];
     }
+
     clear() {
         this.map = {};
     }
+
     printMap() {
         for (let key in this.map) {
             console.log(key, this.map[key]);
         }
     }
 }
+
 const numberMap = new MyMap();
 numberMap.setItem("apples", 10);
 numberMap.setItem("bananas", 2);

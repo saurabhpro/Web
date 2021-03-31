@@ -9,9 +9,9 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^4.0.2"
+    "typescript": "^4.2.3"
   },
   "devDependencies": {
-    "@types/core-js": "^2.5.3"
+    "@types/core-js": "^2.5.4"
   }
 }

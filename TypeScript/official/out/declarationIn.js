@@ -4,6 +4,7 @@ function f2(shouldInitialize) {
     }
     return x;
 }
+
 f2(true); // returns '10'
 f2(false); // returns 'undefined'
 //var declarations are accessible anywhere within their containing function, module, namespace, or global scope 
@@ -20,11 +21,14 @@ function sumMatrix(matrix) {
     console.log("test");
     return sum;
 }
+
 //Maybe it was easy to spot out for some, but the inner for-loop will accidentally overwrite the variable i because i refers to the same function-scoped variable.
 //Variable capturing quirks
 //Take a quick second to guess what the output of the following snippet is:
 for (var i = 0; i < 10; i++) {
-    setTimeout(function () { console.log(i); }, 100 * i);
+    setTimeout(function () {
+        console.log(i);
+    }, 100 * i);
 } //OUTPUT: 10 10 10 10 10 10 10 10 10 10 ??? 
 //setTimeout will run a function after some number of milliseconds, but only after the for loop has stopped executing; By the time the for loop has stopped executing, the value of i is 10. 
 //So each time the given function gets called, it will print out 10!
@@ -38,6 +42,7 @@ function f(x) {
         var x;
     }
 }
+
 //In the above example, all declarations of x actually refer to the same x, and this is perfectly valid. This often ends up being a source of bugs. Thankfully, let declarations are not as forgiving.
 let x = 10;
 //let x = 20; // error: can't re-declare 'x' in the same scope

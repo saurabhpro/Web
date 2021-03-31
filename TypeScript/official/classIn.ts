@@ -4,10 +4,12 @@
 class Octopus {
     readonly name: string;
     readonly numberOfLegs: number = 8;
-    constructor (theName: string) {
+
+    constructor(theName: string) {
         this.name = theName;
     }
 }
+
 let dad = new Octopus("Man with the 8 strong legs");
 //dad.name = "Man with the 3-piece suit"; // error! name is readonly.
 
@@ -17,9 +19,11 @@ let dad = new Octopus("Man with the 8 strong legs");
 
 class Octopus2 {
     readonly numberOfLegs: number = 8;
+
     constructor(readonly name: string) {
     }
-    //Notice how we dropped theName altogether and just use the shortened readonly name: string parameter on the constructor to create and initialize the name member. 
+
+    //Notice how we dropped theName altogether and just use the shortened readonly name: string parameter on the constructor to create and initialize the name member.
     //We’ve consolidated the declarations and assignment into one location.
 }
 
@@ -42,8 +46,7 @@ class Employee {
     set fullName(newName: string) {
         if (passcode && passcode == "secret passcode") {
             this._fullName = newName;
-        }
-        else {
+        } else {
             console.log("Error: Unauthorized update of employee!");
         }
     }
@@ -97,4 +100,6 @@ class GenericNumber<T> {
 
 let myGenericNumber = new GenericNumber<number>();
 myGenericNumber.zeroValue = 0;
-myGenericNumber.add = function(x, y) { return x + y; };
+myGenericNumber.add = function (x, y) {
+    return x + y;
+};

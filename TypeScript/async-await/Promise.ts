@@ -1,6 +1,6 @@
 /**
- * The Promise.all() method returns a single Promise that resolves when all of the promises 
- * in the iterable argument have resolved or when the iterable argument contains no promises. 
+ * The Promise.all() method returns a single Promise that resolves when all of the promises
+ * in the iterable argument have resolved or when the iterable argument contains no promises.
  * It rejects with the reason of the first promise that rejects.
  */
 const p1 = Promise.resolve(3);
@@ -66,7 +66,7 @@ const p = Promise.race(resolvedPromisesArray);
 console.log(p);
 
 // using setTimeout we can execute code after the stack is empty
-setTimeout(function(){
+setTimeout(function () {
     console.log('the stack is now empty');
     console.log(p);
 });

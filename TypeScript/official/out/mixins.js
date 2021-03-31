@@ -2,21 +2,25 @@
 The code sample starts with the two classes that will act as our mixins. You can see each one is focused on a particular activity or capability.
 We’ll later mix these together to form a new class from both capabilities.
 */
+
 // Disposable Mixin
 class Disposable {
     dispose() {
         this.isDisposed = true;
     }
 }
+
 // Activatable Mixin
 class Activatable {
     activate() {
         this.isActive = true;
     }
+
     deactivate() {
         this.isActive = false;
     }
 }
+
 /**
  * Next, we’ll create the class that will handle the combination of the two mixins.
  * instead of using extends, we use implements. This treats the classes as interfaces,
@@ -41,10 +45,12 @@ class SmartObject {
         this.isActive = false;
         setInterval(() => console.log(this.isActive + " : " + this.isDisposed), 500);
     }
+
     interact() {
         this.activate();
     }
 }
+
 //mix our mixins into the class, creating the full implementation.
 applyMixins(SmartObject, [Disposable, Activatable]);
 let smartObj = new SmartObject();
@@ -67,4 +73,5 @@ function applyMixins(derivedCtor, baseCtors) {
         });
     });
 }
+
 //# sourceMappingURL=mixins.js.map

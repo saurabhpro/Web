@@ -1,6 +1,7 @@
 define(["require", "exports", "./product"], function (require, exports, products) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
+    Object.defineProperty(exports, "__esModule", {value: true});
+
     /**
      * The default export, there is only a single default export per module.
      * A default export can be a function, a class, an object or anything else.
@@ -17,19 +18,31 @@ define(["require", "exports", "./product"], function (require, exports, products
     function getProduct() {
         let random = Math.floor(Math.random() * 11); //range [0-11)
         switch (random) {
-            case 0: return new products.CocaCola();
-            case 1: return new products.Fanta();
-            case 2: return new products.Sprite();
-            case 3: return new products.Peanuts();
-            case 4: return new products.Cashews();
-            case 5: return new products.Plain();
-            case 6: return new products.Cheddar();
-            case 7: return new products.Mints();
-            case 8: return new products.Gummies();
-            case 9: return new products.Hersey();
-            default: return new products.MilkyWay();
+            case 0:
+                return new products.CocaCola();
+            case 1:
+                return new products.Fanta();
+            case 2:
+                return new products.Sprite();
+            case 3:
+                return new products.Peanuts();
+            case 4:
+                return new products.Cashews();
+            case 5:
+                return new products.Plain();
+            case 6:
+                return new products.Cheddar();
+            case 7:
+                return new products.Mints();
+            case 8:
+                return new products.Gummies();
+            case 9:
+                return new products.Hersey();
+            default:
+                return new products.MilkyWay();
         }
     }
+
     exports.default = getProduct;
 });
 //# sourceMappingURL=productFactory.js.map

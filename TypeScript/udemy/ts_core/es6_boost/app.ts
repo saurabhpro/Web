@@ -16,6 +16,7 @@ namespace es6_boost {
         let variable = null;
         console.log(variable);
     }
+
     reset();
     console.log(variable);
 
@@ -57,6 +58,7 @@ namespace es6_boost {
     function makeArray(name: string, ...args: number[]) {
         return args;
     }
+
     console.log(makeArray("Max", 1, 2, 6));
 
     // Destructuring
@@ -65,8 +67,8 @@ namespace es6_boost {
     const [hobby1, hobby2] = myHobbies;
     console.log(hobby1, hobby2);
 
-    const userData = { userName: "Max", age: 27 };
-    const { userName: string, age: number } = userData;
+    const userData = {userName: "Max", age: 27};
+    const {userName: string, age: number} = userData;
     console.log(userData.userName, userData.age);
 
 

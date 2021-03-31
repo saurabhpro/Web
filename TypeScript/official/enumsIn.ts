@@ -3,5 +3,6 @@
 enum Enum {
     A
 }
+
 let a2 = Enum.A;
 let nameOfA = Enum[Enum.A]; // "A"

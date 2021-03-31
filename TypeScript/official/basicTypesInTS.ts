@@ -11,8 +11,8 @@ let isDone: boolean = false;
 let fullName: string = `Bob Bobbington`;
 let age: number = 37;
 let sentence: string = `
-                        Hello, my name is ${ fullName }.
-                        I'll be ${ age + 1 } years old next month.
+                        Hello, my name is ${fullName}.
+                        I'll be ${age + 1} years old next month.
                         `;
 
 //Array
@@ -37,14 +37,18 @@ x33 = ["hello", 10]; // OK
 
 //Enum
 enum Color {Red, Green, Blue}
+
 let c: Color = Color.Green;
+
 //By default, enums begin numbering their members starting at 0. You can change this by manually setting the value of one of its members. For example, we can start the previous example at 1 instead of 0:
 
 enum Color2 {Red = 1, Green, Blue}
+
 let c2: Color2 = Color2.Green;
 
 //Or, even manually set all the values in the enum:
 enum Color3 {Red = 1, Green = 2, Blue = 4}
+
 let c3: Color3 = Color3.Green;
 let colorName: string = Color3[2];
 
@@ -66,13 +70,9 @@ let list4: any[] = [1, true, "free"];
 list4[1] = 100;
 
 
-
-
 //void
 //opposite of any
 let unusable: void = undefined;
-
-
 
 
 //null & undfined
@@ -98,8 +98,7 @@ function infiniteLoop(): never {
 }
 
 
-
-//Type assertions are a way to tell the compiler “trust me, I know what I’m doing.” 
+//Type assertions are a way to tell the compiler “trust me, I know what I’m doing.”
 //A type assertion is like a type cast in other languages, but performs no special checking or restructuring of data. 
 //It has no runtime impact, and is used purely by the compiler. 
 //TypeScript assumes that you, the programmer, have performed any special checks that you need.

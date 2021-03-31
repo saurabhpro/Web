@@ -6,6 +6,7 @@ We’ll later mix these together to form a new class from both capabilities.
 // Disposable Mixin
 class Disposable {
     isDisposed: boolean;
+
     dispose() {
         this.isDisposed = true;
     }
@@ -15,9 +16,11 @@ class Disposable {
 // Activatable Mixin
 class Activatable {
     isActive: boolean;
+
     activate() {
         this.isActive = true;
     }
+
     deactivate() {
         this.isActive = false;
     }
@@ -25,12 +28,12 @@ class Activatable {
 
 /**
  * Next, we’ll create the class that will handle the combination of the two mixins.
- * instead of using extends, we use implements. This treats the classes as interfaces, 
- * and only uses the types behind Disposable and Activatable rather than the implementation. 
- * 
- * This means that we’ll have to provide the implementation in class. 
+ * instead of using extends, we use implements. This treats the classes as interfaces,
+ * and only uses the types behind Disposable and Activatable rather than the implementation.
+ *
+ * This means that we’ll have to provide the implementation in class.
  * Except, that’s exactly what we want to avoid by using mixins.
- * 
+ *
  * @class SmartObject
  * @implements {Disposable}
  * @implements {Activatable}
@@ -67,12 +70,12 @@ setTimeout(() => smartObj.interact(), 1000);
 // In your runtime library somewhere
 ////////////////////////////////////////
 /**
- * we create a helper function that will do the mixing for us. This will run through the properties of each 
- * of the mixins and copy them over to the target of the mixins, filling out the stand-in properties with 
+ * we create a helper function that will do the mixing for us. This will run through the properties of each
+ * of the mixins and copy them over to the target of the mixins, filling out the stand-in properties with
  * their implementations.
- * 
- * @param {*} derivedCtor 
- * @param {any[]} baseCtors 
+ *
+ * @param {*} derivedCtor
+ * @param {any[]} baseCtors
  */
 function applyMixins(derivedCtor: any, baseCtors: any[]) {
     baseCtors.forEach(baseCtor => {

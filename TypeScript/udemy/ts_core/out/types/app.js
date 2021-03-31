@@ -34,21 +34,26 @@ var types;
     // any
     let car = "BMW";
     console.log(car);
-    car = { brand: "BMW", series: 3 };
+    car = {brand: "BMW", series: 3};
     console.log(car);
+
     // functions
     function returnMyName() {
         return myName;
     }
+
     console.log(returnMyName());
+
     // void
     function sayHello() {
         console.log("Hello!");
     }
+
     // argument types
     function multiply(value1, value2) {
         return value1 * value2;
     }
+
     // console.log(multiply(2, 'Max'));
     console.log(multiply(10, 2));
     // function types

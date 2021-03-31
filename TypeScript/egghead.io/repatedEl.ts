@@ -1,10 +1,10 @@
 /**
  * Simple TS function to return the first repeated element found in an array
- * 
+ *
  * @export
- * @template T 
- * @param {T[]} array 
- * @returns {T} 
+ * @template T
+ * @param {T[]} array
+ * @returns {T}
  */
 export function repeatedItem<T>(array: T[]): T {
 

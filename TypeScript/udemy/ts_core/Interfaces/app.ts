@@ -1,76 +1,77 @@
 namespace InterfaceX {
-  interface NamedPerson {
-    firstName: string;
-    age?: number;
-    [propName: string]: any; //symbol ???
-    greet(lastName: string): void; //abstract function
-  }
+    interface NamedPerson {
+        firstName: string;
+        age?: number;
 
-  function greet(person: NamedPerson) {
-    console.log("Hello, " + person.firstName);
-  }
-
-  function changeName(person: NamedPerson) {
-    person.firstName = "Anna";
-  }
-
-  const person: NamedPerson = {
-    firstName: "Max",
-    hobbies: ["Cooking", "Sports"],
-    greet(lastName: string) {
-      console.log("Hi, I am " + this.firstName + " " + lastName);
-    },
-  };
-
-  // greet({firstName: "Max", age: 27});
-  changeName(person);
-  greet(person);
-  person.greet("Anything");
-
-  class Person implements NamedPerson {
-    firstName: string;
-    lastName: string;
-
-    public constructor(theName: string, theTitle: string) {
-      this.firstName = theName;
-      this.lastName = theTitle;
+        [propName: string]: any; //symbol ???
+        greet(lastName: string): void; //abstract function
     }
 
-    greet(lastName: string) {
-      console.log("Hi, I am " + this.firstName + " " + lastName);
+    function greet(person: NamedPerson) {
+        console.log("Hello, " + person.firstName);
     }
-  }
 
-  const myPerson = new Person("Maximilian","Anything" );
-  greet(myPerson);
-  myPerson.greet(myPerson.lastName);
+    function changeName(person: NamedPerson) {
+        person.firstName = "Anna";
+    }
 
-  // Function Types
+    const person: NamedPerson = {
+        firstName: "Max",
+        hobbies: ["Cooking", "Sports"],
+        greet(lastName: string) {
+            console.log("Hi, I am " + this.firstName + " " + lastName);
+        },
+    };
 
-  interface DoubleValueFunc {
-    (number1: number, number2: number): number;
-  }
+    // greet({firstName: "Max", age: 27});
+    changeName(person);
+    greet(person);
+    person.greet("Anything");
 
-  let myDoubleFunction: DoubleValueFunc;
-  myDoubleFunction = function (value1: number, value2: number) {
-    return (value1 + value2) * 2;
-  };
+    class Person implements NamedPerson {
+        firstName: string;
+        lastName: string;
 
-  console.log(myDoubleFunction(10, 20));
+        public constructor(theName: string, theTitle: string) {
+            this.firstName = theName;
+            this.lastName = theTitle;
+        }
 
-  // Interface Inheritance
+        greet(lastName: string) {
+            console.log("Hi, I am " + this.firstName + " " + lastName);
+        }
+    }
 
-  interface AgedPerson extends NamedPerson {
-    age: number;
-  }
+    const myPerson = new Person("Maximilian", "Anything");
+    greet(myPerson);
+    myPerson.greet(myPerson.lastName);
 
-  const oldPerson: AgedPerson = {
-    age: 27,
-    firstName: "Max",
-    greet(lastName: string) {
-      console.log("Hello!");
-    },
-  };
+    // Function Types
 
-  console.log(oldPerson);
+    interface DoubleValueFunc {
+        (number1: number, number2: number): number;
+    }
+
+    let myDoubleFunction: DoubleValueFunc;
+    myDoubleFunction = function (value1: number, value2: number) {
+        return (value1 + value2) * 2;
+    };
+
+    console.log(myDoubleFunction(10, 20));
+
+    // Interface Inheritance
+
+    interface AgedPerson extends NamedPerson {
+        age: number;
+    }
+
+    const oldPerson: AgedPerson = {
+        age: 27,
+        firstName: "Max",
+        greet(lastName: string) {
+            console.log("Hello!");
+        },
+    };
+
+    console.log(oldPerson);
 }

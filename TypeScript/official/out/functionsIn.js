@@ -2,6 +2,7 @@
 function buildName(firstName, lastName = "Smith") {
     return firstName + " " + lastName;
 }
+
 let result1 = buildName("Bob"); // works correctly now, returns "Bob Smith"
 let result2 = buildName("Bob", undefined); // still works, also returns "Bob Smith"
 //let result3 = buildName("Bob", "Adams", "Sr.");  // error, too many parameters
@@ -10,6 +11,7 @@ let result4 = buildName("Bob", "Adams"); // ah, just right
 function buildName2(firstName, ...restOfName) {
     return firstName + " " + restOfName.join(" ");
 }
+
 let deck = {
     suits: ["hearts", "spades", "clubs", "diamonds"],
     cards: Array(52),
@@ -19,7 +21,7 @@ let deck = {
         return () => {
             let pickedCard = Math.floor(Math.random() * 52);
             let pickedSuit = Math.floor(pickedCard / 13);
-            return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
+            return {suit: this.suits[pickedSuit], card: pickedCard % 13};
         };
     }
 };
