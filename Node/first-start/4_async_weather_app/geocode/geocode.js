@@ -3,7 +3,7 @@ const request = require('request');
 const geocodeAddress = (argv, callback) => {
     //tested with $ node app.js -a 'sector 16-c dwarka delhi'
     const encodedAddress = encodeURIComponent(argv);
-    const google_map_api_key = "AIzaSyDaTjVaaecu53uX9SFSZJiRdx7lhTCG9Kw";
+    const google_map_api_key = "<get your key from: https://console.cloud.google.com/apis/credentials?project=weather-api-demo-309319>";
     // console.info(encodedAddress);
 
     request(
