@@ -1,9 +1,9 @@
 /**
  * Method to pad a given input string
- * @param {String} inputString 
- * @param {number} [desiredLength=0] 
- * @param {String} [padinputString=' '] 
- * @param {number} [direction=-1] 
+ * @param {String} inputString
+ * @param {number} [desiredLength=0]
+ * @param {String} [padinputString=' ']
+ * @param {number} [direction=-1]
  * @returns {String} the string in desired padded format
  */
 function pad(inputString: String, desiredLength: number = 0, padinputString: String = ' ', direction: number = -1): String {

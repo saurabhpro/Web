@@ -1,5 +1,5 @@
-
 ## Creating a Function
+
 ```js
 //function constructor
 var fun1 = new Function('name', 'return name;');
@@ -21,6 +21,7 @@ fun3('Mami');
 ```
 
 ## What Are Anonymous Functions?
+
 Anonymous functions are function expressions. These expressions do not need to have a name to identify them.
 
 ```js
@@ -35,28 +36,32 @@ document.addEventListener('DOMContentLoaded', function(){
 
 Most use cases for anonymous functions are for closures or using a function as a argument for another function.
 
-
 ## method parameters
-Up until ES6 properties, had a value of `undefined` if a value was not passed when the function was called. Default properties are not restricted to strings or numbers. Objects, arrays, and functions can be used as default values. One of the values that could be passed over is undefined the result would be the same as not passing a value. This would be different than passing null.
 
-Properties can also be evaluated at call time. This would give you the ability to assign a function as the default property and return the result.
-Properties can also be chained together.
+Up until ES6 properties, had a value of `undefined` if a value was not passed when the function was called. Default
+properties are not restricted to strings or numbers. Objects, arrays, and functions can be used as default values. One
+of the values that could be passed over is undefined the result would be the same as not passing a value. This would be
+different than passing null.
+
+Properties can also be evaluated at call time. This would give you the ability to assign a function as the default
+property and return the result. Properties can also be chained together.
 
 ## Using Rest Parameters Allow Unlimited Number of Parameters in a Function?
+
 If the last parameter of a function is prefixed with `...`, all values that are passed to it will be part of an array.
 
+Using rest parameters is similar to using the arguments object. However, there are some important differences.
 
-Using rest parameters is similar to using the arguments object. However, there are some important differences. 
-
-* The arguments object is not a real array. 
+* The arguments object is not a real array.
 * This means that methods like `map, sort, and pop` will not work.
-* The values of the arguments object would have to be converted into a real array first. 
-* The arguments object also returns all arguments sent to a function. 
+* The values of the arguments object would have to be converted into a real array first.
+* The arguments object also returns all arguments sent to a function.
 
-- Rest parameters only handle arguments that are not mapped to a name in the function. 
+- Rest parameters only handle arguments that are not mapped to a name in the function.
 - The rest parameters do not have the same methods that the arguments object does; for example callee is not available.
 
 ## Spread Syntax?
+
 The spread syntax allows functions, arrays, or variables to accept multiple arguments.
 
 ```js
@@ -85,16 +90,21 @@ console.log(part3); //returns 1,2,3,4,5,6
 ```
 
 ## () => {}
-* Arrow functions give you a shorter way of creating functions. 
-* Using this syntax removes some of the features you would be used to having when using a function expression. 
-* Arrow functions are not named; they can be assigned to a variable but are always anonymous. 
-* The basic syntax has a set of parentheses that will hold all the parameters like a function expression. Next the arrow, then curly braces ({}) that will have the body of the function inside.
 
-* Parentheses are optional only when one parameter is being passed. If no parameters are being passed, parentheses are required.
+* Arrow functions give you a shorter way of creating functions.
+* Using this syntax removes some of the features you would be used to having when using a function expression.
+* Arrow functions are not named; they can be assigned to a variable but are always anonymous.
+* The basic syntax has a set of parentheses that will hold all the parameters like a function expression. Next the
+  arrow, then curly braces ({}) that will have the body of the function inside.
+
+* Parentheses are optional only when one parameter is being passed. If no parameters are being passed, parentheses are
+  required.
 
 * Rest and default parameters are supported with arrow functions as well as with object destructuring.
 
-* When using arrow functions, keep in mind that the keyword `this` is not available. It inherits that property from the enclosing scope.
+* When using arrow functions, keep in mind that the keyword `this` is not available. It inherits that property from the
+  enclosing scope.
+
 ```js
 
 //ES 5 
@@ -106,12 +116,12 @@ document.getElementById('myButton').addEventListener('click', function(){
 	}, 1000);
 });
 ```
-The first example first shows how the keyword `this` has different context between the callback function 
-and the function associated with `setInterval`. 
-The only way to bridge the gap is the create a new variable
 
-*(this is why in reval's js file always `var me = this` is done as `this` context can chnage based 
-on from where the callback will be executed .*
+The first example first shows how the keyword `this` has different context between the callback function and the
+function associated with `setInterval`. The only way to bridge the gap is the create a new variable
+
+*(this is why in reval's js file always `var me = this` is done as `this` context can chnage based on from where the
+callback will be executed .*
 
 The inner function (closure) can access the outer variable without using the keyword `this`.
 
@@ -127,17 +137,20 @@ document.getElementById('myButton').addEventListener('click', () => {
 var myObj = () =>  ({name:'June'}) ;
 console.log(myObj()); //returns Object {name: "June"}
 ```
-The second example done with ES6 shows a similar version that is less verbose using the arrow functions. 
-Because arrow functions inherit the property this (due to lexical scoping), you do not need to define another 
-variable to reference the outer context.
 
-If the arrow function needs to return an object literal, the object must be surrounded by parentheses. 
-The reason for this is because if the block were to start with the curly braces ({}), the JavaScript engine 
-does not know the difference between an object literal and the code block. Therefore, by surrounding the 
-object with parentheses the object will be returned, even if the return keyword is not explicitly used.
+The second example done with ES6 shows a similar version that is less verbose using the arrow functions. Because arrow
+functions inherit the property this (due to lexical scoping), you do not need to define another variable to reference
+the outer context.
+
+If the arrow function needs to return an object literal, the object must be surrounded by parentheses. The reason for
+this is because if the block were to start with the curly braces ({}), the JavaScript engine does not know the
+difference between an object literal and the code block. Therefore, by surrounding the object with parentheses the
+object will be returned, even if the return keyword is not explicitly used.
 
 ## super and this work as expected
+
 Just a note on `this`
+
 ```js
 console.log(this); //returns Window
 

@@ -1,8 +1,8 @@
 //a valid json
 [
-    {
-        "id": 1,
-        "firstName" : "Saurabh",
-        "lastName":"Kumar"
-    }
+  {
+    "id": 1,
+    "firstName": "Saurabh",
+    "lastName": "Kumar"
+  }
 ]

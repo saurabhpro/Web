@@ -7,7 +7,7 @@ console.log(typeof num2); // prints out object”
 
 
 const sentence = 'This is one sentence. This is a sentence with a list of items:' +
-	'cherries, oranges, apples, bananas. That was the list of items.';
+    'cherries, oranges, apples, bananas. That was the list of items.';
 
 const start = sentence.indexOf(':');
 
@@ -22,7 +22,7 @@ console.log(fruits2);
 
 //callback
 fruits.forEach(function (elmnt, indx, arry) {
-	arry[indx] = elmnt.trim();
+    arry[indx] = elmnt.trim();
 });
 
 console.log(fruits);
@@ -38,6 +38,6 @@ let str = "";
 
 // check for pattern with regexp exec, if not null, process
 while (matchArray = pattern.exec(searchString)) {
-	str += "at " + matchArray.index + " we found " + matchArray[0] + "\n";
+    str += "at " + matchArray.index + " we found " + matchArray[0] + "\n";
 }
 console.log(str);

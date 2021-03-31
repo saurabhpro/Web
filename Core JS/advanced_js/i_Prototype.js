@@ -36,7 +36,6 @@ var sk = PersonFactory("a", "k");
 console.log(sk.fullNameByPrototype());
 
 
-
 // What does the below code print out?
 var Device = {
     kind: "Music Player"

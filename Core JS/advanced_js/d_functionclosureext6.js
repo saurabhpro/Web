@@ -2,9 +2,9 @@
 
 var foo = [];
 for (var i = 0; i < 10; i++) {
-	foo[i] = function () {
-		return i;
-	}
+    foo[i] = function () {
+        return i;
+    }
 }
 
 console.log(foo[0]());

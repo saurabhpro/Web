@@ -41,7 +41,6 @@ var sk = {
 sk.checkThis.call(); //in non stirct passes window object as this
 
 
-
 function newname(b, c, d) {
     console.log(arguments);
     console.log(this);
@@ -91,7 +90,6 @@ var a = {
 }
 
 a.func();
-
 
 
 var sk = {

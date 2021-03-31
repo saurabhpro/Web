@@ -1,5 +1,5 @@
 var animal = {
-  kind: 'human'
+    kind: 'human'
 };
 
 //console.log(animal);
@@ -21,9 +21,9 @@ valueOf
 
 //or use Object.create(...);
 var sk = Object.create(animal, /*default propertiesObjects too can be passed*/ {
-  food: {
-    value: "mango"
-  }
+    food: {
+        value: "mango"
+    }
 });
 
 console.log(sk.kind);

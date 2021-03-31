@@ -7,44 +7,44 @@
 </head>
 
 <body class="body item">
-    <div class="first item">
-        <div class="second item">
-            <div class="third item">
-                <button class="button item">Click Me!</button>
-            </div>
+<div class="first item">
+    <div class="second item">
+        <div class="third item">
+            <button class="button item">Click Me!</button>
         </div>
     </div>
+</div>
 
-    <script>
-        let items = document.getElementsByClassName('item');
-        /*ES6*/
-        for (let item of items) {
-            (() => {
-                item.addEventListener(
-                    "click",
-                    function event() {
-                        console.log(item, event);
-                    },
-                    true //ture: capturing phase, false: capturing phase (default)
-                );
-            })();
-        }
+<script>
+    let items = document.getElementsByClassName('item');
+    /*ES6*/
+    for (let item of items) {
+        (() => {
+            item.addEventListener(
+                "click",
+                function event() {
+                    console.log(item, event);
+                },
+                true //ture: capturing phase, false: capturing phase (default)
+            );
+        })();
+    }
 
 
-        /*ES5
-        for (let i = 0; i < items.length; i++) {
-            (function () {
-                let y = i;
-                items[y].addEventListener(
-                    "click",
-                    function event() {
-                        console.log(items[y], event);
-                    },
-                    true    //ture: capturing phase, false: capturing phase (default)
-                );
-            })();
-        }*/
-    </script>
+    /*ES5
+    for (let i = 0; i < items.length; i++) {
+        (function () {
+            let y = i;
+            items[y].addEventListener(
+                "click",
+                function event() {
+                    console.log(items[y], event);
+                },
+                true    //ture: capturing phase, false: capturing phase (default)
+            );
+        })();
+    }*/
+</script>
 </body>
 
 

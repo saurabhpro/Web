@@ -7,32 +7,32 @@
 </head>
 
 <body class="body item">
-    <div class="first item">
-        <div class="second item">
-            <div class="third item">
-                <input type="checkbox" class="checkbox item">Click Me!</button>
-            </div>
+<div class="first item">
+    <div class="second item">
+        <div class="third item">
+            <input type="checkbox" class="checkbox item">Click Me!</button>
         </div>
     </div>
+</div>
 
-    <script>
-        let items = document.getElementsByClassName('item');
-        /*ES6*/
-        for (let item of items) {
-            (() => {
-                item.addEventListener(
-                    "click",
-                    function event() {
-                        //alert(item);//to test
-                        //event.stopPropagation();
-                        //event.preventDefault();
-                        console.log(item, event);
-                    },
-                    true //ture: capturing phase, false: capturing phase (default)
-                );
-            })();
-        }
-    </script>
+<script>
+    let items = document.getElementsByClassName('item');
+    /*ES6*/
+    for (let item of items) {
+        (() => {
+            item.addEventListener(
+                "click",
+                function event() {
+                    //alert(item);//to test
+                    //event.stopPropagation();
+                    //event.preventDefault();
+                    console.log(item, event);
+                },
+                true //ture: capturing phase, false: capturing phase (default)
+            );
+        })();
+    }
+</script>
 </body>
 
 

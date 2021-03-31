@@ -5,11 +5,11 @@ eval(code);
 console.log(t);
 
 /**
-with strict
-true
+ with strict
+ true
 
-without strict
-false
+ without strict
+ false
 
-Even though we redefine name when we eval(code) since we are un use strict mode the effects are not leaked out of the eval block.
-*/
+ Even though we redefine name when we eval(code) since we are un use strict mode the effects are not leaked out of the eval block.
+ */

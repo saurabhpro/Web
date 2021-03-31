@@ -1,5 +1,3 @@
-
-
 ```js
 //Two Types of Errors, One During Runtime, the Other User-Defined 
 new Array(-1) //returns Uncaught RangeError: Invalid array length
@@ -10,11 +8,12 @@ console.log(new Error('this is a problem')); //returns Error: this is a problem(
 
 ## Different Types of Errors in JS
 
-- EvalError: This is the result of an error with the eval() function. JavaScript does not throw this error anymore, but it retains it for compatibility.
+- EvalError: This is the result of an error with the eval() function. JavaScript does not throw this error anymore, but
+  it retains it for compatibility.
 - RangeError: This object is the result of a value not in the range of allowed values.
-- ReferenceError: Happens when you try to use something like a variable that has not been defined yet. 
-- SyntaxError: Sometimes called parsing errors, these happen when the runtime cannot parse the code. 
-- TypeError: Happens when trying to access a method or property of an object that does not exist. 
+- ReferenceError: Happens when you try to use something like a variable that has not been defined yet.
+- SyntaxError: Sometimes called parsing errors, these happen when the runtime cannot parse the code.
+- TypeError: Happens when trying to access a method or property of an object that does not exist.
 - URIError: This error is thrown when the URI a function is using is malformed.
 
 ```js
@@ -39,6 +38,7 @@ decodeURIComponent('a%AFc'); //returns Uncaught URIError: URI malformed
 ```
 
 ## try/catch statement used for debugging.
+
 ```js
 function checkStarShip(shipName){
         try{
@@ -63,6 +63,7 @@ checkStarShip('TARDIS');
 ```
 
 ## callback pattern and how to use it to find errors.
+
 ```js
 function onSuccess(){
          console.log('You are Correct');
@@ -80,12 +81,13 @@ function isFirstOfficer(name, onError, onSuccess){
 isFirstOfficer('Scotty', onError, onSuccess);
 isFirstOfficer('Spock', onError, onSuccess);
 ```
+
 Using functions as arguments of other functions is possible because functions are `first-class objects` in JavaScript.
-Because functions are first-class objects, they can be executed inside other functions. 
-This type of thinking is known as `functional programming`. 
-Functions can get executed depending on what is happening in the container function.
+Because functions are first-class objects, they can be executed inside other functions. This type of thinking is known
+as `functional programming`. Functions can get executed depending on what is happening in the container function.
 
 ## User Defined Errors?
+
 ```js
 class myCustomError extends Error{
         constructor(message){

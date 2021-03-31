@@ -1,10 +1,11 @@
 # Chapter 17 - Class
 
-JavaScript is a `prototype-based` language, therefore its use of inheritance is also prototype-based. 
-ECMAScript 5 uses functions to make classes. 
-ECMAScript 6 introduces the `class` keyword as syntactical sugar for class creation in JavaScript.
+JavaScript is a `prototype-based` language, therefore its use of inheritance is also prototype-based. ECMAScript 5 uses
+functions to make classes. ECMAScript 6 introduces the `class` keyword as syntactical sugar for class creation in
+JavaScript.
 
 ## Creating an ES5 Class and an ES6 Class
+
 ```js
 //ECMAScript 5 class
 var Human = (
@@ -37,7 +38,9 @@ var yakko = new Greeting('Nurse!');
 console.log(yakko.sayHello());
 ```
 
-JavaScript uses what is called `prototypical inheritance` to provide access to methods and properties found in other objects. _Each object contains a prototype object with a reference to another object up until an object’s prototype has a null value._ At this point, you have reached the end of the chain and there are no other objects to inherit from.
+JavaScript uses what is called `prototypical inheritance` to provide access to methods and properties found in other
+objects. _Each object contains a prototype object with a reference to another object up until an object’s prototype has
+a null value._ At this point, you have reached the end of the chain and there are no other objects to inherit from.
 
 ```js
 //ES5 Class Creation
@@ -83,6 +86,7 @@ console.log(MyTVShow.prototype)
 ## Extend and Super Keywords has usual functions
 
 ## Static method
+
 Static methods do not need the class to be instantiated in order to use them.
 
 ```js

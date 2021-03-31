@@ -1,5 +1,7 @@
 # Chpatr 10
+
 ## basics
+
 ```js
 var numberSet = new Set();
     numberSet.add(1);
@@ -19,7 +21,10 @@ var numberSet = new Set();
 An array uses push to add elements, whereas sets use the add method. To remove elements, use the delete method.
 
 ## Difference Between the Keys and Values Methods?
-Both methods return an iterator object that contains values for each element. The keys method is an alias for the values method. (since sets values are unique, for Maps they are different)
+
+Both methods return an iterator object that contains values for each element. The keys method is an alias for the values
+method. (since sets values are unique, for Maps they are different)
+
 ```js
 //Checking If a Value Exists in a Set
 var numberSet = new Set();
@@ -36,8 +41,8 @@ var numberSet = new Set();
     console.log(elements.next().value);  //returns 2
 ```
 
-
 ## Check If an Element Exists in a Set?
+
 ```js
 var bandSet = new Set();
     bandSet.add('Dave');
@@ -50,7 +55,9 @@ console.log(bandSet.has('Dave')); //returns true
 It's similar to find on arrays
 
 ## .entries()
+
 The entries method will return an array of each element in the order of insertion.
+
 ```js
 Creating a Custom Iterator with a Set
 var bandSet = new Set();

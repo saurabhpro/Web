@@ -4,8 +4,8 @@ getMyName(
     [
         {
             "id": 1,
-            "firstName" : "Saurabh",
-            "lastName":"Kumar"
+            "firstName": "Saurabh",
+            "lastName": "Kumar"
         }
     ]
 )

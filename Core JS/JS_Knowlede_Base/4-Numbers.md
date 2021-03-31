@@ -1,10 +1,12 @@
-
 # Chapter 4
+
 ## Checking If a Value Is Not a Number
-Both the global method `isNaN` and the `Number.isNaN` method can be used. You can also check the datatype
-by using the `typeof` operator.
+
+Both the global method `isNaN` and the `Number.isNaN` method can be used. You can also check the datatype by using
+the `typeof` operator.
 
 ## Formatting a Number to a Fixed Amount of Digits
+
 ```js
 var numObj = 1.23456789;
 numObj.toPrecision(); //returns 1.23456789
@@ -14,16 +16,19 @@ numObj.toFixed(5); //returns 1.23457 Notice how it rounds up
 numObj.toFixed(2); //returns 1.2
 ```
 
-`toPrecision()` and `toFixed()` will both return a string with the formatted numbers. Using toPrecision will set the amount of digits used. 
+`toPrecision()` and `toFixed()` will both return a string with the formatted numbers. Using toPrecision will set the
+amount of digits used.
 
 When using toFixed, the amount of digits after the decimal point will be set.
 
 ~The **`trunc()`** method will remove all numbers after the decimal, but has no support in Internet Explorer.
 
 ## Checking to See If a Number Is Finite
+
 `isFinite` has a global function and one that is associated with the Number object as of ES6.
 
 ## Number and Math
+
 ```js
 Checking for Integers var myNumber = 1
 Number.isInteger(myNumber);//returns true does not work in IE
@@ -62,14 +67,17 @@ Math.sqrt(1000); //result 31.622776601683793
 ```
 
 ## Random numbers
+
 ```js
 function getRandomBetweenMinAndMax(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 ```
+
 The random method in the Math object returns a floating point pseudo-random number in the range of 0 or 1.
 
 ## Determine the Math.max Method to Return the Highest Number
+
 ```js
 Math.max(1,10) //returns 10
 Math.max(-100,10) //returns 10
@@ -82,6 +90,7 @@ Math.max.apply(myArray) //returns –Infinity
 Math.max(myArray) //Returns NaN
 ```
 
-`Math.max` is a static method so it is used as is. If no arguments are given to it, the answer is `–Infinity`. If any of the arguments cannot be converted into a number, then the answer will result in `NaN`.
-If you are using an array and not putting values directly into the method, use the apply method to direct the browser to where it should find the array.
+`Math.max` is a static method so it is used as is. If no arguments are given to it, the answer is `–Infinity`. If any of
+the arguments cannot be converted into a number, then the answer will result in `NaN`. If you are using an array and not
+putting values directly into the method, use the apply method to direct the browser to where it should find the array.
 
