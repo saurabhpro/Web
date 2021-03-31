@@ -21,8 +21,9 @@ console.debug(argv);
 
 console.time('req');
 
+const google_map_api_key = "AIzaSyDaTjVaaecu53uX9SFSZJiRdx7lhTCG9Kw";
 const encodedAddress = encodeURIComponent(argv.address);
-const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
+const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${google_map_api_key}`;
 
 axios.get(geocodeUrl)
     .then((response: AxiosResponse): AxiosPromise | never => {

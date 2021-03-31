@@ -18,8 +18,9 @@ console.debug(argv);
 
 console.time('req');
 
+const google_map_api_key = "AIzaSyDaTjVaaecu53uX9SFSZJiRdx7lhTCG9Kw";
 const encodedAddress = encodeURIComponent(argv.address);
-const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
+const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${google_map_api_key}`;
 
 axios.get(geocodeUrl)
     .then(
@@ -54,3 +55,20 @@ axios.get(geocodeUrl)
             }
         }
     )
+
+/*
+
+saurabh.kumar@C02D70TBMD6N 4_async_weather_app % node app-promise.js --address=dwarka,delhi
+{
+  _: [],
+  version: false,
+  help: false,
+  h: false,
+  address: 'dwarka,delhi',
+  a: 'dwarka,delhi',
+  '$0': 'app-promise.js'
+}
+Dwarka, New Delhi, Delhi, India
+It is 23.07°C but it feels like 23.07°C
+
+*/
