@@ -1,12 +1,13 @@
-const axios = require('axios');
+import pkg  from 'axios';
+const {get} = pkg;
 
-const wall_street_journel_api_key='86cc672b0b774673b11dfd0fb4373fa1';
+const wall_street_journel_api_key = '86cc672b0b774673b11dfd0fb4373fa1';
 const feedURL = `https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey=${wall_street_journel_api_key}`;
 
 // Main function without using Async/Await
 const printProject = () => {
     // Asynchronous function returning a Promise
-    const newsFeed = axios.get(feedURL);
+    const newsFeed = get(feedURL);
 
     // newsFeed is a Promise object
     newsFeed
@@ -19,7 +20,6 @@ const printProject = () => {
 console.time('random');
 printProject();
 console.timeEnd('random'); // 0.480ms
-
 
 
 // using jQuery - manually returning promises
@@ -59,9 +59,9 @@ Notes:
 */
 
 // Main function with using Async/Await
-const latestHeadline = async(feedUrl) => {
+const latestHeadline = async (feedUrl) => {
     // Fetch raw feed or JSON feed if using axios with await, since internally await resolves the response form axios
-    const response = await axios.get(feedUrl);
+    const response = await get(feedUrl);
 
     // Convert to JSON - if using axios NO NEED
     // const data = await response.json();

@@ -1,7 +1,12 @@
-// arguments from: USD to: CAD amount: 24
-// 24 is worth 28 CAD. You can spend these in the following countries:
+/*
+saurabh.kumar@C02D70TBMD6N async-await % node currency-convert.js
+1000 from EUR is 85923.74 in INR. 
+INR can be used in countries: Bhutan, India, Zimbabwe 
+cnv: 1.372s
+ */
 
-const axios = require('axios');
+import pkg  from 'axios';
+const {get} = pkg;
 
 // const getExchangeRate = (from, to) => {
 //     return axios.get(`http://api.fixer.io/latest?base=${from}`)
@@ -12,9 +17,11 @@ const axios = require('axios');
 // }
 
 
-const getExchangeRate = async(from, to) => {
+// https://fixer.io/quickstart -> yahoo domain, free plan doesnt support USD, so making it to EUR
+const getExchangeRate = async (from, to) => {
     try {
-        const response = await axios.get(`http://api.fixer.io/latest?base=${from}`);
+        const fixer_api_key = 'e55ba5c2eb354c17bc50fbf70ce29f8b';
+        const response = await get(`http://data.fixer.io/api/latest?access_key=${fixer_api_key}&base=${from}`);
 
         const rate = response.data.rates[to];
 
@@ -27,7 +34,6 @@ const getExchangeRate = async(from, to) => {
     } catch (e) {
         throw new Error(`Unable to get Exchange Rate from ${from} to ${to}`);
     }
-
 }
 
 
@@ -38,9 +44,9 @@ const getExchangeRate = async(from, to) => {
 //         });
 // }
 
-const getCountries = async(currency) => {
+const getCountries = async (currency) => {
     try {
-        const response = await axios.get(`https://restcountries.eu/rest/v2/currency/${currency}`);
+        const response = await get(`https://restcountries.eu/rest/v2/currency/${currency}`);
 
         return response.data.map((country) => country.name);
     } catch (e) {
@@ -72,7 +78,7 @@ const getCountries = async(currency) => {
 // });
 
 
-const convertCurrencyAlt = async(from, to, amount) => {
+const convertCurrencyAlt = async (from, to, amount) => {
     const countries = await getCountries(to);
     const rate = await getExchangeRate(from, to);
 
@@ -81,7 +87,7 @@ const convertCurrencyAlt = async(from, to, amount) => {
 }
 
 console.time('cnv');
-convertCurrencyAlt('USD', 'INR', 1000)
+convertCurrencyAlt('EUR', 'INR', 1000)
     .then((res) => {
         console.log(res);
 
