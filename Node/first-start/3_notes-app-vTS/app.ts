@@ -9,7 +9,7 @@ const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
 
-import { Note, Notes } from "./notes";
+import {Note, Notes} from "./notes";
 
 type HelpObject = { describe: string, demand: boolean, alias?: string }
 

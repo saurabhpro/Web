@@ -14,7 +14,9 @@ type fnWithNoArgs = () => Array<Note>;
 
 export class Notes {
 
-    constructor(){}
+    constructor() {
+    }
+
     printNote = (note: Note) => {
         console.log('---------');
         console.log(`Title: ${note.title}\nBody: ${note.body}`);

@@ -7,9 +7,10 @@ fs.readFile('file.md', (err, data) => {
 });
 
 // moreWork(); will run before console.log
-function moreWork(){
+function moreWork() {
     console.log(fs.readFileSync('file.md'));
 }
+
 console.timeEnd('read22');
 
 /*

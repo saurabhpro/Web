@@ -1,7 +1,8 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {value: true});
 console.log('Starting notes.js');
 const fs = require('fs');
+
 class Notes {
     constructor() {
         this.printNote = (note) => {
@@ -13,8 +14,7 @@ class Notes {
                 const existingValues = fs.readFileSync('notes-data.json');
                 console.log(JSON.parse(existingValues));
                 return JSON.parse(existingValues);
-            }
-            catch (e) {
+            } catch (e) {
                 return [];
             }
         };
@@ -53,4 +53,5 @@ class Notes {
         };
     }
 }
+
 exports.Notes = Notes;

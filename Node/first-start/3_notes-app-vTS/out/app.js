@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {value: true});
 console.log('starting app.js');
 const fs = require('fs');
 const _ = require('lodash');
@@ -17,16 +17,16 @@ const bodyOptions = {
 };
 const argv = yargs
     .command('add', 'Add a new note', {
-    title: titleOptions,
-    body: bodyOptions
-})
+        title: titleOptions,
+        body: bodyOptions
+    })
     .command('list', 'List all notes')
     .command('read', 'Read a note', {
-    title: titleOptions,
-})
+        title: titleOptions,
+    })
     .command('remove', 'Remove a note', {
-    title: titleOptions
-})
+        title: titleOptions
+    })
     .help()
     .argv;
 const command = argv._[0];
@@ -37,8 +37,7 @@ switch (command) {
         const notesList = notes.listAllNote();
         if (_.isEmpty(notesList)) {
             console.log("No Note Present");
-        }
-        else {
+        } else {
             console.log(`Printing ${notesList.length} Notes`);
             console.time('for');
             notesList.forEach((note) => notes.printNote(note));
@@ -49,8 +48,7 @@ switch (command) {
         const noteAdded = notes.addNote(argv.title, argv.body);
         if (!noteAdded) {
             console.log('Duplicate Note Title Found');
-        }
-        else {
+        } else {
             console.log('Added Note');
         }
         break;
