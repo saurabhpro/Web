@@ -4,6 +4,9 @@
 - https://www.youtube.com/watch?v=ZQL7tL2S0oQ
 - https://github.com/WebDevSimplified/Learn-GraphQL/blob/master/server.js
 
+## Start 
+-  `npm run devStart`
+
 ## Level 1 - GraphQL Hello World
 ```js
 // input
@@ -165,7 +168,7 @@ query FirstMessage {
 }
 ```
 
-## Level 3: Find books by id
+## Level 4: Find books by id
 ```js
 {
   book(id: 1) {
@@ -185,5 +188,33 @@ query FirstMessage {
       }
     }
   }
+}
+```
+
+
+## Level 5 - GraphQL Mutations 
+```js
+mutation {
+  addBook(name: "Power", authorId: 5) {
+    name
+    id
+  }
+}
+
+
+{
+  "data": {
+    "addBook": {
+      "name": "Power",
+      "id": 11
+    }
+  }
+}
+
+// Obviously the author name is null, can you add it ?
+{
+    "name": "Power",
+    "id": 11,
+    "author": null
 }
 ```
