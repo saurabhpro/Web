@@ -1,1 +1,10 @@
-[{"title":"helo","body":"Yo Sup"},{"title":"he","body":"Yo Sup"}]
+[
+  {
+    "title": "helo",
+    "body": "Yo Sup"
+  },
+  {
+    "title": "he",
+    "body": "Yo Sup"
+  }
+]

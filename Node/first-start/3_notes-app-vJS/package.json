@@ -4,15 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node app.js add --version"
   },
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.17",
-    "yargs": "^10.0.0"
+    "lodash": "^4.17.21",
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
-    "eslint": "^4.8.0"
+    "eslint": "^7.23.0"
   }
 }

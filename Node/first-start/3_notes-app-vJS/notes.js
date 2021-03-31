@@ -71,7 +71,6 @@ const getThisNote = (title) => {
 }
 
 
-
 module.exports = {
     addNote,
     listAllNote,

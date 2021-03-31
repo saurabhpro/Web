@@ -18,7 +18,7 @@ const fs = require('fs');
 
 const originalNote = {
     title: "Hello",
-    body:"Saurabh"
+    body: "Saurabh"
 }
 
 const originalNoteString = JSON.stringify(originalNote);
@@ -27,4 +27,4 @@ fs.writeFileSync('notes.json', originalNoteString);
 const readObjString = fs.readFileSync('notes.json');
 //console.log(readObjString);
 const readNoteObj = JSON.parse(readNoteObjString);
-console.log(typeof readNoteObj, readNoteObj.title );
+console.log(typeof readNoteObj, readNoteObj.title);
