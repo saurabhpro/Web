@@ -1,18 +1,14 @@
 {
   "groupName": "Renovate Dependency Scan",
-  "separateMajorMinor": false,
+  "separateMajorMinor": true,
   "groupSlug": "all",
   "packageRules": [
     {
-      "packagePatterns": [
-        "*"
-      ],
+      "packagePatterns": ["*"],
       "groupName": "Renovate Dependency Scan",
       "groupSlug": "all"
     }
   ],
-  "extends": [
-    "schedule:earlyMondays"
-  ],
+  "ignorePaths": ["**/Angular/**"],
   "ignoreDeps": []
 }
