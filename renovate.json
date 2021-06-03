@@ -1,5 +1,4 @@
 {
-  "extends": ["config:base"],
   "groupName": "Renovate Dependency Scan",
   "groupSlug": "all",
   "lockFileMaintenance": {
