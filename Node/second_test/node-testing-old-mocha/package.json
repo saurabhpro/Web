@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "expect": "1.20.2",
+    "expect": "24.9.0",
     "mocha": "3.5.3",
     "rewire": "2.5.2",
     "supertest": "2.0.1"
