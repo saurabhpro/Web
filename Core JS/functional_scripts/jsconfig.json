@@ -1,5 +1,3 @@
 {
-  "Help": [
-    "its basically tsconfig with allowJS = true"
-  ]
+  "Help": ["its basically tsconfig with allowJS = true"]
 }

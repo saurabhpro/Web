@@ -1,10 +1,10 @@
 function loo() {
-    var goo = 1;
-    moo();
+  var goo = 1;
+  moo();
 }
 
 function moo() {
-    console.log(goo);
+  console.log(goo);
 }
 
 loo();

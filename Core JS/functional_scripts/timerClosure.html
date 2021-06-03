@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 
 <head>
-    <title>interval and anonymous function</title>
-    <style>
-        #redbox {
-            position: absolute;
-            left: 100px;
-            top: 100px;
-            width: 200px;
-            height: 200px;
-            background-color: red;
-        }
-    </style>
+  <title>interval and anonymous function</title>
+  <style>
+    #redbox {
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
 </head>
 
 <body>
-<!-- placeholder for red box-->
-<div id="redbox"></div>
+  <!-- placeholder for red box-->
+  <div id="redbox"></div>
 
-<script>
+  <script>
     var intervalId = null;
 
-    document.getElementById('redbox')
-        .addEventListener('click', startBox, false);
+    document
+      .getElementById('redbox')
+      .addEventListener('click', startBox, false);
 
     function startBox() {
-        if (intervalId == null) {
-            var x = 100;
-            intervalId = setInterval(
-                function () {
-                    x += 5;
-                    var left = x + "px";
-                    document.getElementById('redbox')
-                        .style
-                        .left = left;
-                }
-                , 100);
-        } else {
-            clearInterval(intervalId);
-            intervalId = null;
-        }
+      if (intervalId == null) {
+        var x = 100;
+        intervalId = setInterval(function () {
+          x += 5;
+          var left = x + 'px';
+          document.getElementById('redbox').style.left = left;
+        }, 100);
+      } else {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
     }
 
     var firstDate = new Date();
 
     setTimeout(function () {
-            doEvent(firstDate);
-        }
-        , 25000);
+      doEvent(firstDate);
+    }, 25000);
 
     function doEvent() {
-        var secondDate = new Date();
-        var diff = secondDate - firstDate;
-        console.log(diff); // approx. 25000
+      var secondDate = new Date();
+      var diff = secondDate - firstDate;
+      console.log(diff); // approx. 25000
     }
 
     var obj = {
-        simple: (a) => {
-            return a
-        }
-    }
+      simple: (a) => {
+        return a;
+      },
+    };
     //called by its name along with its associated object
     alert(obj.simple(5));
-
-</script>
-
+  </script>
 </body>

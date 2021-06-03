@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Event Capturing</title>
-</head>
+  </head>
 
-<body class="body item">
-<div class="first item">
-    <div class="second item">
+  <body class="body item">
+    <div class="first item">
+      <div class="second item">
         <div class="third item">
-            <button class="button item">Click Me!</button>
+          <button class="button item">Click Me!</button>
         </div>
+      </div>
     </div>
-</div>
 
-<script>
-    let items = document.getElementsByClassName('item');
-    /*ES6*/
-    for (let item of items) {
+    <script>
+      let items = document.getElementsByClassName('item');
+      /*ES6*/
+      for (let item of items) {
         (() => {
-            item.addEventListener(
-                "click",
-                function event() {
-                    console.log(item, event);
-                },
-                true //ture: capturing phase, false: capturing phase (default)
-            );
+          item.addEventListener(
+            'click',
+            function event() {
+              console.log(item, event);
+            },
+            true //ture: capturing phase, false: capturing phase (default)
+          );
         })();
-    }
+      }
 
-
-    /*ES5
+      /*ES5
     for (let i = 0; i < items.length; i++) {
         (function () {
             let y = i;
@@ -44,8 +42,6 @@
             );
         })();
     }*/
-</script>
-</body>
-
-
+    </script>
+  </body>
 </html>

@@ -6,24 +6,32 @@
  * @param {number} [direction=-1]
  * @returns {String} the string in desired padded format
  */
-function pad(inputString: String, desiredLength: number = 0, padinputString: String = ' ', direction: number = -1): String {
-    var repetition: number = (desiredLength - inputString.length) / padinputString.length;
+function pad(
+  inputString: String,
+  desiredLength: number = 0,
+  padinputString: String = ' ',
+  direction: number = -1
+): String {
+  var repetition: number =
+    (desiredLength - inputString.length) / padinputString.length;
 
-    //pad right
-    if (repetition && direction > 0) {
-        return inputString + padinputString.repeat(repetition);
-    }
-    //padd left
-    else if (repetition && direction < 0) {
-        return padinputString.repeat(repetition) + inputString;
-    }
-    //pad left and right equally
-    else if (repetition && direction === 0) {
-        var left: number = Math.floor(repetition / 2),
-            right: number = repetition - left;
-        return padinputString.repeat(left) + inputString + padinputString.repeat(right);
-    }
-    return inputString;
+  //pad right
+  if (repetition && direction > 0) {
+    return inputString + padinputString.repeat(repetition);
+  }
+  //padd left
+  else if (repetition && direction < 0) {
+    return padinputString.repeat(repetition) + inputString;
+  }
+  //pad left and right equally
+  else if (repetition && direction === 0) {
+    var left: number = Math.floor(repetition / 2),
+      right: number = repetition - left;
+    return (
+      padinputString.repeat(left) + inputString + padinputString.repeat(right)
+    );
+  }
+  return inputString;
 }
 
 console.log(pad('indent', 10));

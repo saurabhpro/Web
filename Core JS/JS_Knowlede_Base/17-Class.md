@@ -8,26 +8,24 @@ JavaScript.
 
 ```js
 //ECMAScript 5 class
-var Human = (
-        function Human(name){
-                 this.name = name;
-} )
+var Human = function Human(name) {
+  this.name = name;
+};
 //assign new functions to the object that can be used with other instances of that objects.
-Human.prototype.sayGoodNight = function(){
-       return 'Say Goodnight ' + this.name;
-}
+Human.prototype.sayGoodNight = function () {
+  return 'Say Goodnight ' + this.name;
+};
 var george = new Human('Gracie');
 console.log(george.sayGoodNight());
 
-
 //ECMAScript 6 class
-class Greeting{
-    constructor(name){
-            this.name = name;
-    }
-    sayHello(){
-            return 'Hellooo ' + this.name;
-    } 
+class Greeting {
+  constructor(name) {
+    this.name = name;
+  }
+  sayHello() {
+    return 'Hellooo ' + this.name;
+  }
 }
 
 /*
@@ -44,43 +42,42 @@ a null value._ At this point, you have reached the end of the chain and there ar
 
 ```js
 //ES5 Class Creation
-function Show(name, network){
-         this.name = name;
-         this.network = network;
+function Show(name, network) {
+  this.name = name;
+  this.network = network;
+}
+Show.prototype.getShowName = function getShowName() {
+  return this.name; //added to the Show prototype it now has access to it's properties.
 };
-Show.prototype.getShowName = function getShowName(){
-       return this.name;  //added to the Show prototype it now has access to it's properties.
-};
-Show.prototype.getShowNetwork = function getShowNetwork(){
-       return this.network;
+Show.prototype.getShowNetwork = function getShowNetwork() {
+  return this.network;
 };
 var gravityFalls = new Show('Gravity Falls', 'Disney XD');
-console.log(gravityFalls.getShowName());  //returns Gravity Falls
+console.log(gravityFalls.getShowName()); //returns Gravity Falls
 console.log(gravityFalls.getShowNetwork()); //returns Disney XD
 
-Show.prototype.getShowNetwork = function getShowNetwork(){
-       return 'On My TV!';
+Show.prototype.getShowNetwork = function getShowNetwork() {
+  return 'On My TV!';
 };
 
 console.log(gravityFalls.getShowNetwork()); //returns On My TV!
 console.log(Show.prototype); //shows getShowName and getShowNetwork functions are now part of the Show prototype
 
-
 //ES6 Class Creation
-class MyTVShow{
-    constructor(name, network){
-          this.name = name;
-          this.network = network;
-    }
-   getShowName(){
-          return this.show;
+class MyTVShow {
+  constructor(name, network) {
+    this.name = name;
+    this.network = network;
+  }
+  getShowName() {
+    return this.show;
+  }
+  getShowNetwork() {
+    return this.network;
+  }
 }
-   getShowNetwork(){
-          return this.network;
-} }
-console.log(MyTVShow.prototype)
+console.log(MyTVShow.prototype);
 //shows getShowName and getShowNetwork functions are now part of the MyTVShow prototype.
-
 ```
 
 ## Extend and Super Keywords has usual functions
@@ -91,17 +88,17 @@ Static methods do not need the class to be instantiated in order to use them.
 
 ```js
 //Static Methods Are Called Directly from the Class
-class Human{
-        constructor(){
+class Human {
+  constructor() {}
+  static hasLegs() {
+    return 'Person has legs';
+  }
+  static hasAmrs() {
+    return 'Person has arms';
+  }
 }
-        static hasLegs(){
-                 return 'Person has legs';
-}
-        static hasAmrs(){
-                 return 'Person has arms';
-} }
 
 //don't need to create var human = new Human();
-console.log(Human.hasLegs())  //returns Person has legs
-console.log(Human.hasAmrs())  //returns Person has arms
+console.log(Human.hasLegs()); //returns Person has legs
+console.log(Human.hasAmrs()); //returns Person has arms
 ```

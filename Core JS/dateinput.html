@@ -1,28 +1,21 @@
 //HTML form
 <form>
-    <label for="dateComponent">Choose a date:
-        <input type="date" id="dateComponent">
-    </label>
-    <label for="dateResult">You picked:
-        <input type="text" id="dateResult">
-    </label>
-    <input type="submit" value="Choose a date" id="subtmitBtn">
+  <label for="dateComponent"
+    >Choose a date:
+    <input type="date" id="dateComponent" />
+  </label>
+  <label for="dateResult"
+    >You picked:
+    <input type="text" id="dateResult" />
+  </label>
+  <input type="submit" value="Choose a date" id="subtmitBtn" />
 </form>
-//JavaScript
-
-var submitBtn = document.getElementById('subtmitBtn');
-submitBtn.addEventListener('click', function(e){
-e.preventDefault();
-var dateSelected = document.getElementById('dateComponent');
-var dateArray = [];
-if(dateSelected.value != ''){
-console.log(typeof dateSelected.value); //result is a string
-dateArray = dateSelected.value.split('');
-for(var i = 0; i < dateArray.length; i++){
-if(dateArray[i] === '-'){
-dateArray[i] = '/';
-} }
-var formatedDate = new Date(dateArray.join(''));
-document.getElementById('dateResult').value = (formatedDate.getMonth() + 1) + '-' +
-formatedDate.getDate() + '-' + formatedDate.getFullYear();
-} });
+//JavaScript var submitBtn = document.getElementById('subtmitBtn');
+submitBtn.addEventListener('click', function(e){ e.preventDefault(); var
+dateSelected = document.getElementById('dateComponent'); var dateArray = [];
+if(dateSelected.value != ''){ console.log(typeof dateSelected.value); //result
+is a string dateArray = dateSelected.value.split(''); for(var i = 0; i <
+dateArray.length; i++){ if(dateArray[i] === '-'){ dateArray[i] = '/'; } } var
+formatedDate = new Date(dateArray.join(''));
+document.getElementById('dateResult').value = (formatedDate.getMonth() + 1) +
+'-' + formatedDate.getDate() + '-' + formatedDate.getFullYear(); } });

@@ -1,48 +1,49 @@
 var Person = {
-    //Method1
-    init: function (firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        return this;
-    },
-    fullNameByPrototype: function () {
-        return this.firstName + this.lastName;
-    }
-}
+  //Method1
+  init: function (firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    return this;
+  },
+  fullNameByPrototype: function () {
+    return this.firstName + this.lastName;
+  },
+};
 
-var sk = Object.create(Person, /*Method 2*/ {
+var sk = Object.create(
+  Person,
+  /*Method 2*/ {
     firstName: {
-        value: "s"
+      value: 's',
     },
     lastName: {
-        value: "k"
-    }
-});
+      value: 'k',
+    },
+  }
+);
 
 //sk.init("s", "k");    //method 1
 console.log(sk.fullNameByPrototype());
 
 /*Method 3*/
 function PersonFactory(firstName, lastName) {
-    var person = Object.create(Person);
-    person.firstName = firstName;
-    person.lastName = lastName;
-    return person;
+  var person = Object.create(Person);
+  person.firstName = firstName;
+  person.lastName = lastName;
+  return person;
 }
 
-var sk = PersonFactory("a", "k");
-
+var sk = PersonFactory('a', 'k');
 
 console.log(sk.fullNameByPrototype());
 
-
 // What does the below code print out?
 var Device = {
-    kind: "Music Player"
+  kind: 'Music Player',
 };
 
 var AppleProduct = Object.create(Device, {
-    name: "iPod"
+  name: 'iPod',
 });
 
 var purchase = Object.create(AppleProduct);

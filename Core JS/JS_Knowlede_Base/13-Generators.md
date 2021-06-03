@@ -1,19 +1,19 @@
 # Chapter 13 - Genrators
 
 ```js
-function fun1(){
-     console.log('function 1');
+function fun1() {
+  console.log('function 1');
 }
-function fun2(){
-     console.log('function 2');
+function fun2() {
+  console.log('function 2');
 }
 //create a generator function with *symbol.
-function *runFun(){
-     yield;
-     yield fun1();
-     yield fun2();
+function* runFun() {
+  yield;
+  yield fun1();
+  yield fun2();
 }
-//other way if 
+//other way if
 var iterator = runFun();
 console.log(iterator.next()); //pauses function  Object {value: undefined, done: false}
 console.log(iterator.next()); //returns 'function1' Object {value: undefined, done: false}
@@ -21,8 +21,8 @@ console.log(iterator.next()); //returns 'function 2' Object {value: undefined, d
 console.log(iterator.next()); //done = true Object {value: undefined, done: true}
 
 //other way to create generators
-var GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor
-var myGenFunction = new GeneratorFunction('value',  'yield value'); // The last parameter defines what the function does.
+var GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
+var myGenFunction = new GeneratorFunction('value', 'yield value'); // The last parameter defines what the function does.
 
 var myGenIterator = myGenFunction();
 console.log(myGenIterator.next()); //Object {value: undefined, done: false}
@@ -43,10 +43,9 @@ whatever value is being returned from the `yield` keyword.
 ## Creating a Function that Maintains State
 
 ```js
-function *numCount(){
-    var count = 0;
-    while(count < 5)
-        yield count++;
+function* numCount() {
+  var count = 0;
+  while (count < 5) yield count++;
 }
 
 var irt = numCount();
@@ -65,15 +64,15 @@ again.
 
 Other ways to terminate yeild
 
-* throw exception
-* return statement
+- throw exception
+- return statement
 
 ## Passing a Parameter Using the next() Method
 
 ```js
-function *returnMSG(){
-     var value = yield value
-     return value;
+function* returnMSG() {
+  var value = yield value;
+  return value;
 }
 var it = returnMSG();
 console.log(it.next()); //Object {value: undefined, done: false}
@@ -87,21 +86,22 @@ does not have a value. The second time next() is called, you can push a paramete
 
 ```js
 var countdown = {
-     max: 3,
-     [Symbol.iterator]() {
-         return this;
-},
-next() {
-    if(this.max == undefined){
-        this.max = max;
-      }else if(this.max > -1){
-        return {value: this.max --};
-      }else{
-        return {done: true};
-} }
+  max: 3,
+  [Symbol.iterator]() {
+    return this;
+  },
+  next() {
+    if (this.max == undefined) {
+      this.max = max;
+    } else if (this.max > -1) {
+      return { value: this.max-- };
+    } else {
+      return { done: true };
+    }
+  },
 };
 for (let i of countdown) {
-     console.log(i);
+  console.log(i);
 }
 ```
 
@@ -115,26 +115,26 @@ This is also valid JavaScript as of ES6. This method will check the current valu
 the property’s value and done.
 
 Now that this object has an iterator, you can use it within a `for..of` loop.
-*It is important to note as of this writing that Symbol.iterator does not have support in Internet Explorer or Safari.*
+_It is important to note as of this writing that Symbol.iterator does not have support in Internet Explorer or Safari._
 
 ## Custom Iterator to Make a Fibonacci Sequence
 
 ```js
 var fibObj = {
-    one: 0,
-    two: 1,
-    temp: 0,
-     [Symbol.iterator](){
-        return this;
-},
-    next(){
-        this.temp = this.two;
-        this.two = this.temp + this.one;
-        this.one = this.temp;
-        return {value: this.two}
-} }
-for(var I = 0 ; I < 1000; I++){
-       consolel.log(fibObj.next().value) //1,2,3,5,8.....
+  one: 0,
+  two: 1,
+  temp: 0,
+  [Symbol.iterator]() {
+    return this;
+  },
+  next() {
+    this.temp = this.two;
+    this.two = this.temp + this.one;
+    this.one = this.temp;
+    return { value: this.two };
+  },
+};
+for (var I = 0; I < 1000; I++) {
+  consolel.log(fibObj.next().value); //1,2,3,5,8.....
 }
 ```
-

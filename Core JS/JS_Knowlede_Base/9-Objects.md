@@ -10,26 +10,26 @@ When accessing variables, dot notation is used more often. However you can also 
 In that case, property names are in quotes. Other languages call this a hash, lookup table, dictionary, or map.
 
 When giving properties names using dot syntax, the same rules apply that you would use for variables. Property names can
-have numbers, underscores, and dollar signs. However, they cannot start with a number. *If you’re using bracket
-notation, property names must be a string.*
+have numbers, underscores, and dollar signs. However, they cannot start with a number. _If you’re using bracket
+notation, property names must be a string._
 
 ## Returning Only the Enumerable Properties of an Object
 
 ```js
-var myObj = {a:1, b:2, c:3};
+var myObj = { a: 1, b: 2, c: 3 };
 console.log(Object.keys(myObj)); //returns ["a", "b", "c"]
 ```
 
 This method will return an array of the object’s enumerable properties, in the same order as if you performed a for..in
 loop.
 
-* If you are using ES5 and pass over a primitive (for example, a string), you will receive a type error.
-* If you are using ES6, each letter in the string will return as its index number.
+- If you are using ES5 and pass over a primitive (for example, a string), you will receive a type error.
+- If you are using ES6, each letter in the string will return as its index number.
 
 ## check if enumerable
 
 ```js
-var myObj = {a:1, b:2, c:3};
+var myObj = { a: 1, b: 2, c: 3 };
 console.log(myObj.propertyIsEnumerable('a')); //returns true
 console.log(myObj.propertyIsEnumerable('length')); //returns false
 ```
@@ -55,4 +55,4 @@ are some of the objects that can be used.
 
 The for...of loop works with iterable objects. This allows JavaScript to define or customize how the values are looped
 over. Some types like arrays or maps have built-in iterables with a default behavior.
-*Objects however do not have such a feature, resulting in an [Symbol.iterator] error.*
+_Objects however do not have such a feature, resulting in an [Symbol.iterator] error._

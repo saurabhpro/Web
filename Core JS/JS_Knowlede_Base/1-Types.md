@@ -22,8 +22,9 @@ new Object();   // An empty Object created from its constructor
 ## typeof
 
 ```javascript
-if (typeof a === 'undefined') { // Strict Equality Operator (`===`)
-    console.log("Variable 'a' is undefined");
+if (typeof a === 'undefined') {
+  // Strict Equality Operator (`===`)
+  console.log("Variable 'a' is undefined");
 }
 ```
 
@@ -57,16 +58,16 @@ var a = NaN;
 var b = Infinity;
 var c = -Infinity;
 var d = 3;
-if ( Number.isNaN(a) ) {
-         console.log("a is a NaN (not a number)");
+if (Number.isNaN(a)) {
+  console.log('a is a NaN (not a number)');
 } else {
-         console.log("a is a real Number, not NaN");
+  console.log('a is a real Number, not NaN');
 }
 
-if ( Number.isFinite(b) ) {
-         console.log("b is a finite Number");
+if (Number.isFinite(b)) {
+  console.log('b is a finite Number');
 } else {
-         console.log("b is not a finite Number, it is either +Infinity or -Infinity");
+  console.log('b is not a finite Number, it is either +Infinity or -Infinity');
 }
 ```
 
@@ -78,12 +79,12 @@ create a Date object instance.
 
 ```javascript
 //Generating a Date with a Date String
-var myDateString = "January 16, 1975 17:07:00";
+var myDateString = 'January 16, 1975 17:07:00';
 var myDate = new Date(myDateString);
 console.log(myDate);
 
 if (myDate instanceof Date) {
-    console.log("a is a Date");
+  console.log('a is a Date');
 }
 ```
 
@@ -106,8 +107,8 @@ is set to the constructor function, so for example new Date()`s constructor prop
 ```javascript
 var date = new Date();
 
-if ( date.constructor === Date ) {
-    console.log("date is a Date instance");
+if (date.constructor === Date) {
+  console.log('date is a Date instance');
 }
 ```
 
@@ -115,11 +116,11 @@ if ( date.constructor === Date ) {
 
 ```javascript
 var name = 'Bob';
-console.log( 'Hello ' + name + '!' ); // The old way to do this, cumbersome and error prone
-console.log( `Hello ${name}!` ); // Template Literals, shorter, more succinct, and less error prone
+console.log('Hello ' + name + '!'); // The old way to do this, cumbersome and error prone
+console.log(`Hello ${name}!`); // Template Literals, shorter, more succinct, and less error prone
 
 var otherName = 'Mary';
 var thirdName = 'Jim';
-console.log( 'Hello ' + otherName + ', how is ' + thirdName + '?' ); // Can get very messy
-console.log( `Hello ${otherName}, how is ${thirdName}?` ); // Much cleaner
+console.log('Hello ' + otherName + ', how is ' + thirdName + '?'); // Can get very messy
+console.log(`Hello ${otherName}, how is ${thirdName}?`); // Much cleaner
 ```

@@ -3,14 +3,14 @@
 ## Unary Addition (+) Operator to Coerce an Object to a Number
 
 ```js
-console.log( + "42" ); // Coerces String to the Number 42
-console.log( + '3.142' ); // Coerces String to the Number 3.142
-console.log( + "-1e3" ); // Coerces String to the Number -1000
+console.log(+'42'); // Coerces String to the Number 42
+console.log(+'3.142'); // Coerces String to the Number 3.142
+console.log(+'-1e3'); // Coerces String to the Number -1000
 var myNum = '1.231'; // The String '1.231'
-console.log( + myNum ); // Coerces String to the Number 1.231
-console.log( + {} ); // NaN (Not a Number)
-console.log( + 'foo' ); // NaN (Not a Number)
-console.log( + + + + '1' ); // Operator can be repeated (value is the Number 1)
+console.log(+myNum); // Coerces String to the Number 1.231
+console.log(+{}); // NaN (Not a Number)
+console.log(+'foo'); // NaN (Not a Number)
+console.log(+(+(+(+'1')))); // Operator can be repeated (value is the Number 1)
 ```
 
 The JavaScript interpreter specifically picks up the + sign with no preceding value as a “unary + operator” (section
@@ -40,7 +40,7 @@ console.log( delete primes );
 It is important to note that delete does not work on variables or declared functions—that is, it cannot delete things
 that are not properties of objects or arrays. A common misconception around delete is that it is useful for freeing up
 memory.
-*Delete does not free up any memory as a direct result of its operation.*
+_Delete does not free up any memory as a direct result of its operation._
 For example, if you have an object that is referenced elsewhere in your code, as well as in an object you are deleting
 from, then the object still has a hard reference, and therefore will not be freed. The only way delete will ever appear
 to be freeing memory is if the deleted property was the only hard reference to an object, function, or array.
@@ -60,16 +60,16 @@ objects (the prototype chain).
 ```js
 var house = { bedrooms: 4, floors: 3 };
 if ('bedrooms' in house) {
-    console.log('house has a "bedrooms" property');
+  console.log('house has a "bedrooms" property');
 }
 
 var myDate = new Date();
 if ('setDay' in myDate) {
-    console.log('myDate has a "setDay" method');
+  console.log('myDate has a "setDay" method');
 }
 
 var qualifiers = ['First', 'Second', 'Third', 'DNF'];
 if (0 in qualifiers) {
-    console.log('qualifiers has a "0" item');
-}//true as in checks the key whic for array is always sequential
+  console.log('qualifiers has a "0" item');
+} //true as in checks the key whic for array is always sequential
 ```

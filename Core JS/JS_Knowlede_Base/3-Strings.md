@@ -6,8 +6,8 @@
 
 ```js
 var myString = 'abc';
-for(var i in myString) {
-    console.log('Character at fromPosition ' + i + ' is ' + myString[i]);
+for (var i in myString) {
+  console.log('Character at fromPosition ' + i + ' is ' + myString[i]);
 }
 ```
 
@@ -29,8 +29,8 @@ Using for...in
 
 ```js
 var myString = 'abc\uD83D\uDCD6';
-for(var v of myString) {
-    console.log(v);
+for (var v of myString) {
+  console.log(v);
 }
 ```
 
@@ -45,7 +45,7 @@ The output is:
 
 ```js
 if ('abc'.contains('a')) {
-    console.log('The string "abc" contains the letter a');
+  console.log('The string "abc" contains the letter a');
 }
 ```
 
@@ -53,14 +53,14 @@ if ('abc'.contains('a')) {
 
 ```js
 if ('abc'.endsWith('a')) {
-    console.log('The string "abc" ends with the letter a');
-} 
+  console.log('The string "abc" ends with the letter a');
+}
 ```
 
 ## Index of an Occurring Substring with indexOf()
 
 ```js
-console.log('letter a in "abc" is in fromPosition ' + 'abc'.indexOf('a') );
+console.log('letter a in "abc" is in fromPosition ' + 'abc'.indexOf('a'));
 ```
 
 ## Getting a Substring from a String
@@ -87,20 +87,21 @@ The output is:
 ## Determining If a String “Comes Before” Another with `localeCompare( )`
 
 ```js
-'a'.localeCompare('b') == 1
-'b'.localeCompare('a') == -1
-'a'.localeCompare('a') == 0
+'a'.localeCompare('b') == 1;
+'b'.localeCompare('a') == -1;
+'a'.localeCompare('a') == 0;
 ```
 
 ## Counting the Occurrences of a Substring
 
 ```js
 function findOccurrences(string, substring) {
-  var occurrenceCount = 0, fromPosition = 0;
-  
-  while ((fromPosition = string.indexOf(substring, fromPosition)) !== -1)  {
-      occurrenceCount++;
-      fromPosition += substring.length;
+  var occurrenceCount = 0,
+    fromPosition = 0;
+
+  while ((fromPosition = string.indexOf(substring, fromPosition)) !== -1) {
+    occurrenceCount++;
+    fromPosition += substring.length;
   }
 
   return occurrenceCount;

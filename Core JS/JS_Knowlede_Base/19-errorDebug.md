@@ -1,6 +1,6 @@
 ```js
-//Two Types of Errors, One During Runtime, the Other User-Defined 
-new Array(-1) //returns Uncaught RangeError: Invalid array length
+//Two Types of Errors, One During Runtime, the Other User-Defined
+new Array(-1); //returns Uncaught RangeError: Invalid array length
 
 //user defined error
 console.log(new Error('this is a problem')); //returns Error: this is a problem(...)
@@ -17,7 +17,7 @@ console.log(new Error('this is a problem')); //returns Error: this is a problem(
 - URIError: This error is thrown when the URI a function is using is malformed.
 
 ```js
-//Different Types of Errors that Can Happen in JavaScript 
+//Different Types of Errors that Can Happen in JavaScript
 var evalMsg = new EvalError('This is an eval error');
 console.log(evalMsg.message); //returns This is an eval error
 
@@ -40,19 +40,19 @@ decodeURIComponent('a%AFc'); //returns Uncaught URIError: URI malformed
 ## try/catch statement used for debugging.
 
 ```js
-function checkStarShip(shipName){
-        try{
-            if(shipName !== 'Enterprise'){
-                throw new Error('Wrong Ship');
-            } 
-        }catch(e){
-            console.log(e);
-            console.log(e.stack);   //displays call stack
-            //throw(e); //rethrows errors
-            console.log('Looking for Enterprise');
-        }finally{
-            console.log('Continue working with code');
-        }
+function checkStarShip(shipName) {
+  try {
+    if (shipName !== 'Enterprise') {
+      throw new Error('Wrong Ship');
+    }
+  } catch (e) {
+    console.log(e);
+    console.log(e.stack); //displays call stack
+    //throw(e); //rethrows errors
+    console.log('Looking for Enterprise');
+  } finally {
+    console.log('Continue working with code');
+  }
 }
 checkStarShip('TARDIS');
 
@@ -65,18 +65,19 @@ checkStarShip('TARDIS');
 ## callback pattern and how to use it to find errors.
 
 ```js
-function onSuccess(){
-         console.log('You are Correct');
+function onSuccess() {
+  console.log('You are Correct');
 }
-function onError(e){
-         console.log(e.message);
+function onError(e) {
+  console.log(e.message);
 }
-function isFirstOfficer(name, onError, onSuccess){
-         if(name === 'Spock'){
-                  onSuccess();
-         }else{
-                  onError(new Error('Sorry, Wrong Officer'));
-} }
+function isFirstOfficer(name, onError, onSuccess) {
+  if (name === 'Spock') {
+    onSuccess();
+  } else {
+    onError(new Error('Sorry, Wrong Officer'));
+  }
+}
 
 isFirstOfficer('Scotty', onError, onSuccess);
 isFirstOfficer('Spock', onError, onSuccess);
@@ -89,14 +90,13 @@ as `functional programming`. Functions can get executed depending on what is hap
 ## User Defined Errors?
 
 ```js
-class myCustomError extends Error{
-        constructor(message){
-                super(message)
-        } 
+class myCustomError extends Error {
+  constructor(message) {
+    super(message);
+  }
 }
 
 var myCustomErrorInstance = new myCustomError('This is a Custom Error');
-        console.log(myCustomErrorInstance.message);  //returns This is a Custom Error
-        console.log(myCustomErrorInstance.stack);    //returns stack trace
-
+console.log(myCustomErrorInstance.message); //returns This is a Custom Error
+console.log(myCustomErrorInstance.stack); //returns stack trace
 ```

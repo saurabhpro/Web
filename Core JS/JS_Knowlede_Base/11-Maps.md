@@ -7,12 +7,12 @@ Use Strings
 
 ```js
 var mapObj = new Map(); //maps
-    mapObj.set('myString', 'myString is a string key');
-    console.log(mapObj.get('myString')); //myString is a string key
+mapObj.set('myString', 'myString is a string key');
+console.log(mapObj.get('myString')); //myString is a string key
 
 var myObj = {};
-    mapObj.set(myObj, 'Object is a used as a key');
-    console.log(mapObj.get(myObj)); //Object is a used as a key
+mapObj.set(myObj, 'Object is a used as a key');
+console.log(mapObj.get(myObj)); //Object is a used as a key
 ```
 
 ## Adding and Removing Elements from a Map Object
@@ -21,11 +21,11 @@ Maps use the set method to set keys and values. Similar to the set object, it us
 
 ```js
 var mapObj = new Map();
-    mapObj.set('myString', 'myString is a string key');
-    mapObj.delete('myString');
-    console.log(mapObj.get('myString')); //undefined
+mapObj.set('myString', 'myString is a string key');
+mapObj.delete('myString');
+console.log(mapObj.get('myString')); //undefined
 
-    mapObj.clear(); //to clear the map
+mapObj.clear(); //to clear the map
 ```
 
 When using the set method, both keys and values are required properties. Keys can be updated by using the set method
@@ -40,24 +40,23 @@ The Keys Method Will Return a MapIterator Object That Lets You Access the Keys o
 
 ```js
 var mapObj = new Map();
-    mapObj.set('1st value', '1st key');
-    mapObj.set('2nd value', '2nd key');
-    mapObj.set('3rd value', '3rd key');
+mapObj.set('1st value', '1st key');
+mapObj.set('2nd value', '2nd key');
+mapObj.set('3rd value', '3rd key');
 
-    console.log(mapObj.keys()); //returns MapIterator object
+console.log(mapObj.keys()); //returns MapIterator object
 var mapIterator = mapObj.keys();
-    console.log(mapIterator.next().value); //1st value
-    console.log(mapIterator.next().value); //2nd value
+console.log(mapIterator.next().value); //1st value
+console.log(mapIterator.next().value); //2nd value
 
-     console.log(mapObj.values()); //returns MapIterator object
+console.log(mapObj.values()); //returns MapIterator object
 var mapIterator = mapObj.values();
-    console.log(mapIterator.next().value); //1st value
-    console.log(mapIterator.next().value); //2nd value
+console.log(mapIterator.next().value); //1st value
+console.log(mapIterator.next().value); //2nd value
 
 //both key and values
-    console.log(mapObj.entries()); //returns MapIterator object
+console.log(mapObj.entries()); //returns MapIterator object
 var mapIterator = mapObj.entries();
-    console.log(mapIterator.next().value); //["1st value", "1st key"]
-    console.log(mapIterator.next().value); //["2nd value", "2nd key"]
+console.log(mapIterator.next().value); //["1st value", "1st key"]
+console.log(mapIterator.next().value); //["2nd value", "2nd key"]
 ```
-

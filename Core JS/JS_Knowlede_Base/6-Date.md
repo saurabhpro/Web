@@ -26,8 +26,8 @@ console.log(now.getMonth()); //return month from 0-11
 console.log(now.getSeconds()); //returns seconds from 0-59
 console.log(now.getTime()); //returns the amount of milliseconds since the first of January 1970
 
-if(date1.getTime() == date2.getTime()){
-    console.log('date are the same');
+if (date1.getTime() == date2.getTime()) {
+  console.log('date are the same');
 }
 ```
 

@@ -4,15 +4,18 @@
   "description": "my first js training",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha mdn/test "
   },
   "repository": {
     "type": "git",
     "url": "JS Basics"
   },
+  "type": "module",
   "author": "saurabh kumar",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^4.6.0"
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "prettier": "^2.3.0"
   }
 }

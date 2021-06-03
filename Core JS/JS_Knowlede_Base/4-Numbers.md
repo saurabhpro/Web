@@ -93,4 +93,3 @@ Math.max(myArray) //Returns NaN
 `Math.max` is a static method so it is used as is. If no arguments are given to it, the answer is `–Infinity`. If any of
 the arguments cannot be converted into a number, then the answer will result in `NaN`. If you are using an array and not
 putting values directly into the method, use the apply method to direct the browser to where it should find the array.
-

@@ -6,18 +6,17 @@ var fun1 = new Function('name', 'return name;');
 fun1('Jessica');
 
 //function declaration
-function myFun(name){
-    var greeting = 'Hello ' + name;
-    return greeting;
+function myFun(name) {
+  var greeting = 'Hello ' + name;
+  return greeting;
 }
 myFun('Danny');
 
 //function expression
-var fun3 = function(name) {
-    return name;
-}
+var fun3 = function (name) {
+  return name;
+};
 fun3('Mami');
-
 ```
 
 ## What Are Anonymous Functions?
@@ -26,11 +25,11 @@ Anonymous functions are function expressions. These expressions do not need to h
 
 ```js
 //Examples of Anonymous Functions
-document.addEventListener('DOMContentLoaded', function(){
-    console.log('content loaded');
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('content loaded');
 });
-(function(){
-    console.log('running closure');
+(function () {
+  console.log('running closure');
 })();
 ```
 
@@ -52,26 +51,26 @@ If the last parameter of a function is prefixed with `...`, all values that are 
 
 Using rest parameters is similar to using the arguments object. However, there are some important differences.
 
-* The arguments object is not a real array.
-* This means that methods like `map, sort, and pop` will not work.
-* The values of the arguments object would have to be converted into a real array first.
-* The arguments object also returns all arguments sent to a function.
+- The arguments object is not a real array.
+- This means that methods like `map, sort, and pop` will not work.
+- The values of the arguments object would have to be converted into a real array first.
+- The arguments object also returns all arguments sent to a function.
 
-- Rest parameters only handle arguments that are not mapped to a name in the function.
-- The rest parameters do not have the same methods that the arguments object does; for example callee is not available.
+* Rest parameters only handle arguments that are not mapped to a name in the function.
+* The rest parameters do not have the same methods that the arguments object does; for example callee is not available.
 
 ## Spread Syntax?
 
 The spread syntax allows functions, arrays, or variables to accept multiple arguments.
 
 ```js
-function showSpread(one, two, three, four){
-    console.log(one);
-    console.log(two);
-    console.log(three);
-    console.log(four);
+function showSpread(one, two, three, four) {
+  console.log(one);
+  console.log(two);
+  console.log(three);
+  console.log(four);
 }
-var myArray = [1,2,3,4];
+var myArray = [1, 2, 3, 4];
 //showSpread(myArray[0], myArray[1], myArray[2], myArray[3]) //without using spread
 //showSpread(...myArray); //using the spread syntax
 var dayInfo = [1975, 7, 19];
@@ -79,62 +78,62 @@ var dayInfo = [1975, 7, 19];
 var dateObj = new Date(...dayInfo);
 console.log(dateObj); //returns Tue Aug 19 1975 00:00:00 GMT-0400 (EDT)
 
-var numArray2 = [ 2, 3, 4, 5, 6, 7]
+var numArray2 = [2, 3, 4, 5, 6, 7];
 var numArray = [1, ...numArray2, 8, 9, 10];
 console.log(numArray); //returns 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
-var part1 = [1,2,3];
-var part2 = [4,5,6];
+var part1 = [1, 2, 3];
+var part2 = [4, 5, 6];
 var part3 = [...part1, ...part2];
 console.log(part3); //returns 1,2,3,4,5,6
 ```
 
 ## () => {}
 
-* Arrow functions give you a shorter way of creating functions.
-* Using this syntax removes some of the features you would be used to having when using a function expression.
-* Arrow functions are not named; they can be assigned to a variable but are always anonymous.
-* The basic syntax has a set of parentheses that will hold all the parameters like a function expression. Next the
+- Arrow functions give you a shorter way of creating functions.
+- Using this syntax removes some of the features you would be used to having when using a function expression.
+- Arrow functions are not named; they can be assigned to a variable but are always anonymous.
+- The basic syntax has a set of parentheses that will hold all the parameters like a function expression. Next the
   arrow, then curly braces ({}) that will have the body of the function inside.
 
-* Parentheses are optional only when one parameter is being passed. If no parameters are being passed, parentheses are
+- Parentheses are optional only when one parameter is being passed. If no parameters are being passed, parentheses are
   required.
 
-* Rest and default parameters are supported with arrow functions as well as with object destructuring.
+- Rest and default parameters are supported with arrow functions as well as with object destructuring.
 
-* When using arrow functions, keep in mind that the keyword `this` is not available. It inherits that property from the
+- When using arrow functions, keep in mind that the keyword `this` is not available. It inherits that property from the
   enclosing scope.
 
 ```js
-
-//ES 5 
-document.getElementById('myButton').addEventListener('click', function(){
-	var self = this;
-	self.currentInterval = 0;
-	setInterval(function myInterval(){
-		self.currentInterval++;
-	}, 1000);
+//ES 5
+document.getElementById('myButton').addEventListener('click', function () {
+  var self = this;
+  self.currentInterval = 0;
+  setInterval(function myInterval() {
+    self.currentInterval++;
+  }, 1000);
 });
 ```
 
 The first example first shows how the keyword `this` has different context between the callback function and the
 function associated with `setInterval`. The only way to bridge the gap is the create a new variable
 
-*(this is why in reval's js file always `var me = this` is done as `this` context can chnage based on from where the
-callback will be executed .*
+_(this is why in reval's js file always `var me = this` is done as `this` context can chnage based on from where the
+callback will be executed ._
 
 The inner function (closure) can access the outer variable without using the keyword `this`.
 
 ```js
 //ES 6
 document.getElementById('myButton').addEventListener('click', () => {
-	this.currentInterval = 0;
-	setInterval(() => {this.currentInterval++;}, 1000);
+  this.currentInterval = 0;
+  setInterval(() => {
+    this.currentInterval++;
+  }, 1000);
 });
 
-
 //retuning object literals
-var myObj = () =>  ({name:'June'}) ;
+var myObj = () => ({ name: 'June' });
 console.log(myObj()); //returns Object {name: "June"}
 ```
 
@@ -154,20 +153,20 @@ Just a note on `this`
 ```js
 console.log(this); //returns Window
 
-function globalFunction(){
-	return this;
+function globalFunction() {
+  return this;
 }
 
-//First let’s talk about the global context. If you were to just print out the value 
+//First let’s talk about the global context. If you were to just print out the value
 //of this in the console in an otherwise blank JavaScript file, it would refer to the Window object.
 
 console.log(globalFunction()); //returns Window
 
 console.log(window.globalFunction());
 
-function globalStrictFunction(){
-	'use strict'
-	return this;
+function globalStrictFunction() {
+  'use strict';
+  return this;
 }
 /*
 When returning this from a function call, its value is also Window. In this instance, 
@@ -185,9 +184,8 @@ you receive undefined is that this keeps the value of whatever it was set to whe
 console.log(globalStrictFunction());
 console.log(window.globalStrictFunction());
 
-
-function saySomething(){
-	return this.something;
+function saySomething() {
+  return this.something;
 }
 
 /*
@@ -196,20 +194,19 @@ Using this method on a function creates a new function called a bound function (
 The value of this is set to the value that is provided in the first argument. 
 */
 
-var phrase = saySomething.bind({something: 'Brothers! Sisters!'});
+var phrase = saySomething.bind({ something: 'Brothers! Sisters!' });
 
-//In the following example, the function saySomething returns a property called something. 
-//On its own it would return undefined since there isn’t a variable in the function called something. 
-//When using the bind method, we provide an object with the property something. 
+//In the following example, the function saySomething returns a property called something.
+//On its own it would return undefined since there isn’t a variable in the function called something.
+//When using the bind method, we provide an object with the property something.
 //So the object becomes bound to the function and the property something now has a value.
 
 console.log(saySomething()); //returns undefine
-console.log(phrase());  //returns Brothers! Sisters!
+console.log(phrase()); //returns Brothers! Sisters!
 
-function useCallFunction(){
-	return this.greeting;
+function useCallFunction() {
+  return this.greeting;
 }
-
 
 /*
 //USING CALL AND APPLY ON A FUNCTION
@@ -220,7 +217,7 @@ that the keyword this is bound to.
 In the previous example, the call method passes an object over and the function uses the properties 
 of that object to return some values. If you’re using the apply method, you would get the same results.
 */
-var greetingObj = {greeting: 'Hello, Mr. Robot'};
+var greetingObj = { greeting: 'Hello, Mr. Robot' };
 
 console.log(useCallFunction.call(greetingObj));
 console.log(useCallFunction.apply(greetingObj));
@@ -230,8 +227,8 @@ console.log(useCallFunction.apply(greetingObj));
 If the function that is being executed is from an event handler, the value of this is set to the element 
 that fired the event. The same is true if the event is fired from a inline event.
 */
-document.getElementById('myButton').addEventListener('click', function(e){
-	console.log(this); //<button id="myButton">Click Me</button>
+document.getElementById('myButton').addEventListener('click', function (e) {
+  console.log(this); //<button id="myButton">Click Me</button>
 });
 
 /*
@@ -247,13 +244,13 @@ the result of this would be the object that this was defined in.
 */
 
 var globalArrayFunction = () => this;
-console.log(globalArrayFunction());  //returns Window
+console.log(globalArrayFunction()); //returns Window
 
 var micCheck = {
-	isThisOn: function(){
-		return (() => this);
-	}
-}
+  isThisOn: function () {
+    return () => this;
+  },
+};
 
 var returnedFunction = micCheck.isThisOn();
 console.log(returnedFunction()); //returns Object
@@ -264,11 +261,11 @@ Object methods make using this much simpler. The value is always set to the obje
 is called on, no matter how the method is defined.
 
 */
-var theNumber = {p: 42};
-function magicNumber(){
-	return this.p;
+var theNumber = { p: 42 };
+function magicNumber() {
+  return this.p;
 }
 
 theNumber.theMagicNumber = magicNumber;
-console.log(theNumber.theMagicNumber()) //returns 42
+console.log(theNumber.theMagicNumber()); //returns 42
 ```

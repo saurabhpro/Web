@@ -18,9 +18,7 @@
       "request": "launch",
       "name": "Launch Program",
       "program": "${workspaceRoot}/first.js",
-      "outFiles": [
-        "${workspaceRoot}/out/**/*.js"
-      ]
+      "outFiles": ["${workspaceRoot}/out/**/*.js"]
     }
   ]
 }

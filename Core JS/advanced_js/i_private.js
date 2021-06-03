@@ -1,15 +1,15 @@
-"use strict";
+'use strict';
 
 class Point {
-    #x;
-    #y;
+  #x;
+  #y;
 
-    constructor(x, y) {
-        this.#x = x;
-        this.#y = y;
-    }
+  constructor(x, y) {
+    this.#x = x;
+    this.#y = y;
+  }
 
-    equals(point) {
-        return this.#x === point.#x && this.#y === point.#y;
-    }
+  equals(point) {
+    return this.#x === point.#x && this.#y === point.#y;
+  }
 }

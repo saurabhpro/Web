@@ -1,6 +1,8 @@
-//"use strict";
+// the problem is with var, change it to let and it will return only `true`
+
+//'use strict';
 var t = true;
-var code = "var t = false";
+var code = 'var t = false';
 eval(code);
 console.log(t);
 

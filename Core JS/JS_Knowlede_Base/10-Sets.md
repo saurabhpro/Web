@@ -4,18 +4,18 @@
 
 ```js
 var numberSet = new Set();
-    numberSet.add(1);
-    numberSet.add(2);
-    numberSet.add(3);
-    numberSet.add(3); //does not get added
-    
-    console.log(numberSet.entries()); //returns SetIterator {[1, 1], [2, 2], [3, 3]}
+numberSet.add(1);
+numberSet.add(2);
+numberSet.add(3);
+numberSet.add(3); //does not get added
 
-    numberSet.delete('5');
+console.log(numberSet.entries()); //returns SetIterator {[1, 1], [2, 2], [3, 3]}
 
-    numberSet.size;
+numberSet.delete('5');
 
-    numberSet.clear();  //removes all element
+numberSet.size;
+
+numberSet.clear(); //removes all element
 ```
 
 An array uses push to add elements, whereas sets use the add method. To remove elements, use the delete method.
@@ -28,26 +28,26 @@ method. (since sets values are unique, for Maps they are different)
 ```js
 //Checking If a Value Exists in a Set
 var numberSet = new Set();
-    numberSet.add(1);
-    numberSet.add(2);
-    numberSet.add(3);
-    numberSet.add('things');
-    
-    console.log(numberSet.keys());  //returns SetIterator {1, 2, 3, "things"}
-    console.log(numberSet.values());  //returns SetIterator {1, 2, 3, "things"}
-    
-    var elements = numberSet.values();
-    console.log(elements.next().value);  //returns 1
-    console.log(elements.next().value);  //returns 2
+numberSet.add(1);
+numberSet.add(2);
+numberSet.add(3);
+numberSet.add('things');
+
+console.log(numberSet.keys()); //returns SetIterator {1, 2, 3, "things"}
+console.log(numberSet.values()); //returns SetIterator {1, 2, 3, "things"}
+
+var elements = numberSet.values();
+console.log(elements.next().value); //returns 1
+console.log(elements.next().value); //returns 2
 ```
 
 ## Check If an Element Exists in a Set?
 
 ```js
 var bandSet = new Set();
-    bandSet.add('Dave');
-    bandSet.add('Martin');
-    bandSet.add('Fletch');
+bandSet.add('Dave');
+bandSet.add('Martin');
+bandSet.add('Fletch');
 console.log(bandSet.has('vince')); //returns false
 console.log(bandSet.has('Dave')); //returns true
 ```

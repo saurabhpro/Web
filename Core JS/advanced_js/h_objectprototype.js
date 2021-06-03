@@ -1,5 +1,5 @@
 var animal = {
-    kind: 'human'
+  kind: 'human',
 };
 
 //console.log(animal);
@@ -20,15 +20,18 @@ valueOf
 //sk.__proto__ = animal;    //MECHANISM 1 to create object
 
 //or use Object.create(...);
-var sk = Object.create(animal, /*default propertiesObjects too can be passed*/ {
+var sk = Object.create(
+  animal,
+  /*default propertiesObjects too can be passed*/ {
     food: {
-        value: "mango"
-    }
-});
+      value: 'mango',
+    },
+  }
+);
 
 console.log(sk.kind);
 
-console.log("animal.isPrototypeOf(sk)", animal.isPrototypeOf(sk));
+console.log('animal.isPrototypeOf(sk)', animal.isPrototypeOf(sk));
 
 sk.kind = 'baaz'; //dynamic   //sets creates local object version for sk- > so not affecting the animal
 console.log(sk.kind);
