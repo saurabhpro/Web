@@ -21,7 +21,7 @@ console.debug(argv);
 
 console.time('req');
 
-const google_map_api_key =  "<get your key from: https://console.cloud.google.com/apis/credentials?project=weather-api-demo-309319>";;
+const google_map_api_key =  "<get your key from: https://console.cloud.google.com/apis/credentials?project=weather-api-demo-309319>";
 const encodedAddress = encodeURIComponent(argv.address);
 const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${google_map_api_key}`;
 
