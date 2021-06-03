@@ -171,7 +171,7 @@ handlebars@4.7.6:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-hbs@^4.1.1:
+hbs@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/hbs/-/hbs-4.1.1.tgz#8aab17ca6ae70f9aaa225278bed7af31011254b7"
   integrity sha512-6QsbB4RwbpL4cb4DNyjEEPF+suwp+3yZqFVlhILEn92ScC0U4cDCR+FDX53jkfKJPhutcqhAvs+rOLZw5sQrDA==
