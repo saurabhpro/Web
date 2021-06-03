@@ -1,61 +1,40 @@
-define(["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {value: true});
-
-    class Coin {
-        constructor(value) {
-            this.value = value;
-        }
+class Coin {
+    value;
+    constructor(value) {
+        this.value = value;
     }
-
-    exports.Coin = Coin;
-
-    class Dime extends Coin {
-        constructor() {
-            super(.1);
-        }
-
-        getImageUrl() {
-            return "img/Dime.png";
-        }
+}
+class Dime extends Coin {
+    constructor() {
+        super(0.1);
     }
-
-    exports.Dime = Dime;
-
-    class Quarter extends Coin {
-        constructor() {
-            super(.25);
-        }
-
-        getImageUrl() {
-            return "img/Quarter.png";
-        }
+    getImageUrl() {
+        return '../img/Dime.png';
     }
-
-    exports.Quarter = Quarter;
-
-    class Half extends Coin {
-        constructor() {
-            super(.5);
-        }
-
-        getImageUrl() {
-            return "img/Half.png";
-        }
+}
+class Quarter extends Coin {
+    constructor() {
+        super(0.25);
     }
-
-    exports.Half = Half;
-
-    class Dollar extends Coin {
-        constructor() {
-            super(1);
-        }
-
-        getImageUrl() {
-            return "img/Dollar.jpg";
-        }
+    getImageUrl() {
+        return '../img/Quarter.png';
     }
-
-    exports.Dollar = Dollar;
-});
+}
+class Half extends Coin {
+    constructor() {
+        super(0.5);
+    }
+    getImageUrl() {
+        return '../img/Half.png';
+    }
+}
+class Dollar extends Coin {
+    constructor() {
+        super(1);
+    }
+    getImageUrl() {
+        return '../img/Dollar.jpg';
+    }
+}
+export { Dime, Dollar, Half, Coin, Quarter };
 //# sourceMappingURL=coin.js.map

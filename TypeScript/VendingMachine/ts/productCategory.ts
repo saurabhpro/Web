@@ -1,58 +1,56 @@
 abstract class ProductCategory {
-    protected imgPath = "img/";
+  protected imgPath = '../img/';
 
-    name: string;
+  name!: string;
 
-    abstract getImageUrl(): string;
+  abstract getImageUrl(): string;
 }
 
 class SodaCategory extends ProductCategory {
-    name = "Soda"
+  name = 'Soda';
 
-    getImageUrl() {
-        return this.imgPath + "SodaCan.png";
-    }
+  getImageUrl() {
+    return this.imgPath + 'SodaCan.png';
+  }
 }
 
 class NutsCategory extends ProductCategory {
-    name = "Nuts"
+  name = 'Nuts';
 
-    getImageUrl() {
-        return this.imgPath + "Nuts.png";
-    }
+  getImageUrl() {
+    return this.imgPath + 'Nuts.png';
+  }
 }
 
 class ChipsCategory extends ProductCategory {
-    name = "Potato chips"
+  name = 'Potato chips';
 
-    getImageUrl() {
-        return this.imgPath + "Chips.png";
-    }
+  getImageUrl() {
+    return this.imgPath + 'Chips.png';
+  }
 }
 
 class CandyCategory extends ProductCategory {
-    name = "Candy"
+  name = 'Candy';
 
-    getImageUrl() {
-        return this.imgPath + "Candy.png";
-    }
+  getImageUrl() {
+    return this.imgPath + 'Candy.png';
+  }
 }
 
 class CandyBarCategory extends ProductCategory {
-    name = "Candy bar"
+  name = 'Candy bar';
 
-    getImageUrl() {
-        return this.imgPath + "CandyBar.png";
-    }
+  getImageUrl() {
+    return this.imgPath + 'CandyBar.png';
+  }
 }
 
 export {
-    ProductCategory,
-    SodaCategory,
-    NutsCategory,
-    ChipsCategory as PotatoChipsCategory,
-    CandyCategory,
-    CandyBarCategory
-}
-
-
+  ProductCategory,
+  SodaCategory,
+  NutsCategory,
+  ChipsCategory as PotatoChipsCategory,
+  CandyCategory,
+  CandyBarCategory,
+};

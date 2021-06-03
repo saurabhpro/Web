@@ -6,3 +6,8 @@ application to use `without even importing them`
 The default export, there is only a single default export per module. A default export can be a function, a class, an
 object or anything else. This value is to be considered as the "main" exported value since it will be the simplest to
 import.
+
+## running
+
+- https://juliangaramendy.dev/blog/prettier-pre-commit-hook
+- just run `tsc` to compile the code

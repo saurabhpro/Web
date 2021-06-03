@@ -1,124 +1,62 @@
-define(["require", "exports", "./productCategory"], function (require, exports, categories) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {value: true});
-
-    class Initial {
-        constructor() {
-            this.name = "Please select a product";
-            this.price = 0;
-        }
-    }
-
-    exports.Initial = Initial;
-
-    class CocaCola {
-        constructor() {
-            this.name = "Coca-Cola";
-            this.price = 2.30;
-            this.category = new categories.SodaCategory();
-        }
-    }
-
-    exports.CocaCola = CocaCola;
-
-    class Fanta {
-        constructor() {
-            this.name = "Fanta";
-            this.price = 2;
-            this.category = new categories.SodaCategory();
-        }
-    }
-
-    exports.Fanta = Fanta;
-
-    class Sprite {
-        constructor() {
-            this.name = "Sprite";
-            this.price = 1.80;
-            this.category = new categories.SodaCategory();
-        }
-    }
-
-    exports.Sprite = Sprite;
-
-    class Peanuts {
-        constructor() {
-            this.name = "Peanuts";
-            this.price = 1.50;
-            this.category = new categories.NutsCategory();
-        }
-    }
-
-    exports.Peanuts = Peanuts;
-
-    class Cashews {
-        constructor() {
-            this.name = "Cashews";
-            this.price = 2.80;
-            this.category = new categories.NutsCategory();
-        }
-    }
-
-    exports.Cashews = Cashews;
-
-    class Plain {
-        constructor() {
-            this.name = "Plain";
-            this.price = 2;
-            this.category = new categories.PotatoChipsCategory();
-        }
-    }
-
-    exports.Plain = Plain;
-
-    class Cheddar {
-        constructor() {
-            this.name = "Cheddar";
-            this.price = 2;
-            this.category = new categories.PotatoChipsCategory();
-        }
-    }
-
-    exports.Cheddar = Cheddar;
-
-    class Mints {
-        constructor() {
-            this.name = "Mints";
-            this.price = 1.30;
-            this.category = new categories.CandyCategory();
-        }
-    }
-
-    exports.Mints = Mints;
-
-    class Gummies {
-        constructor() {
-            this.name = "Gummies";
-            this.price = 1.90;
-            this.category = new categories.CandyCategory();
-        }
-    }
-
-    exports.Gummies = Gummies;
-
-    class Hersey {
-        constructor() {
-            this.name = "Hersey's";
-            this.price = 1.30;
-            this.category = new categories.CandyBarCategory();
-        }
-    }
-
-    exports.Hersey = Hersey;
-
-    class MilkyWay {
-        constructor() {
-            this.name = "Milky Way";
-            this.price = 1.80;
-            this.category = new categories.CandyBarCategory();
-        }
-    }
-
-    exports.MilkyWay = MilkyWay;
-});
+import { SodaCategory, NutsCategory, PotatoChipsCategory, CandyCategory, CandyBarCategory, } from './productCategory';
+class Initial {
+    name = 'Please select a product';
+    price = 0;
+}
+class CocaCola {
+    name = 'Coca-Cola';
+    price = 2.3;
+    category = new SodaCategory();
+}
+class Fanta {
+    name = 'Fanta';
+    price = 2;
+    category = new SodaCategory();
+}
+class Sprite {
+    name = 'Sprite';
+    price = 1.8;
+    category = new SodaCategory();
+}
+class Peanuts {
+    name = 'Peanuts';
+    price = 1.5;
+    category = new NutsCategory();
+}
+class Cashews {
+    name = 'Cashews';
+    price = 2.8;
+    category = new NutsCategory();
+}
+class Plain {
+    name = 'Plain';
+    price = 2;
+    category = new PotatoChipsCategory();
+}
+class Cheddar {
+    name = 'Cheddar';
+    price = 2;
+    category = new PotatoChipsCategory();
+}
+class Mints {
+    name = 'Mints';
+    price = 1.3;
+    category = new CandyCategory();
+}
+class Gummies {
+    name = 'Gummies';
+    price = 1.9;
+    category = new CandyCategory();
+}
+class Hersey {
+    name = "Hersey's";
+    price = 1.3;
+    category = new CandyBarCategory();
+}
+class MilkyWay {
+    name = 'Milky Way';
+    price = 1.8;
+    category = new CandyBarCategory();
+}
+export { MilkyWay, Hersey, Mints, Gummies, Cheddar, Plain, Cashews, Peanuts, Sprite, Fanta, CocaCola, Initial, };
 //# sourceMappingURL=product.js.map

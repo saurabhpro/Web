@@ -1,78 +1,36 @@
-define(["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {value: true});
-
-    class ProductCategory {
-        constructor() {
-            this.imgPath = "img/";
-        }
+class ProductCategory {
+    imgPath = '../img/';
+    name;
+}
+class SodaCategory extends ProductCategory {
+    name = 'Soda';
+    getImageUrl() {
+        return this.imgPath + 'SodaCan.png';
     }
-
-    exports.ProductCategory = ProductCategory;
-
-    class SodaCategory extends ProductCategory {
-        constructor() {
-            super(...arguments);
-            this.name = "Soda";
-        }
-
-        getImageUrl() {
-            return this.imgPath + "SodaCan.png";
-        }
+}
+class NutsCategory extends ProductCategory {
+    name = 'Nuts';
+    getImageUrl() {
+        return this.imgPath + 'Nuts.png';
     }
-
-    exports.SodaCategory = SodaCategory;
-
-    class NutsCategory extends ProductCategory {
-        constructor() {
-            super(...arguments);
-            this.name = "Nuts";
-        }
-
-        getImageUrl() {
-            return this.imgPath + "Nuts.png";
-        }
+}
+class ChipsCategory extends ProductCategory {
+    name = 'Potato chips';
+    getImageUrl() {
+        return this.imgPath + 'Chips.png';
     }
-
-    exports.NutsCategory = NutsCategory;
-
-    class ChipsCategory extends ProductCategory {
-        constructor() {
-            super(...arguments);
-            this.name = "Potato chips";
-        }
-
-        getImageUrl() {
-            return this.imgPath + "Chips.png";
-        }
+}
+class CandyCategory extends ProductCategory {
+    name = 'Candy';
+    getImageUrl() {
+        return this.imgPath + 'Candy.png';
     }
-
-    exports.PotatoChipsCategory = ChipsCategory;
-
-    class CandyCategory extends ProductCategory {
-        constructor() {
-            super(...arguments);
-            this.name = "Candy";
-        }
-
-        getImageUrl() {
-            return this.imgPath + "Candy.png";
-        }
+}
+class CandyBarCategory extends ProductCategory {
+    name = 'Candy bar';
+    getImageUrl() {
+        return this.imgPath + 'CandyBar.png';
     }
-
-    exports.CandyCategory = CandyCategory;
-
-    class CandyBarCategory extends ProductCategory {
-        constructor() {
-            super(...arguments);
-            this.name = "Candy bar";
-        }
-
-        getImageUrl() {
-            return this.imgPath + "CandyBar.png";
-        }
-    }
-
-    exports.CandyBarCategory = CandyBarCategory;
-});
+}
+export { ProductCategory, SodaCategory, NutsCategory, ChipsCategory as PotatoChipsCategory, CandyCategory, CandyBarCategory, };
 //# sourceMappingURL=productCategory.js.map

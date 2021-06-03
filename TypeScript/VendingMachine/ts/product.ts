@@ -1,78 +1,101 @@
-import * as categories from "./productCategory"
+import {
+  ProductCategory,
+  SodaCategory,
+  NutsCategory,
+  PotatoChipsCategory,
+  CandyCategory,
+  CandyBarCategory,
+} from './productCategory';
 
-export interface Product {
-    name: string
-    price: number
-    category?: categories.ProductCategory
+interface Product {
+  name: string;
+  price: number;
+  category?: ProductCategory;
 }
 
-export class Initial implements Product {
-    name = "Please select a product"
-    price = 0
+class Initial implements Product {
+  name = 'Please select a product';
+  price = 0;
 }
 
-export class CocaCola implements Product {
-    name: string = "Coca-Cola"
-    price = 2.30
-    category = new categories.SodaCategory()
+class CocaCola implements Product {
+  name: string = 'Coca-Cola';
+  price = 2.3;
+  category = new SodaCategory();
 }
 
-export class Fanta implements Product {
-    name: string = "Fanta"
-    price = 2
-    category = new categories.SodaCategory()
+class Fanta implements Product {
+  name: string = 'Fanta';
+  price = 2;
+  category = new SodaCategory();
 }
 
-export class Sprite implements Product {
-    name: string = "Sprite"
-    price = 1.80
-    category = new categories.SodaCategory()
+class Sprite implements Product {
+  name: string = 'Sprite';
+  price = 1.8;
+  category = new SodaCategory();
 }
 
-export class Peanuts implements Product {
-    name: string = "Peanuts"
-    price = 1.50
-    category = new categories.NutsCategory()
+class Peanuts implements Product {
+  name: string = 'Peanuts';
+  price = 1.5;
+  category = new NutsCategory();
 }
 
-export class Cashews implements Product {
-    name: string = "Cashews"
-    price = 2.80
-    category = new categories.NutsCategory()
+class Cashews implements Product {
+  name: string = 'Cashews';
+  price = 2.8;
+  category = new NutsCategory();
 }
 
-export class Plain implements Product {
-    name: string = "Plain"
-    price = 2
-    category = new categories.PotatoChipsCategory()
+class Plain implements Product {
+  name: string = 'Plain';
+  price = 2;
+  category = new PotatoChipsCategory();
 }
 
-export class Cheddar implements Product {
-    name: string = "Cheddar"
-    price = 2
-    category = new categories.PotatoChipsCategory()
+class Cheddar implements Product {
+  name: string = 'Cheddar';
+  price = 2;
+  category = new PotatoChipsCategory();
 }
 
-export class Mints implements Product {
-    name: string = "Mints"
-    price = 1.30
-    category = new categories.CandyCategory()
+class Mints implements Product {
+  name: string = 'Mints';
+  price = 1.3;
+  category = new CandyCategory();
 }
 
-export class Gummies implements Product {
-    name: string = "Gummies"
-    price = 1.90
-    category = new categories.CandyCategory()
+class Gummies implements Product {
+  name: string = 'Gummies';
+  price = 1.9;
+  category = new CandyCategory();
 }
 
-export class Hersey implements Product {
-    name: string = "Hersey's"
-    price = 1.30
-    category = new categories.CandyBarCategory()
+class Hersey implements Product {
+  name: string = "Hersey's";
+  price = 1.3;
+  category = new CandyBarCategory();
 }
 
-export class MilkyWay implements Product {
-    name: string = "Milky Way"
-    price = 1.80
-    category = new categories.CandyBarCategory()
+class MilkyWay implements Product {
+  name: string = 'Milky Way';
+  price = 1.8;
+  category = new CandyBarCategory();
 }
+
+export {
+  MilkyWay,
+  Hersey,
+  Mints,
+  Gummies,
+  Cheddar,
+  Plain,
+  Product,
+  Cashews,
+  Peanuts,
+  Sprite,
+  Fanta,
+  CocaCola,
+  Initial,
+};
