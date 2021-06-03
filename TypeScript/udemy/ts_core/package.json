@@ -15,7 +15,7 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "2.6.1"
   },
   "dependencies": {
     "systemjs": "^6.8.3",
