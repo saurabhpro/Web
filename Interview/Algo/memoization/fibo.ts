@@ -4,31 +4,27 @@
 const memo: Array<number> = [];
 
 const fibonacci = (n: number): number => {
+  let value: number;
 
-    let value: number;
+  if (memo[n]) {
+    value = memo[n];
+  } else {
+    if (n === 0 || n === 1) value = n;
+    else value = fibonacci(n - 1) + fibonacci(n - 2);
 
-    if (memo[n]) {
-        value = memo[n];
-    } else {
-        if (n === 0 || n === 1)
-            value = n;
-        else
-            value = fibonacci(n - 1) + fibonacci(n - 2);
+    memo[n] = value;
+  }
 
-        memo[n] = value;
-    }
-
-    return value;
-
+  return value;
 };
 
 const solveProblem = (input: number): number => {
-    let sum = 0;
-    for (let i = 0; i < input - 1; i++) {
-        sum += fibonacci(i);
-    }
+  let sum = 0;
+  for (let i = 0; i < input - 1; i++) {
+    sum += fibonacci(i);
+  }
 
-    return sum;
-}
+  return sum;
+};
 
 console.log(solveProblem(93));

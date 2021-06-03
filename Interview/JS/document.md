@@ -1,8 +1,8 @@
 ## `window` vs `document`
 
-__Question: Is there any difference between window and document?__
+**Question: Is there any difference between window and document?**
 
-__Answer:__ Yes. JavaScript has a global object and everything runs under it. `window` is that global object that holds
+**Answer:** Yes. JavaScript has a global object and everything runs under it. `window` is that global object that holds
 global variables, global functions, location, history everything is under it. Besides, setTimeout, ajax call (
 XMLHttpRequest), console or localStorage are part of window.
 
@@ -18,25 +18,25 @@ document.getElementById; //function getElementById() { [native code] }
 
 ## attribute vs property
 
-__Question: Is attribute similar to property?__
+**Question: Is attribute similar to property?**
 
-__Answer:__ `attributes` are just like attribute in your html tag (XML style attribute) inside the starting
+**Answer:** `attributes` are just like attribute in your html tag (XML style attribute) inside the starting
 tag. `html attributes` are exposed to the DOM via `property`.
 
 - Hence, a `property` is created when DOM is parsed for each attribute in the html tag.
-    - If you change an attribute only the value of the property will change. However, the value of attribute will remain
-      same.
+  - If you change an attribute only the value of the property will change. However, the value of attribute will remain
+    same.
 
 ## DOM Query
 
-__Question: What are the different ways to get an element from DOM?__
+**Question: What are the different ways to get an element from DOM?**
 
 Answer: You can use the following methods in document
 
-- __getElementById__ to get a element that has the provided Id.
-- __getElementsByClassName__ to get a nodelist (nodelist is not an array, rather it is array-like object) by providing a
+- **getElementById** to get a element that has the provided Id.
+- **getElementsByClassName** to get a nodelist (nodelist is not an array, rather it is array-like object) by providing a
   class name.
-- __getElementsByTagName__ to get a nodelist by the provided tag name.
+- **getElementsByTagName** to get a nodelist by the provided tag name.
 - querySelector you will pass css style selector (jquery style) and this will retrurn first matched element in the DOM.
 - querySelectorAll will return a non-live nodelist by using depth-first pre order traversal of all the matched elements.
   Non-live means, any changes after selecting the elements will not be reflected.
