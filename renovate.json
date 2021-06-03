@@ -1,12 +1,32 @@
 {
+  "extends": ["config:base"],
   "groupName": "Renovate Dependency Scan",
-  "separateMajorMinor": true,
   "groupSlug": "all",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "separateMultipleMajor": true,
+  "masterIssue": true,
   "packageRules": [
     {
-      "packagePatterns": ["*"],
-      "groupName": "Renovate Dependency Scan",
-      "groupSlug": "all"
+      "matchDepTypes": ["*"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "groupName": "Dependencies (non-major)",
+      "automerge": true,
+      "groupSlug": "renovate-dependencies"
+    },
+    {
+      "updateTypes": ["major"],
+      "labels": ["UPDATE-MAJOR"],
+      "automerge": false
     }
   ],
   "ignorePaths": ["**/Angular/**"],
