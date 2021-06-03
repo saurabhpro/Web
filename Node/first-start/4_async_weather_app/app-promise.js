@@ -1,6 +1,8 @@
 const yargs = require('yargs');
 const temparatureConverter = require('./weather/tempConv.js');
 const axios = require('axios');
+const propertiesReader = require('properties-reader');
+const properties = propertiesReader('./dev.properties');
 
 const argv = yargs
   .options({
@@ -18,8 +20,8 @@ console.debug(argv);
 
 console.time('req');
 
-const google_map_api_key =
-  '<get your key from: https://console.cloud.google.com/apis/credentials?project=weather-api-demo-309319>';
+const google_map_api_key = properties.get('main.api_key');
+
 const encodedAddress = encodeURIComponent(argv.address);
 const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${google_map_api_key}`;
 

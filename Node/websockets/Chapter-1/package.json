@@ -5,6 +5,6 @@
   "author": "Saurabh Kumar",
   "license": "MIT",
   "dependencies": {
-    "websocket": "^1.0.33"
+    "websocket": "^1.0.34"
   }
 }

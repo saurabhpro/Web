@@ -5,7 +5,7 @@ const fs = require('fs');
 //setting port dynamically
 const port = process.env.PORT || 3000;
 
-var app = express();
+const app = express();
 
 //to support partials in web page -
 hbs.registerPartials(__dirname + '/views/partials');
@@ -25,8 +25,8 @@ app.use(
     //if not call to next() system will be hangged since it doesn't khnow if the application finished
 
     //basic logger as a middleare
-    var now = new Date().toLocaleString();
-    var log = `${now} : ${req.method} ${req.url}`;
+    const now = new Date().toLocaleString();
+    const log = `${now} : ${req.method} ${req.url}`;
     console.log(log);
 
     //write the lod to a file

@@ -1,8 +1,13 @@
 import pkg from 'axios';
 const { get } = pkg;
 
+// get your api key at https://newsapi.org/account
 const wall_street_journel_api_key = '86cc672b0b774673b11dfd0fb4373fa1';
 const feedURL = `https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey=${wall_street_journel_api_key}`;
+
+const print = (project) => {
+  console.log(`"${project.title}" - by @WSJ & I ❤️ this project.`);
+};
 
 // Main function without using Async/Await
 const printProject = () => {
@@ -35,10 +40,6 @@ function pickFav(data) {
   const pick = Math.floor(Math.random() * data.articles.length);
 
   return Promise.resolve(data.articles[pick]);
-}
-
-function print(project) {
-  console.log(`"${project.title}" - by @WSJ & I ❤️ this project.`);
 }
 
 /*

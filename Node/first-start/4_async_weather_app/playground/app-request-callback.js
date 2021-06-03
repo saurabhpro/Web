@@ -1,6 +1,5 @@
 const yargs = require('yargs');
 const geocode = require('../geocode/geocode');
-const request = require('request');
 const weather = require('../weather/weather.js');
 
 const argv = yargs

@@ -9,11 +9,7 @@
   "packageRules": [
     {
       "matchDepTypes": ["*"],
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "lockFileMaintenance"
-      ],
+      "matchUpdateTypes": ["minor", "patch", "lockFileMaintenance"],
       "groupName": "Dependencies (non-major)",
       "automerge": true,
       "groupSlug": "renovate-dependencies"
@@ -24,6 +20,6 @@
       "automerge": false
     }
   ],
-  "ignorePaths": ["**/Angular/**"],
+  "ignorePaths": ["**/Angular/**", "**/Node/second_test/node-testing-old-mocha/package.json"],
   "ignoreDeps": []
 }

@@ -1,38 +1,39 @@
-const request = require('request');
+const axios = require('axios');
+const propertiesReader = require('properties-reader');
+const properties = propertiesReader('./dev.properties');
 
 const geocodeAddress = (argv, callback) => {
   //tested with $ node app.js -a 'sector 16-c dwarka delhi'
   const encodedAddress = encodeURIComponent(argv);
-  const google_map_api_key =
-    '<get your key from: https://console.cloud.google.com/apis/credentials?project=weather-api-demo-309319>';
-  // console.info(encodedAddress);
+  const google_map_api_key = properties.get('main.api_key');
+  console.info(encodedAddress);
 
-  request(
-    {
-      // update 2.0 - https://toolset.com/course-lesson/creating-a-maps-api-key/
-      url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${google_map_api_key}`,
-      json: true, //data coming in form of json [useful steps]//creates request header content type for our application
-    }, //options object
-    (error, response, body) => {
-      console.time(`RESPONSE TIME`);
+  axios(
+    // update 2.0 - https://toolset.com/course-lesson/creating-a-maps-api-key/
+    `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${google_map_api_key}`
+  )
+    .then(
+      (response) => {
+        console.time(`RESPONSE TIME`);
 
-      if (error) {
-        //bad links r no network
-        callback('Unable to connect to Google Servers');
-      } else if (body.status === 'ZERO_RESULTS') {
-        //error is not filled if you asked for wrong address, hence we need this case
-        callback('Unable to find that Address');
-      } else if (body.status === 'OK') {
-        callback(undefined, {
-          Address: body.results[0].formatted_address,
-          Latitude: body.results[0].geometry.location.lat,
-          Longitude: body.results[0].geometry.location.lng,
-        });
-      }
+        if (response.data.status === 'ZERO_RESULTS') {
+          //error is not filled if you asked for wrong address, hence we need this case
+          callback('Unable to find that Address');
+        } else if (response.data.status === 'OK') {
+          callback(undefined, {
+            Address: response.data.results[0].formatted_address,
+            Latitude: response.data.results[0].geometry.location.lat,
+            Longitude: response.data.results[0].geometry.location.lng,
+          });
+        }
 
-      console.timeEnd(`RESPONSE TIME`);
-    } //data function called when data comes
-  );
+        console.timeEnd(`RESPONSE TIME`);
+      } //data function called when data comes
+    )
+    .catch((e) => {
+      //bad links r no network
+      callback('Unable to connect to Google Servers');
+    });
 };
 
 module.exports = {

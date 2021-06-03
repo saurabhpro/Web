@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node promise-all.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.7.1"
+    "bluebird": "^3.7.2"
   }
 }
