@@ -11,8 +11,8 @@ https://maps.googleapis.com/maps/api/geocode/json?address=0XX0000
 
 ```json
 {
-    results: [ ],
-    status: "ZERO_RESULTS"
+  "results": [],
+  "status": "ZERO_RESULTS"
 }
 ```
 
@@ -24,7 +24,6 @@ https://www.npmjs.com/package/request
 ## request (to , results)
 
 ```js
-
 var request = require('request');
 request('http://www.google.com', function (error, response, body) {
   console.log('error:', error); // Print the error if one occurred
@@ -34,11 +33,14 @@ request('http://www.google.com', function (error, response, body) {
 
 //SECOND ARG FOR request
 (error, response, body) => {
-  console.log(JSON.stringify(body //the complete body from the response object (inc html page etc)
-    , undefined //so that we can provide 3rd arg
-    , 1 //how many spaces to indent (can be either 2 or '  ')
-  ));
-}
+  console.log(
+    JSON.stringify(
+      body, //the complete body from the response object (inc html page etc)
+      undefined, //so that we can provide 3rd arg
+      1 //how many spaces to indent (can be either 2 or '  ')
+    )
+  );
+};
 ```
 
 ## To Convert the String address to encoded string for url

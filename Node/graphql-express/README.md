@@ -1,13 +1,16 @@
 # GraphQL with node js and express
 
 ## Resources
+
 - https://www.youtube.com/watch?v=ZQL7tL2S0oQ
 - https://github.com/WebDevSimplified/Learn-GraphQL/blob/master/server.js
 
-## Start 
--  `npm run devStart`
+## Start
+
+- `npm run devStart`
 
 ## Level 1 - GraphQL Hello World
+
 ```js
 // input
 query FirstMessage {
@@ -23,6 +26,7 @@ query FirstMessage {
 ```
 
 ## Level 2 - GraphQL Return Books (note: we are not displaying the books author name)
+
 ```js
 // input
 {
@@ -75,6 +79,7 @@ query FirstMessage {
 ```
 
 ## Level 3 - GraphQL Return Books with the books author name)
+
 ```js
 // input
 {
@@ -169,6 +174,7 @@ query FirstMessage {
 ```
 
 ## Level 4: Find books by id
+
 ```js
 {
   book(id: 1) {
@@ -191,8 +197,8 @@ query FirstMessage {
 }
 ```
 
+## Level 5 - GraphQL Mutations
 
-## Level 5 - GraphQL Mutations 
 ```js
 mutation {
   addBook(name: "Power", authorId: 5) {

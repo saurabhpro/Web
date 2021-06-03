@@ -1,4 +1,4 @@
-const geocode = require("../geocode/geocode");
+const geocode = require('../geocode/geocode');
 
 const geocodeAddressUsingPromise = (address) => {
   return new Promise((resolve, reject) => {
@@ -17,11 +17,11 @@ const geocodeAddressUsingPromise = (address) => {
   });
 };
 
-const f2 = geocodeAddressUsingPromise("12 10 Ashok Nagar, Delhi").then(
+const f2 = geocodeAddressUsingPromise('12 10 Ashok Nagar, Delhi').then(
   (result) => {
     console.log(JSON.stringify(result, undefined, 4));
   },
   (errorMessage) => {
-    console.error("Unable to fetch Weather");
+    console.error('Unable to fetch Weather');
   }
 );

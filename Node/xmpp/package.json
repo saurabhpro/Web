@@ -1,20 +1,14 @@
 {
-    "name": "xmpp",
-    "version": "1.0.0",
-    "description": "Demo of chat specific XMPP (jabber)",
-    "main": "index.js",
-    "author": "Saurabh Kumar",
-    "license": "MIT",
-    "dependencies": {
-        "moment": "^2.29.1",
-        "simple-xmpp": "^2.3.1",
-        "xmppjs": "^1.0.0"
-    },
-    "type": "module",
-    "prettier": {
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "semi": true,
-        "singleQuote": true
-    }
+  "name": "xmpp",
+  "version": "1.0.0",
+  "description": "Demo of chat specific XMPP (jabber)",
+  "main": "index.js",
+  "author": "Saurabh Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "simple-xmpp": "^2.3.1",
+    "xmppjs": "^1.0.0"
+  },
+  "type": "module"
 }

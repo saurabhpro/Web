@@ -12,7 +12,7 @@ const os = require('os');
 const notes = require('./notes.js');
 
 //3 -- npm installed modules
-const _ = require('lodash'); //same module name as in package.json   
+const _ = require('lodash'); //same module name as in package.json
 //first searches local directory then the node_modules
 //lodash is a common utility module
 // _ is popular way of writing lodash variable
@@ -47,13 +47,11 @@ console.log(sumResult);
 const filteredArray = _.uniq(['Saurabh', 1, 'Saurabh', 2, 3, 1, 4]);
 console.log(filteredArray);
 
-
 //read command passed during node app.js x x
 //this is stored in "process" object
 const command = process.argv[2];
 console.log('Command: ' + command);
 console.log(process.argv);
-
 
 //$ node app.js remove--title = "secrets"
 /*

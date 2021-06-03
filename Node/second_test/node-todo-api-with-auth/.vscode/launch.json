@@ -18,9 +18,7 @@
         //"export NODE_ENV=test || SET NODE_ENV=test ",
         "${workspaceFolder}/server/tests"
       ],
-      "runtimeArgs": [
-        "--nolazy"
-      ],
+      "runtimeArgs": ["--nolazy"],
       "env": {
         "NODE_ENV": "test",
         "PORT": "3000",

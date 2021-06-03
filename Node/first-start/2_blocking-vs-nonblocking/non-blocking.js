@@ -1,14 +1,13 @@
 const fs = require('fs');
 console.time('read22');
 fs.readFile('file.md', (err, data) => {
-    if (err)
-        throw err;
-    console.log(data);
+  if (err) throw err;
+  console.log(data);
 });
 
 // moreWork(); will run before console.log
 function moreWork() {
-    console.log(fs.readFileSync('file.md'));
+  console.log(fs.readFileSync('file.md'));
 }
 
 console.timeEnd('read22');

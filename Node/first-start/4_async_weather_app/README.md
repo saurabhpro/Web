@@ -1,10 +1,10 @@
 ```js
 
 // basics callback
-saurabh.kumar@C02D70TBMD6N 4_async_weather_app % node playground/callbacks.js                                  
+saurabh.kumar@C02D70TBMD6N 4_async_weather_app % node playground/callbacks.js
 { id: 31, name: 'Vikram' }
 
-saurabh.kumar@C02D70TBMD6N 4_async_weather_app % node playground/async-basics.js        
+saurabh.kumar@C02D70TBMD6N 4_async_weather_app % node playground/async-basics.js
 Starting App
 Sucessfuly completed
 second callback

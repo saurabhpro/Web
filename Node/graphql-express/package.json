@@ -1,28 +1,21 @@
 {
-    "name": "graphql-express",
-    "version": "1.0.0",
-    "description": "GraphQL testing",
-    "main": "server.js",
-    "scripts": {
-        "devStart": "nodemon server.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Saurabh Kumar",
-    "license": "ISC",
-    "type": "module",
-    "dependencies": {
-        "express": "^4.17.1",
-        "express-graphql": "^0.12.0",
-        "graphql": "^15.5.0",
-        "prettier": "^2.2.1"
-    },
-    "devDependencies": {
-        "nodemon": "2.0.7"
-    },
-    "prettier": {
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "semi": true,
-        "singleQuote": true
-    }
+  "name": "graphql-express",
+  "version": "1.0.0",
+  "description": "GraphQL testing",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.7"
+  }
 }

@@ -1,9 +1,10 @@
 ## Starting the docker command
+
 ```ps
 docker run --name ejabberd -p 5222:5222 ejabberd/ecs
 ```
-This will basically spin you docker image
 
+This will basically spin you docker image
 
 ```js
 2021-03-18 04:04:09.031227+00:00 [info] (<0.921.0>) Accepted connection [::ffff:172.17.0.1]:58520 -> [::ffff:172.17.0.2]:5222
@@ -21,6 +22,7 @@ Closing c2s session for admin@localhost/119019659338260859401954: Connection fai
 ```
 
 ## Step 1 - Register your user
+
 Then you need to register your users - for simplicitiy we are using same server port to communicate
 
 ```ps
@@ -30,7 +32,8 @@ docker exec -it ejabberd bin/ejabberdctl register admin localhost password
 docker exec -it ejabberd bin/ejabberdctl register saurabh localhost password
 ```
 
-## Step 2 - start the admin client 
+## Step 2 - start the admin client
+
 ```js
 saurabh.kumar@C02D70TBMD6N xmpp % node index.js
 Hay you are online
@@ -38,12 +41,14 @@ connected as admin
 ```
 
 ## Step 3 - start your personal client
+
 ```js
-saurabh.kumar@C02D70TBMD6N xmpp % node saurabh.js       Hey you are online! 
+saurabh.kumar@C02D70TBMD6N xmpp % node saurabh.js       Hey you are online!
 Connected as saurabh
 ```
 
 ## Step 4 - You starts sending messages to Admin
+
 ```js
 saurabh.kumar@C02D70TBMD6N xmpp % node index.js
 Hay you are online

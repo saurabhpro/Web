@@ -1,16 +1,12 @@
 console.log('Starting App');
 
-setTimeout(
-    () => {
-        console.log('first callback after two seconds');
-    }, 2000
-);
+setTimeout(() => {
+  console.log('first callback after two seconds');
+}, 2000);
 
-setTimeout(
-    () => {
-        console.log('second callback');
-    }, 0
-);
+setTimeout(() => {
+  console.log('second callback');
+}, 0);
 
 console.log('Sucessfuly completed');
 

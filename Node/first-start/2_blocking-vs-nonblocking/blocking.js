@@ -7,7 +7,7 @@ console.log(data);
 // moreWork(); will run after console.log
 
 function moreWork() {
-    console.log(fs.readFileSync('file.md'));
+  console.log(fs.readFileSync('file.md'));
 }
 
 console.timeEnd('read12');

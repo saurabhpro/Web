@@ -17,9 +17,9 @@
 const fs = require('fs');
 
 const originalNote = {
-    title: "Hello",
-    body: "Saurabh"
-}
+  title: 'Hello',
+  body: 'Saurabh',
+};
 
 const originalNoteString = JSON.stringify(originalNote);
 fs.writeFileSync('notes.json', originalNoteString);
