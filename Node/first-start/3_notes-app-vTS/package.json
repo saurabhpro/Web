@@ -15,10 +15,10 @@
     "yargs": "^13.3.2"
   },
   "devDependencies": {
-    "@types/node": "8.10.66",
+    "@types/node": "10.17.60",
     "eslint": "4.19.1",
     "nodemon": "1.19.4",
-    "ts-node": "3.3.0",
+    "ts-node": "10.0.0",
     "typescript": "2.9.2"
   }
 }
