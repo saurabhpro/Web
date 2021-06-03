@@ -15,7 +15,7 @@
     "yargs": "^13.3.2"
   },
   "devDependencies": {
-    "@types/node": "8.10.66",
+    "@types/node": "11.15.54",
     "eslint": "4.19.1",
     "nodemon": "1.19.4",
     "ts-node": "3.3.0",
