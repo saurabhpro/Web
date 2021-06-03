@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "expect": "^1.20.2",
-    "mocha": "^3.0.0",
-    "rewire": "^2.5.2",
-    "supertest": "^2.0.0"
+    "expect": "^27.0.0",
+    "mocha": "^8.0.0",
+    "rewire": "^5.0.0",
+    "supertest": "^6.0.0"
   },
   "dependencies": {
     "express": "^4.16.1"
