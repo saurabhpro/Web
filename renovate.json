@@ -12,11 +12,7 @@
       "matchUpdateTypes": [
         "minor",
         "patch",
-        "pin",
-        "digest",
-        "lockFileMaintenance",
-        "rollback",
-        "bump"
+        "lockFileMaintenance"
       ],
       "groupName": "Dependencies (non-major)",
       "automerge": true,
