@@ -18,7 +18,7 @@ JavaScript does not always format the date exactly the same in every browser. So
   parse it correctly.
 
 ```js
-var now = new Date(); //returns todays date and time
+const now = new Date(); //returns todays date and time
 console.log(now.getDate()); //returns the day of the month from 1 to 31 console.log(now.getDay()); //returns the day of the week its zero based like an array 0 - 6; console.log(now.getFullYear()); //returns the current year
 console.log(now.getHours()); //returns hours from 0-23
 console.log(now.getMonth()); //return month from 0-11
@@ -34,13 +34,13 @@ if (date1.getTime() == date2.getTime()) {
 ## figure out the offset between UTC and local time.
 
 ```js
-var offSet = currentDate.getTimezoneOffset() / 60; converts minutes to hours
+const offSet = currentDate.getTimezoneOffset() / 60; converts minutes to hours
 console.log(offSet);
 //check if we are on daylight savings time
-var today = new Date();
+const today = new Date();
 function isDST(){
-        var jan = new Date(today.getFullYear(), 0, 1);
-        var jul = new Date(today.getFullYear(), 6, 1);
+        const jan = new Date(today.getFullYear(), 0, 1);
+        const jul = new Date(today.getFullYear(), 6, 1);
         return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
 }
 if(isDST() != today.getTimezoneOffset()){

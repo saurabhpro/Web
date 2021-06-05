@@ -1,3 +1,5 @@
+// https://javascript.info/static-properties-methods#statics-and-inheritance
+
 class Triple {
   static customName = 'Tripler';
   static description = 'I triple any number you provide';

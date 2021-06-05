@@ -1,5 +1,5 @@
 class Ship {
-  constructor(name, type, color) {
+  constructor(type, name, color) {
     //variable declared here only, cant have multiple constructors
     this.name = name;
     this.type = type;
@@ -37,7 +37,7 @@ class SpaceShip extends Ship {
   }
 }
 
-var planetExpress = new SpaceShip(
+const planetExpress = new SpaceShip(
   'Planet Express Ship',
   'Delivery  Ship',
   'Green'
@@ -65,7 +65,7 @@ class Cookies {
   }
 }
 
-var myCookie = new Cookies();
+const myCookie = new Cookies();
 myCookie.cookieType = 'Chocolate Chip'; //calls the setter method
 console.log(myCookie.cookieType); //returns Chocolate Chip; calls getter
 console.log(myCookie._typeOfCookie); //will work!

@@ -14,17 +14,17 @@ function* runFun() {
   yield fun2();
 }
 //other way if
-var iterator = runFun();
+const iterator = runFun();
 console.log(iterator.next()); //pauses function  Object {value: undefined, done: false}
 console.log(iterator.next()); //returns 'function1' Object {value: undefined, done: false}
 console.log(iterator.next()); //returns 'function 2' Object {value: undefined, done: false}
 console.log(iterator.next()); //done = true Object {value: undefined, done: true}
 
 //other way to create generators
-var GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
-var myGenFunction = new GeneratorFunction('value', 'yield value'); // The last parameter defines what the function does.
+const GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
+const myGenFunction = new GeneratorFunction('value', 'yield value'); // The last parameter defines what the function does.
 
-var myGenIterator = myGenFunction();
+const myGenIterator = myGenFunction();
 console.log(myGenIterator.next()); //Object {value: undefined, done: false}
 console.log(myGenIterator.next()); //Object {value: undefined, done: true}
 ```
@@ -44,11 +44,11 @@ whatever value is being returned from the `yield` keyword.
 
 ```js
 function* numCount() {
-  var count = 0;
+  let count = 0;
   while (count < 5) yield count++;
 }
 
-var irt = numCount();
+const irt = numCount();
 console.log(irt.next()); //Object {value: 0, done: false}
 console.log(irt.next()); //Object {value: 1, done: false}
 console.log(irt.next()); //Object {value: 2, done: false}
@@ -71,10 +71,10 @@ Other ways to terminate yeild
 
 ```js
 function* returnMSG() {
-  var value = yield value;
+  const value = yield value;
   return value;
 }
-var it = returnMSG();
+const it = returnMSG();
 console.log(it.next()); //Object {value: undefined, done: false}
 console.log(it.next('things')); //Object {value: "things", done: true}
 ```
@@ -85,7 +85,7 @@ does not have a value. The second time next() is called, you can push a paramete
 ## Creating an Object with a Custom Iterator
 
 ```js
-var countdown = {
+const countdown = {
   max: 3,
   [Symbol.iterator]() {
     return this;
@@ -120,7 +120,7 @@ _It is important to note as of this writing that Symbol.iterator does not have s
 ## Custom Iterator to Make a Fibonacci Sequence
 
 ```js
-var fibObj = {
+const fibObj = {
   one: 0,
   two: 1,
   temp: 0,
@@ -134,7 +134,7 @@ var fibObj = {
     return { value: this.two };
   },
 };
-for (var I = 0; I < 1000; I++) {
+for (let I = 0; I < 1000; I++) {
   consolel.log(fibObj.next().value); //1,2,3,5,8.....
 }
 ```

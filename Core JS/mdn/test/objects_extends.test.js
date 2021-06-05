@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { mArr } from '../super.js';
+import { mArr } from '../objects_extends.js';
 
 describe('MegaArray', () => {
   describe('array ', () => {
