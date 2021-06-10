@@ -17,5 +17,9 @@
     "chai": "^4.3.4",
     "mocha": "^8.4.0",
     "prettier": "^2.3.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.1"
   }
 }
