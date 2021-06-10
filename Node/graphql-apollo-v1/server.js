@@ -1,4 +1,6 @@
 import { ApolloServer } from 'apollo-server';
+import { ApolloServerPluginInlineTrace } from "apollo-server-core";
+
 import SessionAPI from './datasources/sessions.js';
 import SpeakerAPI from './datasources/speakers.js';
 import typeDefs from './schema/schema.js';
@@ -24,6 +26,7 @@ const server = new ApolloServer({
     }
     return err;
   },
+  plugins: [ApolloServerPluginInlineTrace()],
 });
 
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
