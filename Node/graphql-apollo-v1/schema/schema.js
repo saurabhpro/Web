@@ -8,7 +8,7 @@ const typeDefs = gql`
       description: String
       startsAt: String
       endsAt: String
-      room: String
+      room: Room
       day: String
       format: String
       track: String
@@ -21,6 +21,20 @@ const typeDefs = gql`
 
   type Mutation {
     toggleFavoriteSession(id: ID): Session
+    addSession(session: SessionInput): Session
+  }
+
+  input SessionInput {
+    title: String!
+    description: String
+    startsAt: String
+    endsAt: String
+    room: String
+    day: String
+    format: String
+    track: String
+    level: String
+    favorite: Boolean
   }
 
   type Session {
@@ -43,6 +57,12 @@ const typeDefs = gql`
     bio: String
     name: String
     sessions: [Session]
+  }
+
+  enum Room {
+    EUROPA
+    SOL
+    SATURN
   }
 `;
 

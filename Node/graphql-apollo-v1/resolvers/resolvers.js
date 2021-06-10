@@ -6,7 +6,12 @@ import Mutation from './mutation.js';
 const resolvers = {
   Query,
   Session,
-  Mutation
+  Mutation,
+  Room: {
+    EUROPA: 'Europa',
+    SOL: 'Sol',
+    SATURN: 'Saturn',
+  },
 };
 
 export default resolvers;

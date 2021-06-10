@@ -22,6 +22,14 @@ class SessionAPI extends DataSource {
     session.favorite = !session.favorite;
     return session;
   }
+
+  addSession(session) {
+    session.id = 123;
+    sessions.push(session);
+    console.log(session);
+
+    return session;
+  }
 }
 
 export default SessionAPI;
