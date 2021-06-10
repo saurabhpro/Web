@@ -8,8 +8,6 @@ class SessionAPI extends DataSource {
     super();
   }
 
-  initialize(config) {}
-
   getSessions(args) {
     return _.filter(sessions, args);
   }

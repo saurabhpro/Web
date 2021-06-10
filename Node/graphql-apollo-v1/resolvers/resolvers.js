@@ -1,20 +1,10 @@
-import _ from 'lodash';
+import Query from './query.js';
+import Session from './session.js';
 
 // to fetch the data
 const resolvers = {
- 
-
-  Session: {
-    async speakers(session, args, { dataSources }) {
-      // get values
-      const speakers = await dataSources.speakerAPI.getSpeakers();
-
-      // get speaker for my session
-      return speakers.filter(
-        (speaker) => _.filter(session.speakers, { id: speaker.id }).length > 0
-      );
-    },
-  },
+  Query,
+  Session,
 };
 
 export default resolvers;
