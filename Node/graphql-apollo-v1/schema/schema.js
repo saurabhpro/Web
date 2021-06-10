@@ -18,6 +18,11 @@ const typeDefs = gql`
     speakers: [Speaker]
     speakerById(id: ID): Speaker
   }
+
+  type Mutation {
+    toggleFavoriteSession(id: ID): Session
+  }
+
   type Session {
     id: ID!
     title: String!
@@ -29,8 +34,10 @@ const typeDefs = gql`
     format: String
     track: String @deprecated(reason: "Please forget about me")
     level: String
+    favorite: Boolean
     speakers: [Speaker]
   }
+
   type Speaker {
     id: ID!
     bio: String
