@@ -3630,6 +3630,13 @@
       "level": "Intermediate",
       "day": "Thursday",
       "id": "814b1f5e-e6df-440b-a91c-df198b5bbed2"
+    },
+    {
+      "title": "This is Sparta",
+      "description": "TS",
+      "level": "Advanced",
+      "day": "Friday",
+      "id": 5980658
     }
   ]
 }

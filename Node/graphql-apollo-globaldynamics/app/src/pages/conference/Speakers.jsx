@@ -80,7 +80,7 @@ const SpeakerList = () => {
                 await markFeatured({
                   variables: {
                     speakerId: id,
-                    featured: true,
+                    featured: !featured,
                   },
                 });
               }}
@@ -112,10 +112,10 @@ const SpeakerDetails = () => {
   if (error) return <p>Error loading speaker!</p>;
 
   const speaker = data.speakerById;
-  const { id, name, bio, sessions } = speaker;
+  const { id: speakerId, name, bio, sessions } = speaker;
 
   return (
-    <div key={id} className="col-xs-12" style={{ padding: 5 }}>
+    <div key={speakerId} className="col-xs-12" style={{ padding: 5 }}>
       <div className="panel panel-default">
         <div className="panel-heading">
           <h3 className="panel-title">{name}</h3>

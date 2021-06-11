@@ -15,6 +15,8 @@ specifiers:
   nodemon: ^2.0.7
   npm-run-all: ^4.1.5
   path: ^0.12.7
+  unique-random: ^3.0.0
+  uuid: ^8.3.2
 
 dependencies:
   apollo-datasource: 0.9.0
@@ -31,6 +33,8 @@ dependencies:
   nodemon: 2.0.7
   npm-run-all: 4.1.5
   path: 0.12.7
+  unique-random: 3.0.0
+  uuid: 8.3.2
 
 packages:
 
@@ -2183,6 +2187,11 @@ packages:
     resolution: {integrity: sha512-nrXZwwXrD/T/JXeygJqdCO6NZZ1L66HrxM/Z7mIq2oPanoN0F1nLx3lwJMu6AwJY69hdixaFQOuoYsMjE5/C2A==}
     dependencies:
       debug: 2.6.9
+    dev: false
+
+  /unique-random/3.0.0:
+    resolution: {integrity: sha512-4vjtE3pH6xO5OmsSmjc6KPgHy2rbCw66BbMRLIyXkuq+WzOKA1oNkqQ+Y7Lh+sE0DrOrWMSpFkivhhzCF7J6HA==}
+    engines: {node: '>=12'}
     dev: false
 
   /unique-string/2.0.0:

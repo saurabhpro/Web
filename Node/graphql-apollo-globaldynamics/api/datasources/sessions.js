@@ -1,5 +1,7 @@
 import { DataSource } from 'apollo-datasource';
 import { resolve } from 'path';
+import uniqueRandom from 'unique-random';
+
 import { Low, JSONFile } from 'lowdb';
 import _ from 'lodash';
 
@@ -28,6 +30,9 @@ class SessionDataSource extends DataSource {
   }
 
   async createSession(session) {
+    const random = uniqueRandom(1, 10_000_000);
+    session['id'] = random();
+
     const sessions = this.db.push(session);
 
     await db.write(sessions);

@@ -30,10 +30,14 @@ class SpeakerDataSource extends DataSource {
   }
 
   async markFeatured(speakerId, featured) {
-    return this.db
-      .find({ id: speakerId })
-      .assign({ featured })
-      .write();
+    const ab = this.db.find((speaker) => speaker.id === speakerId);
+
+    if (ab) {
+      Object.assign(ab, { featured });
+      await db.write(ab);
+    }
+
+    return ab;
   }
 }
 
