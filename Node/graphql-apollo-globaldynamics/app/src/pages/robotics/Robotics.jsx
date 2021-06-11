@@ -1,5 +1,5 @@
-import React from 'react';
-import './style-robotics.css';
+import React from "react";
+import "./style-robotics.css";
 
 // <link href="css/bootstrap.min.css" rel="stylesheet"/>
 // <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"/>

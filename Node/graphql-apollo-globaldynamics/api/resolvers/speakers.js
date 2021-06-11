@@ -1,4 +1,3 @@
-
 const sessions = async (speaker, args, { dataSources }) => {
   const sessionsList = await dataSources.sessionDataSource.getSessions();
 

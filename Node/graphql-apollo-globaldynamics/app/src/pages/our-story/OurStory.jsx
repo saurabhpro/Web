@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export function OurStory() {
   return (
@@ -38,7 +38,7 @@ export function OurStory() {
                 skills with their pocket technology. Localized anti gravity was
                 born and neither phone nor Larry ever touched the ground again.
               </p>
-              <p style={{ paddingTop: '20px' }}>
+              <p style={{ paddingTop: "20px" }}>
                 It has been nearly 40 years since Larry left us, but the impact
                 of his genius is still felt today. They say that two brains are
                 better than one, which is why Larry left us with copies of

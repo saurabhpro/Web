@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import logo from './images/Globo-Logo-white.svg';
+import logo from "./images/Globo-Logo-white.svg";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function NavLinks() {
   return (
@@ -100,7 +100,8 @@ export function Header() {
 
         <div className="sign-in col-md-2">
           <span className="dvider"></span>
-          <div className="sign"></div>
+          <div className="sign">
+          </div>
         </div>
       </div>
     </header>

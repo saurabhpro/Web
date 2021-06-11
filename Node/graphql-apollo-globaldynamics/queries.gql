@@ -1,0 +1,97 @@
+# Write your query or mutation here
+query BasicQuery {
+  sessions {
+    id
+  }
+
+  sessionById(id: 84473) {
+    id
+    title
+  }
+
+  speakers {
+    id
+  }
+
+  speakerById(id: "381b010e-f51d-4fca-a249-271f72a6a5b9") {
+    id
+    name
+  }
+
+  users {
+    id
+    email
+  }
+
+  userById(id: "e1e392ee-61b9-4ba2-b211-667a4300b0dc") {
+    email
+  }
+}
+
+#introspectons
+query getAllSchemaTypes {
+  # get all possible types in shcema
+  __schema {
+    types {
+      name
+      kind
+    }
+  }
+}
+
+query getAllQueryAndMutationTypes {
+  __schema {
+    queryType {
+      name
+      fields {
+        name
+        description
+      }
+    }
+
+    mutationType {
+      name
+      fields {
+        name
+        description
+      }
+    }
+  }
+}
+
+query retriveTypeInfo {
+  sessionInfo: __type(name: "Session") {
+    fields(includeDeprecated: true) {
+      name
+      isDeprecated
+      deprecationReason
+    }
+  }
+
+  speakerInfo: __type(name: "Speaker") {
+    fields {
+      name
+      description
+    }
+  }
+}
+
+query reativeDirectives {
+  __schema {
+    directives {
+      name
+      description
+      args {
+        name
+        description
+      }
+    }
+  }
+}
+
+query retriveSessionsByDirectives($With_Value: Boolean!) {
+  sessions {
+    title
+    day @include(if: $With_Value)
+  }
+}

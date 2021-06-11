@@ -25,6 +25,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources,
+  debug: true
 });
 
 server.applyMiddleware({ app });
