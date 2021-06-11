@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@apollo/client': 3.3.20
-  '@testing-library/jest-dom': 5.14.0
+  '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 11.2.7
   '@testing-library/user-event': 13.1.9
   apollo: 2.33.4
@@ -16,7 +16,7 @@ specifiers:
 
 dependencies:
   '@apollo/client': 3.3.20_graphql@15.5.0+react@17.0.2
-  '@testing-library/jest-dom': 5.14.0
+  '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.1.9
   apollo: 2.33.4
@@ -2380,8 +2380,8 @@ packages:
       pretty-format: 26.6.2
     dev: false
 
-  /@testing-library/jest-dom/5.14.0:
-    resolution: {integrity: sha512-dSa157Gdn7ogL9zy8kZzBMraS2QAp2J5LUXDXRssqqaBVM7z7Mu/bcfuOEnUFzi6JDYZ5dqGs3dkaRc+dTdKYQ==}
+  /@testing-library/jest-dom/5.14.1:
+    resolution: {integrity: sha512-dfB7HVIgTNCxH22M1+KU6viG5of2ldoA5ly8Ar8xkezKHKXjRvznCdbMbqjYGgO2xjRbwnR+rR8MLUIqF3kKbQ==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
     dependencies:
       '@babel/runtime': 7.14.5
