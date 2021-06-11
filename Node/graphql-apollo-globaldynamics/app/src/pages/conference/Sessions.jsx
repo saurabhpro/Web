@@ -95,9 +95,18 @@ function SessionList({ day }) {
 }
 
 function SessionItem({ session }) {
-  const { id, title, day, room, level, startsAt, speakers } = session;
+  const {
+    id: sessionId, // renamed to sessionId
+    title,
+    day,
+    room,
+    level,
+    startsAt,
+    speakers,
+  } = session;
+
   return (
-    <div key={id} className="col-xs-12 col-sm-6" style={{ padding: 5 }}>
+    <div key={sessionId} className="col-xs-12 col-sm-6" style={{ padding: 5 }}>
       <div className="panel panel-default">
         <div className="panel-heading">
           <h3 className="panel-title">{title}</h3>
@@ -109,11 +118,11 @@ function SessionItem({ session }) {
           <h5>{`Starts at: ${startsAt}`}</h5>
         </div>
         <div className="panel-footer">
-          {speakers.map(({ idx, name }) => (
-            <span key={idx} style={{ padding: 2 }}>
+          {speakers.map(({ id, name }) => (
+            <span key={id} style={{ padding: 2 }}>
               <Link
                 className="btn btn-default btn-lg"
-                to={`/conference/speaker/${idx}`}
+                to={`/conference/speaker/${id}`}
               >
                 View {name}'s Profile
               </Link>
