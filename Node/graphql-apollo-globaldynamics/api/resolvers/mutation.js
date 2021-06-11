@@ -17,9 +17,10 @@ export default {
       throw new Error('A user account with that email already exists.');
     }
 
+    //TODO add exception handling when below part fails and the user is still stored in our mock db
     const hash = hashPassword(userCredentials.password);
 
-    const dbUser = dataSources.userDataSource.createUser({
+    const dbUser = await dataSources.userDataSource.createUser({
       email: userCredentials.email,
       hash,
     });
@@ -31,6 +32,7 @@ export default {
     });
 
     return {
+      token,
       user: {
         id: dbUser.id,
         email: dbUser.email,
@@ -63,6 +65,7 @@ export default {
     });
 
     return {
+      token,
       user: {
         id: existingUser.id,
         email: existingUser.email,

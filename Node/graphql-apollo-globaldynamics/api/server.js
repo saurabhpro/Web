@@ -25,7 +25,11 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources,
-  debug: true
+  // https://stackoverflow.com/questions/59021384/how-to-pass-cookie-from-apollo-server-to-apollo-clenet
+  context: ({ res }) => ({
+    res,
+  }),
+  debug: true,
 });
 
 server.applyMiddleware({ app });

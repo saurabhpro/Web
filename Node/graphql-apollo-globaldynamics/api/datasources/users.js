@@ -1,4 +1,5 @@
 import { DataSource } from 'apollo-datasource';
+import { v4 as uuidv4 } from 'uuid';
 
 import { join } from 'path';
 import { Low, JSONFile } from 'lowdb';
@@ -29,8 +30,14 @@ class UserDataSource extends DataSource {
     return this.db.find((user) => user.id === id);
   }
 
-  createUser(user) {
-    return this.db.push(user).write();
+  async createUser(user) {
+    user['id'] = uuidv4();
+
+    this.db.push(user);
+
+    await db.write();
+
+    return user;
   }
 
   getUserByEmail(email) {

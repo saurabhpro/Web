@@ -68,6 +68,7 @@ export default gql`
   }
 
   type AuthPayload {
+    token: String
     user: User
   }
 
