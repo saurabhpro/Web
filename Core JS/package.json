@@ -19,7 +19,7 @@
     "prettier": "^2.3.0"
   },
   "dependencies": {
-    "fs": "^0.0.1-security",
+    "fs": "^0.0.2",
     "node-fetch": "^2.6.1"
   }
 }
