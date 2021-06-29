@@ -9,7 +9,7 @@ specifiers:
   lodash: ^4.17.21
   morgan: 1.10.0
   nodemon: 2.0.7
-  sequelize: 6.6.2
+  sequelize: 6.6.4
 
 dependencies:
   body-parser: 1.19.0
@@ -20,7 +20,7 @@ dependencies:
   lodash: 4.17.21
   morgan: 1.10.0
   nodemon: 2.0.7
-  sequelize: 6.6.2
+  sequelize: 6.6.4
 
 packages:
 
@@ -563,8 +563,8 @@ packages:
     engines: {node: '>=0.8.19'}
     dev: false
 
-  /inflection/1.12.0:
-    resolution: {integrity: sha1-ogCTVlbW9fa8TcdQLhrstwMihBY=}
+  /inflection/1.13.1:
+    resolution: {integrity: sha512-dldYtl2WlN0QDkIDtg8+xFwOS2Tbmp12t1cHa5/YClU6ZQjTFm7B66UcVbh9NQB+HvT5BAd2t5+yKsBkw5pcqA==}
     engines: {'0': node >= 0.4.0}
     dev: false
 
@@ -1028,8 +1028,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
-  /sequelize/6.6.2:
-    resolution: {integrity: sha512-H/zrzmTK+tis9PJaSigkuXI57nKBvNCtPQol0yxCvau1iWLzSOuq8t3tMOVeQ+Ep8QH2HoD9/+FCCIAqzUr/BQ==}
+  /sequelize/6.6.4:
+    resolution: {integrity: sha512-SOSu3tclOjHJfvuIITUlAsh2Q642gFxjpNN+IM1quFZ7jU5Pep7FIAwBK8UWgTpNc9TK9rUr1cyLB/G25CGicA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       mariadb: '*'
@@ -1054,7 +1054,7 @@ packages:
     dependencies:
       debug: 4.3.1
       dottie: 2.0.2
-      inflection: 1.12.0
+      inflection: 1.13.1
       lodash: 4.17.21
       moment: 2.29.1
       moment-timezone: 0.5.33

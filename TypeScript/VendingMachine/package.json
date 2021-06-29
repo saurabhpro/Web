@@ -11,7 +11,7 @@
   "dependencies": {
     "@types/knockout": "^3.4.70",
     "@types/requirejs": "^2.1.32",
-    "bootstrap": "5.0.1",
+    "bootstrap": "5.0.2",
     "knockout": "^3.5.1",
     "requirejs": "^2.3.6"
   },
