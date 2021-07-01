@@ -8,7 +8,7 @@ specifiers:
   apollo: 2.33.4
   formik: 2.2.9
   graphql: 15.5.1
-  http-proxy-middleware: 2.0.0
+  http-proxy-middleware: 2.0.1
   react: 17.0.2
   react-dom: 17.0.2
   react-router-dom: 5.2.0
@@ -22,7 +22,7 @@ dependencies:
   apollo: 2.33.4
   formik: 2.2.9_react@17.0.2
   graphql: 15.5.1
-  http-proxy-middleware: 2.0.0
+  http-proxy-middleware: 2.0.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-router-dom: 5.2.0_react@17.0.2
@@ -7096,8 +7096,8 @@ packages:
       - debug
     dev: false
 
-  /http-proxy-middleware/2.0.0:
-    resolution: {integrity: sha512-S+RN5njuyvYV760aiVKnyuTXqUMcSIvYOsHA891DOVQyrdZOwaXtBHpt9FUVPEDAsOvsPArZp6VXQLs44yvkow==}
+  /http-proxy-middleware/2.0.1:
+    resolution: {integrity: sha512-cfaXRVoZxSed/BmkA7SwBVNI9Kj7HFltaE5rqYOub5kWzWZ+gofV2koVN1j2rMW7pEfSSlCHGJ31xmuyFyfLOg==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@types/http-proxy': 1.17.6
