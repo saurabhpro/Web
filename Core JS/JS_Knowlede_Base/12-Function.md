@@ -2,18 +2,18 @@
 
 ```js
 //function constructor
-var fun1 = new Function('name', 'return name;');
+const fun1 = new Function('name', 'return name;');
 fun1('Jessica');
 
 //function declaration
 function myFun(name) {
-  var greeting = 'Hello ' + name;
+  const greeting = 'Hello ' + name;
   return greeting;
 }
 myFun('Danny');
 
 //function expression
-var fun3 = function (name) {
+const fun3 = function (name) {
   return name;
 };
 fun3('Mami');
@@ -70,21 +70,21 @@ function showSpread(one, two, three, four) {
   console.log(three);
   console.log(four);
 }
-var myArray = [1, 2, 3, 4];
+const myArray = [1, 2, 3, 4];
 //showSpread(myArray[0], myArray[1], myArray[2], myArray[3]) //without using spread
 //showSpread(...myArray); //using the spread syntax
-var dayInfo = [1975, 7, 19];
+const dayInfo = [1975, 7, 19];
 
-var dateObj = new Date(...dayInfo);
+const dateObj = new Date(...dayInfo);
 console.log(dateObj); //returns Tue Aug 19 1975 00:00:00 GMT-0400 (EDT)
 
-var numArray2 = [2, 3, 4, 5, 6, 7];
-var numArray = [1, ...numArray2, 8, 9, 10];
+const numArray2 = [2, 3, 4, 5, 6, 7];
+const numArray = [1, ...numArray2, 8, 9, 10];
 console.log(numArray); //returns 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
-var part1 = [1, 2, 3];
-var part2 = [4, 5, 6];
-var part3 = [...part1, ...part2];
+const part1 = [1, 2, 3];
+const part2 = [4, 5, 6];
+const part3 = [...part1, ...part2];
 console.log(part3); //returns 1,2,3,4,5,6
 ```
 
@@ -107,7 +107,7 @@ console.log(part3); //returns 1,2,3,4,5,6
 ```js
 //ES 5
 document.getElementById('myButton').addEventListener('click', function () {
-  var self = this;
+  const self = this;
   self.currentInterval = 0;
   setInterval(function myInterval() {
     self.currentInterval++;
@@ -133,7 +133,7 @@ document.getElementById('myButton').addEventListener('click', () => {
 });
 
 //retuning object literals
-var myObj = () => ({ name: 'June' });
+const myObj = () => ({ name: 'June' });
 console.log(myObj()); //returns Object {name: "June"}
 ```
 
@@ -194,7 +194,7 @@ Using this method on a function creates a new function called a bound function (
 The value of this is set to the value that is provided in the first argument. 
 */
 
-var phrase = saySomething.bind({ something: 'Brothers! Sisters!' });
+const phrase = saySomething.bind({ something: 'Brothers! Sisters!' });
 
 //In the following example, the function saySomething returns a property called something.
 //On its own it would return undefined since there isn’t a variable in the function called something.
@@ -217,7 +217,7 @@ that the keyword this is bound to.
 In the previous example, the call method passes an object over and the function uses the properties 
 of that object to return some values. If you’re using the apply method, you would get the same results.
 */
-var greetingObj = { greeting: 'Hello, Mr. Robot' };
+const greetingObj = { greeting: 'Hello, Mr. Robot' };
 
 console.log(useCallFunction.call(greetingObj));
 console.log(useCallFunction.apply(greetingObj));
@@ -243,16 +243,16 @@ to the execution context. For example, if arrow functions were used inside an ob
 the result of this would be the object that this was defined in.
 */
 
-var globalArrayFunction = () => this;
+const globalArrayFunction = () => this;
 console.log(globalArrayFunction()); //returns Window
 
-var micCheck = {
+const micCheck = {
   isThisOn: function () {
     return () => this;
   },
 };
 
-var returnedFunction = micCheck.isThisOn();
+const returnedFunction = micCheck.isThisOn();
 console.log(returnedFunction()); //returns Object
 
 /*
@@ -261,7 +261,7 @@ Object methods make using this much simpler. The value is always set to the obje
 is called on, no matter how the method is defined.
 
 */
-var theNumber = { p: 42 };
+const theNumber = { p: 42 };
 function magicNumber() {
   return this.p;
 }

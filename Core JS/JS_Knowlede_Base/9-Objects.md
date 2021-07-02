@@ -16,7 +16,7 @@ notation, property names must be a string._
 ## Returning Only the Enumerable Properties of an Object
 
 ```js
-var myObj = { a: 1, b: 2, c: 3 };
+const myObj = { a: 1, b: 2, c: 3 };
 console.log(Object.keys(myObj)); //returns ["a", "b", "c"]
 ```
 
@@ -29,7 +29,7 @@ loop.
 ## check if enumerable
 
 ```js
-var myObj = { a: 1, b: 2, c: 3 };
+const myObj = { a: 1, b: 2, c: 3 };
 console.log(myObj.propertyIsEnumerable('a')); //returns true
 console.log(myObj.propertyIsEnumerable('length')); //returns false
 ```

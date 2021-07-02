@@ -8,14 +8,14 @@ JavaScript.
 
 ```js
 //ECMAScript 5 class
-var Human = function Human(name) {
+const Human = function Human(name) {
   this.name = name;
 };
 //assign new functions to the object that can be used with other instances of that objects.
 Human.prototype.sayGoodNight = function () {
   return 'Say Goodnight ' + this.name;
 };
-var george = new Human('Gracie');
+const george = new Human('Gracie');
 console.log(george.sayGoodNight());
 
 //ECMAScript 6 class
@@ -32,7 +32,7 @@ class Greeting {
 Class declarations like in this example are not hoisted. Because of this, be sure to declare the class you want to use before trying to access it. 
 Not doing so will return a ReferenceError.
 */
-var yakko = new Greeting('Nurse!');
+const yakko = new Greeting('Nurse!');
 console.log(yakko.sayHello());
 ```
 
@@ -52,7 +52,7 @@ Show.prototype.getShowName = function getShowName() {
 Show.prototype.getShowNetwork = function getShowNetwork() {
   return this.network;
 };
-var gravityFalls = new Show('Gravity Falls', 'Disney XD');
+const gravityFalls = new Show('Gravity Falls', 'Disney XD');
 console.log(gravityFalls.getShowName()); //returns Gravity Falls
 console.log(gravityFalls.getShowNetwork()); //returns Disney XD
 
@@ -98,7 +98,7 @@ class Human {
   }
 }
 
-//don't need to create var human = new Human();
+//don't need to create const human = new Human();
 console.log(Human.hasLegs()); //returns Person has legs
 console.log(Human.hasAmrs()); //returns Person has arms
 ```

@@ -8,7 +8,7 @@ the `typeof` operator.
 ## Formatting a Number to a Fixed Amount of Digits
 
 ```js
-var numObj = 1.23456789;
+const numObj = 1.23456789;
 numObj.toPrecision(); //returns 1.23456789
 numObj.toPrecision(2); //returns 1.2 (total 2 digits)
 numObj.toPrecision(5); //returns 1.2346 Five numbers total. Notice how it is rounded up
@@ -30,7 +30,7 @@ When using toFixed, the amount of digits after the decimal point will be set.
 ## Number and Math
 
 ```js
-Checking for Integers var myNumber = 1
+Checking for Integers const myNumber = 1
 Number.isInteger(myNumber);//returns true does not work in IE
 Number.isInteger('2'); //returns false does not work in IE
 
@@ -82,7 +82,7 @@ The random method in the Math object returns a floating point pseudo-random numb
 Math.max(1,10) //returns 10
 Math.max(-100,10) //returns 10
 Using apply as part of the method call can define scope of the array.
-var myNumArray = [1,2,3,4,5,6,7,8,9];
+const myNumArray = [1,2,3,4,5,6,7,8,9];
 Math.max.apply(null,myArray); //returns 9
 This would give you the same result:
 Math.max.apply(this,myArray); //returns 9

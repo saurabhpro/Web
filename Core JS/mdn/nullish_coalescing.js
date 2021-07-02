@@ -6,8 +6,9 @@ result = a !== null && a !== undefined ? a : b;
 console.log(result);
 
 // with nullish coalescing operator
-result = a ?? b;
-console.log(result);
+let c= null;
+result = a ?? c;
+console.log(result);    // if both are null, return null and if one is undefined, return undefined
 
 // shows the first defined value:
 let firstName = null;

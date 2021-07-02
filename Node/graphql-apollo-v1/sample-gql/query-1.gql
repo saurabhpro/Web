@@ -1,0 +1,44 @@
+# Write your query or mutation here
+
+query {
+  speakers {
+    id
+    name
+  }
+
+  speakerById(id: "381b010e-f51d-4fca-a249-271f72a6a5b9") {
+    name
+  }
+
+  sessionById(id: 80310) {
+    ... on Session {
+      startsAt
+      title
+      id
+      description
+      track
+      favorite
+      room
+      speakers {
+        name
+      }
+    }
+    ... on Error {
+      code
+      token
+      message
+    }
+  }
+
+  sessions(room: EUROPA, track: ".NET") {
+    startsAt
+    title
+    id
+    track
+    room
+    favorite
+    speakers {
+      name
+    }
+  }
+}

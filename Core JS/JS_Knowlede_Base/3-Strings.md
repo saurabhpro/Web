@@ -5,8 +5,8 @@
 ### Over a String’s code Units Using for...in
 
 ```js
-var myString = 'abc';
-for (var i in myString) {
+const myString = 'abc';
+for (let i in myString) {
   console.log('Character at fromPosition ' + i + ' is ' + myString[i]);
 }
 ```
@@ -28,8 +28,8 @@ a string for each iteration, which is a code point for that fromPosition. The Co
 Using for...in
 
 ```js
-var myString = 'abc\uD83D\uDCD6';
-for (var v of myString) {
+const myString = 'abc\uD83D\uDCD6';
+for (let v of myString) {
   console.log(v);
 }
 ```
@@ -96,7 +96,7 @@ The output is:
 
 ```js
 function findOccurrences(string, substring) {
-  var occurrenceCount = 0,
+  let occurrenceCount = 0,
     fromPosition = 0;
 
   while ((fromPosition = string.indexOf(substring, fromPosition)) !== -1) {
