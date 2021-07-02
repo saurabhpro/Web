@@ -6,7 +6,7 @@
 console.log(+'42'); // Coerces String to the Number 42
 console.log(+'3.142'); // Coerces String to the Number 3.142
 console.log(+'-1e3'); // Coerces String to the Number -1000
-var myNum = '1.231'; // The String '1.231'
+const myNum = '1.231'; // The String '1.231'
 console.log(+myNum); // Coerces String to the Number 1.231
 console.log(+{}); // NaN (Not a Number)
 console.log(+'foo'); // NaN (Not a Number)
@@ -23,14 +23,14 @@ effect as using the number constructor. In other words, +4 is the same as Number
 ## Deleting an Object, Property, or Array Element with the Delete Operator
 
 ```js
-var house = { floors: 3, bedrooms: 4, garden: true };
+const house = { floors: 3, bedrooms: 4, garden: true };
 console.log( 'House has', house.floors , 'floors' );
 console.log( delete house.floors ); // delete returns true
 console.log( delete house.floors ); // delete returns true
 console.log( 'House has', house.floors , 'floors' );
 console.log( delete house );
 
-var primes = [ 2, 3, 5, 7, 11 ];
+const primes = [ 2, 3, 5, 7, 11 ];
 console.log( delete primes[11] ); // delete returns false
 console.log( delete primes[2] ); // delete returns true
 console.log( primes );
@@ -58,17 +58,17 @@ JavaScript’s in operator is a great way to check for the existence of property
 objects (the prototype chain).
 
 ```js
-var house = { bedrooms: 4, floors: 3 };
+const house = { bedrooms: 4, floors: 3 };
 if ('bedrooms' in house) {
   console.log('house has a "bedrooms" property');
 }
 
-var myDate = new Date();
+const myDate = new Date();
 if ('setDay' in myDate) {
   console.log('myDate has a "setDay" method');
 }
 
-var qualifiers = ['First', 'Second', 'Third', 'DNF'];
+const qualifiers = ['First', 'Second', 'Third', 'DNF'];
 if (0 in qualifiers) {
   console.log('qualifiers has a "0" item');
 } //true as in checks the key whic for array is always sequential

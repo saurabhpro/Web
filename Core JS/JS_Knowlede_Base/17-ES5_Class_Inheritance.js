@@ -9,7 +9,7 @@ Show.prototype.getShowName = function getShowName() {
 Show.prototype.getShowNetwork = function getShowNetwork() {
   return this.network;
 };
-var gravityFalls = new Show('Gravity Falls', 'Disney XD');
+const gravityFalls = new Show('Gravity Falls', 'Disney XD');
 console.log(gravityFalls.getShowName()); //returns Gravity Falls
 console.log(gravityFalls.getShowNetwork()); //returns Disney XD
 

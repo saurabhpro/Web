@@ -54,10 +54,10 @@ A variable is null only when it has been assigned the null value.
 ## NaN and Infinity
 
 ```js
-var a = NaN;
-var b = Infinity;
-var c = -Infinity;
-var d = 3;
+const a = NaN;
+const b = Infinity;
+const c = -Infinity;
+const d = 3;
 if (Number.isNaN(a)) {
   console.log('a is a NaN (not a number)');
 } else {
@@ -79,8 +79,8 @@ create a Date object instance.
 
 ```javascript
 //Generating a Date with a Date String
-var myDateString = 'January 16, 1975 17:07:00';
-var myDate = new Date(myDateString);
+const myDateString = 'January 16, 1975 17:07:00';
+const myDate = new Date(myDateString);
 console.log(myDate);
 
 if (myDate instanceof Date) {
@@ -105,7 +105,7 @@ Every object that has a constructor and can be created by using the new keyword 
 is set to the constructor function, so for example new Date()`s constructor property is Date.
 
 ```javascript
-var date = new Date();
+const date = new Date();
 
 if (date.constructor === Date) {
   console.log('date is a Date instance');
@@ -115,12 +115,12 @@ if (date.constructor === Date) {
 ## Injecting Variables into a String with Template Literals
 
 ```javascript
-var name = 'Bob';
+const name = 'Bob';
 console.log('Hello ' + name + '!'); // The old way to do this, cumbersome and error prone
 console.log(`Hello ${name}!`); // Template Literals, shorter, more succinct, and less error prone
 
-var otherName = 'Mary';
-var thirdName = 'Jim';
+const otherName = 'Mary';
+const thirdName = 'Jim';
 console.log('Hello ' + otherName + ', how is ' + thirdName + '?'); // Can get very messy
 console.log(`Hello ${otherName}, how is ${thirdName}?`); // Much cleaner
 ```

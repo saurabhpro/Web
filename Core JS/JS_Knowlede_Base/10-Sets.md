@@ -3,7 +3,7 @@
 ## basics
 
 ```js
-var numberSet = new Set();
+const numberSet = new Set();
 numberSet.add(1);
 numberSet.add(2);
 numberSet.add(3);
@@ -27,7 +27,7 @@ method. (since sets values are unique, for Maps they are different)
 
 ```js
 //Checking If a Value Exists in a Set
-var numberSet = new Set();
+const numberSet = new Set();
 numberSet.add(1);
 numberSet.add(2);
 numberSet.add(3);
@@ -36,7 +36,7 @@ numberSet.add('things');
 console.log(numberSet.keys()); //returns SetIterator {1, 2, 3, "things"}
 console.log(numberSet.values()); //returns SetIterator {1, 2, 3, "things"}
 
-var elements = numberSet.values();
+const elements = numberSet.values();
 console.log(elements.next().value); //returns 1
 console.log(elements.next().value); //returns 2
 ```
@@ -44,7 +44,7 @@ console.log(elements.next().value); //returns 2
 ## Check If an Element Exists in a Set?
 
 ```js
-var bandSet = new Set();
+const bandSet = new Set();
 bandSet.add('Dave');
 bandSet.add('Martin');
 bandSet.add('Fletch');
@@ -60,7 +60,7 @@ The entries method will return an array of each element in the order of insertio
 
 ```js
 Creating a Custom Iterator with a Set
-var bandSet = new Set();
+const bandSet = new Set();
     bandSet.add('Dave');
     bandSet.add('Martin');
     bandSet.add('Fletch');
@@ -69,7 +69,7 @@ var bandSet = new Set();
     bandSet.add('Kurt');
     bandSet.add('Andy');
     bandSet.add('Vince');
-var entry = bandSet.entries();
+const entry = bandSet.entries();
 console.log(entry.next().value); //returns ["Dave", "Dave"]
 console.log(entry.next()); //returns Object {value: Array[2], done: false}
 while(entry.next().done == false){ //as long as the current item returns false then keep going console.log(entry.next().value)
