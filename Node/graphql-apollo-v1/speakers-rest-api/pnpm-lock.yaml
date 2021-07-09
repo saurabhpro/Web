@@ -3,24 +3,24 @@ lockfileVersion: 5.3
 specifiers:
   body-parser: ^1.19.0
   cookie-parser: ~1.4.5
-  debug: 4.3.1
+  debug: 4.3.2
   express: 4.17.1
   http-errors: 1.8.0
   lodash: ^4.17.21
   morgan: 1.10.0
-  nodemon: 2.0.9
-  sequelize: 6.6.4
+  nodemon: 2.0.11
+  sequelize: 6.6.5
 
 dependencies:
   body-parser: 1.19.0
   cookie-parser: 1.4.5
-  debug: 4.3.1
+  debug: 4.3.2
   express: 4.17.1
   http-errors: 1.8.0
   lodash: 4.17.21
   morgan: 1.10.0
-  nodemon: 2.0.9
-  sequelize: 6.6.4
+  nodemon: 2.0.11
+  sequelize: 6.6.5
 
 packages:
 
@@ -285,8 +285,8 @@ packages:
       ms: 2.1.3
     dev: false
 
-  /debug/4.3.1:
-    resolution: {integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==}
+  /debug/4.3.2:
+    resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -795,8 +795,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /nodemon/2.0.9:
-    resolution: {integrity: sha512-6O4k7C8f2HQArGpaPBOqGGddjzDLQAqCYmq3tKMeNIbz7Is/hOphMHy2dcY10sSq5wl3cqyn9Iz+Ep2j51JOLg==}
+  /nodemon/2.0.11:
+    resolution: {integrity: sha512-V9UizUMs7hM63YC+e+26FC4iTqEA1GJsrM8C7DiNyPvYBOG/QE169kMIe+sH7FSe8YteMQpaKkUDwfAF83+kEQ==}
     engines: {node: '>=8.10.0'}
     hasBin: true
     requiresBuild: true
@@ -1028,8 +1028,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
-  /sequelize/6.6.4:
-    resolution: {integrity: sha512-SOSu3tclOjHJfvuIITUlAsh2Q642gFxjpNN+IM1quFZ7jU5Pep7FIAwBK8UWgTpNc9TK9rUr1cyLB/G25CGicA==}
+  /sequelize/6.6.5:
+    resolution: {integrity: sha512-QyRrJrDRiwuiILqTMHUA1yWOPIL12KlfmgZ3hnzQwbMvp2vJ6fzu9bYJQB+qPMosck4mBUggY4Cjoc6Et8FBIQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       mariadb: '*'
@@ -1052,7 +1052,7 @@ packages:
       tedious:
         optional: true
     dependencies:
-      debug: 4.3.1
+      debug: 4.3.2
       dottie: 2.0.2
       inflection: 1.13.1
       lodash: 4.17.21
@@ -1063,7 +1063,7 @@ packages:
       sequelize-pool: 6.1.0
       toposort-class: 1.0.1
       uuid: 8.3.2
-      validator: 10.11.0
+      validator: 13.6.0
       wkx: 0.5.0
     transitivePeerDependencies:
       - supports-color
@@ -1253,8 +1253,8 @@ packages:
     hasBin: true
     dev: false
 
-  /validator/10.11.0:
-    resolution: {integrity: sha512-X/p3UZerAIsbBfN/IwahhYaBbY68EN/UQBWHtsbXGT5bfrH/p4NQzUCG1kF/rtKaNpnJ7jAu6NGTdSNtyNIXMw==}
+  /validator/13.6.0:
+    resolution: {integrity: sha512-gVgKbdbHgtxpRyR8K0O6oFZPhhB5tT1jeEHZR0Znr9Svg03U0+r9DXWMrnRAB+HtCStDQKlaIZm42tVsVjqtjg==}
     engines: {node: '>= 0.10'}
     dev: false
 
