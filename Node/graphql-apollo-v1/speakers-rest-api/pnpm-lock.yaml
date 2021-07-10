@@ -8,7 +8,7 @@ specifiers:
   http-errors: 1.8.0
   lodash: ^4.17.21
   morgan: 1.10.0
-  nodemon: 2.0.11
+  nodemon: 2.0.12
   sequelize: 6.6.5
 
 dependencies:
@@ -19,7 +19,7 @@ dependencies:
   http-errors: 1.8.0
   lodash: 4.17.21
   morgan: 1.10.0
-  nodemon: 2.0.11
+  nodemon: 2.0.12
   sequelize: 6.6.5
 
 packages:
@@ -795,8 +795,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /nodemon/2.0.11:
-    resolution: {integrity: sha512-V9UizUMs7hM63YC+e+26FC4iTqEA1GJsrM8C7DiNyPvYBOG/QE169kMIe+sH7FSe8YteMQpaKkUDwfAF83+kEQ==}
+  /nodemon/2.0.12:
+    resolution: {integrity: sha512-egCTmNZdObdBxUBw6ZNwvZ/xzk24CKRs5K6d+5zbmrMr7rOpPmfPeF6OxM3DDpaRx331CQRFEktn+wrFFfBSOA==}
     engines: {node: '>=8.10.0'}
     hasBin: true
     requiresBuild: true
