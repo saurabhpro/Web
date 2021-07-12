@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
-import "./style-sessions.css";
-import { Sessions, AddSession } from "./Sessions"
-import { Speakers, Speaker } from "./Speakers"
+import * as React from 'react';
+import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
+import './style-sessions.css';
+import { Sessions, Session, AddSession } from './Sessions';
+import { Speakers, Speaker } from './Speakers';
 
 export function Conference() {
   const { path, url } = useRouteMatch();
@@ -10,16 +10,19 @@ export function Conference() {
   return (
     <>
       <Switch>
-        <Route path={`${path}/sessions/new`}>	
-          <AddSession />	
+        <Route path={`${path}/sessions/new`}>
+          <AddSession />
         </Route>
         <Route path={`${path}/sessions`}>
           <Sessions />
         </Route>
+        <Route path={`${path}/sessions/:session_id`}>
+          <Session />
+        </Route>
         <Route path={`${path}/speakers`}>
           <Speakers />
         </Route>
-        <Route path={`${path}/speaker/:speaker_id`}>
+        <Route path={`${path}/speakers/:speaker_id`}>
           <Speaker />
         </Route>
         <Route path={`${path}`}>
@@ -49,12 +52,12 @@ function HeroLinkButton({ children, to }) {
     <h1>
       <Link
         style={{
-          border: "solid 1px white",
+          border: 'solid 1px white',
           borderRadius: 20,
           padding: 20,
-          display: "flex",
-          justifyContent: "center",
-          backgroundColor: "#0D1424",
+          display: 'flex',
+          justifyContent: 'center',
+          backgroundColor: '#0D1424',
         }}
         to={to}
       >

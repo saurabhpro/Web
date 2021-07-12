@@ -19,11 +19,21 @@ export default {
 
     //TODO add exception handling when below part fails and the user is still stored in our mock db
     const hash = hashPassword(userCredentials.password);
+    const role = userCredentials.email
+      .toLowerCase()
+      .endsWith('@globomantics.com')
+      ? 'ADMIN'
+      : 'USER';
 
     const dbUser = await dataSources.userDataSource.createUser({
       email: userCredentials.email,
       hash,
+      role,
     });
+
+    if (role === 'USER') {
+      dataSources.speakerDataSource.createSpeaker(dbUser);
+    }
 
     const token = createToken(dbUser);
 
@@ -69,6 +79,7 @@ export default {
       user: {
         id: existingUser.id,
         email: existingUser.email,
+        role: existingUser.role,
       },
     };
   },
@@ -103,9 +114,12 @@ export default {
   },
 
   markFeatured: async (parent, args, { dataSources }, info) => {
-    return dataSources.speakerDataSource.markFeatured(
-      args.speakerId,
-      args.featured
-    );
+    if (user && user.role === 'ADMIN') {
+      return dataSources.speakerDataSource.markFeatured(
+        args.speakerId,
+        args.featured
+      );
+    }
+    return null;
   },
 };

@@ -68,6 +68,18 @@
       "email": "test@abc.com",
       "hash": "$2a$10$xBV3xd4.lxUkH53k94fAausHddnEakXXwnfKNMRSHsJacn6egWICS",
       "id": "e2d4cc7e-d053-4a09-a70a-9189047de6c0"
+    },
+    {
+      "email": "test3@abc.com",
+      "hash": "$2a$10$koAhPGtnyO7nZMY.jmTPpOYy49daxLFlXG9z/98Ov9joKhOju6fZ6",
+      "role": "USER",
+      "id": "9a60cba5-8834-4aff-b670-d03a67ec71e4"
+    },
+    {
+      "email": "sk@abc.com",
+      "hash": "$2a$10$wB6/Tppy4P7BsEgvy6FN.OIYK1ln/HyK8bnSM2LPfHuB7GLfljv2W",
+      "role": "USER",
+      "id": "b2af1254-d8df-4d87-9f29-4301a087073d"
     }
   ]
 }

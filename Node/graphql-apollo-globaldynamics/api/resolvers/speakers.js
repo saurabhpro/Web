@@ -8,4 +8,7 @@ export default {
       (session) => _.filter(speaker.sessions, { id: session.id }).length > 0
     );
   },
+  user(speaker, args, { dataSources }) {
+    return dataSources.userDataSource.getUserById(speaker.userId);
+  },
 };
