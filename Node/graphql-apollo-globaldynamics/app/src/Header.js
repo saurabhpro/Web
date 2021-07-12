@@ -1,8 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import logo from "./images/Globo-Logo-white.svg";
+import logo from './images/Globo-Logo-white.svg';
+import signIn from './images/avatar.svg';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { AuthLink } from './AuthLink';
 
 function NavLinks() {
   return (
@@ -27,6 +29,11 @@ function NavLinks() {
       <li className="nav-item">
         <Link className="nav-link" to="/conference">
           Conference
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/admin">
+          Admin
         </Link>
       </li>
     </ul>
@@ -75,6 +82,11 @@ export function Header() {
                   </div>
                 </li>
                 <NavLinks />
+                <li className="nav-item">
+                  <AuthLink className="nav-link disabled" to="/auth/sign-in">
+                    Sign-in
+                  </AuthLink>
+                </li>
               </ul>
             </div>
           </nav>
@@ -101,6 +113,10 @@ export function Header() {
         <div className="sign-in col-md-2">
           <span className="dvider"></span>
           <div className="sign">
+            <AuthLink to="/auth/sign-in">
+              <img className="sign-in-img" src={signIn} alt="sign-in" />
+              Sign-in
+            </AuthLink>
           </div>
         </div>
       </div>

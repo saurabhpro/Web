@@ -44,11 +44,11 @@ class UserDataSource extends DataSource {
     return this.db.find((user) => user.email === email);
   }
 
-  toggleFavoriteSession(sessionId, userId) {
-    const favorites = this.db.getById(userId).get('favorites').value() || [];
+  async toggleFavoriteSession(sessionId, userId) {
+    const favorites = this.getUserById(userId)['favorites'] ?? [];
 
     let set = [];
-    if (favorites.includes(sessionId)) {
+    if (_.includes(favorites, sessionId)) {
       // remove it
       set = [...favorites.filter((fav) => fav !== sessionId)];
     } else {
@@ -56,7 +56,10 @@ class UserDataSource extends DataSource {
       set = [...favorites, sessionId];
     }
 
-    return this.db.getById(userId).assign({ favorites: set }).write();
+    const user = this.getUserById(userId).assign({ favorites: set });
+    await db.write(user);
+
+    return user;
   }
 }
 

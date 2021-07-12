@@ -1,4 +1,5 @@
 import { DataSource } from 'apollo-datasource';
+import { v4 as uuidv4 } from 'uuid';
 
 import { join } from 'path';
 import { Low, JSONFile } from 'lowdb';
@@ -27,6 +28,14 @@ class SpeakerDataSource extends DataSource {
 
   getSpeakerById(id) {
     return this.db.find((speaker) => speaker.id === id);
+  }
+
+  async createSpeaker(user) {
+    const speakers = this.db.push({ id: uuidv4(), userId: user.id });
+
+    await db.write(speakers);
+
+    return speakers;
   }
 
   async markFeatured(speakerId, featured) {

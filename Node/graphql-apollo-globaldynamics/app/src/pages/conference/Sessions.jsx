@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './style-sessions.css';
 import { gql, useQuery, useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { Formik, Field, Form } from 'formik';
-
+import './style-sessions.css';
+import { useParams, Link } from 'react-router-dom';
+import { Formik, Form, Field } from 'formik';
+import { AuthContext } from '../../context/AuthProvider';
 const SESSIONS_ATTRIBUTES = gql`
   fragment SessionInfo on Session {
     id
@@ -44,6 +44,14 @@ const SESSIONS = gql`
   ${SESSIONS_ATTRIBUTES}
 `;
 
+const SESSION_BY_ID = gql`
+  query sessionById($id: ID!) {
+    sessionById(id: $id) {
+      ...SessionInfo
+    }
+  }
+`;
+
 const ALL_SESSIONS = gql`
   query sessions {
     sessions {
@@ -51,6 +59,17 @@ const ALL_SESSIONS = gql`
     }
   }
   ${SESSIONS_ATTRIBUTES}
+`;
+
+const TOGGLE_FAVORITE = gql`
+  mutation ToggleFavorite($sessionId: ID!) {
+    toggleFavoriteSession(sessionId: $sessionId) {
+      id
+      favorites {
+        id
+      }
+    }
+  }
 `;
 
 function AllSessionList() {
@@ -95,6 +114,15 @@ function SessionList({ day }) {
 }
 
 function SessionItem({ session }) {
+  const { isAuthenticated } = React.useContext(AuthContext);
+  const [toggle] = useMutation(TOGGLE_FAVORITE, {
+    variables: { sessionId: session.id },
+  });
+
+  const markFavorite = async () => {
+    await toggle();
+  };
+
   const {
     id: sessionId, // renamed to sessionId
     title,
@@ -102,7 +130,8 @@ function SessionItem({ session }) {
     room,
     level,
     startsAt,
-    speakers,
+    favorite,
+    speakers = [],
   } = session;
 
   return (
@@ -118,11 +147,29 @@ function SessionItem({ session }) {
           <h5>{`Starts at: ${startsAt}`}</h5>
         </div>
         <div className="panel-footer">
+          {isAuthenticated && (
+            <span style={{ padding: 2 }}>
+              <button
+                type="button"
+                className="btn btn-default btn-lg"
+                onClick={markFavorite}
+              >
+                <i
+                  className={`fa ${favorite ? 'fa-star' : 'fa-star-o'}`}
+                  aria-hidden="true"
+                  style={{
+                    color: favorite ? 'gold' : undefined,
+                  }}
+                ></i>{' '}
+                Favorite
+              </button>
+            </span>
+          )}
           {speakers.map(({ id, name }) => (
             <span key={id} style={{ padding: 2 }}>
               <Link
                 className="btn btn-default btn-lg"
-                to={`/conference/speaker/${id}`}
+                to={`/conference/speakers/${id}`}
               >
                 View {name}'s Profile
               </Link>
@@ -134,6 +181,47 @@ function SessionItem({ session }) {
   );
 }
 
+
+const SessionDetails = () => {
+  const { session_id } = useParams();
+  const { loading, error, data } = useQuery(SESSION_BY_ID, {
+    variables: { id: session_id },
+  });
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
+  const session = data.sessionById;
+  if (!session) {
+    return <div>No session.</div>;
+  }
+
+  return (
+    <SessionItem
+      session={{
+        ...session,
+        favorite: data.user?.favorites
+          .map((favorite) => favorite.id)
+          .includes(session.id),
+      }}
+    />
+  );
+};
+
+export function Session() {
+  return (
+    <>
+      <section className="banner">
+        <div className="container">
+          <div className="row">
+            <SessionDetails />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 export function Sessions() {
   const [day, setDay] = useState('');
   return (
@@ -142,7 +230,7 @@ export function Sessions() {
         <div className="container">
           <div className="row" style={{ padding: 10 }}>
             <Link
-              className="btn btn-lg center-block"
+              className="btn btn-primary btn-lg center-block"
               to={`/conference/sessions/new`}
             >
               Submit a Session!

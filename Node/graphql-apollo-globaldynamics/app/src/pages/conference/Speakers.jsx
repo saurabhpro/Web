@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import './style-sessions.css';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { gql, useQuery, useMutation } from '@apollo/client';
 
 const SPEAKER_ATTRIBUTES = gql`
@@ -36,7 +36,7 @@ const SPEAKERS = gql`
 `;
 
 const SPEAKER_BY_ID = gql`
-  query speakeryById($id: ID!) {
+  query speakerById($id: ID!) {
     speakerById(id: $id) {
       ...SpeakerInfo
     }
@@ -68,8 +68,13 @@ const SpeakerList = () => {
         <div className="panel-footer">
           <h4>Sessions</h4>
           {sessions.map((session) => (
-            <span key={session.id}>
-              <p>{session.title}</p>
+            <span key={session.id} style={{ padding: 2 }}>
+              <Link
+                className="btn btn-default btn-lg"
+                to={`/conference/sessions/${session.id}`}
+              >
+                View "{session.title}"
+              </Link>
             </span>
           ))}
           <span>
@@ -124,9 +129,14 @@ const SpeakerDetails = () => {
           <h5>{bio}</h5>
         </div>
         <div className="panel-footer">
-          {sessions.map(({ id, title }) => (
-            <span key={id} style={{ padding: 5 }}>
-              "{title}"
+          {sessions.map((session) => (
+            <span key={session.id} style={{ padding: 5 }}>
+              <Link
+                className="btn btn-default btn-lg"
+                to={`/conference/sessions/${session.id}`}
+              >
+                View "{session.title}"
+              </Link>
             </span>
           ))}
         </div>
