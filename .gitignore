@@ -64,3 +64,5 @@ typings/
 .idea/
 
 */target/
+
+node_modules

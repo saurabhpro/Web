@@ -14,8 +14,8 @@
     "@opentelemetry/exporter-zipkin": "^0.23.0",
     "@opentelemetry/node": "^0.23.0",
     "@opentelemetry/tracing": "^0.23.0",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
-    "node-fetch": "^2.6.1",
     "opentelemetry-resource-detector-service": "^0.23.0"
   }
 }
