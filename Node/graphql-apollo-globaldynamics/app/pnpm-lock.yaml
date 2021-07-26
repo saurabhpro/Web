@@ -4,7 +4,7 @@ specifiers:
   '@apollo/client': 3.3.21
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0
-  '@testing-library/user-event': 13.2.0
+  '@testing-library/user-event': 13.2.1
   apollo: 2.33.4
   formik: 2.2.9
   graphql: 15.5.1
@@ -18,7 +18,7 @@ dependencies:
   '@apollo/client': 3.3.21_graphql@15.5.1+react@17.0.2
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
-  '@testing-library/user-event': 13.2.0
+  '@testing-library/user-event': 13.2.1
   apollo: 2.33.4
   formik: 2.2.9_react@17.0.2
   graphql: 15.5.1
@@ -2434,8 +2434,8 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /@testing-library/user-event/13.2.0:
-    resolution: {integrity: sha512-wDEuKkkChNfA02Fpd9A39AXmdmxkvRcHyt/cK3WWiPAQTyMhcKFNM51aQgpEDJUcdj7uPsOaDEESoW/L1b2kZA==}
+  /@testing-library/user-event/13.2.1:
+    resolution: {integrity: sha512-cczlgVl+krjOb3j1625usarNEibI0IFRJrSWX9UsJ1HKYFgCQv9Nb7QAipUDXl3Xdz8NDTsiS78eAkPSxlzTlw==}
     engines: {node: '>=10', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
