@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@apollo/client': 3.3.21
+  '@apollo/client': 3.4.5
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0
   '@testing-library/user-event': 13.2.1
@@ -15,7 +15,7 @@ specifiers:
   react-scripts: 4.0.3
 
 dependencies:
-  '@apollo/client': 3.3.21_graphql@15.5.1+react@17.0.2
+  '@apollo/client': 3.4.5_graphql@15.5.1+react@17.0.2
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.2.1
@@ -30,8 +30,8 @@ dependencies:
 
 packages:
 
-  /@apollo/client/3.3.21_graphql@15.5.1+react@17.0.2:
-    resolution: {integrity: sha512-RAmZReFuKCKx0Rs5C0nVJwKomAHUHn+gGP/YvbEsXQWu0sXoncEUZa71UqlfCPVXa/0MkYOIbCXSQdOcuRrHgw==}
+  /@apollo/client/3.4.5_graphql@15.5.1+react@17.0.2:
+    resolution: {integrity: sha512-arvzqyh+SmcJ9jGmdP1QhboTCq6YoowidqbDTigJ8LqA4jywOvgy3GMSPKUtyyxter12rQ+42cXjGI9+ZMVuyA==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0
       react: ^16.8.0 || ^17.0.0
@@ -43,10 +43,9 @@ packages:
         optional: true
     dependencies:
       '@graphql-typed-document-node/core': 3.1.0_graphql@15.5.1
-      '@types/zen-observable': 0.8.3
       '@wry/context': 0.6.0
       '@wry/equality': 0.5.1
-      fast-json-stable-stringify: 2.1.0
+      '@wry/trie': 0.3.0
       graphql: 15.5.1
       graphql-tag: 2.12.5_graphql@15.5.1
       hoist-non-react-statics: 3.3.2
@@ -54,9 +53,9 @@ packages:
       prop-types: 15.7.2
       react: 17.0.2
       symbol-observable: 4.0.0
-      ts-invariant: 0.8.2
-      tslib: 1.14.1
-      zen-observable: 0.8.15
+      ts-invariant: 0.9.1
+      tslib: 2.3.0
+      zen-observable-ts: 1.1.0
     dev: false
 
   /@apollo/federation/0.25.0_graphql@15.5.1:
@@ -12535,8 +12534,8 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /ts-invariant/0.8.2:
-    resolution: {integrity: sha512-VI1ZSMW8soizP5dU8DsMbj/TncHf7bIUqavuE7FTeYeQat454HHurJ8wbfCnVWcDOMkyiBUWOW2ytew3xUxlRw==}
+  /ts-invariant/0.9.1:
+    resolution: {integrity: sha512-hSeYibh29ULlHkuEfukcoiyTct+s2RzczMLTv4x3NWC/YrBy7x7ps5eYq/b4Y3Sb9/uAlf54+/5CAEMVxPhuQw==}
     engines: {node: '>=8'}
     dependencies:
       tslib: 2.3.0
@@ -13564,6 +13563,13 @@ packages:
     resolution: {integrity: sha512-Yj3yXweRc8LdRMrCC8nIc4kkjWecPAUVh0TI0OUrWXx6aX790vLcDlWca6I4vsyCGH3LpWxq0dJRcMOFoVqmeg==}
     dependencies:
       tslib: 1.14.1
+      zen-observable: 0.8.15
+    dev: false
+
+  /zen-observable-ts/1.1.0:
+    resolution: {integrity: sha512-1h4zlLSqI2cRLPJUHJFL8bCWHhkpuXkF+dbGkRaWjgDIG26DmzyshUMrdV/rL3UnR+mhaX4fRq8LPouq0MYYIA==}
+    dependencies:
+      '@types/zen-observable': 0.8.3
       zen-observable: 0.8.15
     dev: false
 
