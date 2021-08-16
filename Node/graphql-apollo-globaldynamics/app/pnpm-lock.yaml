@@ -1,11 +1,11 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@apollo/client': 3.4.5
+  '@apollo/client': 3.4.8
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0
   '@testing-library/user-event': 13.2.1
-  apollo: 2.33.4
+  apollo: 2.33.6
   formik: 2.2.9
   graphql: 15.5.1
   http-proxy-middleware: 2.0.1
@@ -15,11 +15,11 @@ specifiers:
   react-scripts: 4.0.3
 
 dependencies:
-  '@apollo/client': 3.4.5_graphql@15.5.1+react@17.0.2
+  '@apollo/client': 3.4.8_graphql@15.5.1+react@17.0.2
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.2.1
-  apollo: 2.33.4
+  apollo: 2.33.6
   formik: 2.2.9_react@17.0.2
   graphql: 15.5.1
   http-proxy-middleware: 2.0.1
@@ -30,8 +30,8 @@ dependencies:
 
 packages:
 
-  /@apollo/client/3.4.5_graphql@15.5.1+react@17.0.2:
-    resolution: {integrity: sha512-arvzqyh+SmcJ9jGmdP1QhboTCq6YoowidqbDTigJ8LqA4jywOvgy3GMSPKUtyyxter12rQ+42cXjGI9+ZMVuyA==}
+  /@apollo/client/3.4.8_graphql@15.5.1+react@17.0.2:
+    resolution: {integrity: sha512-/cNqTSwc2Dw8q6FDDjdd30+yvhP7rI0Fvl3Hbro0lTtFuhzkevfNyQaI2jAiOrjU6Jc0RbanxULaNrX7UmvjSQ==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0
       react: ^16.8.0 || ^17.0.0
@@ -58,8 +58,8 @@ packages:
       zen-observable-ts: 1.1.0
     dev: false
 
-  /@apollo/federation/0.25.0_graphql@15.5.1:
-    resolution: {integrity: sha512-HspsFSatOhBwDSbYq7WyrtalhX98ShOrzT1Knwj/VHLGfFbLsbREpx191S8D2Wr6ew8LhqCcUkfNrrTBB1l3XA==}
+  /@apollo/federation/0.27.0_graphql@15.5.1:
+    resolution: {integrity: sha512-hMeRN9IPsIn+5J5SmWof0ODbvRjRj8mBNqbsm9Zjkqjbw6RTlcx90taMk7cYhcd/E+uTyLQt5cOSRVBx53cxbQ==}
     engines: {node: '>=12.13.0 <17.0'}
     peerDependencies:
       graphql: ^14.5.0 || ^15.0.0
@@ -157,14 +157,6 @@ packages:
       source-map: 0.5.7
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /@babel/generator/7.14.2:
-    resolution: {integrity: sha512-OnADYbKrffDVai5qcpkMxQ7caomHOoEwjkouqnN2QhydAjowFAZcsdecFIRUBdb+ZcruwYE4ythYmF1UBZU5xQ==}
-    dependencies:
-      '@babel/types': 7.14.2
-      jsesc: 2.5.2
-      source-map: 0.5.7
     dev: false
 
   /@babel/generator/7.14.8:
@@ -1592,13 +1584,6 @@ packages:
       - supports-color
     dev: false
 
-  /@babel/types/7.14.2:
-    resolution: {integrity: sha512-SdjAG/3DikRHpUOjxZgnkbR11xUlyDMUFJdvnIgZEE16mqmY0BINMmc4//JMJglEmn6i7sq6p+mGrFWyZ98EEw==}
-    dependencies:
-      '@babel/helper-validator-identifier': 7.14.8
-      to-fast-properties: 2.0.0
-    dev: false
-
   /@babel/types/7.14.8:
     resolution: {integrity: sha512-iob4soQa7dZw8nodR/KlOQkPh9S4I8RwCxwRIFuiMRYjOzH/KJzdUfDgz6cGi5dDaclXF4P2PAhCdrBJNIg68Q==}
     engines: {node: '>=6.9.0'}
@@ -1975,7 +1960,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       '@oclif/config': 1.17.0
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       '@oclif/parser': 3.8.5
       '@oclif/plugin-help': 3.2.2
       debug: 4.3.2
@@ -1984,15 +1969,15 @@ packages:
       - supports-color
     dev: false
 
-  /@oclif/command/1.8.0_supports-color@7.2.0:
+  /@oclif/command/1.8.0_supports-color@8.1.1:
     resolution: {integrity: sha512-5vwpq6kbvwkQwKqAoOU3L72GZ3Ta8RRrewKj9OJRolx28KLJJ8Dg9Rf7obRwt5jQA9bkYd8gqzMTrI7H3xLfaw==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      '@oclif/config': 1.17.0_supports-color@7.2.0
-      '@oclif/errors': 1.3.4
+      '@oclif/config': 1.17.0_supports-color@8.1.1
+      '@oclif/errors': 1.3.5
       '@oclif/parser': 3.8.5
-      '@oclif/plugin-help': 3.2.2_supports-color@7.2.0
-      debug: 4.3.2_supports-color@7.2.0
+      '@oclif/plugin-help': 3.2.2_supports-color@8.1.1
+      debug: 4.3.2_supports-color@8.1.1
       semver: 7.3.5
     transitivePeerDependencies:
       - supports-color
@@ -2002,7 +1987,7 @@ packages:
     resolution: {integrity: sha512-Lmfuf6ubjQ4ifC/9bz1fSCHc6F6E653oyaRXxg+lgT4+bYf9bk+nqrUpAbrXyABkCqgIBiFr3J4zR/kiFdE1PA==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       '@oclif/parser': 3.8.5
       debug: 4.3.2
       globby: 11.0.4
@@ -2012,13 +1997,13 @@ packages:
       - supports-color
     dev: false
 
-  /@oclif/config/1.17.0_supports-color@7.2.0:
+  /@oclif/config/1.17.0_supports-color@8.1.1:
     resolution: {integrity: sha512-Lmfuf6ubjQ4ifC/9bz1fSCHc6F6E653oyaRXxg+lgT4+bYf9bk+nqrUpAbrXyABkCqgIBiFr3J4zR/kiFdE1PA==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       '@oclif/parser': 3.8.5
-      debug: 4.3.2_supports-color@7.2.0
+      debug: 4.3.2_supports-color@8.1.1
       globby: 11.0.4
       is-wsl: 2.2.0
       tslib: 2.3.0
@@ -2026,8 +2011,8 @@ packages:
       - supports-color
     dev: false
 
-  /@oclif/errors/1.3.4:
-    resolution: {integrity: sha512-pJKXyEqwdfRTUdM8n5FIHiQQHg5ETM0Wlso8bF9GodczO40mF5Z3HufnYWJE7z8sGKxOeJCdbAVZbS8Y+d5GCw==}
+  /@oclif/errors/1.3.5:
+    resolution: {integrity: sha512-OivucXPH/eLLlOT7FkCMoZXiaVYf8I/w1eTAM1+gKzfhALwWTusxEx7wBmW0uzvkSg/9ovWLycPaBgJbM3LOCQ==}
     engines: {node: '>=8.0.0'}
     dependencies:
       clean-stack: 3.0.1
@@ -2045,7 +2030,7 @@ packages:
     resolution: {integrity: sha512-yojzeEfmSxjjkAvMRj0KzspXlMjCfBzNRPkWw8ZwOSoNWoJn+OCS/m/S+yfV6BvAM4u2lTzX9Y5rCbrFIgkJLg==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       '@oclif/linewrap': 1.0.0
       chalk: 2.4.2
       tslib: 1.14.1
@@ -2058,26 +2043,10 @@ packages:
       '@oclif/command': 1.8.0
       '@oclif/config': 1.17.0
       chalk: 4.1.1
-      cli-ux: 5.5.1
+      cli-ux: 5.6.3
       debug: 4.3.2
       fs-extra: 9.1.0
       moment: 2.29.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@oclif/plugin-help/2.2.3:
-    resolution: {integrity: sha512-bGHUdo5e7DjPJ0vTeRBMIrfqTRDBfyR5w0MP41u0n3r7YG5p14lvMmiCXxi6WDaP2Hw5nqx3PnkAIntCKZZN7g==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      '@oclif/command': 1.8.0
-      chalk: 2.4.2
-      indent-string: 4.0.0
-      lodash.template: 4.5.0
-      string-width: 3.1.0
-      strip-ansi: 5.2.0
-      widest-line: 2.0.1
-      wrap-ansi: 4.0.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2088,7 +2057,7 @@ packages:
     dependencies:
       '@oclif/command': 1.8.0
       '@oclif/config': 1.17.0
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       chalk: 4.1.1
       indent-string: 4.0.0
       lodash.template: 4.5.0
@@ -2100,13 +2069,13 @@ packages:
       - supports-color
     dev: false
 
-  /@oclif/plugin-help/3.2.2_supports-color@7.2.0:
+  /@oclif/plugin-help/3.2.2_supports-color@8.1.1:
     resolution: {integrity: sha512-SPZ8U8PBYK0n4srFjCLedk0jWU4QlxgEYLCXIBShJgOwPhTTQknkUlsEwaMIevvCU4iCQZhfMX+D8Pz5GZjFgA==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      '@oclif/command': 1.8.0_supports-color@7.2.0
-      '@oclif/config': 1.17.0_supports-color@7.2.0
-      '@oclif/errors': 1.3.4
+      '@oclif/command': 1.8.0_supports-color@8.1.1
+      '@oclif/config': 1.17.0_supports-color@8.1.1
+      '@oclif/errors': 1.3.5
       chalk: 4.1.1
       indent-string: 4.0.0
       lodash.template: 4.5.0
@@ -2131,15 +2100,15 @@ packages:
       - supports-color
     dev: false
 
-  /@oclif/plugin-plugins/1.10.0:
-    resolution: {integrity: sha512-lfHNiuuCrCUtH9A912T/ztxRA9lS1lCZm+gcmVWksIJG/gwKH/fMn+GdLTbRzU2k6ojtMhBblYk1RWKxUEJuzA==}
+  /@oclif/plugin-plugins/1.10.1:
+    resolution: {integrity: sha512-JDUA3NtOa4OlH8ofUBXQMTFlpEkSmeE9BxoQTD6+BeUvMgqFuZThENucRvCD00sywhCmDngmIYN59gKcXpGJeQ==}
     engines: {node: '>=8.0.0'}
     dependencies:
       '@oclif/color': 0.1.2
       '@oclif/command': 1.8.0
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       chalk: 4.1.1
-      cli-ux: 5.5.1
+      cli-ux: 5.6.3
       debug: 4.3.2
       fs-extra: 9.1.0
       http-call: 5.3.0
@@ -2158,7 +2127,7 @@ packages:
     dependencies:
       '@oclif/command': 1.8.0
       '@oclif/config': 1.17.0
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       chalk: 2.4.2
       debug: 4.3.2
       fs-extra: 7.0.1
@@ -3173,15 +3142,15 @@ packages:
       picomatch: 2.3.0
     dev: false
 
-  /apollo-codegen-core/0.40.3:
-    resolution: {integrity: sha512-4xpMxjw0Vjt1fjlWqf3uPPnl4eF93L2aZpNwmlR0hdZ3FKHKEBubvKkF4vdKWB6rvY+HRLD6l7bFOPyGhe0SZg==}
+  /apollo-codegen-core/0.40.4:
+    resolution: {integrity: sha512-FAgPwfI78QK8/mDQqUZgAe+URrG7RNDh9wdGRG7snQF2PaV9NynhqVoplka/DAywcnTDEqh4q0zz8qul0e1Azg==}
     engines: {node: '>=8', npm: '>=6'}
     dependencies:
-      '@babel/generator': 7.14.2
+      '@babel/generator': 7.14.8
       '@babel/parser': 7.14.8
-      '@babel/types': 7.14.2
+      '@babel/types': 7.14.8
       apollo-env: 0.10.0
-      apollo-language-server: 1.26.3
+      apollo-language-server: 1.26.4
       ast-types: 0.14.2
       common-tags: 1.8.0
       recast: 0.20.5
@@ -3189,13 +3158,13 @@ packages:
       - typescript
     dev: false
 
-  /apollo-codegen-flow/0.38.3:
-    resolution: {integrity: sha512-qdfjj6ufwDvXeCHaBnPnMAlcySoArz09O/uYaHfRg1In17q+OSbp51vWxxr4czRXZccAN8GzS5nsxgj8vVFCHA==}
+  /apollo-codegen-flow/0.38.4:
+    resolution: {integrity: sha512-6YWZlW7/Ng10gxFQ+8kF1uFXZM968qMvzJCzhNzJmwVOnn0vjI7fR7XmNwpnka0AMi77GcyT52FPX+Dm8hh81w==}
     engines: {node: '>=8', npm: '>=6'}
     dependencies:
-      '@babel/generator': 7.14.2
-      '@babel/types': 7.14.2
-      apollo-codegen-core: 0.40.3
+      '@babel/generator': 7.14.8
+      '@babel/types': 7.14.8
+      apollo-codegen-core: 0.40.4
       change-case: 4.1.2
       common-tags: 1.8.0
       inflected: 2.1.0
@@ -3203,11 +3172,11 @@ packages:
       - typescript
     dev: false
 
-  /apollo-codegen-scala/0.39.3:
-    resolution: {integrity: sha512-XF92uHvsrHNb7z86XdVatMuP/Bd1EAui1BT7KksmmraV5k/x/dk7pdAt+1BIrqDh7bL2HK0dbTczhqs/lFNf7Q==}
+  /apollo-codegen-scala/0.39.4:
+    resolution: {integrity: sha512-N/OpdSgaNVRo9cJcLUC6j9Mh2i9iVHfHl+B5Ht4P+cDbsxmMczfkgiOcNUDybvUNbMFdye4eX4VV+1Zmm6oxAA==}
     engines: {node: '>=8', npm: '>=6'}
     dependencies:
-      apollo-codegen-core: 0.40.3
+      apollo-codegen-core: 0.40.4
       change-case: 4.1.2
       common-tags: 1.8.0
       inflected: 2.1.0
@@ -3215,11 +3184,11 @@ packages:
       - typescript
     dev: false
 
-  /apollo-codegen-swift/0.40.3:
-    resolution: {integrity: sha512-OyPAvTlKhFdqXemRQjLSFP02FnJXZBuueaPlw2AKUFJwe28YlgPsORCkOMEzShLRT+LD9LXCaYb8zsgjjcATqQ==}
+  /apollo-codegen-swift/0.40.4:
+    resolution: {integrity: sha512-iwdzVBHwp8OeRF8n2ET57C7k79cwfGrJ7xFGdHuyj8K/ea0UCKHmjyeq5Te2G17KeS0ZH3sMQuzXsR9nJUsrKg==}
     engines: {node: '>=8', npm: '>=6'}
     dependencies:
-      apollo-codegen-core: 0.40.3
+      apollo-codegen-core: 0.40.4
       change-case: 4.1.2
       common-tags: 1.8.0
       inflected: 2.1.0
@@ -3227,13 +3196,13 @@ packages:
       - typescript
     dev: false
 
-  /apollo-codegen-typescript/0.40.3:
-    resolution: {integrity: sha512-unzsNvdhbVAlH31OAQGewA8ylsbdoMXpyeE+4pHix58CUklQ9RttcD7JT4HA6Li30Frh8k1xs9JERHvMUA2SVw==}
+  /apollo-codegen-typescript/0.40.4:
+    resolution: {integrity: sha512-PFKua11i1S2IXSQTxof2dpotw31wjKmoZdiEN0m7rdhjR9mWy+p+xlyOxrT+sj1pJy3kCoRAItYzPP2fTC8lzQ==}
     engines: {node: '>=8', npm: '>=6'}
     dependencies:
-      '@babel/generator': 7.14.2
-      '@babel/types': 7.14.2
-      apollo-codegen-core: 0.40.3
+      '@babel/generator': 7.14.8
+      '@babel/types': 7.14.8
+      apollo-codegen-core: 0.40.4
       change-case: 4.1.2
       common-tags: 1.8.0
       inflected: 2.1.0
@@ -3271,11 +3240,11 @@ packages:
       sha.js: 2.4.11
     dev: false
 
-  /apollo-language-server/1.26.3:
-    resolution: {integrity: sha512-gVe3wN+cVxrEeLgYJVAf7s1V4YszXjDxZKS0oHUzCrSfH9JDroPwXfiZa6JK540wtx1l18Cpl71gJ++/aYaoNQ==}
+  /apollo-language-server/1.26.4:
+    resolution: {integrity: sha512-WQtJxQcHcTTHB3ckA56vyN3W2Lb+ha3YWsojwyirBWHvT0mLoZeblEISv2y5iADgRE9kR80CXs/WV82VaKbxPQ==}
     engines: {node: '>=8', npm: '>=6'}
     dependencies:
-      '@apollo/federation': 0.25.0_graphql@15.5.1
+      '@apollo/federation': 0.27.0_graphql@15.5.1
       '@apollographql/apollo-tools': 0.5.1
       '@apollographql/graphql-language-service-interface': 2.0.2_graphql@15.5.1
       '@endemolshinegroup/cosmiconfig-typescript-loader': 1.0.2_cosmiconfig@5.2.1
@@ -3291,9 +3260,9 @@ packages:
       core-js: 3.15.2
       cosmiconfig: 5.2.1
       dotenv: 8.6.0
-      glob: 7.1.5
+      glob: 7.1.7
       graphql: 15.5.1
-      graphql-tag: 2.12.4_graphql@15.5.1
+      graphql-tag: 2.12.5_graphql@15.5.1
       lodash.debounce: 4.0.8
       lodash.merge: 4.6.2
       minimatch: 3.0.4
@@ -3393,36 +3362,36 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /apollo/2.33.4:
-    resolution: {integrity: sha512-XSsJVYzYLfwGjf6sGJvCtBImqTTVPXDAaz+KbPTs7fe4PYJS6ZDbChIEE9JmmW+BkEdQubM4sQUekwWVJwap7w==}
+  /apollo/2.33.6:
+    resolution: {integrity: sha512-NSOU8g16Vu3OkThS3BX7Iq/NeuD2guOtYn24/dbuK2QiYmld4ZDtUrnvZbd8XgH9NzzPnF8cMztAGfqESFbq2Q==}
     engines: {node: '>=8', npm: '>=6'}
     hasBin: true
     dependencies:
       '@apollographql/apollo-tools': 0.5.1
       '@oclif/command': 1.8.0
       '@oclif/config': 1.17.0
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       '@oclif/plugin-autocomplete': 0.3.0
-      '@oclif/plugin-help': 2.2.3
+      '@oclif/plugin-help': 3.2.2
       '@oclif/plugin-not-found': 1.2.4
-      '@oclif/plugin-plugins': 1.10.0
+      '@oclif/plugin-plugins': 1.10.1
       '@oclif/plugin-warn-if-update-available': 1.7.0
-      apollo-codegen-core: 0.40.3
-      apollo-codegen-flow: 0.38.3
-      apollo-codegen-scala: 0.39.3
-      apollo-codegen-swift: 0.40.3
-      apollo-codegen-typescript: 0.40.3
+      apollo-codegen-core: 0.40.4
+      apollo-codegen-flow: 0.38.4
+      apollo-codegen-scala: 0.39.4
+      apollo-codegen-swift: 0.40.4
+      apollo-codegen-typescript: 0.40.4
       apollo-env: 0.10.0
       apollo-graphql: 0.9.3_graphql@15.5.1
-      apollo-language-server: 1.26.3
+      apollo-language-server: 1.26.4
       chalk: 2.4.2
-      cli-ux: 5.5.1
+      cli-ux: 5.6.3
       env-ci: 5.0.2
       gaze: 1.1.3
       git-parse: 1.0.4
       git-rev-sync: 3.0.1
-      git-url-parse: 11.4.4
-      glob: 7.1.5
+      git-url-parse: 11.5.0
+      glob: 7.1.7
       global-agent: 2.2.0
       graphql: 15.5.1
       graphql-tag: 2.12.4_graphql@15.5.1
@@ -3432,7 +3401,7 @@ packages:
       mkdirp: 1.0.4
       moment: 2.29.1
       strip-ansi: 5.2.0
-      table: 6.6.0
+      table: 6.7.1
       tty: 1.0.1
       vscode-uri: 1.0.6
     transitivePeerDependencies:
@@ -4464,7 +4433,7 @@ packages:
     resolution: {integrity: sha512-/1owvF0SZ5Gn54cgrikJ0QskgTzeg30HGjkmjFoaHDJzAqFpuX1DBpFR8aLvsE1J5s9MgeYRENQK4BFwOag5VA==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      '@oclif/errors': 1.3.4
+      '@oclif/errors': 1.3.5
       '@oclif/linewrap': 1.0.0
       '@oclif/screen': 1.0.4
       ansi-escapes: 3.2.0
@@ -4487,12 +4456,12 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /cli-ux/5.5.1:
-    resolution: {integrity: sha512-t3DT1U1C3rArLGYLpKa3m9dr/8uKZRI8HRm/rXKL7UTjm4c+Yd9zHNWg1tP8uaJkUbhmvx5SQHwb3VWpPUVdHQ==}
+  /cli-ux/5.6.3:
+    resolution: {integrity: sha512-/oDU4v8BiDjX2OKcSunGH0iGDiEtj2rZaGyqNuv9IT4CgcSMyVWAMfn0+rEHaOc4n9ka78B0wo1+N1QX89f7mw==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      '@oclif/command': 1.8.0_supports-color@7.2.0
-      '@oclif/errors': 1.3.4
+      '@oclif/command': 1.8.0_supports-color@8.1.1
+      '@oclif/errors': 1.3.5
       '@oclif/linewrap': 1.0.0
       '@oclif/screen': 1.0.4
       ansi-escapes: 4.3.2
@@ -4514,7 +4483,7 @@ packages:
       semver: 7.3.5
       string-width: 4.2.2
       strip-ansi: 6.0.0
-      supports-color: 7.2.0
+      supports-color: 8.1.1
       supports-hyperlinks: 2.2.0
       tslib: 2.3.0
     dev: false
@@ -5184,7 +5153,7 @@ packages:
       supports-color: 6.1.0
     dev: false
 
-  /debug/4.3.2_supports-color@7.2.0:
+  /debug/4.3.2_supports-color@8.1.1:
     resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
     engines: {node: '>=6.0'}
     peerDependencies:
@@ -5194,7 +5163,7 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
-      supports-color: 7.2.0
+      supports-color: 8.1.1
     dev: false
 
   /decamelize/1.2.0:
@@ -6633,8 +6602,8 @@ packages:
       parse-url: 6.0.0
     dev: false
 
-  /git-url-parse/11.4.4:
-    resolution: {integrity: sha512-Y4o9o7vQngQDIU9IjyCmRJBin5iYjI5u9ZITnddRZpD7dcCFQj2sL2XuMNbLRE4b4B/4ENPsp2Q8P44fjAZ0Pw==}
+  /git-url-parse/11.5.0:
+    resolution: {integrity: sha512-TZYSMDeM37r71Lqg1mbnMlOqlHd7BSij9qN7XwTkRqSAYFMihGLGhfHwgqQob3GUhEneKnV4nskN9rbQw2KGxA==}
     dependencies:
       git-up: 4.0.5
     dev: false
@@ -6651,17 +6620,6 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       is-glob: 4.0.1
-    dev: false
-
-  /glob/7.1.5:
-    resolution: {integrity: sha512-J9dlskqUXK1OeTOYBEn5s8aMukWMwWfs+rPTn/jn50Ux4MNXVhubL1wu/j2t+H4NVI+cXEcCaYellqaPVGXNqQ==}
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 3.0.4
-      once: 1.4.0
-      path-is-absolute: 1.0.1
     dev: false
 
   /glob/7.1.7:
@@ -6762,7 +6720,7 @@ packages:
     resolution: {integrity: sha512-7IDTQTIu2xzXkT+6mlluidnWo+BypnbSoEVVQCGfzqnl5Ik8d3e1d4wycb8Rj9tWW+Z39uPWsdlquqiqPCd/pA==}
     engines: {node: '>= 0.10'}
     dependencies:
-      glob: 7.1.5
+      glob: 7.1.7
       lodash: 4.17.21
       minimatch: 3.0.4
     dev: false
@@ -8638,10 +8596,6 @@ packages:
 
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=}
-    dev: false
-
-  /lodash.flatten/4.4.0:
-    resolution: {integrity: sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8=}
     dev: false
 
   /lodash.get/4.4.2:
@@ -11706,7 +11660,7 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
     dependencies:
-      glob: 7.1.5
+      glob: 7.1.7
       interpret: 1.4.0
       rechoir: 0.6.2
     dev: false
@@ -12232,6 +12186,13 @@ packages:
       has-flag: 4.0.0
     dev: false
 
+  /supports-color/8.1.1:
+    resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
+    engines: {node: '>=10'}
+    dependencies:
+      has-flag: 4.0.0
+    dev: false
+
   /supports-hyperlinks/1.0.1:
     resolution: {integrity: sha512-HHi5kVSefKaJkGYXbDuKbUGRVxqnWGn3J2e39CYcNJEfWciGq2zYtOhXLTlvrOZW1QU7VX67w7fMmWafHX9Pfw==}
     engines: {node: '>=4'}
@@ -12284,19 +12245,6 @@ packages:
 
   /symbol-tree/3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
-    dev: false
-
-  /table/6.6.0:
-    resolution: {integrity: sha512-iZMtp5tUvcnAdtHpZTWLPF0M7AgiQsURR2DwmxnJwSy8I3+cY+ozzVvYha3BOLG2TB+L0CqjIz+91htuj6yCXg==}
-    engines: {node: '>=10.0.0'}
-    dependencies:
-      ajv: 8.6.2
-      lodash.clonedeep: 4.5.0
-      lodash.flatten: 4.4.0
-      lodash.truncate: 4.4.2
-      slice-ansi: 4.0.0
-      string-width: 4.2.2
-      strip-ansi: 6.0.0
     dev: false
 
   /table/6.7.1:
@@ -13210,13 +13158,6 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
-    dev: false
-
-  /widest-line/2.0.1:
-    resolution: {integrity: sha512-Ba5m9/Fa4Xt9eb2ELXt77JxVDV8w7qQrH0zS/TWSJdLyAwQjWoOzpzj5lwVftDz6n/EOu3tNACS84v509qwnJA==}
-    engines: {node: '>=4'}
-    dependencies:
-      string-width: 2.1.1
     dev: false
 
   /widest-line/3.1.0:

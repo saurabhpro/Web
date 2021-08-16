@@ -12,6 +12,6 @@
     "typescript": "^4.2.3"
   },
   "devDependencies": {
-    "@types/core-js": "2.5.4"
+    "@types/core-js": "2.5.5"
   }
 }
