@@ -12,7 +12,7 @@
   "devDependencies": {
     "jest": "27.0.6",
     "rewire": "5.0.0",
-    "supertest": "6.1.5",
+    "supertest": "6.1.6",
     "nodemon": "2.0.12"
   },
   "dependencies": {
