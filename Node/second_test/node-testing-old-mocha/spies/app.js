@@ -1,10 +1,10 @@
-var db = require('./db.js');
+import { saveUser } from './db.js';
 
-module.exports.handleSignup = (email, password) => {
+export function handleSignup(email, password) {
   // Check if email already exists
-  db.saveUser({
+  saveUser({
     email,
     password,
   });
   // Send the welcome email
-};
+}

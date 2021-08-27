@@ -1,31 +1,31 @@
-const expect = require('expect');
+import expect from 'expect';
 
-const utils = require('./utils');
+import { add, asyncAdd, square, asyncSquare, setName } from './utils';
 
 describe('Utils', () => {
   describe('#add', () => {
     it('should add two numbers', () => {
-      var res = utils.add(33, 11);
+      var res = add(33, 11);
 
       expect(res).toBe(44).toBeA('number');
     });
   });
 
   it('should async add two numbers', (done) => {
-    utils.asyncAdd(4, 3, (sum) => {
+    asyncAdd(4, 3, (sum) => {
       expect(sum).toBe(7).toBeA('number');
       done();
     });
   });
 
   it('should square a number', () => {
-    var res = utils.square(3);
+    var res = square(3);
 
     expect(res).toBe(9).toBeA('number');
   });
 
   it('should async square a number', (done) => {
-    utils.asyncSquare(5, (res) => {
+    asyncSquare(5, (res) => {
       expect(res).toBe(25).toBeA('number');
       done();
     });
@@ -39,7 +39,7 @@ it('should set firstName and lastName', () => {
     location: 'Philadelphia',
     age: 25,
   };
-  var res = utils.setName(user, 'Andrew Mead');
+  var res = setName(user, 'Andrew Mead');
 
   expect(res).toInclude({
     firstName: 'Andrew',
