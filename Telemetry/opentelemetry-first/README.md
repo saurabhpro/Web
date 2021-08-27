@@ -21,3 +21,5 @@ Now view the tracing data in zipkin : http://localhost:9411/zipkin/
 
 > currently the service name is not getting updated in zipkin ui
 > you can use NodeJs Exported to see data in console
+
+Ref: https://github.com/kubowania/opentelemetry-movies-microservices

@@ -80,7 +80,7 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/node@*", "@types/node@14.x || 15.x":
+"@types/node@*":
   version "15.14.3"
   resolved "https://registry.npmjs.org/@types/node/-/node-15.14.3.tgz"
   integrity sha512-gliNP92vLGGha1nioYHIIT2WrZ450sxpRgyPCEyog2hMVi6LEbhY/Pkj+EDiGWrCXntZ9lrnE2+lTIlyYtaxCg==
@@ -212,7 +212,7 @@ bluebird@3.5.1:
   resolved "https://registry.npmjs.org/bluebird/-/bluebird-3.5.1.tgz"
   integrity sha512-MKiLiV+I1AA596t9w1sQJ8jkiSr5+ZKi0WKrYGUn6d1Fx+Ij4tIj+m2WMQSGczs5jZVxV339chE8iwk6F64wjA==
 
-body-parser@1.19.0, body-parser@^1.19.0:
+body-parser@1.19.0:
   version "1.19.0"
   resolved "https://registry.npmjs.org/body-parser/-/body-parser-1.19.0.tgz"
   integrity sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
@@ -1236,10 +1236,10 @@ mocha@9.1.0:
     yargs-parser "20.2.4"
     yargs-unparser "2.0.0"
 
-mongodb@3.6.10, mongodb@^3.6.9:
-  version "3.6.10"
-  resolved "https://registry.npmjs.org/mongodb/-/mongodb-3.6.10.tgz"
-  integrity sha512-fvIBQBF7KwCJnDZUnFFy4WqEFP8ibdXeFANnylW19+vOwdjOAvqIzPdsNCEMT6VKTHnYu4K64AWRih0mkFms6Q==
+mongodb@3.6.11, mongodb@^3.6.9:
+  version "3.6.11"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.6.11.tgz#8a59a0491a92b00a8c925f72ed9d9a5b054aebb2"
+  integrity sha512-4Y4lTFHDHZZdgMaHmojtNAlqkvddX2QQBEN0K//GzxhGwlI9tZ9R0vhbjr1Decw+TF7qK0ZLjQT292XgHRRQgw==
   dependencies:
     bl "^2.2.1"
     bson "^1.1.4"
@@ -1254,16 +1254,15 @@ mongoose-legacy-pluralize@1.0.2:
   resolved "https://registry.npmjs.org/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz"
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
 
-mongoose@^5.13.4:
-  version "5.13.4"
-  resolved "https://registry.npmjs.org/mongoose/-/mongoose-5.13.4.tgz"
-  integrity sha512-D1yVHAOa+G8iQZsC/nNzZe+CI1FCYu6Qk384s1vSyaSfKCu/alKeyL78BA73SsxeRKT9zmswSIueLbGBURjrKg==
+mongoose@^5.13.5:
+  version "5.13.8"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.13.8.tgz#1477c306b9f1d1c737ad95ce1b4acac9aec4a421"
+  integrity sha512-z3d+qei9Dem/LxRcJi0cdGPKzQnYk71oHEsEfYm17JA/vLiAbJiGuBS2hW7vkd9afkPAqu3KsPZh2ax0c5iPQw==
   dependencies:
     "@types/mongodb" "^3.5.27"
-    "@types/node" "14.x || 15.x"
     bson "^1.1.4"
     kareem "2.3.2"
-    mongodb "3.6.10"
+    mongodb "3.6.11"
     mongoose-legacy-pluralize "1.0.2"
     mpath "0.8.3"
     mquery "3.2.5"

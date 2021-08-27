@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const _ = require('lodash');
 
 const { ObjectID } = require('mongodb');
@@ -12,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 // post mapping
 app.post('/todos', (req, res) => {
