@@ -1,30 +1,30 @@
-const utils = require('./utils');
+import { add, asyncAdd, square, asyncSquare, setName } from './utils';
 
 describe('Utils', () => {
   describe('#add', () => {
     test('should add two numbers', () => {
-      var res = utils.add(33, 11);
+      var res = add(33, 11);
 
       expect(res).toBe(44);
     });
   });
 
   test('should async add two numbers', (done) => {
-    utils.asyncAdd(4, 3, (sum) => {
+    asyncAdd(4, 3, (sum) => {
       expect(sum).toBe(7);
       done();
     });
   });
 
   test('should square a number', () => {
-    var res = utils.square(3);
+    var res = square(3);
 
     //expect(res).toBe(9).toBeA('number');
     expect(res).toBe(9);
   });
 
   test('should async square a number', (done) => {
-    utils.asyncSquare(5, (res) => {
+    asyncSquare(5, (res) => {
       expect(res).toBe(25);
       done();
     });
@@ -39,7 +39,7 @@ test('should set firstName and lastName', () => {
     age: 25,
   };
 
-  var res = utils.setName(user, 'Andrew Mead');
+  var res = setName(user, 'Andrew Mead');
 
   expect(res).toMatchObject({
     firstName: 'Andrew',

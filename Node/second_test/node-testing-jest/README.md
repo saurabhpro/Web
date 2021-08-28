@@ -10,3 +10,8 @@ run `npm test`
 
 - todo upgrade to ES6
 - `npm run test-watch` to work with nodemon
+
+
+## 3.0.0 - upgraded to latest version
+➜  node-testing-old-mocha git:(master) ✗ node server/server.js
+Started on port 3000

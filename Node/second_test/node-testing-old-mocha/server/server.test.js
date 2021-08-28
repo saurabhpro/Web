@@ -1,7 +1,7 @@
-import request from 'supertest';
-import expect from 'expect';
+const request = require('supertest');
+const expect = require('expect');
 
-import { app } from './server';
+var app = require('./server').app;
 
 describe('Server', () => {
   describe('GET /', () => {

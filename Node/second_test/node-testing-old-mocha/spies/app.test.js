@@ -1,16 +1,16 @@
-import expect, { createSpy } from 'expect';
-import rewire from 'rewire';
+const expect = require('expect');
+const rewire = require('rewire');
 
 var app = rewire('./app');
 
 describe('App', () => {
   var db = {
-    saveUser: createSpy(),
+    saveUser: expect.createSpy(),
   };
   app.__set__('db', db);
 
   it('should call the spy correctly', () => {
-    var spy = createSpy();
+    var spy = expect.createSpy();
     spy('Andrew', 25);
     expect(spy).toHaveBeenCalledWith('Andrew', 25);
   });

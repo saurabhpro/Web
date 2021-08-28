@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 
 var app = express();
 
@@ -28,8 +28,5 @@ app.get('/users', (req, res) => {
 // GET /users
 // Give users a name prop and age prop
 
-app.listen(3000, () => {
-  console.log(`Started on port 3000`);
-});
-const _app = app;
-export { _app as app };
+app.listen(3000);
+module.exports.app = app;

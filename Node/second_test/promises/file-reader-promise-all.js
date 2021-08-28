@@ -1,5 +1,9 @@
-const Promise = require('bluebird');
-const readFile = Promise.promisify(require('fs').readFile);
+import pkg from 'bluebird';
+const { promisify, all } = pkg;
+
+import fs from 'fs';
+
+const readFile = promisify(fs.readFile);
 
 const fileList = ['file1.txt', 'test/file2.txt', 'file3.txt'];
 
@@ -38,7 +42,7 @@ const promises = fileList.map((filename) => {
     });
 });
 
-Promise.all(promises)
+all(promises)
   .then((arrayOfValuesOrErrors) => {
     // handling of array containing values and/or errors.
 

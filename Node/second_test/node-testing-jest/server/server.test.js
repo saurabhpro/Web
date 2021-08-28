@@ -1,6 +1,6 @@
-const request = require('supertest');
+import request from 'supertest';
 
-var app = require('./server').app;
+import { app } from './server';
 
 describe('Server', () => {
   describe('GET /', () => {
