@@ -37,12 +37,10 @@ Object.defineProperty(obj, 'key', withValue('static'));
 
 console.log(obj); // prints {}
 
-
 // if freeze is available, prevents adding or
 // removing the object prototype properties
 // (value, get, set, enumerable, writable, configurable)
 (Object.freeze || Object)(Object.prototype);
-
 
 // ... and ...
 Object.defineProperty(obj, 'key', withValue('non'));

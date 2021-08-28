@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 class Startup {
-    static main() {
-        console.log('Hello World');
-        return 0;
-    }
+  static main() {
+    console.log('Hello World');
+    return 0;
+  }
 }
 
 Startup.main();

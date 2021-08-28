@@ -1,3 +1,3 @@
 var r = 10;
-console.log("Hello World");
-hi
+console.log('Hello World');
+hi;

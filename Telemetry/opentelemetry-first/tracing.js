@@ -1,21 +1,21 @@
 /* tracing.js */
 
 // Require dependencies
-const { NodeTracerProvider } = require("@opentelemetry/node");
+const { NodeTracerProvider } = require('@opentelemetry/node');
 const {
   SimpleSpanProcessor,
   ConsoleSpanExporter,
-} = require("@opentelemetry/tracing");
+} = require('@opentelemetry/tracing');
 
-const { ZipkinExporter } = require("@opentelemetry/exporter-zipkin");
+const { ZipkinExporter } = require('@opentelemetry/exporter-zipkin');
 
 const {
   getNodeAutoInstrumentations,
-} = require("@opentelemetry/auto-instrumentations-node");
-const { registerInstrumentations } = require("@opentelemetry/instrumentation");
+} = require('@opentelemetry/auto-instrumentations-node');
+const { registerInstrumentations } = require('@opentelemetry/instrumentation');
 
 const options = {
-  serviceName: "first-opentelemetry",
+  serviceName: 'first-opentelemetry',
   // If you are running your tracing backend on another host,
   // you can point to it using the `url` parameter of the
   // exporter config.

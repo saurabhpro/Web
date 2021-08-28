@@ -1,6 +1,6 @@
 # Server Sent Events Demo
 
-A small Server Sent Events demo for [San Diego JS](http://sandiegojs.org/) Meetup using Node, HTML, JavaScript, CSS.  I also wrote a [post on my website](https://simonprickett.dev/a-look-at-server-sent-events/) about this topic wihich includes a video of me presenting about it at the Meetup.
+A small Server Sent Events demo for [San Diego JS](http://sandiegojs.org/) Meetup using Node, HTML, JavaScript, CSS. I also wrote a [post on my website](https://simonprickett.dev/a-look-at-server-sent-events/) about this topic wihich includes a video of me presenting about it at the Meetup.
 
 ![demo](sse_demo.gif)
 
@@ -36,7 +36,7 @@ Then point a browser at `http://localhost:8000/`.
 
 ## Reference Materials
 
-* [MDN Server Sent Events Guide](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-* [HTML 5 Rocks Tutorial](https://www.html5rocks.com/en/tutorials/eventsource/basics/)
-* [O'Reilly High Performance Browser Networking SSE page](https://hpbn.co/server-sent-events-sse/)
-* [Data source for cat facts](https://github.com/vadimdemedes/cat-facts)
+- [MDN Server Sent Events Guide](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [HTML 5 Rocks Tutorial](https://www.html5rocks.com/en/tutorials/eventsource/basics/)
+- [O'Reilly High Performance Browser Networking SSE page](https://hpbn.co/server-sent-events-sse/)
+- [Data source for cat facts](https://github.com/vadimdemedes/cat-facts)

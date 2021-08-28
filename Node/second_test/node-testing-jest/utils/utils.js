@@ -1,4 +1,6 @@
-export function add(a, b) { return a + b; }
+export function add(a, b) {
+  return a + b;
+}
 
 export function asyncAdd(a, b, callback) {
   setTimeout(() => {
@@ -6,7 +8,9 @@ export function asyncAdd(a, b, callback) {
   }, 1000);
 }
 
-export function square(x) { return x * x; }
+export function square(x) {
+  return x * x;
+}
 
 export function asyncSquare(x, callback) {
   setTimeout(() => {

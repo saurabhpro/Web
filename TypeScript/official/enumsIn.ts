@@ -1,7 +1,7 @@
 //Enums are real objects that exist at runtime. One reason is the ability to maintain a reverse mapping from enum values to enum names.
 
 enum Enum {
-    A
+  A,
 }
 
 let a2 = Enum.A;

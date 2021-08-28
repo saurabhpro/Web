@@ -1,5 +1,5 @@
 function printId(id: number | string) {
-  if (typeof id === "string") {
+  if (typeof id === 'string') {
     // In this branch, id is of type 'string'
     console.log(id.toUpperCase());
   } else {
@@ -12,10 +12,10 @@ function printId(id: number | string) {
 function welcomePeople(x: string[] | string) {
   if (Array.isArray(x)) {
     // Here: 'x' is 'string[]'
-    console.log("Hello, " + x.join(" and "));
+    console.log('Hello, ' + x.join(' and '));
   } else {
     // Here: 'x' is 'string'
-    console.log("Welcome lone traveler " + x);
+    console.log('Welcome lone traveler ' + x);
   }
 }
 

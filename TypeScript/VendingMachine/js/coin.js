@@ -1,40 +1,40 @@
 class Coin {
-    value;
-    constructor(value) {
-        this.value = value;
-    }
+  value;
+  constructor(value) {
+    this.value = value;
+  }
 }
 class Dime extends Coin {
-    constructor() {
-        super(0.1);
-    }
-    getImageUrl() {
-        return '../img/Dime.png';
-    }
+  constructor() {
+    super(0.1);
+  }
+  getImageUrl() {
+    return '../img/Dime.png';
+  }
 }
 class Quarter extends Coin {
-    constructor() {
-        super(0.25);
-    }
-    getImageUrl() {
-        return '../img/Quarter.png';
-    }
+  constructor() {
+    super(0.25);
+  }
+  getImageUrl() {
+    return '../img/Quarter.png';
+  }
 }
 class Half extends Coin {
-    constructor() {
-        super(0.5);
-    }
-    getImageUrl() {
-        return '../img/Half.png';
-    }
+  constructor() {
+    super(0.5);
+  }
+  getImageUrl() {
+    return '../img/Half.png';
+  }
 }
 class Dollar extends Coin {
-    constructor() {
-        super(1);
-    }
-    getImageUrl() {
-        return '../img/Dollar.jpg';
-    }
+  constructor() {
+    super(1);
+  }
+  getImageUrl() {
+    return '../img/Dollar.jpg';
+  }
 }
 export { Dime, Dollar, Half, Coin, Quarter };
 //# sourceMappingURL=coin.js.map

@@ -20,13 +20,13 @@ then visit localhost:3001/dashboard
 
 Now view the tracing data in zipkin : http://localhost:9411/zipkin/
 
-
 > For Metrics we need to use prometheus
 
 > currently the service name is not getting updated in zipkin ui as it requires nodeJs Resource to be setup
 > you can use NodeJs Exported to see data in console
 
 ## Additional Resources
+
 - https://opentelemetry.lightstep.com/js/
 - https://www.npmjs.com/package/opentelemetry-resource-detector-service
 - https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/sdk-environment-variables.md

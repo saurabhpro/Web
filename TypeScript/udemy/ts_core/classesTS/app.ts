@@ -1,98 +1,98 @@
 namespace classesTS {
-    class Person {
-        name: string;
-        #type: string = "";
-        protected age: number = 27;
+  class Person {
+    name: string;
+    #type: string = '';
+    protected age: number = 27;
 
-        constructor(name: string, public username: string) {
-            this.name = name;
-        }
-
-        printAge() {
-            console.log(this.age);
-            this.setType("Old Guy");
-        }
-
-        private setType(type: string) {
-            this.#type = type;
-            console.log(this.#type);
-        }
+    constructor(name: string, public username: string) {
+      this.name = name;
     }
 
-    const person = new Person("Max", "max");
-    console.log(person.name, person.username);
-    person.printAge();
-    // person.setType("Cool guy"); // Won't work with private method
-
-    // Inheritance
-    class Max extends Person {
-        // name = "Max";
-
-        constructor(username: string) {
-            super("Max", username);
-            this.age = 31;
-        }
+    printAge() {
+      console.log(this.age);
+      this.setType('Old Guy');
     }
 
-    const max = new Max("max");
-    console.log(max);
+    private setType(type: string) {
+      this.#type = type;
+      console.log(this.#type);
+    }
+  }
 
-    // Getters & Setters
-    class Plant {
-        private _species: string = "Default";
+  const person = new Person('Max', 'max');
+  console.log(person.name, person.username);
+  person.printAge();
+  // person.setType("Cool guy"); // Won't work with private method
 
-        get species() {
-            return this._species;
-        }
+  // Inheritance
+  class Max extends Person {
+    // name = "Max";
 
-        set species(value: string) {
-            if (value.length > 3) {
-                this._species = value;
-            } else {
-                this._species = "Default";
-            }
-        }
+    constructor(username: string) {
+      super('Max', username);
+      this.age = 31;
+    }
+  }
+
+  const max = new Max('max');
+  console.log(max);
+
+  // Getters & Setters
+  class Plant {
+    private _species: string = 'Default';
+
+    get species() {
+      return this._species;
     }
 
-    let plant = new Plant();
-    console.log(plant.species);
-    plant.species = "AB";
-    console.log(plant.species);
-    plant.species = "Green Plant";
-    console.log(plant.species);
-
-    // Static Properties & Methods
-    class Helpers {
-        static PI: number = 3.14;
-
-        static calcCircumference(diameter: number): number {
-            return this.PI * diameter;
-        }
+    set species(value: string) {
+      if (value.length > 3) {
+        this._species = value;
+      } else {
+        this._species = 'Default';
+      }
     }
+  }
 
-    console.log(2 * Helpers.PI);
-    console.log(Helpers.calcCircumference(8));
+  let plant = new Plant();
+  console.log(plant.species);
+  plant.species = 'AB';
+  console.log(plant.species);
+  plant.species = 'Green Plant';
+  console.log(plant.species);
 
-    // Abstract Classes
-    abstract class Project {
-        projectName: string = "Default";
-        budget: number = 1000;
+  // Static Properties & Methods
+  class Helpers {
+    static PI: number = 3.14;
 
-        abstract changeName(name: string): void;
-
-        calcBudget() {
-            return this.budget * 2;
-        }
+    static calcCircumference(diameter: number): number {
+      return this.PI * diameter;
     }
+  }
 
-    class ITProject extends Project {
-        changeName(name: string): void {
-            this.projectName = name;
-        }
+  console.log(2 * Helpers.PI);
+  console.log(Helpers.calcCircumference(8));
+
+  // Abstract Classes
+  abstract class Project {
+    projectName: string = 'Default';
+    budget: number = 1000;
+
+    abstract changeName(name: string): void;
+
+    calcBudget() {
+      return this.budget * 2;
     }
+  }
 
-    let newProject = new ITProject();
-    console.log(newProject);
-    newProject.changeName("Super IT Project");
-    console.log(newProject);
+  class ITProject extends Project {
+    changeName(name: string): void {
+      this.projectName = name;
+    }
+  }
+
+  let newProject = new ITProject();
+  console.log(newProject);
+  newProject.changeName('Super IT Project');
+  console.log(newProject);
 }

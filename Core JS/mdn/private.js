@@ -34,9 +34,7 @@ let machine = new CoffeeMachine(100);
 machine.waterAmount = 100;
 console.log(`Power is: ${machine.power}W`); // Power is: 100W
 
-
 machine.power = 25; // Error (no setter)
-
 
 // console.log(machine.#waterAmount); // Error
 // SyntaxError: Private field '#waterAmount' must be declared in an enclosing class

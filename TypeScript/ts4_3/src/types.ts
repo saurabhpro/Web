@@ -1,18 +1,18 @@
-function printText(s: string, alignment: "left" | "right" | "center") {
+function printText(s: string, alignment: 'left' | 'right' | 'center') {
   // ...
 }
-printText("Hello, world", "left");
+printText('Hello, world', 'left');
 //  printText("G'day, mate", "centre");
 
 interface Options {
   width: number;
 }
-function configure(x: Options | "auto") {
+function configure(x: Options | 'auto') {
   // ...
 }
 
 configure({ width: 100 });
-configure("auto");
+configure('auto');
 // configure("automatic");
 
 function liveDangerously(x?: number | null) {

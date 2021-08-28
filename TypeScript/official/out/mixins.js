@@ -5,20 +5,20 @@ We’ll later mix these together to form a new class from both capabilities.
 
 // Disposable Mixin
 class Disposable {
-    dispose() {
-        this.isDisposed = true;
-    }
+  dispose() {
+    this.isDisposed = true;
+  }
 }
 
 // Activatable Mixin
 class Activatable {
-    activate() {
-        this.isActive = true;
-    }
+  activate() {
+    this.isActive = true;
+  }
 
-    deactivate() {
-        this.isActive = false;
-    }
+  deactivate() {
+    this.isActive = false;
+  }
 }
 
 /**
@@ -34,21 +34,24 @@ class Activatable {
  * @implements {Activatable}
  */
 class SmartObject {
-    constructor() {
-        /*
-         * we create stand-in properties and their types for the members that will come from our mixins.
-         * This satisfies the compiler that these members will be available at runtime.
-         */
-        // Disposable
-        this.isDisposed = false;
-        // Activatable
-        this.isActive = false;
-        setInterval(() => console.log(this.isActive + " : " + this.isDisposed), 500);
-    }
+  constructor() {
+    /*
+     * we create stand-in properties and their types for the members that will come from our mixins.
+     * This satisfies the compiler that these members will be available at runtime.
+     */
+    // Disposable
+    this.isDisposed = false;
+    // Activatable
+    this.isActive = false;
+    setInterval(
+      () => console.log(this.isActive + ' : ' + this.isDisposed),
+      500
+    );
+  }
 
-    interact() {
-        this.activate();
-    }
+  interact() {
+    this.activate();
+  }
 }
 
 //mix our mixins into the class, creating the full implementation.
@@ -67,11 +70,11 @@ setTimeout(() => smartObj.interact(), 1000);
  * @param {any[]} baseCtors
  */
 function applyMixins(derivedCtor, baseCtors) {
-    baseCtors.forEach(baseCtor => {
-        Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
-            derivedCtor.prototype[name] = baseCtor.prototype[name];
-        });
+  baseCtors.forEach((baseCtor) => {
+    Object.getOwnPropertyNames(baseCtor.prototype).forEach((name) => {
+      derivedCtor.prototype[name] = baseCtor.prototype[name];
     });
+  });
 }
 
 //# sourceMappingURL=mixins.js.map

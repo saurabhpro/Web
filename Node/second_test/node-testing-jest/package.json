@@ -10,7 +10,7 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "devDependencies": {
-    "@babel/preset-env": "^7.15.0",    
+    "@babel/preset-env": "^7.15.0",
     "babel-jest": "27.1.0",
     "nodemon": "2.0.12",
     "rewire": "5.0.0",

@@ -16,7 +16,6 @@ then visit http://localhost:8080/date
 
 Now view the tracing data in zipkin : http://localhost:9411/zipkin/
 
-
 > For Metrics we need to use prometheus
 
 > currently the service name is not getting updated in zipkin ui

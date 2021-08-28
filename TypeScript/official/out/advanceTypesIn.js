@@ -10,17 +10,17 @@
  */
 //function padLeft(value: string, padding: any) { //any is buggy here as it allows even boolean to pass compilation
 function padLeft(value, padding) {
-    if (typeof padding === "number") {
-        //typeof type guards are recognized in two different forms: typeof v === "typename" and typeof v !== "typename", where "typename" must be "number", "string", "boolean", or "symbol".
-        return Array(padding + 1).join(" ") + value;
-    }
-    if (typeof padding === "string") {
-        return padding + value;
-    }
-    throw new Error(`Expected string or number, got '${padding}'.`);
+  if (typeof padding === 'number') {
+    //typeof type guards are recognized in two different forms: typeof v === "typename" and typeof v !== "typename", where "typename" must be "number", "string", "boolean", or "symbol".
+    return Array(padding + 1).join(' ') + value;
+  }
+  if (typeof padding === 'string') {
+    return padding + value;
+  }
+  throw new Error(`Expected string or number, got '${padding}'.`);
 }
 
-padLeft("Hello world", 4); // returns "    Hello world"
+padLeft('Hello world', 4); // returns "    Hello world"
 //let indentedString = padLeft("Hello world", true); // errors during compilation
 /*
 //If we have a value that has a union type, we can only access members that are common to all types in the union.
@@ -49,7 +49,7 @@ function isFish(pet: Fish | Bird): pet is Fish {
 }
 */
 function isNumber(x) {
-    return typeof x === "number";
+  return typeof x === 'number';
 }
 
 //typeof

@@ -46,19 +46,19 @@ console.log(firstName, experience);
 
 // Exercise 1 - using Arrow Function of ES6
 const double = (value: number): number => {
-    return value * 2;
+  return value * 2;
 };
 console.log(double(10));
 
 // Exercise 2 - Default Params
-const greetI = (name: string = "Gita"): void => {
-    if (name === undefined) {
-        name = "Max";
-    }
-    console.log("Hello, " + name);
+const greetI = (name: string = 'Gita'): void => {
+  if (name === undefined) {
+    name = 'Max';
+  }
+  console.log('Hello, ' + name);
 };
 greetI();
-greetI("Anna");
+greetI('Anna');
 
 // Exercise 3 - Spread Operator
 const numbersArray = [-3, 33, 38, 5];
@@ -75,6 +75,6 @@ const [result1, result2, result3] = testResult;
 console.log(result1, result2, result3);
 
 // Exercise 6 - Destructuring Objects
-const scientist = {firstName: "Will", experience: 12};
-const {firstName, experience} = scientist;
+const scientist = { firstName: 'Will', experience: 12 };
+const { firstName, experience } = scientist;
 console.log(firstName, experience);

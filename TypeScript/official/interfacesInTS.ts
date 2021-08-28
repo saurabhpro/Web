@@ -12,7 +12,7 @@ printLabel(myObj);
 
 //This is how its written more cleanly
 interface LabelledValue {
-    label: string;
+  label: string;
 }
 
 /**
@@ -22,12 +22,11 @@ interface LabelledValue {
  * @param {LabelledValue} labelledObj
  */
 function printLabel(labelledObj: LabelledValue) {
-    console.log(labelledObj.label);
+  console.log(labelledObj.label);
 }
 
-let myObj = {size: 10, label: "Size 10 Object"};
+let myObj = { size: 10, label: 'Size 10 Object' };
 printLabel(myObj);
-
 
 /**
  * Optionals in an Interface
@@ -35,27 +34,26 @@ printLabel(myObj);
  * @interface SquareConfig
  */
 interface SquareConfig {
-    color?: string;     //syntax for defining optional elements
-    width?: number;     //when no value is provided to them its undefiend
+  color?: string; //syntax for defining optional elements
+  width?: number; //when no value is provided to them its undefiend
 }
 
 function createSquare(config: SquareConfig): { color: string; area: number } {
-    let newSquare = {color: "white", area: 100};
-    //type cecking ensures that only the two propeties are allowed
-    if (config.color) {
-        newSquare.color = config.color;
-    }
+  let newSquare = { color: 'white', area: 100 };
+  //type cecking ensures that only the two propeties are allowed
+  if (config.color) {
+    newSquare.color = config.color;
+  }
 
-    console.log(config.width);
+  console.log(config.width);
 
-    if (config.width) {
-        newSquare.area = config.width * config.width;
-    }
-    return newSquare;
+  if (config.width) {
+    newSquare.area = config.width * config.width;
+  }
+  return newSquare;
 }
 
-let mySquare = createSquare({color: "black"});
-
+let mySquare = createSquare({ color: 'black' });
 
 /**
  * The easiest way to remember whether to use readonly or const is to ask whether you’re using it on a variable or a property.
@@ -64,13 +62,13 @@ let mySquare = createSquare({color: "black"});
  * @interface Point
  */
 interface Point {
-    readonly x: number;
-    readonly y: number;
+  readonly x: number;
+  readonly y: number;
 }
 
 //You can construct a Point by assigning an object literal. After the assignment, x and y can’t be changed.
 
-let p1: Point = {x: 10, y: 20};
+let p1: Point = { x: 10, y: 20 };
 //p1.x = 5; // error!
 
 //TypeScript comes with a ReadonlyArray<T> type that is the same as Array<T> with all mutating methods removed
@@ -85,25 +83,23 @@ a = ro; // error!       cant promote it to mutable array
 
 a = ro as number[]; //allowed by type assertion
 
-
 /**
  *
  *
  * @interface SearchFunc
  */
 interface SearchFunc {
-    (source: string, subString: string): boolean;
+  (source: string, subString: string): boolean;
 }
 
-//For function types to correctly type-check, the names of the parameters do not need to match. 
+//For function types to correctly type-check, the names of the parameters do not need to match.
 let mySearch: SearchFunc;
 //If you do not want to specify types at all, TypeScript’s contextual typing can infer the argument types
 //so type bounding in this method arguments and return type is unnecessary
 mySearch = function (src: string, sub: string): boolean {
-    let result = src.search(sub);
-    return result > -1;
-}
-
+  let result = src.search(sub);
+  return result > -1;
+};
 
 /**
  * Interfaces describe the public side of the class, rather than both the public and private side.
@@ -111,22 +107,20 @@ mySearch = function (src: string, sub: string): boolean {
  * @interface ClockInterface
  */
 interface ClockInterface {
-    currentTime: Date;
+  currentTime: Date;
 
-    setTime(d: Date);
+  setTime(d: Date);
 }
 
 class Clock implements ClockInterface {
-    currentTime: Date;
+  currentTime: Date;
 
-    setTime(d: Date) {
-        this.currentTime = d;
-    }
+  setTime(d: Date) {
+    this.currentTime = d;
+  }
 
-    constructor(h: number, m: number) {
-    }
+  constructor(h: number, m: number) {}
 }
-
 
 /**
  * An interface can extend multiple interfaces, creating a combination of all of the interfaces.
@@ -134,22 +128,21 @@ class Clock implements ClockInterface {
  * @interface Shape
  */
 interface Shape {
-    color: string;
+  color: string;
 }
 
 interface PenStroke {
-    penWidth: number;
+  penWidth: number;
 }
 
 interface Square extends Shape, PenStroke {
-    sideLength: number;
+  sideLength: number;
 }
 
-let square = <Square>{};    //genrify that the object can only be of type square
-square.color = "blue";
+let square = <Square>{}; //genrify that the object can only be of type square
+square.color = 'blue';
 square.sideLength = 10;
 square.penWidth = 5.0;
-
 
 /**
  *
@@ -157,7 +150,7 @@ square.penWidth = 5.0;
  * @class Control
  */
 class Control {
-    private state: any;
+  private state: any;
 }
 
 /**
@@ -177,17 +170,15 @@ class Control {
  * @extends {Control}
  */
 interface SelectableControl extends Control {
-    select(): void;
+  select(): void;
 }
 
 class Button extends Control {
-    select() {
-    }
+  select() {}
 }
 
 class TextBox extends Control {
-    select() {
-    }
+  select() {}
 }
 
 /*

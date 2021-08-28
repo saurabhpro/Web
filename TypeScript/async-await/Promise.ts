@@ -6,56 +6,55 @@
 const p1 = Promise.resolve(3);
 const p2 = 1337;
 const p3 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 100, 'foo');
+  setTimeout(resolve, 100, 'foo');
 });
 
-Promise.all([p1, p2, p3]).then(values => {
-    console.log(values); // [3, 1337, "foo"] 
+Promise.all([p1, p2, p3]).then((values) => {
+  console.log(values); // [3, 1337, "foo"]
 });
-
 
 function serialAsyncMap(collection: Array<number>, fn: any) {
+  let results: Array<number> = [];
+  let promise: Promise<void> = Promise.resolve();
 
-    let results: Array<number> = [];
-    let promise: Promise<void> = Promise.resolve();
+  for (let item of collection) {
+    promise.then(() => fn(item)).then((result) => results.push(result));
+  }
 
-    for (let item of collection) {
-        promise.then(() => fn(item))
-            .then(result => results.push(result));
-    }
-
-    return promise.then(() => results);
+  return promise.then(() => results);
 }
 
 // using a resolved promise, the 'then' block will be triggered instantly, but its handlers will be triggered asynchronously as demonstrated by the console.logs
 const resolvedProm = Promise.resolve(33);
 
-const thenProm = resolvedProm.then(
-    function (value) {
-        console.log("this gets called after the end of the main stack. the value received and returned is: " + value);
-        return value;
-    });
+const thenProm = resolvedProm.then(function (value) {
+  console.log(
+    'this gets called after the end of the main stack. the value received and returned is: ' +
+      value
+  );
+  return value;
+});
 // instantly logging the value of thenProm
 console.log(thenProm);
 
 // using setTimeout we can postpone the execution of a function to the moment the stack is empty
 setTimeout(function () {
-    console.log(thenProm);
+  console.log(thenProm);
 });
-
 
 const promis = Promise.resolve([1, 2, 3]);
 promis.then(function (v) {
-    console.log(v[0]); // 1
+  console.log(v[0]); // 1
 });
 
-Promise.reject(new Error('fail'))
-    .then(function (error) {
-        // not called
-    }, function (error) {
-        console.log(error); // Stacktrace
-    });
-
+Promise.reject(new Error('fail')).then(
+  function (error) {
+    // not called
+  },
+  function (error) {
+    console.log(error); // Stacktrace
+  }
+);
 
 // we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
@@ -67,10 +66,9 @@ console.log(p);
 
 // using setTimeout we can execute code after the stack is empty
 setTimeout(function () {
-    console.log('the stack is now empty');
-    console.log(p);
+  console.log('the stack is now empty');
+  console.log(p);
 });
-
 
 /*
 function urlPromiseGenerator(encodedLongURI: string) {
@@ -100,4 +98,3 @@ Promise.all(promiseArray).then((smallLinkToMeme) => { // Doesn't continue until 
     console.log(smallLinkToMeme) // Returns all of the links memes
 });
 */
-

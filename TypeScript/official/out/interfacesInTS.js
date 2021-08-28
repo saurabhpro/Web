@@ -16,28 +16,28 @@ printLabel(myObj);
  * @param {LabelledValue} labelledObj
  */
 function printLabel(labelledObj) {
-    console.log(labelledObj.label);
+  console.log(labelledObj.label);
 }
 
-let myObj = {size: 10, label: "Size 10 Object"};
+let myObj = { size: 10, label: 'Size 10 Object' };
 printLabel(myObj);
 
 function createSquare(config) {
-    let newSquare = {color: "white", area: 100};
-    //type cecking ensures that only the two propeties are allowed
-    if (config.color) {
-        newSquare.color = config.color;
-    }
-    console.log(config.width);
-    if (config.width) {
-        newSquare.area = config.width * config.width;
-    }
-    return newSquare;
+  let newSquare = { color: 'white', area: 100 };
+  //type cecking ensures that only the two propeties are allowed
+  if (config.color) {
+    newSquare.color = config.color;
+  }
+  console.log(config.width);
+  if (config.width) {
+    newSquare.area = config.width * config.width;
+  }
+  return newSquare;
 }
 
-let mySquare = createSquare({color: "black"});
+let mySquare = createSquare({ color: 'black' });
 //You can construct a Point by assigning an object literal. After the assignment, x and y can’t be changed.
-let p1 = {x: 10, y: 20};
+let p1 = { x: 10, y: 20 };
 //p1.x = 5; // error!
 //TypeScript comes with a ReadonlyArray<T> type that is the same as Array<T> with all mutating methods removed
 let a = [1, 2, 3, 4];
@@ -49,26 +49,25 @@ ro.length = 100; // error!
 a = ro; // error!       cant promote it to mutable array
 */
 a = ro; //allowed by type assertion
-//For function types to correctly type-check, the names of the parameters do not need to match. 
+//For function types to correctly type-check, the names of the parameters do not need to match.
 let mySearch;
 //If you do not want to specify types at all, TypeScript’s contextual typing can infer the argument types
 //so type bounding in this method arguments and return type is unnecessary
 mySearch = function (src, sub) {
-    let result = src.search(sub);
-    return result > -1;
+  let result = src.search(sub);
+  return result > -1;
 };
 
 class Clock {
-    constructor(h, m) {
-    }
+  constructor(h, m) {}
 
-    setTime(d) {
-        this.currentTime = d;
-    }
+  setTime(d) {
+    this.currentTime = d;
+  }
 }
 
 let square = {}; //genrify that the object can only be of type square
-square.color = "blue";
+square.color = 'blue';
 square.sideLength = 10;
 square.penWidth = 5.0;
 
@@ -77,17 +76,14 @@ square.penWidth = 5.0;
  *
  * @class Control
  */
-class Control {
-}
+class Control {}
 
 class Button extends Control {
-    select() {
-    }
+  select() {}
 }
 
 class TextBox extends Control {
-    select() {
-    }
+  select() {}
 }
 
 /*

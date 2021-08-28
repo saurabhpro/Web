@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Let's keep it simple and only add the following methods to the Map:
@@ -21,40 +21,40 @@ stringMap.setItem('age', "27");
 stringMap.printMap();
 */
 class MyMap {
-    constructor() {
-        this.map = {};
-    }
+  constructor() {
+    this.map = {};
+  }
 
-    setItem(key, item) {
-        this.map[key] = item;
-    }
+  setItem(key, item) {
+    this.map[key] = item;
+  }
 
-    getItem(key) {
-        return this.map[key];
-    }
+  getItem(key) {
+    return this.map[key];
+  }
 
-    clear() {
-        this.map = {};
-    }
+  clear() {
+    this.map = {};
+  }
 
-    printMap() {
-        for (let key in this.map) {
-            console.log(key, this.map[key]);
-        }
+  printMap() {
+    for (let key in this.map) {
+      console.log(key, this.map[key]);
     }
+  }
 }
 
 const numberMap = new MyMap();
-numberMap.setItem("apples", 10);
-numberMap.setItem("bananas", 2);
-console.log(numberMap.getItem("apples"));
+numberMap.setItem('apples', 10);
+numberMap.setItem('bananas', 2);
+console.log(numberMap.getItem('apples'));
 numberMap.printMap();
 numberMap.clear();
 numberMap.printMap();
 const stringMap = new MyMap();
-stringMap.setItem("apples", "10");
-stringMap.setItem("bananas", "2");
-console.log(stringMap.getItem("apples"));
+stringMap.setItem('apples', '10');
+stringMap.setItem('bananas', '2');
+console.log(stringMap.getItem('apples'));
 stringMap.printMap();
 stringMap.clear();
 stringMap.printMap();

@@ -16,5 +16,3 @@ TypeError --- Creates an instance representing an error that occurs when a varia
 
 URIError --- Creates an instance representing an error that occurs when encodeURI() or decodeURI() are passed invalid
 parameters.
-
-

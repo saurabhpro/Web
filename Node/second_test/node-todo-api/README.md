@@ -1,11 +1,12 @@
-## Updated 
-➜  node-todo-api git:(master) ✗ docker-compose up -d       
-➜  node-todo-api git:(master) ✗ mongo admin -u root -p rootpassword  
+## Updated
+
+➜ node-todo-api git:(master) ✗ docker-compose up -d  
+➜ node-todo-api git:(master) ✗ mongo admin -u root -p rootpassword  
 // then add db TodoApp
 // add the data from queries below
-➜  node-todo-api git:(master) ✗ node server/server.js    
+➜ node-todo-api git:(master) ✗ node server/server.js
 
-** this is still not working http://localhost:3000/todos
+\*\* this is still not working http://localhost:3000/todos
 
 mongod - start database server - it needs 1 arg --dbpath - where to keep the data
 

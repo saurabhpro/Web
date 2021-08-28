@@ -7,15 +7,14 @@
  * @returns {T}
  */
 export function repeatedItem<T>(array: T[]): T {
-
-    /*
+  /*
     //common part - correct
     We start off by creating a function which takes an array of type t items, 
     and returns a repeated item, if any. Within the function, 
     we will throw an error if no item repetition is found.
     */
 
-    /*
+  /*
     //not-optimal solution
     Intuitively, we can check item repetition by iterating through all the items of the array one by one, 
     and for each item, checking it against any items that appear further in the array. 
@@ -32,7 +31,7 @@ export function repeatedItem<T>(array: T[]): T {
     where n is the length of the array.
     */
 
-    /*
+  /*
     //optimal solution
     WE CAN DO BETTER BY USING A DATA STRUCTURE DESIGNED FOR CHECKING OBJECT UNIQUENESS. 
 
@@ -45,12 +44,12 @@ export function repeatedItem<T>(array: T[]): T {
     to the set data structure, the runtime now falls to the order of n, where n is the length of the array.
     */
 
-    const set = new Set<T>();
+  const set = new Set<T>();
 
-    for (const item of array) {
-        if (set.has(item)) return item;
-        else set.add(item);
-    }
+  for (const item of array) {
+    if (set.has(item)) return item;
+    else set.add(item);
+  }
 
-    throw new Error("No Item Repetetion");
+  throw new Error('No Item Repetetion');
 }

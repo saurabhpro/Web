@@ -2,11 +2,11 @@ type Human = {
   name: string;
 };
 
-let a: Human = { name: "Saurabh" };
+let a: Human = { name: 'Saurabh' };
 console.log(a);
 
 type ID = number | string;
-let b: ID = "my name is khan";
+let b: ID = 'my name is khan';
 console.log(b);
 b = 12345;
 console.log(b);
@@ -24,7 +24,7 @@ interface NewHuman {
   color: string;
 }
 
-let c: NewHuman = { id: "1", name: "Khan", color: "green" }; // WHATTTT!
+let c: NewHuman = { id: '1', name: 'Khan', color: 'green' }; // WHATTTT!
 console.log(c);
 
 // type predicates
@@ -49,19 +49,19 @@ if (isFish(petx)) {
 function getSmallPet(): Bird {
   return {
     fly() {
-      console.log("fly");
+      console.log('fly');
       return true;
     },
   };
 }
 
 interface Circle {
-  kind: "circle";
+  kind: 'circle';
   radius: number;
 }
 
 interface Square {
-  kind: "square";
+  kind: 'square';
   sideLength: number;
 }
 
@@ -69,9 +69,9 @@ type Shape = Circle | Square;
 
 function getArea(shape: Shape) {
   switch (shape.kind) {
-    case "circle":
+    case 'circle':
       return Math.PI * shape.radius ** 2;
-    case "square":
+    case 'square':
       return shape.sideLength ** 2;
     default:
       const _exhaustiveCheck: never = shape;

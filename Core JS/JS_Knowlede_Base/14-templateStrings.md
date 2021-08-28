@@ -55,7 +55,8 @@ template literal.
 ## Using Line Breaks with Template Literals
 
 ```js
-const seriesOfWords = ' this is line one\n this is line two\n this is line three';
+const seriesOfWords =
+  ' this is line one\n this is line two\n this is line three';
 console.log(seriesOfWords);
 const temp = `
            one
