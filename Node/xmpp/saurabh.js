@@ -1,8 +1,9 @@
-const moment = require('moment');
-const xmpp = require('simple-xmpp');
+import moment from 'moment';
+import pkg from 'simple-xmpp';
+const { send, on, connect } = pkg;
 
 //saurabh
-xmpp.on('online', (data) => {
+on('online', (data) => {
   console.log('Hey you are online! ');
   console.log(`Connected as ${data.jid.user}`);
   sendMessage();
@@ -13,19 +14,16 @@ xmpp.on('online', (data) => {
  */
 const sendMessage = () => {
   setTimeout(sendMessage, 5000);
-  xmpp.send(
-    'admin@localhost',
-    `hi! ${moment().format('MMMM Do YYYY, h:mm:ss a')}`
-  );
+  send('admin@localhost', `hi! ${moment().format('MMMM Do YYYY, h:mm:ss a')}`);
 };
 
-xmpp.on('error', (error) => console.log(`something went wrong!${error} `));
+on('error', (error) => console.log(`something went wrong!${error} `));
 
-xmpp.on('chat', (from, message) => {
+on('chat', (from, message) => {
   console.log(`Got a message! ${message} from ${from}`);
 });
 
-xmpp.connect({
+connect({
   jid: 'saurabh@localhost',
   password: 'password',
   host: 'localhost',
