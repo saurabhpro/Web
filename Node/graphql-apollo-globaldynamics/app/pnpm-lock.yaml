@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@apollo/client': 3.4.9
+  '@apollo/client': 3.4.10
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0
   '@testing-library/user-event': 13.2.1
@@ -11,11 +11,11 @@ specifiers:
   http-proxy-middleware: 2.0.1
   react: 17.0.2
   react-dom: 17.0.2
-  react-router-dom: 5.2.0
+  react-router-dom: 5.2.1
   react-scripts: 4.0.3
 
 dependencies:
-  '@apollo/client': 3.4.9_graphql@15.5.1+react@17.0.2
+  '@apollo/client': 3.4.10_graphql@15.5.1+react@17.0.2
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.2.1
@@ -25,13 +25,13 @@ dependencies:
   http-proxy-middleware: 2.0.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  react-router-dom: 5.2.0_react@17.0.2
+  react-router-dom: 5.2.1_react@17.0.2
   react-scripts: 4.0.3_react@17.0.2
 
 packages:
 
-  /@apollo/client/3.4.9_graphql@15.5.1+react@17.0.2:
-    resolution: {integrity: sha512-1AlYjRJ/ktDApEUEP2DqHI38tqSyhSlsF/Q3fFb/aCbLHQfcSZ1dCv7ZlC9UXRyDwQYc0w23gYJ7wZde6W8P4A==}
+  /@apollo/client/3.4.10_graphql@15.5.1+react@17.0.2:
+    resolution: {integrity: sha512-b+8TT3jBM2BtEJi+V2FuLpvoYDZCY3baNYrgAgEyw4fjnuBCSRPY7qVjqriZAwMaGiTLtyVifGhmdeICQs4Eow==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0
       react: ^16.8.0 || ^17.0.0
@@ -10795,8 +10795,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-router-dom/5.2.0_react@17.0.2:
-    resolution: {integrity: sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==}
+  /react-router-dom/5.2.1_react@17.0.2:
+    resolution: {integrity: sha512-xhFFkBGVcIVPbWM2KEYzED+nuHQPmulVa7sqIs3ESxzYd1pYg8N8rxPnQ4T2o1zu/2QeDUWcaqST131SO1LR3w==}
     peerDependencies:
       react: '>=15'
     dependencies:
@@ -10805,13 +10805,13 @@ packages:
       loose-envify: 1.4.0
       prop-types: 15.7.2
       react: 17.0.2
-      react-router: 5.2.0_react@17.0.2
+      react-router: 5.2.1_react@17.0.2
       tiny-invariant: 1.1.0
       tiny-warning: 1.0.3
     dev: false
 
-  /react-router/5.2.0_react@17.0.2:
-    resolution: {integrity: sha512-smz1DUuFHRKdcJC0jobGo8cVbhO3x50tCL4icacOlcwDOEQPq4TMqwx3sY1TP+DvtTgz4nm3thuo7A+BK2U0Dw==}
+  /react-router/5.2.1_react@17.0.2:
+    resolution: {integrity: sha512-lIboRiOtDLFdg1VTemMwud9vRVuOCZmUIT/7lUoZiSpPODiiH1UQlfXy+vPLC/7IWdFYnhRwAyNqA/+I7wnvKQ==}
     peerDependencies:
       react: '>=15'
     dependencies:
