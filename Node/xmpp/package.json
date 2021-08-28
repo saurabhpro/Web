@@ -7,8 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "moment": "^2.29.1",
-    "simple-xmpp": "^2.3.1",
-    "xmppjs": "^1.0.0"
-  },
-  "type": "module"
+    "simple-xmpp": "^2.3.1"
+  }
 }

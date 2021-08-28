@@ -1,3 +1,8 @@
+## About XMPP
+
+1. https://youtu.be/92egt5-UDwo
+2. https://www.youtube.com/watch?v=OVN99SgBGkM
+
 ## Starting the docker command
 
 ```ps
