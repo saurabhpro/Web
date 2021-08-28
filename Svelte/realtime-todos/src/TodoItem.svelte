@@ -1,15 +1,16 @@
 <script>
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher } from 'svelte';
 
   const dispatch = createEventDispatcher();
 
   function remove() {
-    dispatch("remove", { id });
+    dispatch('remove', { id });
   }
 
   function toggleStatus() {
-    let newStatus = !complete;
-    dispatch("toggle", {
+    const newStatus = !complete;
+
+    dispatch('toggle', {
       id,
       newStatus,
     });
@@ -20,17 +21,19 @@
   export let complete;
 </script>
 
-<li>
+<tr>
   {#if complete}
-    <span class="is-complete">{text}</span>
-    <button on:click={toggleStatus}> ✔️ </button>
+    <td><span class="is-complete">{text}</span></td>
+    <td><button on:click={toggleStatus}> ❌ </button></td>
   {:else}
-    <span>{text}</span>
-    <button on:click={toggleStatus}> ❌ </button>
+    <td><span>{text}</span></td>
+    <td><button on:click={toggleStatus}> ✔️ </button></td>
   {/if}
 
-  <button on:click={remove}> 🗑 </button>
-</li>
+  <td>
+    <button on:click={remove}> 🗑 </button>
+  </td>
+</tr>
 
 <style>
   .is-complete {

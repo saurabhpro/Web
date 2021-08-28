@@ -1,10 +1,9 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: 'AIzaSyBHh5xUBO-mPgYj2QVgMiPB7D1fAdypCBA',
   authDomain: 'todo-items-svelte-v1.firebaseapp.com',
   projectId: 'todo-items-svelte-v1',
@@ -14,9 +13,7 @@ var firebaseConfig = {
   measurementId: 'G-R8X0SQ4RZQ',
 };
 
-firebase.initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
-export const auth = firebase.auth();
-export const googleProvider = new firebase.auth.GoogleAuthProvider();
-
-export const db = firebase.firestore();
+export const auth = getAuth();
+export const googleProvider = new GoogleAuthProvider();
