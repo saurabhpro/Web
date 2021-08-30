@@ -7,7 +7,7 @@ specifiers:
   '@testing-library/user-event': 13.2.1
   apollo: 2.33.6
   formik: 2.2.9
-  graphql: 15.5.1
+  graphql: 15.5.2
   http-proxy-middleware: 2.0.1
   react: 17.0.2
   react-dom: 17.0.2
@@ -15,13 +15,13 @@ specifiers:
   react-scripts: 4.0.3
 
 dependencies:
-  '@apollo/client': 3.4.10_graphql@15.5.1+react@17.0.2
+  '@apollo/client': 3.4.10_graphql@15.5.2+react@17.0.2
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.2.1
   apollo: 2.33.6
   formik: 2.2.9_react@17.0.2
-  graphql: 15.5.1
+  graphql: 15.5.2
   http-proxy-middleware: 2.0.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -30,7 +30,7 @@ dependencies:
 
 packages:
 
-  /@apollo/client/3.4.10_graphql@15.5.1+react@17.0.2:
+  /@apollo/client/3.4.10_graphql@15.5.2+react@17.0.2:
     resolution: {integrity: sha512-b+8TT3jBM2BtEJi+V2FuLpvoYDZCY3baNYrgAgEyw4fjnuBCSRPY7qVjqriZAwMaGiTLtyVifGhmdeICQs4Eow==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0
@@ -42,12 +42,12 @@ packages:
       subscriptions-transport-ws:
         optional: true
     dependencies:
-      '@graphql-typed-document-node/core': 3.1.0_graphql@15.5.1
+      '@graphql-typed-document-node/core': 3.1.0_graphql@15.5.2
       '@wry/context': 0.6.0
       '@wry/equality': 0.5.1
       '@wry/trie': 0.3.0
-      graphql: 15.5.1
-      graphql-tag: 2.12.5_graphql@15.5.1
+      graphql: 15.5.2
+      graphql-tag: 2.12.5_graphql@15.5.2
       hoist-non-react-statics: 3.3.2
       optimism: 0.16.1
       prop-types: 15.7.2
@@ -1646,12 +1646,12 @@ packages:
       - supports-color
     dev: false
 
-  /@graphql-typed-document-node/core/3.1.0_graphql@15.5.1:
+  /@graphql-typed-document-node/core/3.1.0_graphql@15.5.2:
     resolution: {integrity: sha512-wYn6r8zVZyQJ6rQaALBEln5B1pzxb9shV5Ef97kTvn6yVGrqyXVnDqnU24MXnFubR+rZjBY9NWuxX3FB2sTsjg==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      graphql: 15.5.1
+      graphql: 15.5.2
     dev: false
 
   /@hapi/address/2.1.4:
@@ -6753,8 +6753,23 @@ packages:
       tslib: 2.3.0
     dev: false
 
+  /graphql-tag/2.12.5_graphql@15.5.2:
+    resolution: {integrity: sha512-5xNhP4063d16Pz3HBtKprutsPrmHZi5IdUGOWRxA2B6VF7BIRGOHZ5WQvDmJXZuPcBg7rYwaFxvQYjqkSdR3TQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+    dependencies:
+      graphql: 15.5.2
+      tslib: 2.3.0
+    dev: false
+
   /graphql/15.5.1:
     resolution: {integrity: sha512-FeTRX67T3LoE3LWAxxOlW2K3Bz+rMYAC18rRguK4wgXaTZMiJwSUwDmPFo3UadAKbzirKIg5Qy+sNJXbpPRnQw==}
+    engines: {node: '>= 10.x'}
+    dev: false
+
+  /graphql/15.5.2:
+    resolution: {integrity: sha512-dZjLPWNQqYv0dqV2RNbiFed0LtSp6yd4jchsDGnuhDKa9OQHJYCfovaOEvY91w9gqbYO7Se9LKDTl3xxYva/3w==}
     engines: {node: '>= 10.x'}
     dev: false
 
