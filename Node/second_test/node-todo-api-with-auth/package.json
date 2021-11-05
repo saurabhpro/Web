@@ -22,7 +22,7 @@
     "bcryptjs": "^2.4.3",
     "crypto-js": "^4.0.0",
     "jsonwebtoken": "^8.5.1",
-    "validator": "^13.6.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "expect": "27.2.0",
