@@ -6,7 +6,7 @@ specifiers:
   apollo-server: ^2.25.1
   apollo-server-express: ^2.25.1
   cookie-parser: ^1.4.5
-  dotenv: ^10.0.0
+  dotenv: ^11.0.0
   express: ^4.17.1
   graphql: ^15.5.0
   graphql-depth-limit: ^1.1.0
@@ -27,7 +27,7 @@ dependencies:
   apollo-server: 2.25.2_graphql@15.5.1
   apollo-server-express: 2.25.2_graphql@15.5.1
   cookie-parser: 1.4.5
-  dotenv: 10.0.0
+  dotenv: 11.0.0
   express: 4.17.1
   graphql: 15.5.1
   graphql-depth-limit: 1.1.0_graphql@15.5.1
@@ -906,9 +906,9 @@ packages:
       is-obj: 2.0.0
     dev: false
 
-  /dotenv/10.0.0:
-    resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
-    engines: {node: '>=10'}
+  /dotenv/11.0.0:
+    resolution: {integrity: sha512-Fp/b504Y5W+e+FpCxTFMUZ7ZEQkQYF0rx+KZtmwixJxGQbLHrhCwo3FjZgNC8vIfrSi29PABNbMoCGD9YoiXbQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /duplexer3/0.1.4:
@@ -1083,6 +1083,7 @@ packages:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+    requiresBuild: true
     dev: false
     optional: true
 
