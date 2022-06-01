@@ -10,11 +10,11 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.3",
+    "axios": "^0.27.0",
     "yargs": "^17.1.0"
   },
   "devDependencies": {
-    "@types/node": "16.9.2",
+    "@types/node": "16.11.38",
     "prettier": "^2.3.0",
     "properties-reader": "^2.2.0"
   }
