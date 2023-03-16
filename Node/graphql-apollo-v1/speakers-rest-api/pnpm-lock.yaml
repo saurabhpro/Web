@@ -5,7 +5,7 @@ specifiers:
   cookie-parser: ~1.4.5
   debug: 4.3.4
   express: 4.18.1
-  http-errors: 1.8.1
+  http-errors: 2.0.0
   lodash: ^4.17.21
   morgan: 1.10.0
   nodemon: 2.0.19
@@ -16,7 +16,7 @@ dependencies:
   cookie-parser: 1.4.5
   debug: 4.3.4
   express: 4.18.1
-  http-errors: 1.8.1
+  http-errors: 2.0.0
   lodash: 4.17.21
   morgan: 1.10.0
   nodemon: 2.0.19
@@ -400,17 +400,6 @@ packages:
       setprototypeof: 1.1.1
       statuses: 1.5.0
       toidentifier: 1.0.0
-    dev: false
-
-  /http-errors/1.8.1:
-    resolution: {integrity: sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==}
-    engines: {node: '>= 0.6'}
-    dependencies:
-      depd: 1.1.2
-      inherits: 2.0.4
-      setprototypeof: 1.2.0
-      statuses: 1.5.0
-      toidentifier: 1.0.1
     dev: false
 
   /http-errors/2.0.0:
