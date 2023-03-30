@@ -9,6 +9,6 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^4.3.2"
+    "typescript": "^5.0.0"
   }
 }
