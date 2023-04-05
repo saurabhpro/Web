@@ -14,7 +14,7 @@
     "yargs": "^17.1.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.47",
+    "@types/node": "16.18.23",
     "prettier": "^2.3.0",
     "properties-reader": "^2.2.0"
   }
