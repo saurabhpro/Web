@@ -14,14 +14,14 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "apollo-datasource": "^0.10.0",
-    "apollo-datasource-rest": "^0.15.0",
-    "apollo-server": "^2.25.1",
+    "apollo-datasource": "^3.0.0",
+    "apollo-datasource-rest": "^3.0.0",
+    "apollo-server": "^3.0.0",
     "graphql": "^15.5.0"
   },
   "type": "module",
   "devDependencies": {
-    "apollo-server-core": "^2.25.1",
+    "apollo-server-core": "^3.0.0",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.7",
     "prettier": "^2.3.1"
