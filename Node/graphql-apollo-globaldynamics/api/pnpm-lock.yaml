@@ -10,7 +10,7 @@ specifiers:
   express: ^4.17.1
   graphql: ^15.5.0
   graphql-depth-limit: ^1.1.0
-  graphql-rate-limit-directive: ^1.3.0
+  graphql-rate-limit-directive: ^2.0.0
   graphql-validation-complexity: ^0.4.2
   lodash: ^4.17.21
   lodash-id: ^0.14.1
@@ -31,7 +31,7 @@ dependencies:
   express: 4.17.1
   graphql: 15.5.1
   graphql-depth-limit: 1.1.0_graphql@15.5.1
-  graphql-rate-limit-directive: 1.3.0
+  graphql-rate-limit-directive: 2.0.3_graphql@15.5.1
   graphql-validation-complexity: 0.4.2_graphql@15.5.1
   lodash: 4.17.21
   lodash-id: 0.14.1
@@ -93,35 +93,6 @@ packages:
       graphql: 15.5.1
       http-errors: 1.8.0
       object-path: 0.11.5
-    dev: false
-
-  /@ardatan/aggregate-error/0.0.6:
-    resolution: {integrity: sha512-vyrkEHG1jrukmzTPtyWB4NLPauUw5bQeg4uhn8f+1SSynmrOcyvlb1GKQjjgoBzElLdfXCRYX8UnBlhklOHYRQ==}
-    engines: {node: '>=8'}
-    dependencies:
-      tslib: 2.0.3
-    dev: false
-
-  /@graphql-tools/schema/7.1.5_graphql@15.5.1:
-    resolution: {integrity: sha512-uyn3HSNSckf4mvQSq0Q07CPaVZMNFCYEVxroApOaw802m9DcZPgf9XVPy/gda5GWj9AhbijfRYVTZQgHnJ4CXA==}
-    peerDependencies:
-      graphql: ^14.0.0 || ^15.0.0
-    dependencies:
-      '@graphql-tools/utils': 7.10.0_graphql@15.5.1
-      graphql: 15.5.1
-      tslib: 2.2.0
-      value-or-promise: 1.0.6
-    dev: false
-
-  /@graphql-tools/utils/7.10.0_graphql@15.5.1:
-    resolution: {integrity: sha512-d334r6bo9mxdSqZW6zWboEnnOOFRrAPVQJ7LkU8/6grglrbcu6WhwCLzHb90E94JI3TD3ricC3YGbUqIi9Xg0w==}
-    peerDependencies:
-      graphql: ^14.0.0 || ^15.0.0
-    dependencies:
-      '@ardatan/aggregate-error': 0.0.6
-      camel-case: 4.1.2
-      graphql: 15.5.1
-      tslib: 2.2.0
     dev: false
 
   /@josephg/resolvable/1.0.1:
@@ -716,13 +687,6 @@ packages:
       get-intrinsic: 1.1.1
     dev: false
 
-  /camel-case/4.1.2:
-    resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
-    dependencies:
-      pascal-case: 3.1.2
-      tslib: 2.2.0
-    dev: false
-
   /camelcase/5.3.1:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
@@ -1234,14 +1198,14 @@ packages:
       graphql: 15.5.1
     dev: false
 
-  /graphql-rate-limit-directive/1.3.0:
-    resolution: {integrity: sha512-5pIrEsFbeyuitGO8o3OB+IljW1HwIxZfxv1LC4NstCk+QjzOAF1qGDG7/PQ52xviGsagjJ6PYqlVf8s3Ey6Tuw==}
+  /graphql-rate-limit-directive/2.0.3_graphql@15.5.1:
+    resolution: {integrity: sha512-ruDuPJ8GyjIWm3X3K4OpHEYzMIycTOP6IB+YgqSPt+Xey3MikRCPUffwf8g6q1Ajcc9kgOlOSgvieCCRrVl+Jw==}
+    peerDependencies:
+      '@graphql-tools/utils': ^8.0.0 || ^9.0.0
+      graphql: ^16.0.0
+      rate-limiter-flexible: ^2.0.0
     dependencies:
-      '@graphql-tools/schema': 7.1.5_graphql@15.5.1
-      '@graphql-tools/utils': 7.10.0_graphql@15.5.1
       graphql: 15.5.1
-      graphql-tag: 2.12.5_graphql@15.5.1
-      rate-limiter-flexible: 2.2.4
     dev: false
 
   /graphql-subscriptions/1.2.1_graphql@15.5.1:
@@ -1616,12 +1580,6 @@ packages:
       steno: 1.0.0
     dev: false
 
-  /lower-case/2.0.2:
-    resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
-    dependencies:
-      tslib: 2.2.0
-    dev: false
-
   /lowercase-keys/1.0.1:
     resolution: {integrity: sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==}
     engines: {node: '>=0.10.0'}
@@ -1717,13 +1675,6 @@ packages:
 
   /nice-try/1.0.5:
     resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
-    dev: false
-
-  /no-case/3.0.4:
-    resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
-    dependencies:
-      lower-case: 2.0.2
-      tslib: 2.2.0
     dev: false
 
   /node-fetch/2.6.1:
@@ -1870,13 +1821,6 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /pascal-case/3.1.2:
-    resolution: {integrity: sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==}
-    dependencies:
-      no-case: 3.0.4
-      tslib: 2.2.0
-    dev: false
-
   /path-key/2.0.1:
     resolution: {integrity: sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=}
     engines: {node: '>=4'}
@@ -1964,10 +1908,6 @@ packages:
   /range-parser/1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
-    dev: false
-
-  /rate-limiter-flexible/2.2.4:
-    resolution: {integrity: sha512-8u4k5b1afuBcfydX0L0l3J2PNjgcuo3zua8plhvIisyDqOBldrCwfSFut/Fj00LAB1nxJYVM9jeszr2rZyDhQw==}
     dev: false
 
   /raw-body/2.4.0:
@@ -2316,14 +2256,6 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: false
 
-  /tslib/2.0.3:
-    resolution: {integrity: sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==}
-    dev: false
-
-  /tslib/2.2.0:
-    resolution: {integrity: sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==}
-    dev: false
-
   /tslib/2.3.0:
     resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
     dev: false
@@ -2449,11 +2381,6 @@ packages:
     dependencies:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
-    dev: false
-
-  /value-or-promise/1.0.6:
-    resolution: {integrity: sha512-9r0wQsWD8z/BxPOvnwbPf05ZvFngXyouE9EKB+5GbYix+BYnAwrIChCUyFIinfbf2FL/U71z+CPpbnmTdxrwBg==}
-    engines: {node: '>=12'}
     dev: false
 
   /vary/1.1.2:
