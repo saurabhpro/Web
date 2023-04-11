@@ -5,19 +5,19 @@ specifiers:
   apollo-datasource-rest: ^0.15.0
   apollo-server: ^2.25.1
   apollo-server-core: ^2.25.1
-  graphql: ^15.5.0
+  graphql: ^16.0.0
   lodash: ^4.17.21
   nodemon: ^2.0.7
   prettier: ^2.3.1
 
 dependencies:
   apollo-datasource: 0.10.0
-  apollo-datasource-rest: 0.15.0_graphql@15.5.1
-  apollo-server: 2.25.2_graphql@15.5.1
-  graphql: 15.5.1
+  apollo-datasource-rest: 0.15.0_graphql@16.6.0
+  apollo-server: 2.25.2_graphql@16.6.0
+  graphql: 16.6.0
 
 devDependencies:
-  apollo-server-core: 2.25.2_graphql@15.5.1
+  apollo-server-core: 2.25.2_graphql@16.6.0
   lodash: 4.17.21
   nodemon: 2.0.12
   prettier: 2.3.2
@@ -43,20 +43,20 @@ packages:
       '@types/node': 10.17.60
       long: 4.0.0
 
-  /@apollographql/apollo-tools/0.5.1_graphql@15.5.1:
+  /@apollographql/apollo-tools/0.5.1_graphql@16.6.0:
     resolution: {integrity: sha512-ZII+/xUFfb9ezDU2gad114+zScxVFMVlZ91f8fGApMzlS1kkqoyLnC4AJaQ1Ya/X+b63I20B4Gd+eCL8QuB4sA==}
     engines: {node: '>=8', npm: '>=6'}
     peerDependencies:
       graphql: ^14.2.1 || ^15.0.0
     dependencies:
-      graphql: 15.5.1
+      graphql: 16.6.0
 
   /@apollographql/graphql-playground-html/1.6.27:
     resolution: {integrity: sha512-tea2LweZvn6y6xFV11K0KC8ETjmm52mQrW+ezgB2O/aTQf8JGyFmMcRPFgUaQZeHbWdm8iisDC6EjOKsXu0nfw==}
     dependencies:
       xss: 1.0.9
 
-  /@apollographql/graphql-upload-8-fork/8.1.3_graphql@15.5.1:
+  /@apollographql/graphql-upload-8-fork/8.1.3_graphql@16.6.0:
     resolution: {integrity: sha512-ssOPUT7euLqDXcdVv3Qs4LoL4BPtfermW1IOouaqEmj36TpHYDmYDIbKoSQxikd9vtMumFnP87OybH7sC9fJ6g==}
     engines: {node: '>=8.5'}
     peerDependencies:
@@ -67,7 +67,7 @@ packages:
       '@types/koa': 2.13.4
       busboy: 0.3.1
       fs-capacitor: 2.0.4
-      graphql: 15.5.1
+      graphql: 16.6.0
       http-errors: 1.8.0
       object-path: 0.11.5
 
@@ -285,7 +285,7 @@ packages:
       picomatch: 2.3.0
     dev: true
 
-  /apollo-cache-control/0.14.0_graphql@15.5.1:
+  /apollo-cache-control/0.14.0_graphql@16.6.0:
     resolution: {integrity: sha512-qN4BCq90egQrgNnTRMUHikLZZAprf3gbm8rC5Vwmc6ZdLolQ7bFsa769Hqi6Tq/lS31KLsXBLTOsRbfPHph12w==}
     engines: {node: '>=6.0'}
     deprecated: The functionality provided by the `apollo-cache-control` package is built in to `apollo-server-core` starting with Apollo Server 3. See https://www.apollographql.com/docs/apollo-server/migration/#cachecontrol for details.
@@ -293,10 +293,10 @@ packages:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
       apollo-server-env: 3.2.0
-      apollo-server-plugin-base: 0.13.0_graphql@15.5.1
-      graphql: 15.5.1
+      apollo-server-plugin-base: 0.13.0_graphql@16.6.0
+      graphql: 16.6.0
 
-  /apollo-datasource-rest/0.15.0_graphql@15.5.1:
+  /apollo-datasource-rest/0.15.0_graphql@16.6.0:
     resolution: {integrity: sha512-YVY+O93F509xJvN12VM0Pe3PlB7KUM2q2xRd8VzXzwrC67dXOQeY81E7DOFCs9XW7jXuF0TePMddSOyWmnEiDw==}
     engines: {node: '>=6'}
     deprecated: The `apollo-datasource-rest` package is part of Apollo Server v2 and v3, which are now deprecated (end-of-life October 22nd 2023). This package's functionality is now found in the `@apollo/datasource-rest` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
@@ -304,7 +304,7 @@ packages:
       apollo-datasource: 0.10.0
       apollo-server-caching: 0.7.0
       apollo-server-env: 3.2.0
-      apollo-server-errors: 2.5.0_graphql@15.5.1
+      apollo-server-errors: 2.5.0_graphql@16.6.0
       http-cache-semantics: 4.1.0
     transitivePeerDependencies:
       - graphql
@@ -327,24 +327,24 @@ packages:
       apollo-server-caching: 0.7.0
       apollo-server-env: 3.2.0
 
-  /apollo-graphql/0.9.3_graphql@15.5.1:
+  /apollo-graphql/0.9.3_graphql@16.6.0:
     resolution: {integrity: sha512-rcAl2E841Iko4kSzj4Pt3PRBitmyq1MvoEmpl04TQSpGnoVgl1E/ZXuLBYxMTSnEAm7umn2IsoY+c6Ll9U/10A==}
     engines: {node: '>=6'}
     peerDependencies:
       graphql: ^14.2.1 || ^15.0.0
     dependencies:
       core-js-pure: 3.15.2
-      graphql: 15.5.1
+      graphql: 16.6.0
       lodash.sortby: 4.7.0
       sha.js: 2.4.11
 
-  /apollo-link/1.2.14_graphql@15.5.1:
+  /apollo-link/1.2.14_graphql@16.6.0:
     resolution: {integrity: sha512-p67CMEFP7kOG1JZ0ZkYZwRDa369w5PIjtMjvrQd/HnIV8FRsHRqLqK+oAZQnFa1DDdZtOtHTi+aMIW6EatC2jg==}
     peerDependencies:
       graphql: ^0.11.3 || ^0.12.3 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      apollo-utilities: 1.3.4_graphql@15.5.1
-      graphql: 15.5.1
+      apollo-utilities: 1.3.4_graphql@16.6.0
+      graphql: 16.6.0
       ts-invariant: 0.4.4
       tslib: 1.14.1
       zen-observable-ts: 0.8.21
@@ -361,37 +361,37 @@ packages:
     dependencies:
       lru-cache: 6.0.0
 
-  /apollo-server-core/2.25.2_graphql@15.5.1:
+  /apollo-server-core/2.25.2_graphql@16.6.0:
     resolution: {integrity: sha512-lrohEjde2TmmDTO7FlOs8x5QQbAS0Sd3/t0TaK2TWaodfzi92QAvIsq321Mol6p6oEqmjm8POIDHW1EuJd7XMA==}
     engines: {node: '>=6'}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      '@apollographql/apollo-tools': 0.5.1_graphql@15.5.1
+      '@apollographql/apollo-tools': 0.5.1_graphql@16.6.0
       '@apollographql/graphql-playground-html': 1.6.27
-      '@apollographql/graphql-upload-8-fork': 8.1.3_graphql@15.5.1
+      '@apollographql/graphql-upload-8-fork': 8.1.3_graphql@16.6.0
       '@josephg/resolvable': 1.0.1
       '@types/ws': 7.4.7
-      apollo-cache-control: 0.14.0_graphql@15.5.1
+      apollo-cache-control: 0.14.0_graphql@16.6.0
       apollo-datasource: 0.9.0
-      apollo-graphql: 0.9.3_graphql@15.5.1
+      apollo-graphql: 0.9.3_graphql@16.6.0
       apollo-reporting-protobuf: 0.8.0
       apollo-server-caching: 0.7.0
       apollo-server-env: 3.1.0
-      apollo-server-errors: 2.5.0_graphql@15.5.1
-      apollo-server-plugin-base: 0.13.0_graphql@15.5.1
-      apollo-server-types: 0.9.0_graphql@15.5.1
-      apollo-tracing: 0.15.0_graphql@15.5.1
+      apollo-server-errors: 2.5.0_graphql@16.6.0
+      apollo-server-plugin-base: 0.13.0_graphql@16.6.0
+      apollo-server-types: 0.9.0_graphql@16.6.0
+      apollo-tracing: 0.15.0_graphql@16.6.0
       async-retry: 1.3.1
       fast-json-stable-stringify: 2.1.0
-      graphql: 15.5.1
-      graphql-extensions: 0.15.0_graphql@15.5.1
-      graphql-tag: 2.12.5_graphql@15.5.1
-      graphql-tools: 4.0.8_graphql@15.5.1
+      graphql: 16.6.0
+      graphql-extensions: 0.15.0_graphql@16.6.0
+      graphql-tag: 2.12.5_graphql@16.6.0
+      graphql-tools: 4.0.8_graphql@16.6.0
       loglevel: 1.7.1
       lru-cache: 6.0.0
       sha.js: 2.4.11
-      subscriptions-transport-ws: 0.9.19_graphql@15.5.1
+      subscriptions-transport-ws: 0.9.19_graphql@16.6.0
       uuid: 8.3.2
     transitivePeerDependencies:
       - bufferutil
@@ -412,15 +412,15 @@ packages:
       node-fetch: 2.6.1
       util.promisify: 1.1.1
 
-  /apollo-server-errors/2.5.0_graphql@15.5.1:
+  /apollo-server-errors/2.5.0_graphql@16.6.0:
     resolution: {integrity: sha512-lO5oTjgiC3vlVg2RKr3RiXIIQ5pGXBFxYGGUkKDhTud3jMIhs+gel8L8zsEjKaKxkjHhCQAA/bcEfYiKkGQIvA==}
     engines: {node: '>=6'}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      graphql: 15.5.1
+      graphql: 16.6.0
 
-  /apollo-server-express/2.25.2_graphql@15.5.1:
+  /apollo-server-express/2.25.2_graphql@16.6.0:
     resolution: {integrity: sha512-A2gF2e85vvDugPlajbhr0A14cDFDIGX0mteNOJ8P3Z3cIM0D4hwrWxJidI+SzobefDIyIHu1dynFedJVhV0euQ==}
     engines: {node: '>=6'}
     peerDependencies:
@@ -433,16 +433,16 @@ packages:
       '@types/express': 4.17.13
       '@types/express-serve-static-core': 4.17.24
       accepts: 1.3.7
-      apollo-server-core: 2.25.2_graphql@15.5.1
-      apollo-server-types: 0.9.0_graphql@15.5.1
+      apollo-server-core: 2.25.2_graphql@16.6.0
+      apollo-server-types: 0.9.0_graphql@16.6.0
       body-parser: 1.19.0
       cors: 2.8.5
       express: 4.17.1
-      graphql: 15.5.1
-      graphql-subscriptions: 1.2.1_graphql@15.5.1
-      graphql-tools: 4.0.8_graphql@15.5.1
+      graphql: 16.6.0
+      graphql-subscriptions: 1.2.1_graphql@16.6.0
+      graphql-tools: 4.0.8_graphql@16.6.0
       parseurl: 1.3.3
-      subscriptions-transport-ws: 0.9.19_graphql@15.5.1
+      subscriptions-transport-ws: 0.9.19_graphql@16.6.0
       type-is: 1.6.18
     transitivePeerDependencies:
       - bufferutil
@@ -450,16 +450,16 @@ packages:
       - utf-8-validate
     dev: false
 
-  /apollo-server-plugin-base/0.13.0_graphql@15.5.1:
+  /apollo-server-plugin-base/0.13.0_graphql@16.6.0:
     resolution: {integrity: sha512-L3TMmq2YE6BU6I4Tmgygmd0W55L+6XfD9137k+cWEBFu50vRY4Re+d+fL5WuPkk5xSPKd/PIaqzidu5V/zz8Kg==}
     engines: {node: '>=6'}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      apollo-server-types: 0.9.0_graphql@15.5.1
-      graphql: 15.5.1
+      apollo-server-types: 0.9.0_graphql@16.6.0
+      graphql: 16.6.0
 
-  /apollo-server-types/0.9.0_graphql@15.5.1:
+  /apollo-server-types/0.9.0_graphql@16.6.0:
     resolution: {integrity: sha512-qk9tg4Imwpk732JJHBkhW0jzfG0nFsLqK2DY6UhvJf7jLnRePYsPxWfPiNkxni27pLE2tiNlCwoDFSeWqpZyBg==}
     engines: {node: '>=6'}
     peerDependencies:
@@ -468,19 +468,19 @@ packages:
       apollo-reporting-protobuf: 0.8.0
       apollo-server-caching: 0.7.0
       apollo-server-env: 3.2.0
-      graphql: 15.5.1
+      graphql: 16.6.0
 
-  /apollo-server/2.25.2_graphql@15.5.1:
+  /apollo-server/2.25.2_graphql@16.6.0:
     resolution: {integrity: sha512-2Ekx9puU5DqviZk6Kw1hbqTun3lwOWUjhiBJf+UfifYmnqq0s9vAv6Ditw+DEXwphJQ4vGKVVgVIEw6f/9YfhQ==}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      apollo-server-core: 2.25.2_graphql@15.5.1
-      apollo-server-express: 2.25.2_graphql@15.5.1
+      apollo-server-core: 2.25.2_graphql@16.6.0
+      apollo-server-express: 2.25.2_graphql@16.6.0
       express: 4.17.1
-      graphql: 15.5.1
-      graphql-subscriptions: 1.2.1_graphql@15.5.1
-      graphql-tools: 4.0.8_graphql@15.5.1
+      graphql: 16.6.0
+      graphql-subscriptions: 1.2.1_graphql@16.6.0
+      graphql-tools: 4.0.8_graphql@16.6.0
       stoppable: 1.1.0
     transitivePeerDependencies:
       - bufferutil
@@ -488,7 +488,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /apollo-tracing/0.15.0_graphql@15.5.1:
+  /apollo-tracing/0.15.0_graphql@16.6.0:
     resolution: {integrity: sha512-UP0fztFvaZPHDhIB/J+qGuy6hWO4If069MGC98qVs0I8FICIGu4/8ykpX3X3K6RtaQ56EDAWKykCxFv4ScxMeA==}
     engines: {node: '>=4.0'}
     deprecated: The `apollo-tracing` package is no longer part of Apollo Server 3. See https://www.apollographql.com/docs/apollo-server/migration/#tracing for details
@@ -496,17 +496,17 @@ packages:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
       apollo-server-env: 3.2.0
-      apollo-server-plugin-base: 0.13.0_graphql@15.5.1
-      graphql: 15.5.1
+      apollo-server-plugin-base: 0.13.0_graphql@16.6.0
+      graphql: 16.6.0
 
-  /apollo-utilities/1.3.4_graphql@15.5.1:
+  /apollo-utilities/1.3.4_graphql@16.6.0:
     resolution: {integrity: sha512-pk2hiWrCXMAy2fRPwEyhvka+mqwzeP60Jr1tRYi5xru+3ko94HI9o6lK0CT33/w4RDlxWchmdhDCrvdr+pHCig==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
       '@wry/equality': 0.1.11
       fast-json-stable-stringify: 2.1.0
-      graphql: 15.5.1
+      graphql: 16.6.0
       ts-invariant: 0.4.4
       tslib: 1.14.1
 
@@ -1026,51 +1026,51 @@ packages:
     resolution: {integrity: sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==}
     dev: true
 
-  /graphql-extensions/0.15.0_graphql@15.5.1:
+  /graphql-extensions/0.15.0_graphql@16.6.0:
     resolution: {integrity: sha512-bVddVO8YFJPwuACn+3pgmrEg6I8iBuYLuwvxiE+lcQQ7POotVZxm2rgGw0PvVYmWWf3DT7nTVDZ5ROh/ALp8mA==}
     engines: {node: '>=6.0'}
     deprecated: 'The `graphql-extensions` API has been removed from Apollo Server 3. Use the plugin API instead: https://www.apollographql.com/docs/apollo-server/integrations/plugins/'
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      '@apollographql/apollo-tools': 0.5.1_graphql@15.5.1
+      '@apollographql/apollo-tools': 0.5.1_graphql@16.6.0
       apollo-server-env: 3.2.0
-      apollo-server-types: 0.9.0_graphql@15.5.1
-      graphql: 15.5.1
+      apollo-server-types: 0.9.0_graphql@16.6.0
+      graphql: 16.6.0
 
-  /graphql-subscriptions/1.2.1_graphql@15.5.1:
+  /graphql-subscriptions/1.2.1_graphql@16.6.0:
     resolution: {integrity: sha512-95yD/tKi24q8xYa7Q9rhQN16AYj5wPbrb8tmHGM3WRc9EBmWrG/0kkMl+tQG8wcEuE9ibR4zyOM31p5Sdr2v4g==}
     peerDependencies:
       graphql: ^0.10.5 || ^0.11.3 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      graphql: 15.5.1
+      graphql: 16.6.0
       iterall: 1.3.0
     dev: false
 
-  /graphql-tag/2.12.5_graphql@15.5.1:
+  /graphql-tag/2.12.5_graphql@16.6.0:
     resolution: {integrity: sha512-5xNhP4063d16Pz3HBtKprutsPrmHZi5IdUGOWRxA2B6VF7BIRGOHZ5WQvDmJXZuPcBg7rYwaFxvQYjqkSdR3TQ==}
     engines: {node: '>=10'}
     peerDependencies:
       graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      graphql: 15.5.1
+      graphql: 16.6.0
       tslib: 2.3.0
 
-  /graphql-tools/4.0.8_graphql@15.5.1:
+  /graphql-tools/4.0.8_graphql@16.6.0:
     resolution: {integrity: sha512-MW+ioleBrwhRjalKjYaLQbr+920pHBgy9vM/n47sswtns8+96sRn5M/G+J1eu7IMeKWiN/9p6tmwCHU7552VJg==}
     peerDependencies:
       graphql: ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      apollo-link: 1.2.14_graphql@15.5.1
-      apollo-utilities: 1.3.4_graphql@15.5.1
+      apollo-link: 1.2.14_graphql@16.6.0
+      apollo-utilities: 1.3.4_graphql@16.6.0
       deprecated-decorator: 0.1.6
-      graphql: 15.5.1
+      graphql: 16.6.0
       iterall: 1.3.0
       uuid: 3.4.0
 
-  /graphql/15.5.1:
-    resolution: {integrity: sha512-FeTRX67T3LoE3LWAxxOlW2K3Bz+rMYAC18rRguK4wgXaTZMiJwSUwDmPFo3UadAKbzirKIg5Qy+sNJXbpPRnQw==}
-    engines: {node: '>= 10.x'}
+  /graphql/16.6.0:
+    resolution: {integrity: sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==}
+    engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
   /has-bigints/1.0.1:
     resolution: {integrity: sha512-LSBS2LjbNBTf6287JEbEzvJgftkF5qFkmCo9hDRpAzKhUOlJ+hx8dd4USs00SgsUNwc4617J9ki5YtEClM2ffA==}
@@ -1763,14 +1763,14 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /subscriptions-transport-ws/0.9.19_graphql@15.5.1:
+  /subscriptions-transport-ws/0.9.19_graphql@16.6.0:
     resolution: {integrity: sha512-dxdemxFFB0ppCLg10FTtRqH/31FNRL1y1BQv8209MK5I4CwALb7iihQg+7p65lFcIl8MHatINWBLOqpgU4Kyyw==}
     peerDependencies:
       graphql: '>=0.10.0'
     dependencies:
       backo2: 1.0.2
       eventemitter3: 3.1.2
-      graphql: 15.5.1
+      graphql: 16.6.0
       iterall: 1.3.0
       symbol-observable: 1.2.0
       ws: 7.5.3
