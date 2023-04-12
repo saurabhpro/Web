@@ -14,7 +14,7 @@ specifiers:
   graphql-validation-complexity: ^0.4.2
   lodash: ^4.17.21
   lodash-id: ^0.14.1
-  lowdb: ^2.1.0
+  lowdb: ^5.0.0
   nodemon: ^2.0.7
   npm-run-all: ^4.1.5
   path: ^0.12.7
@@ -35,7 +35,7 @@ dependencies:
   graphql-validation-complexity: 0.4.2_graphql@15.5.1
   lodash: 4.17.21
   lodash-id: 0.14.1
-  lowdb: 2.1.0
+  lowdb: 5.1.0
   nodemon: 2.0.12
   npm-run-all: 4.1.5
   path: 0.12.7
@@ -1573,11 +1573,11 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
-  /lowdb/2.1.0:
-    resolution: {integrity: sha512-F4Go8/V37gAidTR3c5poyjprOpZSDNSLJVOmI0ny4D4q9rC37OkBhlzX0bqj7LZlT3UIj4FchmZrrSw7qY+eGQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+  /lowdb/5.1.0:
+    resolution: {integrity: sha512-OEysJ2S3j05RqehEypEv3h6EgdV4Y7LTq7LngRNqe1IxsInOm66/sa3fzoI6mmqs2CC+zIJW3vfncGNv2IGi3A==}
+    engines: {node: '>=14.16'}
     dependencies:
-      steno: 1.0.0
+      steno: 3.0.0
     dev: false
 
   /lowercase-keys/1.0.1:
@@ -2103,8 +2103,9 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /steno/1.0.0:
-    resolution: {integrity: sha512-C/KgCvEa1yWnpHmaPjAXrz1yWxh6hs+HvhqqPa71euaQmNi1wr4+WFo57VQxjKKuFl2KqS7gtlrN0oxj2noQLw==}
+  /steno/3.0.0:
+    resolution: {integrity: sha512-uZtn7Ht9yXLiYgOsmo8btj4+f7VxyYheMt8g6F1ANjyqByQXEE2Gygjgenp3otHH1TlHsS4JAaRGv5wJ1wvMNw==}
+    engines: {node: '>=14.16'}
     dev: false
 
   /stoppable/1.1.0:
