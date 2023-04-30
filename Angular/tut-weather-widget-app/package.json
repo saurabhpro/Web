@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "4.0.1",
     "@angular/router": "4.0.1",
     "angular-in-memory-web-api": "0.3.1",
-    "bootstrap": "4.6.0",
+    "bootstrap": "4.6.2",
     "core-js": "2.6.12",
     "font-awesome": "^4.7.0",
     "reflect-metadata": "0.1.10",
