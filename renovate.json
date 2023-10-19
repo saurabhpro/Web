@@ -4,22 +4,6 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "separateMultipleMajor": true,
-  "masterIssue": true,
-  "packageRules": [
-    {
-      "matchDepTypes": ["*"],
-      "matchUpdateTypes": ["minor", "patch", "lockFileMaintenance"],
-      "groupName": "Dependencies (non-major)",
-      "automerge": true,
-      "groupSlug": "renovate-dependencies"
-    },
-    {
-      "updateTypes": ["major"],
-      "labels": ["UPDATE-MAJOR"],
-      "automerge": false
-    }
-  ],
   "ignorePaths": ["**/Angular/**", "**/Node/second_test/node-testing-old-mocha/package.json"],
   "ignoreDeps": []
 }
