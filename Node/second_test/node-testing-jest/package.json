@@ -12,7 +12,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.15.0",
     "babel-jest": "29.7.0",
-    "nodemon": "2.0.22",
+    "nodemon": "3.0.1",
     "rewire": "7.0.0",
     "supertest": "6.3.3"
   },

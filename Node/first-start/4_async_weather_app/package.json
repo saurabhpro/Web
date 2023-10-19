@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@types/node": "20.8.7",
-    "prettier": "^2.3.0",
+    "prettier": "^3.0.0",
     "properties-reader": "^2.2.0"
   }
 }
