@@ -9,7 +9,7 @@
     "@testing-library/user-event": "13.5.0",
     "apollo": "2.34.0",
     "formik": "2.4.5",
-    "graphql": "15.8.0",
+    "graphql": "16.8.1",
     "http-proxy-middleware": "2.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
