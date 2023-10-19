@@ -9,7 +9,7 @@
     "test-watch": "nodemon --exec 'npm test'"
   },
   "engines": {
-    "node": "18.16.0"
+    "node": "18.18.2"
   },
   "author": "Saurabh Kumar",
   "license": "ISC",
@@ -20,7 +20,7 @@
     "mongoose": "^5.13.17"
   },
   "devDependencies": {
-    "expect": "29.5.0",
+    "expect": "29.7.0",
     "mocha": "10.2.0",
     "nodemon": "2.0.22",
     "supertest": "6.3.3"
