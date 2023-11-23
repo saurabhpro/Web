@@ -9,7 +9,7 @@
     "test-watch": "nodemon --exec 'npm test'"
   },
   "engines": {
-    "node": "20.9.0"
+    "node": "20.10.0"
   },
   "author": "Saurabh Kumar",
   "license": "ISC",

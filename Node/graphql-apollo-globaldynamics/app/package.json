@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@apollo/client": "3.8.6",
+    "@apollo/client": "3.8.7",
     "@testing-library/jest-dom": "6.1.4",
-    "@testing-library/react": "14.0.0",
+    "@testing-library/react": "14.1.2",
     "@testing-library/user-event": "14.5.1",
     "apollo": "2.34.0",
     "formik": "2.4.5",
@@ -13,7 +13,7 @@
     "http-proxy-middleware": "2.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-router-dom": "6.17.0",
+    "react-router-dom": "6.20.0",
     "react-scripts": "5.0.1"
   },
   "scripts": {
