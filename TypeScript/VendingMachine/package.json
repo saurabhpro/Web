@@ -13,7 +13,7 @@
     "@types/requirejs": "^2.1.32",
     "bootstrap": "5.3.3",
     "knockout": "^3.5.1",
-    "requirejs": "^2.3.6"
+    "requirejs": "^2.3.7"
   },
   "devDependencies": {
     "husky": "^9.0.0",
