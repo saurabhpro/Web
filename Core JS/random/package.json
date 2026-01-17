@@ -10,6 +10,6 @@
   "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
-    "p5": "^1.9.2"
+    "p5": "^1.9.4"
   }
 }
