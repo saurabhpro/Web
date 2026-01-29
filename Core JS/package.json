@@ -14,8 +14,8 @@
   "author": "saurabh kumar",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^5.0.0",
-    "mocha": "^10.0.0",
+    "chai": "^6.0.0",
+    "mocha": "^11.0.0",
     "prettier": "^3.0.0"
   },
   "dependencies": {
