@@ -13,6 +13,6 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "hbs": "4.2.0"
+    "hbs": "4.3.0"
   }
 }
